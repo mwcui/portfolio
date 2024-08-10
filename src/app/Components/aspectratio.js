@@ -4,17 +4,24 @@
 
 
 // Explanation:
-// relative w-full: The div is set to be relative with a width of 100% of its parent element.
-// style={{ paddingTop: '46.15%' }}: This padding-top ensures the aspect ratio is maintained. It's calculated as (9 / 19.5) * 100 = 46.15%.
-// absolute inset-0: This ensures the child content (children) fills the container completely.
+// h-screen flex items-center justify-center: The outer container takes up the full height of the viewport (h-screen) and centers the content.
+// Aspect Ratio Box (style={{ width: 'calc(100vh * (9 / 19.5))', height: '100vh' }}):
+// The height is set to 100vh to take the full height of the viewport.
+// The width is calculated using calc(100vh * (9 / 19.5)) to maintain the 19.5:9 aspect ratio based on the viewport height.
 
 
-export default function AspectRatio({ children }) {
-    return (
-      <div className="relative w-full" style={{ paddingTop: '46.15%' }}>
-        <div className="absolute inset-0">
+
+const AspectRatio = ({ children }) => {
+  return (
+
+      <div className="relative bg-white" style={{ width: 'calc(100vh * (9 / 19.5))', height: '100vh' }}>
+        <div className="absolute inset-0 flex items-center justify-center">
           {children}
         </div>
       </div>
-    );
-  }
+
+  );
+};
+
+export default AspectRatio;
+

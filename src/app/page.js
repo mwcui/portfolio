@@ -1,11 +1,27 @@
+// import AspectRatio from "./Components/aspectratio";
+
+// export default function TestPage() {
+//   return (
+//     <div className="bg-[#0C3B65] h-screen flex items-center justify-center">
+//     <AspectRatio>
+//       <h1 className="text-black">Aspect Ratio 19.5:9</h1>
+//     </AspectRatio>
+//     </div>
+//   );
+// }
+
+
 import AspectRatio from "./Components/aspectratio";
 
-export default function Home() {
+const Home = () => {
   return (
-    <AspectRatio>
-      <div className="bg-blue-500">
-        <h1 className="text-white">Content inside 19.5:9 Aspect Ratio</h1>
-      </div>
-    </AspectRatio>
+    <div className="bg-[#0C3B65] h-screen flex items-center justify-center">
+      <AspectRatio>
+        <h1 className="text-black">Aspect Ratio 19.5:9</h1>
+      </AspectRatio>
+    </div>
   );
-}
+};
+
+export default Home;
+
