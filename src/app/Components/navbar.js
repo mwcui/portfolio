@@ -2,53 +2,13 @@
 // when the navbar is on the home page, hid the logo
 // otherwise, always have the logo in the upper left corner
 
-
-// import Link from 'next/link';
-
-// export default function Navbar() {
-//   return (
-//     <nav className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-//       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-//         <div className="text-2xl font-bold">
-//           <Link href="/" className="text-gray-800 hover:text-gray-600">
-//             MyLogo
-//           </Link>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
-
-
-
-// import Link from 'next/link';
-
-// export default function Navbar() {
-//   return (
-//     <nav className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-//       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-//         <div className="text-2xl font-bold">
-//           <Link href="/" className="text-gray-800 hover:text-gray-600">
-//             MyLogo
-//           </Link>
-//         </div>
-//         <div>
-//           <Link href="/menu" passHref>
-//             <button className="text-lg text-gray-800 hover:text-gray-600 font-semibold">
-//               Menu
-//             </button>
-//           </Link>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
-
-
 "use client"
 
 import { useState } from 'react';
 import Menu from './menu';
+import Image from 'next/image';
+import Link from 'next/link'; // Import the Link component from Next.js
+import logo from '/public/logo.svg';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,11 +21,9 @@ export default function Navbar() {
     <>
       <nav className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold">
-            <a href="/" className="text-gray-800 hover:text-gray-600">
-              MyLogo
-            </a>
-          </div>
+          <Link href="/">
+            <Image src={logo} alt="Logo" width={50} height={50} className="object-contain cursor-pointer" />
+          </Link>
           <div>
             <button
               onClick={toggleMenu}
