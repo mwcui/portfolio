@@ -2,3 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/globals.css */
+
+@font-face {
+    font-family: 'Inika';
+    src: url('/fonts/Inika-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Inika';
+    src: url('/fonts/Inika-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .inika-regular {
+    font-family: 'Inika', serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .inika-bold {
+    font-family: 'Inika', serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .checkered-border {
+    background: 
+      linear-gradient(45deg, #0C3B65 25%, transparent 25%) -20px 0,
+      linear-gradient(-45deg, #0C3B65 25%, transparent 25%) -20px 0,
+      linear-gradient(45deg, transparent 75%, #0C3B65 75%),
+      linear-gradient(-45deg, transparent 75%, #0C3B65 75%);
+    background-size: 40px 40px;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  
