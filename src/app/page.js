@@ -1,7 +1,11 @@
-import Image from "next/image";
+import AspectRatio from "./Components/aspectratio";
 
 export default function Home() {
   return (
-    <div className="bg-blue-900">hello world</div>
+    <AspectRatio>
+      <div className="bg-blue-500">
+        <h1 className="text-white">Content inside 19.5:9 Aspect Ratio</h1>
+      </div>
+    </AspectRatio>
   );
 }
