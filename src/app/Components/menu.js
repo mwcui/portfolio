@@ -24,6 +24,7 @@
 // export default Menu;
 
 
+
 import React, { useEffect } from 'react';
 import { toggleCheckeredBackground } from './toggleCheckeredBackground';
 
@@ -58,3 +59,4 @@ const Menu = ({ closeMenu }) => {
 };
 
 export default Menu;
+
