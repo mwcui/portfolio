@@ -36,6 +36,12 @@ module.exports = {
       backgroundImage: {
         'checkered': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj4KICA8cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IiNGRjAwMDAiLz4KICA8cmVjdCB4PSIyMCIgeT0iMjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI0ZGQTUwMCIvPgo8L3N2Zz4=')"
       },
+      backgroundPosition: {
+        'center-center': 'center center',
+      },
+      backgroundSize: {
+        'pattern': '40px 40px', // Adjust this size based on your pattern size
+      },
     },
   },
   plugins: [],
