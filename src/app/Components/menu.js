@@ -24,9 +24,16 @@
 
 
 const Menu = ({ closeMenu }) => {
+  useEffect(() => {
+    // Apply the checkered background when the menu is open
+    toggleCheckeredBackground(true);
+
+    // Clean up: Remove the checkered background when the menu is closed
+    return () => toggleCheckeredBackground(false);
+  }, []);
   return (
     <div className="fixed inset-0 flex items-center justify-center checkered-bg z-50 p-4">
-      <div className="bg-white w-full max-w-[calc(100vw-40px)] h-full max-h-[calc(100vh-40px)] text-center relative border-8 border-[#0C3B65] flex flex-col justify-center p-4">
+      <div className="bg-white w-full max-w-[calc(100vw-120px)] h-full max-h-[calc(100vh-120px)] text-center relative border-8 border-[#0C3B65] flex flex-col justify-center p-4">
         <button
           onClick={closeMenu}
           className="absolute top-4 right-4 text-3xl font-inika hover:text-gray-600"
