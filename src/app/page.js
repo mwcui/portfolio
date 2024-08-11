@@ -1,4 +1,3 @@
-import AspectRatio from './Components/aspectratio';
 import Image from 'next/image';
 import logo from '/public/logo.svg'
 import Navbar from './Components/navbar';

@@ -36,7 +36,5 @@ export default function Navbar() {
     </nav>
     {isMenuOpen && <Menu closeMenu={toggleMenu} />}
     </>
-
-
   );
 }
