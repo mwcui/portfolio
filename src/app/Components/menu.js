@@ -9,8 +9,8 @@ const Menu = ({ closeMenu }) => {
         >
           X
         </button>
-        <h1 className="text-5xl font-bold font-inika mb-10">MENU</h1>
-        <ul className="space-y-6 text-3xl font-inika">
+        <h1 className="text-4xl font-bold font-inika mb-20">MENU</h1>
+        <ul className="space-y-10 text-2xl font-inika">
           <li className="hover:text-gray-600 cursor-pointer">EXPERIENCE</li>
           <li className="hover:text-gray-600 cursor-pointer">CREATIVE</li>
           <li className="hover:text-gray-600 cursor-pointer">ABOUT</li>
