@@ -18,43 +18,24 @@ export default function Navbar() {
   };
 
   return (
-    // <>
-    //   <nav className="fixed top-0 left-0 right-0 border">
-    //     <div className="container flex justify-between items-center">
-    //       <Link href="/">
-    //         <Image src={logo} alt="Logo" width={150} height={150} className="object-contain cursor-pointer" />
-    //       </Link>
-    //       <div>
-    //         <button
-    //           onClick={toggleMenu}
-    //           className="text-lg text-white hover:text-gray-600 font-semibold"
-    //         >
-    //           Menu
-    //         </button>
-    //       </div>
-    //     </div>
-    //   </nav>
-    //   {isMenuOpen && <Menu closeMenu={toggleMenu} />}
-    // </>
-
     <>
-  <nav className="fixed top-0 left-0 right-0 border">
-    <div className="flex justify-between items-center">
-      <Link href="/">
-        <Image src={logo} alt="Logo" width={125} height={125} className="object-contain cursor-pointer" />
-      </Link>
-      <div className="ml-auto px-4">
-        <button
-          onClick={toggleMenu}
-          className="text-lg text-white hover:text-gray-600 font-inika"
-        >
-          Menu
-        </button>
-      </div>
-    </div>
-  </nav>
-  {isMenuOpen && <Menu closeMenu={toggleMenu} />}
-</>
+    <nav className="fixed top-0 left-0 right-0 border">
+        <div className="flex justify-between items-center">
+        <Link href="/">
+            <Image src={logo} alt="Logo" width={125} height={125} className="object-contain cursor-pointer" />
+        </Link>
+        <div className="ml-auto px-4">
+            <button
+            onClick={toggleMenu}
+            className="text-lg text-white hover:text-gray-600 font-inika"
+            >
+            Menu
+            </button>
+        </div>
+        </div>
+    </nav>
+    {isMenuOpen && <Menu closeMenu={toggleMenu} />}
+    </>
 
 
   );
