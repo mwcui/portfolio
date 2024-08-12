@@ -62,7 +62,7 @@ html, body {
   }
   
   #blocks {
-    width: 105vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;

@@ -80,16 +80,19 @@ const Home = () => {
   return (
     <div className="relative bg-[#0C3B65] min-h-screen">
       {/* Interactive Blocks as the background layer */}
+      <Navbar />
+
       <InteractiveBlocks>
 
       {/* Content layer with Navbar and Logo */}
       <div className="relative z-1000 flex flex-col min-h-screen items-center justify-center">
-        <Navbar />
-        <div className="flex items-center justify-center flex-grow">
-          <Image src={logo} alt="Logo" width={300} height={300} className="object-contain" />
-        </div>
+        
+
       </div>
       </InteractiveBlocks>
+      <div className="flex items-center justify-center flex-grow">
+          <Image src={logo} alt="Logo" width={300} height={300} className="object-contain" />
+        </div>
     </div>
   );
 };
