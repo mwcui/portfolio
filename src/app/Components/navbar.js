@@ -57,7 +57,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0C3B65] bg-opacity-80 p-4">
+      <nav className="fixed top-0 left-0 right-0 z-50  border-white p-4">
         <div className="flex justify-between items-center">
           <Link href="/">
             <Image src={logo} alt="Logo" width={125} height={125} className="object-contain cursor-pointer" />

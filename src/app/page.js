@@ -71,6 +71,41 @@
 // export default Home;
 
 
+
+
+// import Image from 'next/image';
+// import InteractiveBlocks from './Components/mouseeffect';
+// import logo from '/public/logo.svg';
+// import Navbar from './Components/navbar';
+
+// const Home = () => {
+//   return (
+//     <div className="relative bg-[#0C3B65] min-h-screen">
+//       {/* Interactive Blocks as the background layer */}
+//       <div className="flex items-center justify-center flex-grow">
+//           <Image src={logo} alt="Logo" width={300} height={300} className="object-contain" />
+//       </div>
+//       <Navbar />
+
+
+//       <InteractiveBlocks>
+
+//       {/* Content layer with Navbar and Logo */}
+//       {/* <div className="relative z-1000 flex flex-col min-h-screen items-center justify-center">
+        
+
+//       </div> */}
+//       </InteractiveBlocks>
+
+
+//     </div>
+//   );
+// };
+
+// export default Home;
+
+
+
 import Image from 'next/image';
 import InteractiveBlocks from './Components/mouseeffect';
 import logo from '/public/logo.svg';
@@ -78,24 +113,16 @@ import Navbar from './Components/navbar';
 
 const Home = () => {
   return (
-    <div className="relative bg-[#0C3B65] min-h-screen">
-      {/* Interactive Blocks as the background layer */}
+    <div className="relative bg-[#0C3B65] min-h-screen flex flex-col">
       <Navbar />
-
       <InteractiveBlocks>
-
-      {/* Content layer with Navbar and Logo */}
-      <div className="relative z-1000 flex flex-col min-h-screen items-center justify-center">
-        
-
-      </div>
-      </InteractiveBlocks>
-      <div className="flex items-center justify-center flex-grow">
+        {/* Content layer with Logo */}
+        <div className="flex items-center justify-center flex-grow">
           <Image src={logo} alt="Logo" width={300} height={300} className="object-contain" />
         </div>
+      </InteractiveBlocks>
     </div>
   );
 };
 
 export default Home;
-
