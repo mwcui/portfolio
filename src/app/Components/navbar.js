@@ -67,7 +67,7 @@ export default function Navbar() {
               onClick={toggleMenu}
               className="text-lg text-white hover:text-gray-300 font-inika"
             >
-              Menu
+              MENU
             </button>
           </div>
         </div>
