@@ -537,8 +537,8 @@ const InteractiveBlocks = () => {
       blockContainer.innerHTML = '';
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      numCols = Math.ceil((screenWidth + blockSize) / blockSize);
-      numRows = Math.ceil((screenHeight + blockSize) / blockSize);
+      numCols = Math.ceil((screenWidth + blockSize +blockSize) / blockSize);
+      numRows = Math.ceil((screenHeight + blockSize + blockSize) / blockSize);
       const numBlocks = numCols * numRows;
 
       for (let i = 0; i < numBlocks; i++) {
