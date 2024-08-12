@@ -530,7 +530,7 @@ import React, { useEffect } from 'react';
 const InteractiveBlocks = () => {
   useEffect(() => {
     const blockSize = 20;
-    let numCols, numRows; // Declare numCols and numRows in a higher scope
+    let numCols, numRows; // Declare numCols and numRows in a higher scope so that highlightRandomNeighbors() can access it
     const blockContainer = document.getElementById("blocks");
 
     function createBlocks() {
@@ -553,14 +553,15 @@ const InteractiveBlocks = () => {
     function highlightRandomNeighbors() {
       const index = parseInt(this.dataset.index);
       const neighbors = [
-        index - 1,
-        index + 1,
-        index - numCols,
-        index + numCols,
-        index - numCols - 1,
-        index - numCols + 1,
-        index + numCols - 1,
-        index + numCols + 1,
+        // this increases the number of boxes that highlight
+        // index - 1,
+        // index + 1,
+        // index - numCols,
+        // index + numCols,
+        // index - numCols - 1,
+        // index - numCols + 1,
+        // index + numCols - 1,
+        // index + numCols + 1,
       ].filter(
         (i) =>
           i >= 0 &&
