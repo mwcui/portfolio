@@ -156,12 +156,10 @@ const Home = () => {
   return (
     <div className="relative bg-[#0C3B65] min-h-screen flex flex-col">
       <Navbar />
-      <InteractiveBlocks>
-        {/* Content layer with Logo */}
-        <div className="flex items-center justify-center flex-grow">
-          <Image src={logo} alt="Logo" width={300} height={300} className="object-contain" />
+      <InteractiveBlocks />
+        <div className="flex items-center justify-center flex-grow z-10000">
+          <Image src={logo} alt="Logo" width={500} height={500} className="object-contain" />
         </div>
-      </InteractiveBlocks>
     </div>
   );
 };
