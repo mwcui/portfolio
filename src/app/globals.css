@@ -73,8 +73,8 @@ html, body {
   }
   
   .block {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     border: 0.5px solid rgba(255, 255, 255, 0.075);
     transition: border-color 0.3s ease;
   }

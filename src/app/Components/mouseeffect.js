@@ -529,7 +529,7 @@ import React, { useEffect } from 'react';
 
 const InteractiveBlocks = () => {
   useEffect(() => {
-    const blockSize = 50;
+    const blockSize = 20;
     let numCols, numRows; // Declare numCols and numRows in a higher scope
     const blockContainer = document.getElementById("blocks");
 
@@ -537,8 +537,8 @@ const InteractiveBlocks = () => {
       blockContainer.innerHTML = '';
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      numCols = Math.ceil((screenWidth / blockSize)+2);
-      numRows = Math.ceil((screenHeight / blockSize)+2);
+      numCols = Math.ceil((screenWidth + blockSize) / blockSize);
+      numRows = Math.ceil((screenHeight + blockSize) / blockSize);
       const numBlocks = numCols * numRows;
 
       for (let i = 0; i < numBlocks; i++) {
@@ -620,7 +620,7 @@ const InteractiveBlocks = () => {
     };
   }, []);
 
-  return <div id="blocks" style={{ position: 'absolute', top: 0, left: 0, width: '110%', height: '110%' }}></div>;
+  return <div id="blocks" style={{ position: 'absolute', top: 0, left: 0, width: '105%', height: '100%' }}></div>;
 };
 
 export default InteractiveBlocks;
