@@ -537,8 +537,8 @@ const InteractiveBlocks = () => {
       blockContainer.innerHTML = '';
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      numCols = Math.ceil((screenWidth + blockSize +blockSize) / blockSize);
-      numRows = Math.ceil((screenHeight + blockSize + blockSize) / blockSize);
+      numCols = Math.ceil((screenWidth + blockSize + blockSize + blockSize) / blockSize); //the extra + blocksize is just so that we can cover the entire screen. otherwise there were gaps on the screen
+      numRows = Math.ceil((screenHeight + blockSize + blockSize + blockSize) / blockSize);
       const numBlocks = numCols * numRows;
 
       for (let i = 0; i < numBlocks; i++) {
@@ -621,7 +621,7 @@ const InteractiveBlocks = () => {
     };
   }, []);
 
-  return <div id="blocks" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}></div>;
+  return <div id="blocks" style={{ position: 'absolute', top: 0, left: 0, width: '110%', height: '100%' }}></div>;
 };
 
 export default InteractiveBlocks;
