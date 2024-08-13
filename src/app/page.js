@@ -94,6 +94,9 @@
 // export default Home;
 
 
+
+// this stuff works. pre routing code
+
 "use client"
 
 import { useState } from 'react';
@@ -128,3 +131,7 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+

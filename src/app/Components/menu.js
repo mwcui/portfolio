@@ -24,6 +24,8 @@
 // export default Menu;
 
 
+// this stuff works. pre routing
+
 const Menu = ({ closeMenu, onMenuSelect }) => {
 
   const handleSelect = (page) => {
