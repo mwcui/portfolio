@@ -38,6 +38,47 @@
 
 // src/app/Components/template.js
 
+// "use client";
+
+// import { useEffect } from 'react';
+// import { Mouse } from 'moussejs';
+// import InteractiveBlocks from './mouseeffect';
+// import Navbar from './navbar';
+// import { LogoVisibilityProvider } from './LogoVisibilityContext';
+
+// const Template = ({ children }) => {
+//   useEffect(() => {
+//     const mouse = new Mouse({
+//       mouse: 'cirle',
+//       color: '#F5BD02',
+//       mouseHover: false,
+//       mousePointer: false,
+//       el: 'a',
+//       el_hover: true,
+//       mouse_clicked: true,
+//       clrChanged: false,
+//     });
+
+//     mouse.mouse(); // Activate the custom mouse
+//   }, []);
+
+//   return (
+//     <LogoVisibilityProvider>
+//       <div className="relative bg-[#0C3B65] min-h-screen flex flex-col">
+//         <Navbar />
+//         <InteractiveBlocks />
+//         <div className="flex-grow flex items-center justify-center">
+//           {children}
+//         </div>
+//       </div>
+//     </LogoVisibilityProvider>
+//   );
+// };
+
+// export default Template;
+
+
+
 "use client";
 
 import { useEffect } from 'react';
@@ -46,7 +87,7 @@ import InteractiveBlocks from './mouseeffect';
 import Navbar from './navbar';
 import { LogoVisibilityProvider } from './LogoVisibilityContext';
 
-const Template = ({ children }) => {
+const Template = ({ children, onMenuSelect }) => {
   useEffect(() => {
     const mouse = new Mouse({
       mouse: 'cirle',
@@ -65,7 +106,7 @@ const Template = ({ children }) => {
   return (
     <LogoVisibilityProvider>
       <div className="relative bg-[#0C3B65] min-h-screen flex flex-col">
-        <Navbar />
+        <Navbar onMenuSelect={onMenuSelect} />
         <InteractiveBlocks />
         <div className="flex-grow flex items-center justify-center">
           {children}
