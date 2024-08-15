@@ -259,7 +259,7 @@ export default function Navbar({ onMenuSelect }) {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 h-[64.43px] bg-[#0C3B65]">
+      <nav className="fixed top-0 left-0 right-0 z-50 h-[64.43px]">
         <div className="flex justify-between items-center h-full">
           <div className="h-full flex items-center cursor-pointer" onClick={handleLogoClick}>
             {isLogoVisible ? (
@@ -283,7 +283,6 @@ export default function Navbar({ onMenuSelect }) {
             </button>
           </div>
         </div>
-      <InteractiveBlocks />
       </nav>
       {isMenuOpen && <Menu onMenuSelect={handleMenuSelect} closeMenu={toggleMenu} />}
     </>

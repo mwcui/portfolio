@@ -109,10 +109,14 @@ import React, { useEffect } from 'react';
 
 const InteractiveBlocks = () => {
   useEffect(() => {
+
+    // creates global variables that can be referenced by any of the functions
     const blockSize = 20;
     let numCols, numRows;
     const blockContainer = document.getElementById("blocks");
 
+
+    // what generates the blocks on the screen, the blueprint effect
     function createBlocks() {
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
@@ -144,6 +148,7 @@ const InteractiveBlocks = () => {
       }
     }
 
+    // creates the highlight mouse tail effect
     function highlightRandomNeighbors() {
       const index = parseInt(this.dataset.index);
       const neighbors = [].filter(
@@ -153,22 +158,24 @@ const InteractiveBlocks = () => {
           Math.abs((i % numCols) - (index % numCols)) <= 1
       );
 
+      // sets current box highlight and duration of highlight
       this.classList.add("highlight");
       setTimeout(() => {
         this.classList.remove("highlight");
       }, 500);
 
-      shuffleArray(neighbors)
-        .slice(0, 1)
-        .forEach((nIndex) => {
-          const neighbor = blockContainer.children[nIndex];
-          if (neighbor) {
-            neighbor.classList.add("highlight");
-            setTimeout(() => {
-              neighbor.classList.remove("highlight");
-            }, 500);
-          }
-        });
+    
+      // shuffleArray(neighbors)
+      //   .slice(0, 1)
+      //   .forEach((nIndex) => {
+      //     const neighbor = blockContainer.children[nIndex];
+      //     if (neighbor) {
+      //       neighbor.classList.add("highlight");
+      //       setTimeout(() => {
+      //         neighbor.classList.remove("highlight");
+      //       }, 500);
+      //     }
+      //   });
     }
 
     function shuffleArray(array) {
