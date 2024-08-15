@@ -234,6 +234,11 @@ import Image from 'next/image';
 import logo from '/public/logo.svg';
 import Menu from './menu';
 import { useLogoVisibility } from './LogoVisibilityContext';
+import InteractiveBlocks from './mouseeffect'; 
+
+  // added this into the navbar bc when i started scrolling on the creative page, the text and photos
+  // would overlap with the navbar
+  // by adding the bg and InteractiveBlocks to the navbar, the contents of the page now get hidden below as i scroll
 
 export default function Navbar({ onMenuSelect }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -254,7 +259,7 @@ export default function Navbar({ onMenuSelect }) {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 h-[64.43px]">
+      <nav className="fixed top-0 left-0 right-0 z-50 h-[64.43px] bg-[#0C3B65]">
         <div className="flex justify-between items-center h-full">
           <div className="h-full flex items-center cursor-pointer" onClick={handleLogoClick}>
             {isLogoVisible ? (
@@ -278,6 +283,7 @@ export default function Navbar({ onMenuSelect }) {
             </button>
           </div>
         </div>
+      <InteractiveBlocks />
       </nav>
       {isMenuOpen && <Menu onMenuSelect={handleMenuSelect} closeMenu={toggleMenu} />}
     </>
