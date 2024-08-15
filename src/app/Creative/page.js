@@ -270,7 +270,77 @@
 
 // test 3
 
-import React from 'react';
+// import React from 'react';
+// import Image from 'next/image';
+
+// // Importing the images
+// import image1 from '/public/EverestTheVan/Column1/4D2FC80D-BBD9-406E-AA75-3EE5766E0602.JPG';
+// import image2 from '/public/EverestTheVan/Column1/43526335_540335119773642_3633964151634513646_n.jpg';
+// import image3 from '/public/EverestTheVan/Column1/43913765_745471489144624_6794989592274714758_n.jpg';
+// import image4 from '/public/EverestTheVan/Column1/44805728_458688047869595_8855460207580953527_n.jpg';
+// import image5 from '/public/EverestTheVan/Column1/45299541_276334803085163_2005946314950687511_n.jpg';
+// import image6 from '/public/EverestTheVan/Column1/45704660_2162830243956641_3297561469725675227_n.jpg';
+// import image7 from '/public/EverestTheVan/Column1/46556922_1991246224284455_8257869488090615571_n.jpg';
+// import image8 from '/public/EverestTheVan/Column1/46556922_1991246224284455_8257869488090615571_n.jpg';
+// import image9 from '/public/EverestTheVan/Column1/45842265_201957070742904_7103791088184030935_n.jpg';
+
+// const Creative = () => {
+//   const images = [
+//     image1,
+//     image2,
+//     image3,
+//     image4,
+//     image5,
+//     image6,
+//     image7,
+//     image8,
+//     image9,
+//   ];
+
+//   return (
+//     <div className="font-inika text-white justify-center place-self-center text-wrap">
+//       <div className="top-0 pt-28 z-10">
+//         <h1 className="text-6xl font-bold text-center">CREATIVE</h1>
+//       </div>
+//       <div className="pt-8">
+//         <h2 className="text-2xl text-center">Everest the Van</h2>
+//         <hr className="my-4 border-gray-500" />
+//         <p className="text-center">Everest was my experience with #vanlife</p>
+//         <p className="text-center">Would I do it again? Probably Not</p>
+//         <p className="text-center">Was it worth doing? definitely</p>
+//       </div>
+
+//       <div className="flex justify-center">
+//         <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw'}}>
+//           {images.map((image, index) => (
+//             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
+//               <div>
+//                 <Image
+//                   src={image}
+//                   alt={`Photo ${index + 1}`}
+//                   objectFit="cover"
+//                   className="rounded-lg"
+//                   layout="fill"
+//                 />
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Creative;
+
+
+
+
+// testing the image feature
+
+"use client";
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 // Importing the images
@@ -285,6 +355,8 @@ import image8 from '/public/EverestTheVan/Column1/46556922_1991246224284455_8257
 import image9 from '/public/EverestTheVan/Column1/45842265_201957070742904_7103791088184030935_n.jpg';
 
 const Creative = () => {
+  const [selectedImage, setSelectedImage] = useState(null); // State for the selected image
+
   const images = [
     image1,
     image2,
@@ -296,6 +368,14 @@ const Creative = () => {
     image8,
     image9,
   ];
+
+  const handleImageClick = (image) => {
+    setSelectedImage(image); // Set the selected image
+  };
+
+  const handleClose = () => {
+    setSelectedImage(null); // Clear the selected image
+  };
 
   return (
     <div className="font-inika text-white justify-center place-self-center text-wrap">
@@ -314,7 +394,7 @@ const Creative = () => {
         <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw'}}>
           {images.map((image, index) => (
             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
-              <div>
+              <div onClick={() => handleImageClick(image)} className="cursor-pointer">
                 <Image
                   src={image}
                   alt={`Photo ${index + 1}`}
@@ -327,11 +407,43 @@ const Creative = () => {
           ))}
         </div>
       </div>
+
+      {/* Full-screen Image View */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 bg-opacity-90 z-50 flex items-center justify-center">
+          <div className="relative">
+            <Image
+              src={selectedImage}
+              alt="Selected Photo"
+              className="rounded-lg"
+              width={350} // Adjust the width as needed
+              height={350} // Adjust the height as needed
+              objectFit="contain" // Ensure the image is contained within the given dimensions
+            />
+            <button
+              onClick={handleClose}
+              className="absolute top-0 right-0 m-4 text-white text-3xl font-bold"
+            >
+              X
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Creative;
+
+
+
+
+
+
+
+
+
+
 
 
 
