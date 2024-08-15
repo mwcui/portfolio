@@ -99,7 +99,7 @@ const Creative = () => {
   ];
 
   return (
-    <div className="relative text-white min-h-screen">
+    <div className="relative text-white min-h-screen ">
       {/* Sticky Creative Header */}
       <div className="font-inika top-0 pt-28 z-10">
         <h1 className="text-6xl font-bold text-center">CREATIVE</h1>
