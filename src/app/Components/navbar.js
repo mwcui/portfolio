@@ -269,7 +269,7 @@ export default function Navbar({ onMenuSelect }) {
               <div style={{ width: '125px' }} />
             )}
           </div>
-          <div className="ml-auto px-4">
+          <div className="ml-auto pr-4">
             <button
               onClick={toggleMenu}
               className="text-lg text-white hover:text-gray-300 font-inika"
