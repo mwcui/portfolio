@@ -99,9 +99,9 @@ const Creative = () => {
   ];
 
   return (
-    <div className="relative text-white min-h-screen p-8">
+    <div className="relative text-white min-h-screen">
       {/* Sticky Creative Header */}
-      <div className="font-inika top-0 py-4 z-10">
+      <div className="font-inika top-0 pt-28 z-10">
         <h1 className="text-6xl font-bold text-center">CREATIVE</h1>
       </div>
 
@@ -114,27 +114,10 @@ const Creative = () => {
         <p className="text-center">Was it worth doing? definitely</p>
       </div>
 
-      {/* Grid of Images */}
-      {/* <div className="pt-8 grid grid-cols-3 gap-8">
-        {images.map((image, index) => (
-          <div key={index} className="relative">
-            <Image
-              src={image}
-              alt={`Photo ${index + 1}`}
-              // layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
-              width={300}
-              height={300}
-            />
-          </div>
-        ))}
-      </div> */}
-
-<div className="pt-8 grid grid-cols-3 gap-8">
+<div className="pt-8 grid grid-cols-3 gap-2">
   {images.map((image, index) => (
     <div key={index} className="relative w-full" style={{ paddingBottom: '100%' }}>
-      <div className="absolute inset-0">
+      <div className=" ">
         <Image
           src={image}
           alt={`Photo ${index + 1}`}
