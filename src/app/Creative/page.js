@@ -442,7 +442,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import NextImage from 'next/image';  // Renaming Next.js Image component to avoid conflict
+import Image from 'next/image';  // Renaming Next.js Image component to avoid conflict
 
 // Importing Everest Images
 import image1 from '/public/EverestTheVan/Column4.jpeg';
@@ -455,6 +455,7 @@ import image7 from '/public/EverestTheVan/IMG_8273.jpeg';
 import image8 from '/public/EverestTheVan/img044.jpg';
 import image9 from '/public/EverestTheVan/IMG_8928.jpeg';
 
+import ypslogo from '/public/YourPersonalStory/Your_personal_story.svg';
 
 
 const Creative = () => {
@@ -506,7 +507,7 @@ const Creative = () => {
           {images.map((image, index) => (
             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
               <div onClick={() => handleImageClick(image)} className="cursor-pointer">
-                <NextImage
+                <Image
                   src={image}
                   alt={`Photo ${index + 1}`}
                   objectFit="cover"
@@ -523,7 +524,7 @@ const Creative = () => {
       {selectedImage && (
         <div className="fixed inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 bg-opacity-90 z-50 flex items-center justify-center">
           <div className="relative">
-            <NextImage
+            <Image
               src={selectedImage}
               alt="Selected Photo"
               className="rounded-lg"
@@ -543,12 +544,15 @@ const Creative = () => {
       )}
 
 
+
       <div className="pt-32">
+      <div className="flex justify-center">
+        <Image src={ypslogo} alt="Your Personal Story" width={200} height={200} />
+      </div>
         <h2 className="text-2xl text-center">Your Personal Story</h2>
         <hr className="my-4 border-gray-500" />
-        <p className="text-center">Everest was my experience with #vanlife</p>
-        <p className="text-center">Would I do it again? Probably Not</p>
-        <p className="text-center">Was it worth doing? definitely</p>
+        <p className="text-center">Your Personal Story is a project that tells the stories behind photos.</p>
+        <p className="text-center mt-4">“If a picture is worth a thousand words, then a collage tells an entire story”</p>
       </div>
 
       <div className="flex justify-center">
@@ -556,7 +560,7 @@ const Creative = () => {
           {images.map((image, index) => (
             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
               <div onClick={() => handleImageClick(image)} className="cursor-pointer">
-                <NextImage
+                <Image
                   src={image}
                   alt={`Photo ${index + 1}`}
                   objectFit="cover"
@@ -573,7 +577,7 @@ const Creative = () => {
       {selectedImage && (
         <div className="fixed inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 bg-opacity-90 z-50 flex items-center justify-center">
           <div className="relative">
-            <NextImage
+            <Image
               src={selectedImage}
               alt="Selected Photo"
               className="rounded-lg"
