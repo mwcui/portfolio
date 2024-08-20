@@ -25,7 +25,7 @@
 // import image9 from '/public/EverestTheVan/Column1/45842265_201957070742904_7103791088184030935_n.jpg';
 
 // const Creative = () => {
-//   const images = [
+//   const EverestImages = [
 //     img1,
 //     img2,
 //     img3,
@@ -49,7 +49,7 @@
 
 //       <div className="pt-32">
 //         <div className="grid grid-cols-3 gap-8">
-//           {images.map((image, index) => (
+//           {EverestImages.map((image, index) => (
 //             <div key={index} className="relative w-full h-40">
 //               <Image
 //                 src={image}
@@ -77,7 +77,7 @@
 // import React from 'react';
 // import Image from 'next/image';
 
-// // Importing the images
+// // Importing the EverestImages
 // import image1 from '/public/EverestTheVan/Column1/4D2FC80D-BBD9-406E-AA75-3EE5766E0602.JPG';
 // import image2 from '/public/EverestTheVan/Column1/43526335_540335119773642_3633964151634513646_n.jpg';
 // import image3 from '/public/EverestTheVan/Column1/43913765_745471489144624_6794989592274714758_n.jpg';
@@ -89,7 +89,7 @@
 // import image9 from '/public/EverestTheVan/Column1/45842265_201957070742904_7103791088184030935_n.jpg';
 
 // const Creative = () => {
-//   const images = [
+//   const EverestImages = [
 //     image1,
 //     image2,
 //     image3,
@@ -115,7 +115,7 @@
 //       </div>
 
 // <div className="pt-8 grid grid-cols-3 gap-2">
-//   {images.map((image, index) => (
+//   {EverestImages.map((image, index) => (
 //     <div key={index} className="relative w-full" style={{ paddingBottom: '100%' }}>
 //       <div className=" ">
 //         <Image
@@ -144,7 +144,7 @@
 // import React from 'react';
 // import Image from 'next/image';
 
-// // Importing the images
+// // Importing the EverestImages
 // import image1 from '/public/EverestTheVan/Column1/4D2FC80D-BBD9-406E-AA75-3EE5766E0602.JPG';
 // import image2 from '/public/EverestTheVan/Column1/43526335_540335119773642_3633964151634513646_n.jpg';
 // import image3 from '/public/EverestTheVan/Column1/43913765_745471489144624_6794989592274714758_n.jpg';
@@ -156,7 +156,7 @@
 // import image9 from '/public/EverestTheVan/Column1/45842265_201957070742904_7103791088184030935_n.jpg';
 
 // const Creative = () => {
-//   const images = [
+//   const EverestImages = [
 //     image1,
 //     image2,
 //     image3,
@@ -182,7 +182,7 @@
 //       </div>
 
 //       <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '100%', maxWidth: '500px', margin: '0 auto' }}>
-//         {images.map((image, index) => (
+//         {EverestImages.map((image, index) => (
 //           <div key={index} className="relative w-full" style={{ paddingBottom: '100%' }}>
 //             <div>
 //               <Image
@@ -209,7 +209,7 @@
 // import React from 'react';
 // import Image from 'next/image';
 
-// // Importing the images
+// // Importing the EverestImages
 // import image1 from '/public/EverestTheVan/Column1/4D2FC80D-BBD9-406E-AA75-3EE5766E0602.JPG';
 // import image2 from '/public/EverestTheVan/Column1/43526335_540335119773642_3633964151634513646_n.jpg';
 // import image3 from '/public/EverestTheVan/Column1/43913765_745471489144624_6794989592274714758_n.jpg';
@@ -221,7 +221,7 @@
 // import image9 from '/public/EverestTheVan/Column1/45842265_201957070742904_7103791088184030935_n.jpg';
 
 // const Creative = () => {
-//   const images = [
+//   const EverestImages = [
 //     image1,
 //     image2,
 //     image3,
@@ -247,7 +247,7 @@
 //       </div>
 
 //       <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100%', margin: '0 auto' }}>
-//         {images.map((image, index) => (
+//         {EverestImages.map((image, index) => (
 //           <div key={index} className="relative w-full" style={{ paddingBottom: '100%' }}>
 //             <div>
 //               <Image
@@ -273,7 +273,7 @@
 // import React from 'react';
 // import Image from 'next/image';
 
-// // Importing the images
+// // Importing the EverestImages
 // import image1 from '/public/EverestTheVan/Column1/4D2FC80D-BBD9-406E-AA75-3EE5766E0602.JPG';
 // import image2 from '/public/EverestTheVan/Column1/43526335_540335119773642_3633964151634513646_n.jpg';
 // import image3 from '/public/EverestTheVan/Column1/43913765_745471489144624_6794989592274714758_n.jpg';
@@ -285,7 +285,7 @@
 // import image9 from '/public/EverestTheVan/Column1/45842265_201957070742904_7103791088184030935_n.jpg';
 
 // const Creative = () => {
-//   const images = [
+//   const EverestImages = [
 //     image1,
 //     image2,
 //     image3,
@@ -312,7 +312,7 @@
 
 //       <div className="flex justify-center">
 //         <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw'}}>
-//           {images.map((image, index) => (
+//           {EverestImages.map((image, index) => (
 //             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
 //               <div>
 //                 <Image
@@ -343,7 +343,7 @@
 // import React, { useState } from 'react';
 // import Image from 'next/image';
 
-// // Importing the images
+// // Importing the EverestImages
 // import image1 from '/public/EverestTheVan/Column1/4D2FC80D-BBD9-406E-AA75-3EE5766E0602.JPG';
 // import image2 from '/public/EverestTheVan/Column1/43526335_540335119773642_3633964151634513646_n.jpg';
 // import image3 from '/public/EverestTheVan/Column1/43913765_745471489144624_6794989592274714758_n.jpg';
@@ -357,7 +357,7 @@
 // const Creative = () => {
 //   const [selectedImage, setSelectedImage] = useState(null); // State for the selected image
 
-//   const images = [
+//   const EverestImages = [
 //     image1,
 //     image2,
 //     image3,
@@ -392,7 +392,7 @@
 
 //       <div className="flex justify-center">
 //         <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw'}}>
-//           {images.map((image, index) => (
+//           {EverestImages.map((image, index) => (
 //             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
 //               <div onClick={() => handleImageClick(image)} className="cursor-pointer">
 //                 <Image
@@ -444,8 +444,8 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';  // Renaming Next.js Image component to avoid conflict
 
-// Importing Everest Images
-import image1 from '/public/EverestTheVan/Column4.jpeg';
+// Importing EverestImages
+import image1 from '/public/YourPersonalStory/Collage20210221_0002.jpg';
 import image2 from '/public/EverestTheVan/45991404_717704181939089_8783923192192249374_n.jpg';
 import image3 from '/public/EverestTheVan/IMG_5602.jpeg';
 import image4 from '/public/EverestTheVan/52670261_863556043982887_8109390835054743669_n.jpg';
@@ -455,13 +455,17 @@ import image7 from '/public/EverestTheVan/IMG_8273.jpeg';
 import image8 from '/public/EverestTheVan/img044.jpg';
 import image9 from '/public/EverestTheVan/IMG_8928.jpeg';
 
+
+// Importing YPS assets
 import ypslogo from '/public/YourPersonalStory/Your_personal_story.svg';
+import image10 from '/public/YourPersonalStory/Collage20210221_0002.jpg';
+
 
 
 const Creative = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = [
+  const EverestImages = [
     image1,
     image2,
     image3,
@@ -473,13 +477,13 @@ const Creative = () => {
     image9,
   ];
 
-  // Preload images on component mount
+  // Preload EverestImages on component mount
   useEffect(() => {
-    images.forEach((image) => {
+    EverestImages.forEach((image) => {
       const img = new window.Image(); // Using native Image constructor for preloading
       img.src = image.src;
     });
-  }, [images]);
+  }, [EverestImages]);
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
@@ -504,7 +508,7 @@ const Creative = () => {
 
       <div className="flex justify-center">
         <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw' }}>
-          {images.map((image, index) => (
+          {EverestImages.map((image, index) => (
             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
               <div onClick={() => handleImageClick(image)} className="cursor-pointer">
                 <Image
@@ -562,7 +566,7 @@ const Creative = () => {
 
       <div className="flex justify-center">
         <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw' }}>
-          {images.map((image, index) => (
+          {EverestImages.map((image, index) => (
             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
               <div onClick={() => handleImageClick(image)} className="cursor-pointer">
                 <Image
