@@ -444,7 +444,7 @@
 import React, { useState, useEffect } from 'react';
 import NextImage from 'next/image';  // Renaming Next.js Image component to avoid conflict
 
-// Importing the images
+// Importing Everest Images
 import image1 from '/public/EverestTheVan/Column4.jpeg';
 import image2 from '/public/EverestTheVan/45991404_717704181939089_8783923192192249374_n.jpg';
 import image3 from '/public/EverestTheVan/IMG_5602.jpeg';
@@ -454,6 +454,8 @@ import image6 from '/public/EverestTheVan/Column1.jpeg';
 import image7 from '/public/EverestTheVan/IMG_8273.jpeg';
 import image8 from '/public/EverestTheVan/img044.jpg';
 import image9 from '/public/EverestTheVan/IMG_8928.jpeg';
+
+
 
 const Creative = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -539,6 +541,60 @@ const Creative = () => {
           </div>
         </div>
       )}
+
+
+      <div className="pt-32">
+        <h2 className="text-2xl text-center">Your Personal Story</h2>
+        <hr className="my-4 border-gray-500" />
+        <p className="text-center">Everest was my experience with #vanlife</p>
+        <p className="text-center">Would I do it again? Probably Not</p>
+        <p className="text-center">Was it worth doing? definitely</p>
+      </div>
+
+      <div className="flex justify-center">
+        <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw' }}>
+          {images.map((image, index) => (
+            <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
+              <div onClick={() => handleImageClick(image)} className="cursor-pointer">
+                <NextImage
+                  src={image}
+                  alt={`Photo ${index + 1}`}
+                  objectFit="cover"
+                  className="rounded-lg"
+                  layout="fill"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Full-screen Image View */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 bg-opacity-90 z-50 flex items-center justify-center">
+          <div className="relative">
+            <NextImage
+              src={selectedImage}
+              alt="Selected Photo"
+              className="rounded-lg"
+              width={350} // Adjust the width as needed
+              height={350} // Adjust the height as needed
+              objectFit="contain" // Ensure the image is contained within the given dimensions
+              priority // Ensure the image is loaded with priority
+            />
+            <button
+              onClick={handleClose}
+              className="absolute top-0 right-0 m-4 text-white text-3xl"
+            >
+              X
+            </button>
+          </div>
+        </div>
+      )}
+
+
+
+
     </div>
   );
 };
