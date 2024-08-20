@@ -546,10 +546,15 @@ const Creative = () => {
 
 
       <div className="pt-32">
-      <div className="flex justify-center">
-        <Image src={ypslogo} alt="Your Personal Story" width={200} height={200} />
+      <div className="flex justify-center m-4">
+        <Image 
+          src={ypslogo} 
+          alt="Your Personal Story" 
+          width={200} 
+          height={300} 
+        />
       </div>
-        <h2 className="text-2xl text-center">Your Personal Story</h2>
+        <h2 className="text-2xl text-center ">Your Personal Story</h2>
         <hr className="my-4 border-gray-500" />
         <p className="text-center">Your Personal Story is a project that tells the stories behind photos.</p>
         <p className="text-center mt-4">“If a picture is worth a thousand words, then a collage tells an entire story”</p>
