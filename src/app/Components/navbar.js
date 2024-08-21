@@ -113,7 +113,7 @@ export default function Navbar({ onMenuSelect }) {
           <div className="ml-auto pr-4">
             <button
               onClick={toggleMenu}
-              className="text-lg text-white hover:text-gray-300 font-inika"
+              className="text-lg text-white hover:text-gray-300 hover:italic font-inika"
             >
               {selectedMenu} {/* Display the selected menu item */}
             </button>

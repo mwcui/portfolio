@@ -379,7 +379,7 @@ const Creative = () => {
           </div>
         </div>
       )}
-      <div className="m-16" />
+      <div className="m-12" />
     </div>
   );
 };
