@@ -445,7 +445,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';  // Renaming Next.js Image component to avoid conflict
 
 // Importing EverestImages
-import image1 from '/public/YourPersonalStory/Collage20210221_0002.jpg';
+import image1 from '/public/EverestTheVan/Column4.jpeg';
 import image2 from '/public/EverestTheVan/45991404_717704181939089_8783923192192249374_n.jpg';
 import image3 from '/public/EverestTheVan/IMG_5602.jpeg';
 import image4 from '/public/EverestTheVan/52670261_863556043982887_8109390835054743669_n.jpg';
@@ -458,7 +458,9 @@ import image9 from '/public/EverestTheVan/IMG_8928.jpeg';
 
 // Importing YPS assets
 import ypslogo from '/public/YourPersonalStory/Your_personal_story.svg';
-import image10 from '/public/YourPersonalStory/Collage20210221_0002.jpg';
+import image10 from '/public/YourPersonalStory/Collage.jpg';
+import image11 from '/public/YourPersonalStory/collage02.JPG';
+import image12 from '/public/YourPersonalStory/Collage20201208.JPG';
 
 
 
