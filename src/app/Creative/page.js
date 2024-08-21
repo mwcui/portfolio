@@ -266,28 +266,25 @@ const Creative = () => {
 
   return (
     <div className="font-inika text-white justify-center place-self-center text-wrap">
-      <div className="top-0 pt-16 z-10">
-        <h1 className="text-6xl font-bold text-center">CREATIVE</h1>
-      </div>
 
-      <div className="pt-12">
-        <div className="flex justify-center m-4">
+      <div className="pt-16">
+        <div className="flex justify-center m-4 ">
           <Image 
             src={ypslogo} 
             alt="Your Personal Story" 
-            width={200} 
+            width={225} 
             height={300} 
             priority // Load the logo with high priority
           />
         </div>
-        <h2 className="text-2xl text-center">Your Personal Story</h2>
+        <h2 className="text-3xl text-center">Your Personal Story</h2>
         <hr className="my-4 border-t-2 border-white w-[80%] mx-auto" />
-        <p className="text-center">Your Personal Story is a project that tells the stories behind photos.</p>
-        <p className="text-center mt-4">“If a picture is worth a thousand words, then a collage tells an entire story”</p>
+        <p className="text-center text-lg">Your Personal Story is a project that tells the stories behind photos.</p>
+        <p className="text-center mt-4 text-lg">“If a picture is worth a thousand words, then a collage tells an entire story”</p>
       </div>
 
       <div className="flex justify-center">
-        <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw' }}>
+        <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '600px', maxWidth: '100vw' }}>
           {YPSImages.map((image, index) => (
             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
               <div onClick={() => handleImageClick(image)} className="cursor-pointer">
@@ -331,16 +328,16 @@ const Creative = () => {
       )}
 
       {/* Everest the Van */}
-      <div className="pt-20">
-        <h2 className="text-2xl text-center">Everest the Van</h2>
+      <div className="pt-40">
+        <h2 className="text-3xl text-center">Everest the Van</h2>
         <hr className="my-4 border-t-4 border-white w-[80%] mx-auto" />
-        <p className="text-center">Everest was my experience with #vanlife</p>
-        <p className="text-center">Would I do it again? Probably Not</p>
-        <p className="text-center">Was it worth doing? definitely</p>
+        <p className="text-center text-lg">Everest was my experience with #vanlife</p>
+        <p className="text-center text-lg">Would I do it again? Probably Not</p>
+        <p className="text-center text-lg">Was it worth doing? definitely</p>
       </div>
 
       <div className="flex justify-center">
-        <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw' }}>
+        <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '600px', maxWidth: '100vw' }}>
           {EverestImages.map((image, index) => (
             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
               <div onClick={() => handleImageClick(image)} className="cursor-pointer">
