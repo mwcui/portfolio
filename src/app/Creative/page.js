@@ -514,61 +514,14 @@ const Creative = () => {
 
   return (
     <div className="font-inika text-white justify-center place-self-center text-wrap">
-      <div className="top-0 pt-28 z-10">
+
+
+      <div className="top-0 pt-16 z-10">
         <h1 className="text-6xl font-bold text-center">CREATIVE</h1>
       </div>
-      <div className="pt-8">
-        <h2 className="text-2xl text-center">Everest the Van</h2>
-        <hr className="my-4 border-gray-500 w-[80%]" />
-        <p className="text-center">Everest was my experience with #vanlife</p>
-        <p className="text-center">Would I do it again? Probably Not</p>
-        <p className="text-center">Was it worth doing? definitely</p>
-      </div>
 
-      <div className="flex justify-center">
-        <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw' }}>
-          {EverestImages.map((image, index) => (
-            <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
-              <div onClick={() => handleImageClick(image)} className="cursor-pointer">
-                <Image
-                  src={image}
-                  alt={`Photo ${index + 1}`}
-                  objectFit="cover"
-                  className="rounded-lg"
-                  layout="fill"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Full-screen Image View */}
-      {selectedImage && (
-        <div className="fixed inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 bg-opacity-90 z-50 flex items-center justify-center">
-          <div className="relative">
-            <Image
-              src={selectedImage}
-              alt="Selected Photo"
-              className="rounded-lg"
-              width={350} // Adjust the width as needed
-              height={350} // Adjust the height as needed
-              objectFit="contain" // Ensure the image is contained within the given dimensions
-              priority // Ensure the image is loaded with priority
-            />
-            <button
-              onClick={handleClose}
-              className="absolute top-0 right-0 m-4 text-white text-3xl"
-            >
-              X
-            </button>
-          </div>
-        </div>
-      )}
-
-
-
-      <div className="pt-32">
+      
+      <div className="pt-12">
       <div className="flex justify-center m-4">
         <Image 
           src={ypslogo} 
@@ -578,7 +531,7 @@ const Creative = () => {
         />
       </div>
         <h2 className="text-2xl text-center ">Your Personal Story</h2>
-        <hr className="my-4 border-gray-500" />
+        <hr className="my-4 border-t-2 border-white w-[80%] mx-auto" />
         <p className="text-center">Your Personal Story is a project that tells the stories behind photos.</p>
         <p className="text-center mt-4">“If a picture is worth a thousand words, then a collage tells an entire story”</p>
       </div>
@@ -624,7 +577,55 @@ const Creative = () => {
         </div>
       )}
 
+            {/* Everest the Van */}
+      <div className="pt-20">
+        <h2 className="text-2xl text-center">Everest the Van</h2>
+        <hr className="my-4 border-t-4 border-white w-[80%] mx-auto" />
+        <p className="text-center">Everest was my experience with #vanlife</p>
+        <p className="text-center">Would I do it again? Probably Not</p>
+        <p className="text-center">Was it worth doing? definitely</p>
+      </div>
 
+      <div className="flex justify-center">
+        <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw' }}>
+          {EverestImages.map((image, index) => (
+            <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
+              <div onClick={() => handleImageClick(image)} className="cursor-pointer">
+                <Image
+                  src={image}
+                  alt={`Photo ${index + 1}`}
+                  objectFit="cover"
+                  className="rounded-lg"
+                  layout="fill"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Full-screen Image View */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 bg-opacity-90 z-50 flex items-center justify-center">
+          <div className="relative">
+            <Image
+              src={selectedImage}
+              alt="Selected Photo"
+              className="rounded-lg"
+              width={350} // Adjust the width as needed
+              height={350} // Adjust the height as needed
+              objectFit="contain" // Ensure the image is contained within the given dimensions
+              priority // Ensure the image is loaded with priority
+            />
+            <button
+              onClick={handleClose}
+              className="absolute top-0 right-0 m-4 text-white text-3xl"
+            >
+              X
+            </button>
+          </div>
+        </div>
+      )}
 
 
     </div>
