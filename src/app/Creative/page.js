@@ -461,7 +461,12 @@ import ypslogo from '/public/YourPersonalStory/Your_personal_story.svg';
 import image10 from '/public/YourPersonalStory/Collage.jpg';
 import image11 from '/public/YourPersonalStory/collage02.JPG';
 import image12 from '/public/YourPersonalStory/Collage20201208.JPG';
-
+import image13 from '/public/YourPersonalStory/Collage20210104_0001.JPG';
+import image14 from '/public/YourPersonalStory/Collage20210113_0001.JPG';
+import image15 from '/public/YourPersonalStory/Collage20210220_0001.JPG';
+import image16 from '/public/YourPersonalStory/Collage20210220_0002.jpg';
+import image17 from '/public/YourPersonalStory/IMG_1440.jpg';
+import image18 from '/public/YourPersonalStory/Collage20210221_0002.jpg';
 
 
 const Creative = () => {
@@ -477,6 +482,18 @@ const Creative = () => {
     image7,
     image8,
     image9,
+  ];
+
+  const YPSImages = [
+    image10,
+    image11,
+    image12,
+    image13,
+    image14,
+    image15,
+    image16,
+    image17,
+    image18,
   ];
 
   // Preload EverestImages on component mount
@@ -502,7 +519,7 @@ const Creative = () => {
       </div>
       <div className="pt-8">
         <h2 className="text-2xl text-center">Everest the Van</h2>
-        <hr className="my-4 border-gray-500" />
+        <hr className="my-4 border-gray-500 w-[80%]" />
         <p className="text-center">Everest was my experience with #vanlife</p>
         <p className="text-center">Would I do it again? Probably Not</p>
         <p className="text-center">Was it worth doing? definitely</p>
@@ -568,7 +585,7 @@ const Creative = () => {
 
       <div className="flex justify-center">
         <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '500px', maxWidth: '100vw' }}>
-          {EverestImages.map((image, index) => (
+          {YPSImages.map((image, index) => (
             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
               <div onClick={() => handleImageClick(image)} className="cursor-pointer">
                 <Image
@@ -592,8 +609,8 @@ const Creative = () => {
               src={selectedImage}
               alt="Selected Photo"
               className="rounded-lg"
-              width={350} // Adjust the width as needed
-              height={350} // Adjust the height as needed
+              width={400} // Adjust the width as needed
+              height={400} // Adjust the height as needed
               objectFit="contain" // Ensure the image is contained within the given dimensions
               priority // Ensure the image is loaded with priority
             />
