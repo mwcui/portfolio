@@ -265,7 +265,7 @@ const Creative = () => {
   };
 
   return (
-    <div className="font-inika text-white justify-center place-self-center text-wrap">
+    <div className="font-inika text-white justify-center place-self-center text-wrap mb-16">
 
       <div className="pt-16">
         <div className="flex justify-center m-4 ">
@@ -328,7 +328,7 @@ const Creative = () => {
       )}
 
       {/* Everest the Van */}
-      <div className="pt-40">
+      <div className="pt-20">
         <h2 className="text-3xl text-center">Everest the Van</h2>
         <hr className="my-4 border-t-4 border-white w-[80%] mx-auto" />
         <p className="text-center text-lg">Everest was my experience with #vanlife</p>
@@ -379,7 +379,6 @@ const Creative = () => {
           </div>
         </div>
       )}
-      <div className="m-12" />
     </div>
   );
 };

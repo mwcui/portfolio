@@ -109,9 +109,7 @@ const Template = ({ children, onMenuSelect }) => {
       <div className="relative bg-[#0C3B65] min-h-screen flex flex-col">
         <Navbar onMenuSelect={onMenuSelect} />
         <InteractiveBlocks />
-        <div className="flex-grow flex items-center justify-center">
           {children}
-        </div>
       </div>
     </LogoVisibilityProvider>
   );

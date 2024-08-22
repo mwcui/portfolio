@@ -137,6 +137,7 @@ const InteractiveBlocks = () => {
             block.classList.add("block");
             block.dataset.index = i;
             block.addEventListener("mousemove", highlightRandomNeighbors);
+            
             blockContainer.appendChild(block);
           }
         } else if (currentBlocks > numBlocks) {
