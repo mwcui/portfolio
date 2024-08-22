@@ -214,14 +214,14 @@ const About = () => {
       </div>
 
       {/* About Text */}
-      <div className="text-center text-2xl max-w-2xl leading-relaxed" style={{ width: '600px', maxWidth: '100vw' }}>
+      <div className="text-center text-xl max-w-2xl leading-relaxed" style={{ width: '600px', maxWidth: '100vw' }}>
         <p>
           Matthew is an entrepreneur and engineer based in Los Angeles, California. His work spans many organizations including NASA, The Walt Disney Company, and Northrop Grumman.
         </p>
-        <p className="mt-4">
+        <p className="mt-8">
           He is currently building gov-tech products to help local governments across the country better serve their residents.
         </p>
-        <p className="mt-4">
+        <p className="mt-8">
           Outside of building, Matthew enjoys dance, music, travel, reading, and spending time with friends and family.
         </p>
       </div>
