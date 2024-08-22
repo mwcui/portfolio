@@ -178,6 +178,7 @@
 // export default About;
 
 
+'use client'
 
 import Image from 'next/image';
 import profilePic from '/public/About/ProfilePicture.png'; // Replace with your actual image path
@@ -227,7 +228,7 @@ const About = () => {
 
       {/* Social Icons */}
       <div className="flex space-x-6 mt-8 relative"> {/* relative is what allows me to select the icon and have it redirect. why? don't know. artur helped me test and figured it out randomly*/}
-        <a onClick={() => console.log('here')} href='mailto:matthew.w.cui@gmail.com' target='_blank'>
+        <a href='mailto:matthew.w.cui@gmail.com' target='_blank'>
           <Image src={emailIcon} alt="Email Icon" width={48} height={48} className="hover:opacity-75" />
         </a>
         <div onClick={() => handleRedirect('https://www.linkedin.com/in/matthewwcui/')} className="cursor-pointer">
