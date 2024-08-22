@@ -33,12 +33,6 @@ const Menu = ({ closeMenu, onMenuSelect }) => {
           >
             ABOUT
           </li>
-          <li
-            className="hover:text-gray-600 hover:italic cursor-pointer"
-            onClick={() => handleSelect('contact')}
-          >
-            CONTACT
-          </li>
         </ul>
       </div>
     </div>
