@@ -58,8 +58,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import svg1 from '/public/DesigntoKit/Design_to_Kit.svg'; // Replace with your actual path
-import svg2 from '/public/DesigntoKit/image6.svg'; // Replace with your actual path
+import svg1 from '/Users/user/Documents/Portfolio/portfolio_code_v3/portfolio_website/public/SpacecraftBusinessDevelopment/Business Development Tool.003 outline_test.svg'; // Replace with your actual path
+import svg2 from '/Users/user/Documents/Portfolio/portfolio_code_v3/portfolio_website/public/Tables/image (2).svg'; // Replace with your actual path
 
 const Experience = () => {
   return (

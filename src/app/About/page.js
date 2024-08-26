@@ -227,7 +227,7 @@ const About = () => {
       </div>
 
       {/* Social Icons */}
-      <div className="flex space-x-6 mt-8 relative"> {/* relative is what allows me to select the icon and have it redirect. why? don't know. artur helped me test and figured it out randomly*/}
+      <div className="flex space-x-4 mt-8 relative"> {/* relative is what allows me to select the icon and have it redirect. why? don't know. artur helped me test and figured it out randomly*/}
         <a href='mailto:matthew.w.cui@gmail.com' target='_blank'>
           <Image src={emailIcon} alt="Email Icon" width={48} height={48} className="hover:opacity-75" />
         </a>
