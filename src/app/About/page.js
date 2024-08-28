@@ -199,7 +199,7 @@ const About = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pt-16 pb-16">
+    <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pt-16 pb-16 px-4">
 
       <div className="m-10 w-44 h-44 relative">
         <Image
@@ -214,7 +214,7 @@ const About = () => {
       </div>
 
       {/* About Text */}
-      <div className="text-center text-xl max-w-2xl leading-relaxed" style={{ width: '600px', maxWidth: '100vw' }}>
+      <div className="text-center text-xl max-w-2xl leading-relaxed" style={{ width: '600px', maxWidth: '90vw' }}>
         <p>
           Matthew is an entrepreneur and engineer based in Los Angeles, California. His work spans many organizations including NASA, The Walt Disney Company, and Northrop Grumman.
         </p>
