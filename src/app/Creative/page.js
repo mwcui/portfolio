@@ -265,14 +265,14 @@ const Creative = () => {
   };
 
   return (
-    <div className="font-inika text-white justify-center place-self-center text-wrap mb-16">
+    <div className="font-inika text-white justify-center place-self-center text-wrap mb-16 px-4">
 
       <div className="pt-16">
         <div className="flex justify-center m-4 ">
           <Image 
             src={ypslogo} 
             alt="Your Personal Story" 
-            width={225} 
+            width={200} 
             height={300} 
             priority // Load the logo with high priority
           />
