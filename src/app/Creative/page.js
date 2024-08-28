@@ -267,9 +267,9 @@ const Creative = () => {
   return (
     <div className="font-inika text-white justify-center place-self-center text-wrap mb-16 px-4">
 
-      <div className="pt-16">
+      <div className="pt-20">
         <div className="flex justify-center m-4 ">
-          <Image 
+          <Image
             src={ypslogo} 
             alt="Your Personal Story" 
             width={200} 
@@ -284,7 +284,7 @@ const Creative = () => {
       </div>
 
       <div className="flex justify-center">
-        <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '600px', maxWidth: '100vw' }}>
+        <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '600px', maxWidth: '90vw' }}>
           {YPSImages.map((image, index) => (
             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
               <div onClick={() => handleImageClick(image)} className="cursor-pointer">
@@ -337,7 +337,7 @@ const Creative = () => {
       </div>
 
       <div className="flex justify-center">
-        <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '600px', maxWidth: '100vw' }}>
+        <div className="pt-8 grid grid-cols-3 gap-2" style={{ width: '600px', maxWidth: '90vw' }}>
           {EverestImages.map((image, index) => (
             <div key={index} className="relative justify-center" style={{ paddingBottom: '100%' }}>
               <div onClick={() => handleImageClick(image)} className="cursor-pointer">
