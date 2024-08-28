@@ -312,8 +312,8 @@ const Creative = () => {
               src={selectedImage}
               alt="Selected Photo"
               className="rounded-lg"
-              width={400}
-              height={400}
+              width={600}
+              height={600}
               objectFit="contain"
               priority // Ensure the image is loaded with priority
             />
@@ -365,8 +365,8 @@ const Creative = () => {
               src={selectedImage}
               alt="Selected Photo"
               className="rounded-lg"
-              width={350}
-              height={350}
+              width={500}
+              height={500}
               objectFit="contain"
               priority // Ensure the image is loaded with priority
             />
