@@ -126,7 +126,7 @@ html, body {
   .square {
     width: 100px;
     height: 100px;
-    background: #fd552f;
+    background: #0C3B65;
     box-sizing: border-box;
     pointer-events: none;
   }
