@@ -85,3 +85,49 @@ html, body {
     z-index: 5;
   }
   
+
+  /* below is the styling for the block effect */
+
+  /* .square-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 10000;
+    pointer-events: none;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    background: #fd552f;
+    box-sizing: border-box;
+    pointer-events: none;
+  } */
+
+
+
+  .square-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    box-sizing: border-box;
+    z-index: 10000;
+    pointer-events: none;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    background: #fd552f;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+  

@@ -201,7 +201,7 @@ const About = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pt-16 pb-16 px-4">
 
-      <div className="m-10 w-44 h-44 relative">
+      <div className="m-10 w-40 h-40 relative">
         <Image
           src={profilePic}
           alt="Profile Picture of Matthew"
