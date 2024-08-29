@@ -44,7 +44,7 @@
 
 
 
-// testing. getting closer
+// testing. this works perfect
 
 "use client";
 
@@ -65,6 +65,15 @@ const componentsMap = {
 };
 
 const Home = () => {
+  
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowContent(true); // Show content after block effect starts
+    }, 500); // Delay matches the start of the block effect animation
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const [currentComponent, setCurrentComponent] = useState('logo'); // Start with Logo
   const [showContent, setShowContent] = useState(false); // Control visibility of content
 
@@ -73,14 +82,6 @@ const Home = () => {
   };
 
   const CurrentComponent = componentsMap[currentComponent] || Logo;
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowContent(true); // Show content after block effect starts
-    }, 500); // Delay matches the start of the block effect animation
-
-    return () => clearTimeout(timeout);
-  }, []);
 
   return (
     <div>
@@ -99,9 +100,6 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
 
 
 
