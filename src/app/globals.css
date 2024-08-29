@@ -88,29 +88,6 @@ html, body {
 
   /* below is the styling for the block effect */
 
-
-/* 
-  .square-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    box-sizing: border-box;
-    z-index: 10000;
-    pointer-events: none;
-  }
-  
-  .square {
-    width: 100px;
-    height: 100px;
-    background: #0C3B65;
-    box-sizing: border-box;
-    pointer-events: none;
-  } */
-  
-
   .square-container {
     width: 100vw;
     height: 100vh;
@@ -131,3 +108,4 @@ html, body {
     box-sizing: border-box;
     pointer-events: none;
   }
+
