@@ -81,10 +81,10 @@ const BlockEffect = ({ onComplete }) => {
       // Start with squares fully visible and fade them out
       gsap.to(squares, {
         opacity: 0,    // Fade out the squares
-        delay: 0.55,    // Optional delay before the animation starts
+        delay: 0,    // Optional delay before the animation starts
         duration: 0.0005,
         stagger: {
-          each: 0.004,
+          each: 0.003,
           from: "random",
         },
         onComplete: onComplete, // Notify parent when animation is complete

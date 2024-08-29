@@ -69,7 +69,7 @@ const Home = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowContent(true); // Show content after block effect starts
-    }, 500); // Delay matches the start of the block effect animation
+    }, 0); // Delay matches the start of the block effect animation
 
     return () => clearTimeout(timeout);
   }, []);
@@ -87,7 +87,7 @@ const Home = () => {
     <div>
       <BlockEffect onComplete={() => {}} />
       <div
-        className={`transition-opacity duration-500 ease-in-out ${
+        className={`transition-opacity duration-700 ease-in-out ${
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
