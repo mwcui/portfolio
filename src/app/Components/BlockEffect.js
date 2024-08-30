@@ -84,7 +84,7 @@ const BlockEffect = ({ onComplete }) => {
         delay: 0,    // Optional delay before the animation starts
         duration: 0.0005,
         stagger: {
-          each: 0.003,
+          each: 0.005,
           from: "random",
         },
         onComplete: onComplete, // Notify parent when animation is complete
