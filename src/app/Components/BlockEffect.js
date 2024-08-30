@@ -50,7 +50,7 @@ const BlockEffect = ({ onComplete, isInitialLoad }) => {
         { opacity: 0 },  // Start with squares invisible
         {
           opacity: 1,    // Animate to fully visible
-          delay: 0.5,
+          delay: 0,
           duration: 0.0005,
           stagger: {
             each: 0.004,
@@ -59,7 +59,7 @@ const BlockEffect = ({ onComplete, isInitialLoad }) => {
           onComplete: () => {
             gsap.to(squares, {
               opacity: 0, // Fade out the squares
-              delay: 0.7,
+              delay: 0.2,
               duration: 0.0005,
               stagger: {
                 each: 0.004,

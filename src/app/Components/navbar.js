@@ -82,6 +82,12 @@ export default function Navbar({ onMenuSelect }) {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const delayedCloseMenu = () => {
+    setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 500);
+  };
+
   const handleLogoClick = () => {
     onMenuSelect('logo');
     setSelectedMenu('MENU'); // Reset to default when logo is clicked
@@ -90,7 +96,7 @@ export default function Navbar({ onMenuSelect }) {
   const handleMenuSelect = (selection) => {
     onMenuSelect(selection);
     setSelectedMenu(selection.toUpperCase()); // Update the navbar text with the selected menu item
-    setIsMenuOpen(false); // Close the menu after selection
+    delayedCloseMenu();
   };
 
   return (
@@ -120,7 +126,7 @@ export default function Navbar({ onMenuSelect }) {
           </div>
         </div>
       </nav>
-      {isMenuOpen && <Menu onMenuSelect={handleMenuSelect} closeMenu={toggleMenu} />}
+      {isMenuOpen && <Menu onMenuSelect={handleMenuSelect} closeMenu={delayedCloseMenu} />}
     </>
   );
 }
