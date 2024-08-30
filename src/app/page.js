@@ -65,7 +65,10 @@ const componentsMap = {
 };
 
 const Home = () => {
-  
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const [showContent, setShowContent] = useState(false);
+  const [currentComponent, setCurrentComponent] = useState('logo'); // Start with Logo
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowContent(true); // Show content after block effect starts
@@ -74,18 +77,16 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const [currentComponent, setCurrentComponent] = useState('logo'); // Start with Logo
-  const [showContent, setShowContent] = useState(false); // Control visibility of content
-
   const handleMenuSelection = (selection) => {
     setCurrentComponent(selection);
+    setIsInitialLoad(false); // Set to false when menu item is selected
   };
 
   const CurrentComponent = componentsMap[currentComponent] || Logo;
 
   return (
     <div>
-      <BlockEffect onComplete={() => {}} />
+      <BlockEffect onComplete={() => {}} isInitialLoad={isInitialLoad} />
       <div
         className={`transition-opacity duration-700 ease-in-out ${
           showContent ? 'opacity-100' : 'opacity-0'

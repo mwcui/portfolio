@@ -6,7 +6,7 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 
-const BlockEffect = ({ onComplete }) => {
+const BlockEffect = ({ onComplete, isInitialLoad }) => {
   useEffect(() => {
     const squareContainer = document.getElementById("square-container");
     const squareSize = 75;
@@ -44,40 +44,35 @@ const BlockEffect = ({ onComplete }) => {
       }
     }
 
-    // function animateSquares() {
-    //   gsap.fromTo(
-    //     squares,
-    //     { opacity: 0 },  // Start with squares invisible
-    //     {
-    //       opacity: 1,    // Animate to fully visible
-    //       delay: 0.5,
-    //       duration: 0.0005,
-    //       stagger: {
-    //         each: 0.004,
-    //         from: "random",
-    //       },
-    //       onComplete: () => {
-    //         gsap.to(squares, {
-    //           opacity: 0, // Fade out the squares
-    //           delay: 0.7,
-    //           duration: 0.0005,
-    //           stagger: {
-    //             each: 0.004,
-    //             from: "random",
-    //           },
-    //           onComplete: onComplete, // Notify parent when animation is complete
-    //         });
-    //       },
-    //     }
-    //   );
-    // }
+    function animateSquaresFull() {
+      gsap.fromTo(
+        squares,
+        { opacity: 0 },  // Start with squares invisible
+        {
+          opacity: 1,    // Animate to fully visible
+          delay: 0.5,
+          duration: 0.0005,
+          stagger: {
+            each: 0.004,
+            from: "random",
+          },
+          onComplete: () => {
+            gsap.to(squares, {
+              opacity: 0, // Fade out the squares
+              delay: 0.7,
+              duration: 0.0005,
+              stagger: {
+                each: 0.004,
+                from: "random",
+              },
+              onComplete: onComplete, // Notify parent when animation is complete
+            });
+          },
+        }
+      );
+    }
 
-
-
-
-
-
-    function animateSquares() {
+    function animateSquaresHalf() {
       // Start with squares fully visible and fade them out
       gsap.to(squares, {
         opacity: 0,    // Fade out the squares
@@ -93,7 +88,11 @@ const BlockEffect = ({ onComplete }) => {
 
     // Initialize the squares and animate
     createSquares();
-    animateSquares();
+    if (isInitialLoad) {
+      animateSquaresHalf();
+    } else {
+      animateSquaresFull();
+    }
 
     // Cleanup on component unmount
     return () => {
@@ -101,7 +100,7 @@ const BlockEffect = ({ onComplete }) => {
         squareContainer.removeChild(squareContainer.firstChild);
       }
     };
-  }, [onComplete]);
+  }, [onComplete, isInitialLoad]);
 
   return (
     <div
