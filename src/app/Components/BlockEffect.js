@@ -20,6 +20,12 @@ const BlockEffect = ({ onComplete, isInitialLoad }) => {
     squareContainer.style.width = `${numCols * squareSize}px`;
     squareContainer.style.height = `${numRows * squareSize}px`;
 
+    // Calculate the estimated duration for the first half of the animation
+    const animationDuration = (numSquares - 1) * 0.004 + 0.001;
+    const animateSquaresFullMidpoint = animationDuration * 1000; // Convert to milliseconds
+    
+    console.log(`Estimated animation midpoint: ${animateSquaresFullMidpoint} ms`);
+
     let squares = [];
 
     function createSquares() {

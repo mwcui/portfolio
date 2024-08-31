@@ -4,6 +4,7 @@ import logo from '/public/logo.svg';
 import Menu from './menu';
 import { useLogoVisibility } from './LogoVisibilityContext';
 
+
 export default function Navbar({ onMenuSelect }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isLogoVisible } = useLogoVisibility();
