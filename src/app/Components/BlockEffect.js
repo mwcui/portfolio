@@ -45,6 +45,9 @@ const BlockEffect = ({ onComplete, isInitialLoad }) => {
     }
 
     function animateSquaresFull() {
+      const startTime = performance.now();
+      let midpointTime;
+
       gsap.fromTo(
         squares,
         { opacity: 0 },  // Start with squares invisible
@@ -57,15 +60,23 @@ const BlockEffect = ({ onComplete, isInitialLoad }) => {
             from: "random",
           },
           onComplete: () => {
+            midpointTime = performance.now();
+            console.log(`First half duration: ${midpointTime - startTime} ms`);
+
             gsap.to(squares, {
               opacity: 0, // Fade out the squares
-              delay: 0.3,
+              delay: 0.2,
               duration: 0.0005,
               stagger: {
                 each: 0.004,
                 from: "random",
               },
-              onComplete: onComplete, // Notify parent when animation is complete
+              onComplete: () => {
+                const endTime = performance.now();
+                console.log(`Second half duration: ${endTime - midpointTime} ms`);
+                console.log(`Total animation duration: ${endTime - startTime} ms`);
+                onComplete(); // Notify parent when animation is complete
+              },
             });
           },
         }
