@@ -6,7 +6,7 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 
-const BlockEffect = ({ onComplete, isInitialLoad }) => {
+const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
   useEffect(() => {
     const squareContainer = document.getElementById("square-container");
     const squareSize = 75;
@@ -21,10 +21,12 @@ const BlockEffect = ({ onComplete, isInitialLoad }) => {
     squareContainer.style.height = `${numRows * squareSize}px`;
 
     // Calculate the estimated duration for the first half of the animation
-    const animationDuration = (numSquares - 1) * 0.004 + 0.001;
+    const animationDuration = (numSquares - 1) * 0.004 + 0.0005;
     const animateSquaresFullMidpoint = animationDuration * 1000; // Convert to milliseconds
     
     console.log(`Estimated animation midpoint: ${animateSquaresFullMidpoint} ms`);
+
+    onMidpointCalculated(animateSquaresFullMidpoint);
 
     let squares = [];
 
@@ -117,7 +119,7 @@ const BlockEffect = ({ onComplete, isInitialLoad }) => {
         squareContainer.removeChild(squareContainer.firstChild);
       }
     };
-  }, [onComplete, isInitialLoad]);
+  }, [onComplete, isInitialLoad, onMidpointCalculated]);
 
   return (
     <div

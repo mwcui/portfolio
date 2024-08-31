@@ -68,6 +68,7 @@ const Home = () => {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const [currentComponent, setCurrentComponent] = useState('logo'); // Start with Logo
+  const [animationMidpoint, setAnimationMidpoint] = useState(500); // Default to 500ms
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -82,17 +83,25 @@ const Home = () => {
     setIsInitialLoad(false); // Set to false when menu item is selected
   };
 
+  const handleMidpointCalculated = (midpoint) => {
+    setAnimationMidpoint(midpoint);
+  };
+
   const CurrentComponent = componentsMap[currentComponent] || Logo;
 
   return (
     <div>
-      <BlockEffect onComplete={() => {}} isInitialLoad={isInitialLoad} />
+      <BlockEffect 
+        onComplete={() => {}} 
+        isInitialLoad={isInitialLoad}
+        onMidpointCalculated={handleMidpointCalculated}
+      />
       <div
         className={`transition-opacity duration-700 ease-in-out ${
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <Template onMenuSelect={handleMenuSelection}>
+        <Template onMenuSelect={handleMenuSelection} animationMidpoint={animationMidpoint}>
           <CurrentComponent />
         </Template>
       </div>

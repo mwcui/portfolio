@@ -88,7 +88,7 @@ import InteractiveBlocks from './mouseeffect';
 import Navbar from './navbar';
 import { LogoVisibilityProvider } from './LogoVisibilityContext';
 
-const Template = ({ children, onMenuSelect }) => {
+const Template = ({ children, onMenuSelect, animationMidpoint }) => {
   useEffect(() => {
     const mouse = new Mouse({
       mouse: 'cirle',
@@ -107,9 +107,11 @@ const Template = ({ children, onMenuSelect }) => {
   return (
     <LogoVisibilityProvider>
       <div className="relative bg-[#0C3B65] min-h-screen flex flex-col">
-        <Navbar onMenuSelect={onMenuSelect} />
+        <Navbar onMenuSelect={onMenuSelect} animationMidpoint={animationMidpoint} />
         <InteractiveBlocks />
+        <div className="flex-grow flex items-center justify-center">
           {children}
+        </div>
       </div>
     </LogoVisibilityProvider>
   );

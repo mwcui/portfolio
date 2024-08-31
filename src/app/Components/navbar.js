@@ -5,7 +5,7 @@ import Menu from './menu';
 import { useLogoVisibility } from './LogoVisibilityContext';
 
 
-export default function Navbar({ onMenuSelect }) {
+export default function Navbar({ onMenuSelect, animationMidpoint }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isLogoVisible } = useLogoVisibility();
   const [selectedMenu, setSelectedMenu] = useState('MENU'); // State for the selected menu item
@@ -17,7 +17,7 @@ export default function Navbar({ onMenuSelect }) {
   const delayedCloseMenu = () => {
     setTimeout(() => {
       setIsMenuOpen(false);
-    }, 500);
+    }, animationMidpoint);
   };
 
   const handleLogoClick = () => {
