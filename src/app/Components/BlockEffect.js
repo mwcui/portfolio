@@ -73,7 +73,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
 
             gsap.to(squares, {
               opacity: 0, // Fade out the squares
-              delay: 0.2,
+              delay: 0.25,
               duration: 0.0005,
               stagger: {
                 each: 0.004,
