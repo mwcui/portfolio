@@ -36,7 +36,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
         square.classList.add("square");
 
         // Apply background color to squares
-        square.style.backgroundColor = "#ffffff"; // Adjust color as needed
+        square.style.backgroundColor = "#F5F5F4"; // Adjust color as needed
         
         // Calculate row and column position
         const row = Math.floor(i / numCols);

@@ -1,22 +1,16 @@
-const Menu = ({ closeMenu, onMenuSelect }) => {
+const Menu = ({ closeMenu, onMenuSelect, animationMidpoint }) => {
   const handleSelect = (page) => {
     onMenuSelect(page);
     setTimeout(() => {
       closeMenu();
-    }, 500);
-  };
-
-  const delayedCloseMenu = () => {
-    setTimeout(() => {
-      closeMenu();
-    }, 500);
+    }, animationMidpoint);
   };
 
   return (
     <div className="fixed inset-0 flex items-center justify-center checkered-bg z-50 p-4">
       <div className="bg-white w-full max-w-[calc(100vw-120px)] h-full max-h-[calc(100vh-120px)] text-center relative border-8 border-[#0C3B65] flex flex-col justify-center p-4">
         <button
-          onClick={delayedCloseMenu}
+          onClick={closeMenu}
           className="absolute top-4 right-6 text-3xl font-inika hover:text-gray-600"
         >
           X

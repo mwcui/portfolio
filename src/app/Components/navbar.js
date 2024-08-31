@@ -58,7 +58,7 @@ export default function Navbar({ onMenuSelect, animationMidpoint }) {
           </div>
         </div>
       </nav>
-      {isMenuOpen && <Menu onMenuSelect={handleMenuSelect} closeMenu={delayedCloseMenu} />}
+      {isMenuOpen && <Menu onMenuSelect={handleMenuSelect} closeMenu={delayedCloseMenu} animationMidpoint={animationMidpoint} />}
     </>
   );
 }
