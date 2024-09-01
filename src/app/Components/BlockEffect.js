@@ -21,7 +21,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
     squareContainer.style.height = `${numRows * squareSize}px`;
 
     // Calculate the estimated duration for the first half of the animation
-    const animationDuration = (numSquares - 1) * 0.004 + 0.0005;
+    const animationDuration = (numSquares - 1) * 0.002 + 0.0005;
     const animateSquaresFullMidpoint = animationDuration * 1000; // Convert to milliseconds
     
     console.log(`Estimated animation midpoint: ${animateSquaresFullMidpoint} ms`);
@@ -64,7 +64,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
           delay: 0,
           duration: 0.0005,
           stagger: {
-            each: 0.004,
+            each: 0.002,
             from: "random",
           },
           onComplete: () => {
@@ -73,10 +73,10 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
 
             gsap.to(squares, {
               opacity: 0, // Fade out the squares
-              delay: 0.25,
+              delay: 0.05,
               duration: 0.0005,
               stagger: {
-                each: 0.004,
+                each: 0.002,
                 from: "random",
               },
               onComplete: () => {
@@ -98,7 +98,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
         delay: 0,    // Optional delay before the animation starts
         duration: 0.0005,
         stagger: {
-          each: 0.005,
+          each: 0.002,
           from: "random",
         },
         onComplete: onComplete, // Notify parent when animation is complete
