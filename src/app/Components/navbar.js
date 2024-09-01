@@ -2,12 +2,9 @@ import { useState } from 'react';
 import Image from 'next/image';
 import logo from '/public/logo.svg';
 import Menu from './menu';
-import { useLogoVisibility } from './LogoVisibilityContext';
-
 
 export default function Navbar({ onMenuSelect, animationMidpoint }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isLogoVisible } = useLogoVisibility();
   const [selectedMenu, setSelectedMenu] = useState('MENU'); // State for the selected menu item
 
   const toggleMenu = () => {
@@ -21,8 +18,8 @@ export default function Navbar({ onMenuSelect, animationMidpoint }) {
   };
 
   const handleLogoClick = () => {
-    onMenuSelect('logo');
-    setSelectedMenu('MENU'); // Reset to default when logo is clicked
+    onMenuSelect('about');
+    setSelectedMenu('MENU');
   };
 
   const handleMenuSelect = (selection) => {
@@ -36,7 +33,7 @@ export default function Navbar({ onMenuSelect, animationMidpoint }) {
       <nav className="fixed top-0 left-0 right-0 z-50 h-[64.43px]">
         <div className="flex justify-between items-center h-full">
           <div className="h-full flex items-center cursor-pointer" onClick={handleLogoClick}>
-            {isLogoVisible ? (
+
               <Image
                 src={logo}
                 alt="Logo"
@@ -44,9 +41,7 @@ export default function Navbar({ onMenuSelect, animationMidpoint }) {
                 height={125}
                 className="object-contain h-full"
               />
-            ) : (
-              <div style={{ width: '125px' }} />
-            )}
+
           </div>
           <div className="ml-auto pr-4">
             <button

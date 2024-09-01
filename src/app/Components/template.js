@@ -86,7 +86,7 @@ import { useEffect } from 'react';
 import { Mouse } from 'moussejs';
 import InteractiveBlocks from './mouseeffect';
 import Navbar from './navbar';
-import { LogoVisibilityProvider } from './LogoVisibilityContext';
+
 
 const Template = ({ children, onMenuSelect, animationMidpoint }) => {
   useEffect(() => {
@@ -105,7 +105,7 @@ const Template = ({ children, onMenuSelect, animationMidpoint }) => {
   }, []);
 
   return (
-    <LogoVisibilityProvider>
+
       <div className="relative bg-[#0C3B65] min-h-screen flex flex-col">
         <Navbar onMenuSelect={onMenuSelect} animationMidpoint={animationMidpoint} />
         <InteractiveBlocks />
@@ -113,7 +113,7 @@ const Template = ({ children, onMenuSelect, animationMidpoint }) => {
           {children}
         </div>
       </div>
-    </LogoVisibilityProvider>
+
   );
 };
 

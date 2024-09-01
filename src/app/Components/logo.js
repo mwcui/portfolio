@@ -22,12 +22,12 @@ import logo from '/public/logo.svg';
 import { useLogoVisibility } from './LogoVisibilityContext';
 
 const Logo = () => {
-  const { setIsLogoVisible } = useLogoVisibility();
+  // const { setIsLogoVisible } = useLogoVisibility();
 
-  useEffect(() => {
-    setIsLogoVisible(false);
-    return () => setIsLogoVisible(true); // Reset visibility on unmount
-  }, [setIsLogoVisible]);
+  // useEffect(() => {
+  //   setIsLogoVisible(false);
+  //   return () => setIsLogoVisible(true); // Reset visibility on unmount
+  // }, [setIsLogoVisible]);
 
   return (
     <div className="flex items-center justify-center flex-grow z-10000">

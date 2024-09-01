@@ -16,12 +16,13 @@ const componentsMap = {
   experience: Experience,
   contact: Contact,
   about: About,
+  logo: Logo,
 };
 
 const Home = () => {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [showContent, setShowContent] = useState(false);
-  const [currentComponent, setCurrentComponent] = useState('logo'); // Start with Logo
+  const [currentComponent, setCurrentComponent] = useState('about'); // Start with Logo
   const [animationMidpoint, setAnimationMidpoint] = useState(500); // Default to 500ms
 
   useEffect(() => {
@@ -41,7 +42,7 @@ const Home = () => {
     setAnimationMidpoint(midpoint);
   };
 
-  const CurrentComponent = componentsMap[currentComponent] || Logo;
+  const CurrentComponent = componentsMap[currentComponent] || About;
 
   return (
     <div>
