@@ -110,11 +110,7 @@ const Creative = () => {
 
   {/* Full-screen Image View */}
   {selectedImage && (
-    <div className="fixed inset-0 z-10000">
-      <button 
-        className="absolute inset-0 w-full h-full bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 bg-opacity-90"
-        onClick={handleClose}
-      ></button>
+      <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 bg-opacity-90">
       <div className="relative z-51 flex items-center justify-center h-full">
         <div style={{ maxWidth: '90vw' }}>
           <Image
