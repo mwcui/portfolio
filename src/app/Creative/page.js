@@ -110,24 +110,30 @@ const Creative = () => {
 
   {/* Full-screen Image View */}
   {selectedImage && (
-    <div className="fixed inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 bg-opacity-90 z-50 flex items-center justify-center">
-      <div className="relative" style={{ maxWidth: '90vw' }}>
-        <Image
-          src={selectedImage}
-          alt="Selected Photo"
-          className="rounded-lg"
-          width={600}
-          height={600}
-          objectFit="contain"
-          priority // Ensure the image is loaded with priority
-          style={{ maxWidth: '90vw', width: '100%', height: 'auto' }} // Ensure image respects maxWidth on mobile
-        />
-        <button
-          onClick={handleClose}
-          className="absolute top-0 right-0 m-4 text-white text-3xl"
-        >
-          X
-        </button>
+    <div className="fixed inset-0 z-10000">
+      <button 
+        className="absolute inset-0 w-full h-full bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 bg-opacity-90"
+        onClick={handleClose}
+      ></button>
+      <div className="relative z-51 flex items-center justify-center h-full">
+        <div style={{ maxWidth: '90vw' }}>
+          <Image
+            src={selectedImage}
+            alt="Selected Photo"
+            className="rounded-lg"
+            width={600}
+            height={600}
+            objectFit="contain"
+            priority
+            style={{ maxWidth: '90vw', width: '100%', height: 'auto' }}
+          />
+          <button
+            onClick={handleClose}
+            className="absolute top-0 right-0 m-4 text-white text-3xl"
+          >
+            X
+          </button>
+        </div>
       </div>
     </div>
   )}

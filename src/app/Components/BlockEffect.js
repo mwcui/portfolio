@@ -21,7 +21,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
     squareContainer.style.height = `${numRows * squareSize}px`;
 
     // Calculate the estimated duration for the first half of the animation
-    const animationDuration = (numSquares - 1) * 0.002 + 0.0005;
+    const animationDuration = (numSquares - 1) * 0.002 + 0.0005; // .002 is the duration of the fade in, .0005 is the duration of the fade out. based on the GSAP values
     const animateSquaresFullMidpoint = animationDuration * 1000; // Convert to milliseconds
     
     console.log(`Estimated animation midpoint: ${animateSquaresFullMidpoint} ms`);
@@ -130,7 +130,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
         left: 0,
         width: '100vw',
         height: '100vh',
-        zIndex: 10000,
+        zIndex: 1000,
         pointerEvents: 'none',
         backgroundColor: 'transparent', // Ensure container is transparent
       }}
