@@ -17,9 +17,14 @@ export default function Navbar({ onMenuSelect, animationMidpoint }) {
     }, animationMidpoint);
   };
 
+
+
   const handleLogoClick = () => {
-    onMenuSelect('about');
-    setSelectedMenu('MENU');
+    if (selectedMenu !== 'MENU') {
+      onMenuSelect('about');
+      setSelectedMenu('MENU');
+    }
+    // If already on 'ABOUT', do nothing
   };
 
   const handleMenuSelect = (selection) => {
