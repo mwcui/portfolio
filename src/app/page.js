@@ -51,7 +51,7 @@ const Home = () => {
         onMidpointCalculated={handleMidpointCalculated}
       />
       <div
-        className={`transition-opacity duration-700 ease-in-out ${
+        className={`transition-opacity duration-600 ease-in-out ${
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
