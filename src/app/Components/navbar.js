@@ -5,7 +5,6 @@ import Menu from './menu';
 
 export default function Navbar({ onMenuSelect, animationMidpoint, menuText }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [selectedMenu, setSelectedMenu] = useState('MENU'); // State for the selected menu item
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -18,16 +17,14 @@ export default function Navbar({ onMenuSelect, animationMidpoint, menuText }) {
   };
 
   const handleLogoClick = () => {
-    if (selectedMenu !== 'MENU') {
+    if (menuText !== 'MENU') {
       onMenuSelect('about');
-      setSelectedMenu('MENU');
     }
     // If already on 'ABOUT', do nothing
   };
 
   const handleMenuSelect = (selection) => {
     onMenuSelect(selection);
-    setSelectedMenu(selection.toUpperCase()); // Update the navbar text with the selected menu item
     delayedCloseMenu();
   };
 
@@ -36,15 +33,13 @@ export default function Navbar({ onMenuSelect, animationMidpoint, menuText }) {
       <nav className="fixed top-0 left-0 right-0 z-50 h-[64.43px]">
         <div className="flex justify-between items-center h-full">
           <div className="h-full flex items-center cursor-pointer" onClick={handleLogoClick}>
-
-              <Image
-                src={logo}
-                alt="Logo"
-                width={125}
-                height={125}
-                className="object-contain h-full"
-              />
-
+            <Image
+              src={logo}
+              alt="Logo"
+              width={125}
+              height={125}
+              className="object-contain h-full"
+            />
           </div>
           <div className="ml-auto pr-4">
             <button

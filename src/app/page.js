@@ -22,7 +22,7 @@ const componentsMap = {
 const Home = () => {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [showContent, setShowContent] = useState(false);
-  const [currentComponent, setCurrentComponent] = useState('about'); // Start with Logo
+  const [currentComponent, setCurrentComponent] = useState('about'); // Start with About
   const [animationMidpoint, setAnimationMidpoint] = useState(500); // Default to 500ms
   const [menuText, setMenuText] = useState('MENU');
 

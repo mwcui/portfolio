@@ -50,7 +50,7 @@ const About = ({ onMenuSelect }) => {
         <a href='https://github.com/mwcui' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
           GitHub
         </a>
-        <a href='https://www.instagram.com/mwcui/' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
+        {/* <a href='https://www.instagram.com/mwcui/' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
           Instagram
         </a>
         <a href='https://www.tiktok.com/@mwcui' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
@@ -58,7 +58,7 @@ const About = ({ onMenuSelect }) => {
         </a>
         <a href='https://x.com/mwcui' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
           Twitter
-        </a>
+        </a> */}
       </div>
     </div>
   );
