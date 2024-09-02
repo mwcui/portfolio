@@ -24,6 +24,7 @@ const Home = () => {
   const [showContent, setShowContent] = useState(false);
   const [currentComponent, setCurrentComponent] = useState('about'); // Start with Logo
   const [animationMidpoint, setAnimationMidpoint] = useState(500); // Default to 500ms
+  const [menuText, setMenuText] = useState('MENU');
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -35,7 +36,8 @@ const Home = () => {
 
   const handleMenuSelection = (selection) => {
     setCurrentComponent(selection);
-    setIsInitialLoad(false); // Set to false when menu item is selected
+    setIsInitialLoad(false);
+    setMenuText(selection.toUpperCase());
   };
 
   const handleMidpointCalculated = (midpoint) => {
@@ -56,8 +58,12 @@ const Home = () => {
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <Template onMenuSelect={handleMenuSelection} animationMidpoint={animationMidpoint}>
-          <CurrentComponent />
+        <Template 
+          onMenuSelect={handleMenuSelection} 
+          animationMidpoint={animationMidpoint}
+          menuText={menuText}
+        >
+          <CurrentComponent onMenuSelect={handleMenuSelection} />
         </Template>
       </div>
     </div>

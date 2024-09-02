@@ -3,7 +3,7 @@ import Image from 'next/image';
 import logo from '/public/logo.svg';
 import Menu from './menu';
 
-export default function Navbar({ onMenuSelect, animationMidpoint }) {
+export default function Navbar({ onMenuSelect, animationMidpoint, menuText }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState('MENU'); // State for the selected menu item
 
@@ -16,8 +16,6 @@ export default function Navbar({ onMenuSelect, animationMidpoint }) {
       setIsMenuOpen(false);
     }, animationMidpoint);
   };
-
-
 
   const handleLogoClick = () => {
     if (selectedMenu !== 'MENU') {
@@ -53,7 +51,7 @@ export default function Navbar({ onMenuSelect, animationMidpoint }) {
               onClick={toggleMenu}
               className="text-lg text-white hover:text-gray-300 hover:italic font-inika"
             >
-              {selectedMenu} {/* Display the selected menu item */}
+              {menuText}
             </button>
           </div>
         </div>

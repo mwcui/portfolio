@@ -3,7 +3,8 @@
 import Image from 'next/image';
 import profilePic from '/public/About/ProfilePicture.png'; // Replace with your actual image path
 
-const About = () => {
+
+const About = ({ onMenuSelect }) => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pt-16 pb-16 px-4">
@@ -28,8 +29,18 @@ const About = () => {
 
       </div>
 
+      {/* Experience Button */}
+      <div className="mt-8 relative">
+        <button
+          onClick={() => onMenuSelect('experience')}
+          className="bg-white text-[#0C3B65] hover:bg-gray-200 transition-colors duration-200 font-bold py-2 px-4 rounded"
+        >
+          See My Experience
+        </button>
+      </div>
+
       {/* Social Icons */}
-      <div className="flex space-x-4 mt-16 relative">
+      <div className="flex space-x-4 mt-16 relative"> {/* relative allows me to select the text. I dunno why but it is necessary to make the text selectable */}
         <a href='mailto:matthew.w.cui@gmail.com' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
           Email
         </a>
