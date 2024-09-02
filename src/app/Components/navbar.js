@@ -18,7 +18,7 @@ export default function Navbar({ onMenuSelect, animationMidpoint, menuText }) {
 
   const handleLogoClick = () => {
     if (menuText !== 'MENU') {
-      onMenuSelect('about');
+      onMenuSelect('about', 'MENU');  // Pass 'MENU' as the desired menu text
     }
     // If already on 'ABOUT', do nothing
   };

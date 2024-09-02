@@ -25,7 +25,11 @@ const Template = ({ children, onMenuSelect, animationMidpoint, menuText }) => {
   return (
     <LogoVisibilityProvider>
       <div className="relative bg-[#0C3B65] min-h-screen flex flex-col">
-        <Navbar onMenuSelect={onMenuSelect} animationMidpoint={animationMidpoint} menuText={menuText} />
+        <Navbar 
+          onMenuSelect={onMenuSelect} 
+          animationMidpoint={animationMidpoint} 
+          menuText={menuText} 
+        />
         <InteractiveBlocks />
         <div className="flex-grow flex items-center justify-center">
           {children}

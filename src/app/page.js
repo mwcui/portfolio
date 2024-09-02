@@ -34,10 +34,10 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const handleMenuSelection = (selection) => {
+  const handleMenuSelection = (selection, customMenuText) => {
     setCurrentComponent(selection);
     setIsInitialLoad(false);
-    setMenuText(selection.toUpperCase());
+    setMenuText(customMenuText || selection.toUpperCase());
   };
 
   const handleMidpointCalculated = (midpoint) => {
