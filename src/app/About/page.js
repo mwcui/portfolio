@@ -4,19 +4,15 @@ import Image from 'next/image';
 import profilePic from '/public/About/ProfilePicture.png'; // Replace with your actual image path
 
 
-const About = ({ onMenuSelect, delayedMenuSelect, animationMidpoint }) => {
-  
+const About = ({ handlePageTransition, handleBlockEffect, animationMidpoint }) => {
   // handleExperienceClick is delaying both the blockeffect animation and the menu selection
   // i want it to ONLY delay the menu selection
-  const handleExperienceClick = () => {
-    // Trigger the animation immediately
-    //onMenuSelect('experience', 'EXPERIENCE');
 
-    
-    
-    // Delay the actual navigation
+  const handleExperienceClick = () => {
+    handleBlockEffect();
+
     setTimeout(() => {
-      delayedMenuSelect('experience', 'EXPERIENCE');
+      handlePageTransition('experience', 'EXPERIENCE');
     }, animationMidpoint);
   };
 

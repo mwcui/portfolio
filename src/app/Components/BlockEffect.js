@@ -26,7 +26,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
     
     console.log(`Estimated animation midpoint: ${animateSquaresFullMidpoint} ms`);
 
-    onMidpointCalculated(animateSquaresFullMidpoint);
+    onMidpointCalculated(animateSquaresFullMidpoint); // this sends the animateSquaresFullMidpoint to Home
 
     let squares = [];
 

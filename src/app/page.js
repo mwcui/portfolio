@@ -34,23 +34,26 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, []);
 
+
+  // animation for the menu selection
   const handleMenuSelection = (selection, customMenuText) => {
-    setCurrentComponent(selection);
+    setCurrentComponent(selection); // menu selection
     setIsInitialLoad(false); // this triggers the BlockEffect animation
+    setMenuText(customMenuText || selection.toUpperCase()); // updates the menu text
+  };
+
+  // this is for the page transition (NO BLOCK EFFECT). used for logo and "See My Experience" button
+  const handlePageTransition = (selection, customMenuText) => {
+    setCurrentComponent(selection);
     setMenuText(customMenuText || selection.toUpperCase());
+  };
+
+  const handleBlockEffect = () => {
+    setIsInitialLoad(false)
   };
 
   const handleMidpointCalculated = (midpoint) => {
     setAnimationMidpoint(midpoint);
-  };
-
-  const delayedMenuSelection = (selection, customMenuText) => {
-    // Trigger the BlockEffect animation
-    
-    // Delay the actual page transition
-    setTimeout(() => {
-      handleMenuSelection(selection, customMenuText);
-    }, animationMidpoint);
   };
 
   const CurrentComponent = componentsMap[currentComponent] || About;
@@ -73,8 +76,8 @@ const Home = () => {
           menuText={menuText}
         >
           <CurrentComponent 
-            onMenuSelect={handleMenuSelection} 
-            delayedMenuSelect={delayedMenuSelection}
+            handlePageTransition={handlePageTransition}
+            handleBlockEffect={handleBlockEffect}
             animationMidpoint={animationMidpoint}
           />
         </Template>
