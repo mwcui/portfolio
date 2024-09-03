@@ -49,9 +49,9 @@ const Home = () => {
   return (
     <div>
       <BlockEffect 
-        onComplete={() => {}} 
-        isInitialLoad={isInitialLoad}
-        onMidpointCalculated={handleMidpointCalculated}
+        onComplete={() => {}} // for testing purposes. how long does it take
+        isInitialLoad={isInitialLoad} // determines if we run animateSquaresHalf() or animateSquaresFull()
+        onMidpointCalculated={handleMidpointCalculated} // midpoint of animateSquaresFullMidpoint()
       />
       <div
         className={`transition-opacity duration-600 ease-in-out ${
