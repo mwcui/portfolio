@@ -20,8 +20,8 @@ const componentsMap = {
 };
 
 const Home = () => {
-  const [isInitialLoad, setIsInitialLoad] = useState(true);
-  const [showContent, setShowContent] = useState(false);
+  const [isInitialLoad, setIsInitialLoad] = useState(true); // this is used for the block effect animation
+  const [showContent, setShowContent] = useState(false); // this is used for initial page load
   const [currentComponent, setCurrentComponent] = useState('about'); // Start with About
   const [animationMidpoint, setAnimationMidpoint] = useState(500); // Default to 500ms
   const [menuText, setMenuText] = useState('MENU');
@@ -36,7 +36,7 @@ const Home = () => {
 
   const handleMenuSelection = (selection, customMenuText) => {
     setCurrentComponent(selection);
-    setIsInitialLoad(false);
+    setIsInitialLoad(false); // this triggers the BlockEffect animation
     setMenuText(customMenuText || selection.toUpperCase());
   };
 
