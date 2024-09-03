@@ -44,6 +44,16 @@ const Home = () => {
     setAnimationMidpoint(midpoint);
   };
 
+  const delayedMenuSelection = (selection, customMenuText) => {
+    // Trigger the BlockEffect animation
+    // setIsInitialLoad(false);
+    
+    // Delay the actual page transition
+    setTimeout(() => {
+      handleMenuSelection(selection, customMenuText);
+    }, animationMidpoint);
+  };
+
   const CurrentComponent = componentsMap[currentComponent] || About;
 
   return (
@@ -63,7 +73,11 @@ const Home = () => {
           animationMidpoint={animationMidpoint}
           menuText={menuText}
         >
-          <CurrentComponent onMenuSelect={handleMenuSelection} />
+          <CurrentComponent 
+            onMenuSelect={handleMenuSelection} 
+            delayedMenuSelect={delayedMenuSelection}
+            animationMidpoint={animationMidpoint}
+          />
         </Template>
       </div>
     </div>

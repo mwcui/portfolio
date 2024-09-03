@@ -4,7 +4,18 @@ import Image from 'next/image';
 import profilePic from '/public/About/ProfilePicture.png'; // Replace with your actual image path
 
 
-const About = ({ onMenuSelect }) => {
+const About = ({ onMenuSelect, delayedMenuSelect, animationMidpoint }) => {
+  const handleExperienceClick = () => {
+    // Trigger the animation immediately
+    //onMenuSelect('experience', 'EXPERIENCE');
+
+    
+    
+    // Delay the actual navigation
+    setTimeout(() => {
+      delayedMenuSelect('experience', 'EXPERIENCE');
+    }, animationMidpoint);
+  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pt-16 pb-16 px-4">
@@ -32,7 +43,7 @@ const About = ({ onMenuSelect }) => {
       {/* Experience Button */}
       <div className="mt-8 relative">
         <button
-          onClick={() => onMenuSelect('experience')}
+          onClick={handleExperienceClick}
           className="bg-white text-[#0C3B65] hover:bg-gray-200 transition-colors duration-200 font-bold py-2 px-4 rounded"
         >
           See My Experience
