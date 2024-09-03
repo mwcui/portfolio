@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import svg1 from '/public/SpacecraftBusinessDevelopment/Business Development Tool.003 outline_test.svg'; // Replace with your actual path
-import svg2 from '/public/Tables/image.svg'; // Replace with your actual path
+import svg2 from '/public/Tables/image (9).svg'; // Replace with your actual path
 
 const Experience = () => {
   return (

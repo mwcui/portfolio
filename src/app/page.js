@@ -46,7 +46,6 @@ const Home = () => {
 
   const delayedMenuSelection = (selection, customMenuText) => {
     // Trigger the BlockEffect animation
-    // setIsInitialLoad(false);
     
     // Delay the actual page transition
     setTimeout(() => {

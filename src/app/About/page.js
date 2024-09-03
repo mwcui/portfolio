@@ -5,6 +5,9 @@ import profilePic from '/public/About/ProfilePicture.png'; // Replace with your 
 
 
 const About = ({ onMenuSelect, delayedMenuSelect, animationMidpoint }) => {
+  
+  // handleExperienceClick is delaying both the blockeffect animation and the menu selection
+  // i want it to ONLY delay the menu selection
   const handleExperienceClick = () => {
     // Trigger the animation immediately
     //onMenuSelect('experience', 'EXPERIENCE');
