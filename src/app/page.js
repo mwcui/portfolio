@@ -58,7 +58,7 @@ const Home = () => {
   return (
     <div>
       <BlockEffect 
-        onComplete={() => {}} // for testing purposes. how long does it take
+        onComplete={() => {}} // for testing purposes. how long does it take for the animations to complete
         isInitialLoad={isInitialLoad} // determines if we run animateSquaresHalf() or animateSquaresFull()
         onMidpointCalculated={handleMidpointCalculated} // midpoint of animateSquaresFullMidpoint()
       />
