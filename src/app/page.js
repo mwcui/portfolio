@@ -2,13 +2,14 @@
 
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import BlockEffect from './Components/BlockEffect.js';
 import Template from './Components/template.js';
 import Logo from './Components/logo';
 import Creative from './Creative/page.js';
 import Experience from './Experience/page.js';
 import About from './About/page';
+import ScrollToTop from './Components/ScrollToTop';
 
 const componentsMap = {
   //creative: Creative,
@@ -25,6 +26,7 @@ const Home = () => {
   const [menuText, setMenuText] = useState('MENU');
   const [runBlockEffect, setRunBlockEffect] = useState(true); // New state to control block effect
   const [isFading, setIsFading] = useState(false);
+  const containerRef = useRef(null);
 
   // Initial page load effect
   useEffect(() => {
@@ -80,6 +82,8 @@ const Home = () => {
 
   return (
     <div>
+      <ScrollToTop />
+      <div ref={containerRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: 1000 }}></div>
       {runBlockEffect && (
         <BlockEffect 
           onComplete={() => {
