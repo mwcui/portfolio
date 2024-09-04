@@ -12,9 +12,8 @@ import Contact from './Contact/page.js';
 import About from './About/page';
 
 const componentsMap = {
-  creative: Creative,
+  //creative: Creative,
   experience: Experience,
-  contact: Contact,
   about: About,
   logo: Logo,
 };

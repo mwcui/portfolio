@@ -23,12 +23,12 @@ const Menu = ({ closeMenu, onMenuSelect, animationMidpoint }) => {
           >
             EXPERIENCE
           </li>
-          <li
+          {/* <li
             className="hover:text-gray-600 hover:italic cursor-pointer"
             onClick={() => handleSelect('creative')}
           >
             CREATIVE
-          </li>
+          </li> */}
           <li
             className="hover:text-gray-600 hover:italic cursor-pointer"
             onClick={() => handleSelect('logo')}
