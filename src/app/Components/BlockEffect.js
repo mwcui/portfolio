@@ -16,8 +16,8 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
         setScreenConstantFull(0.005); // iPhone size
         setScreenConstantHalf(0.005); // iPhone size
       } else if (window.innerWidth < 1024) {
-        setScreenConstantFull(0.004); // iPad size
-        setScreenConstantHalf(0.0045); // iPad size
+        setScreenConstantFull(0.0025); // iPad size
+        setScreenConstantHalf(0.0025); // iPad size
       } else {
         setScreenConstantFull(0.0015); // Laptop size
         setScreenConstantHalf(0.0015); // Laptop size
