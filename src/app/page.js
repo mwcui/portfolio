@@ -26,6 +26,7 @@ const Home = () => {
   const [animationMidpoint, setAnimationMidpoint] = useState(500); // Default to 500ms. used for initial page load
   const [menuText, setMenuText] = useState('MENU');
   const [runBlockEffect, setRunBlockEffect] = useState(true); // New state to control block effect
+  const [isFading, setIsFading] = useState(false);
 
   // this is for the initial page load
   useEffect(() => {
@@ -45,11 +46,22 @@ const Home = () => {
     setRunBlockEffect(true); // Enable block effect for menu selections
   };
 
-  // this is for the page transition (NO BLOCK EFFECT). used for logo and "See My Experience" button
+  // Modified page transition function
   const handlePageTransition = (selection, customMenuText) => {
-    setCurrentComponent(selection);
-    setMenuText(customMenuText || selection.toUpperCase());
-    setRunBlockEffect(false); // Disable block effect for direct transitions
+    setIsFading(true);
+    setRunBlockEffect(false);
+    
+    setTimeout(() => {
+      setCurrentComponent(selection);
+      setMenuText(customMenuText || selection.toUpperCase());
+      
+      // Use requestAnimationFrame to ensure the DOM has updated before we start fading in
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setIsFading(false);
+        });
+      });
+    }, 300); // Adjust this value to match your desired fade duration
   };
 
   const handleBlockEffect = () => {
@@ -73,8 +85,8 @@ const Home = () => {
         />
       )}
       <div
-        className={`transition-opacity duration-600 ease-in-out ${
-          showContent ? 'opacity-100' : 'opacity-0'
+        className={`transition-opacity duration-300 ease-in-out ${
+          !isFading ? 'opacity-100' : 'opacity-0'
         }`}
       >
         <Template 
