@@ -11,7 +11,7 @@ const About = ({ handlePageTransition, handleBlockEffect, animationMidpoint }) =
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pb-16 px-4">
+    <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pb-16 pt-8 px-4">
 
       <div className="m-10 w-40 h-36 relative">
         <Image
