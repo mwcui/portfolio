@@ -25,7 +25,7 @@ const Home = () => {
   const [currentComponent, setCurrentComponent] = useState('about'); // Start with About
   const [animationMidpoint, setAnimationMidpoint] = useState(500); // Default to 500ms. used for initial page load
   const [menuText, setMenuText] = useState('MENU');
-
+  const [runBlockEffect, setRunBlockEffect] = useState(true); // New state to control block effect
 
   // this is for the initial page load
   useEffect(() => {
@@ -42,12 +42,14 @@ const Home = () => {
     setCurrentComponent(selection); // menu selection
     setIsInitialLoad(false); // this triggers the BlockEffect animation
     setMenuText(customMenuText || selection.toUpperCase()); // updates the menu text
+    setRunBlockEffect(true); // Enable block effect for menu selections
   };
 
   // this is for the page transition (NO BLOCK EFFECT). used for logo and "See My Experience" button
   const handlePageTransition = (selection, customMenuText) => {
     setCurrentComponent(selection);
     setMenuText(customMenuText || selection.toUpperCase());
+    setRunBlockEffect(false); // Disable block effect for direct transitions
   };
 
   const handleBlockEffect = () => {
@@ -63,11 +65,13 @@ const Home = () => {
 
   return (
     <div>
-      <BlockEffect 
-        onComplete={() => {}} // for testing purposes. how long does it take for the animations to complete
-        isInitialLoad={isInitialLoad} // determines if we run animateSquaresHalf() or animateSquaresFull()
-        onMidpointCalculated={handleMidpointCalculated} // midpoint of animateSquaresFullMidpoint()
-      />
+      {runBlockEffect && (
+        <BlockEffect 
+          onComplete={() => {}} // for testing purposes. how long does it take for the animations to complete
+          isInitialLoad={isInitialLoad} // determines if we run animateSquaresHalf() or animateSquaresFull()
+          onMidpointCalculated={handleMidpointCalculated} // midpoint of animateSquaresFullMidpoint()
+        />
+      )}
       <div
         className={`transition-opacity duration-600 ease-in-out ${
           showContent ? 'opacity-100' : 'opacity-0'
