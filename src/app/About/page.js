@@ -9,13 +9,8 @@ const About = ({ handlePageTransition, handleBlockEffect, animationMidpoint }) =
   // i want it to ONLY delay the menu selection
 
   const handleExperienceClick = () => {
-    handleBlockEffect();
-
-
-    setTimeout(() => {  
-      handlePageTransition('experience', 'EXPERIENCE');
-    }, animationMidpoint);
-
+    // Directly transition to the Experience page without block effect
+    handlePageTransition('experience', 'EXPERIENCE');
   };
 
   // const handleSelect = (page) => {
