@@ -28,15 +28,15 @@ const Home = () => {
   const [runBlockEffect, setRunBlockEffect] = useState(true); // New state to control block effect
   const [isFading, setIsFading] = useState(false);
 
-  // this is for the initial page load
+  // Initial page load effect
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowContent(true); // Show content after block effect starts
-    }, 0); // Delay matches the start of the block effect animation
-
-    return () => clearTimeout(timeout);
-  }, []);
-
+    if (isInitialLoad) {
+      const timeout = setTimeout(() => {
+        setShowContent(true); // Show content after block effect starts
+      }, 0);
+      return () => clearTimeout(timeout);
+    }
+  }, [isInitialLoad, animationMidpoint]);
 
   // animation for the menu selection
   const handleMenuSelection = (selection, customMenuText) => {
@@ -86,7 +86,7 @@ const Home = () => {
       )}
       <div
         className={`transition-opacity duration-300 ease-in-out ${
-          !isFading ? 'opacity-100' : 'opacity-0'
+          (showContent && !isFading) ? 'opacity-100' : 'opacity-0'
         }`}
       >
         <Template 
