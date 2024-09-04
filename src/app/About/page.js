@@ -5,23 +5,13 @@ import profilePic from '/public/About/ProfilePicture.png'; // Replace with your 
 
 
 const About = ({ handlePageTransition, handleBlockEffect, animationMidpoint }) => {
-  // handleExperienceClick is delaying both the blockeffect animation and the menu selection
-  // i want it to ONLY delay the menu selection
-
   const handleExperienceClick = () => {
     // Directly transition to the Experience page without block effect
     handlePageTransition('experience', 'EXPERIENCE');
   };
 
-  // const handleSelect = (page) => {
-  //   handleBlockEffect(); // starts the block effect animation
-  //   setTimeout(() => { // waits for the animation to get to the midpoint
-  //     handlePageTransition(page, page.toUpperCase());
-  //   }, animationMidpoint);
-  // };
-
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pt-16 pb-16 px-4">
+    <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pb-16 px-4">
 
       <div className="m-10 w-40 h-36 relative">
         <Image
@@ -36,7 +26,7 @@ const About = ({ handlePageTransition, handleBlockEffect, animationMidpoint }) =
       </div>
 
       {/* About Text */}
-      <div className="text-center text-3xl max-w-2xl leading-relaxed" style={{ width: '750px', maxWidth: '90vw' }}>
+      <div className="text-center text-3xl max-w-2xl leading-relaxed" style={{ width: '650px', maxWidth: '90vw' }}>
         <p>
         Hi, I’m Matthew.
         </p>
@@ -50,7 +40,7 @@ const About = ({ handlePageTransition, handleBlockEffect, animationMidpoint }) =
       <div className="mt-8 relative">
         <button
           onClick={handleExperienceClick}
-          className="bg-white text-[#0C3B65] hover:bg-gray-200 transition-colors duration-200 font-bold py-2 px-4 rounded"
+          className="bg-white text-[#0C3B65] hover:bg-slate-400 transition-colors duration-200 font-bold py-2 px-4 rounded"
         >
           See My Experience
         </button>
