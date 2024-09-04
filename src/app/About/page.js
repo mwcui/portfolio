@@ -11,10 +11,19 @@ const About = ({ handlePageTransition, handleBlockEffect, animationMidpoint }) =
   const handleExperienceClick = () => {
     handleBlockEffect();
 
-    setTimeout(() => {
+
+    setTimeout(() => {  
       handlePageTransition('experience', 'EXPERIENCE');
     }, animationMidpoint);
+
   };
+
+  // const handleSelect = (page) => {
+  //   handleBlockEffect(); // starts the block effect animation
+  //   setTimeout(() => { // waits for the animation to get to the midpoint
+  //     handlePageTransition(page, page.toUpperCase());
+  //   }, animationMidpoint);
+  // };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pt-16 pb-16 px-4">

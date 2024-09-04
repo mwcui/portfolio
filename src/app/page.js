@@ -23,9 +23,11 @@ const Home = () => {
   const [isInitialLoad, setIsInitialLoad] = useState(true); // this is used for the block effect animation
   const [showContent, setShowContent] = useState(false); // this is used for initial page load
   const [currentComponent, setCurrentComponent] = useState('about'); // Start with About
-  const [animationMidpoint, setAnimationMidpoint] = useState(500); // Default to 500ms
+  const [animationMidpoint, setAnimationMidpoint] = useState(500); // Default to 500ms. used for initial page load
   const [menuText, setMenuText] = useState('MENU');
 
+
+  // this is for the initial page load
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowContent(true); // Show content after block effect starts
@@ -52,6 +54,7 @@ const Home = () => {
     setIsInitialLoad(false)
   };
 
+  // this updates the animationMidpoint based on the BlockEffect animation animatesquaresfullmidpoint
   const handleMidpointCalculated = (midpoint) => {
     setAnimationMidpoint(midpoint);
   };

@@ -1,8 +1,8 @@
 const Menu = ({ closeMenu, onMenuSelect, animationMidpoint }) => {
   const handleSelect = (page) => {
-    onMenuSelect(page);
-    setTimeout(() => {
-      closeMenu();
+    onMenuSelect(page); // selects the page from the menu
+    setTimeout(() => { // waits for the animation to complete
+      closeMenu(); // closes the menu
     }, animationMidpoint);
   };
 
