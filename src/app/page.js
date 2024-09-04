@@ -64,7 +64,7 @@ const Home = () => {
           setIsFading(false);
         });
       });
-    }, 300); // Adjust this value to match your desired fade duration
+    }, 325); // Adjust this value to match your desired fade duration
   };
 
   const handleBlockEffect = () => {

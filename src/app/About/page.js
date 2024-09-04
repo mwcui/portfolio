@@ -1,10 +1,34 @@
 'use client'
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import profilePic from '/public/About/ProfilePicture.png'; // Replace with your actual image path
 
 
-const About = ({ handlePageTransition, handleBlockEffect, animationMidpoint }) => {
+const About = ({ handlePageTransition }) => {
+  const [textSize, setTextSize] = useState('text-3xl');
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setTextSize('text-3xl'); // iPhone
+      } else if (window.innerWidth < 1024) {
+        setTextSize('text-3xl'); // iPad
+      } else {
+        setTextSize('text-4xl'); // Laptop and larger
+      }
+    };
+
+    // Set initial size
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const handleExperienceClick = () => {
     // Directly transition to the Experience page without block effect
     handlePageTransition('experience', 'EXPERIENCE');
@@ -26,7 +50,7 @@ const About = ({ handlePageTransition, handleBlockEffect, animationMidpoint }) =
       </div>
 
       {/* About Text */}
-      <div className="text-center text-3xl max-w-2xl leading-relaxed" style={{ width: '650px', maxWidth: '90vw' }}>
+      <div className={`text-center ${textSize} max-w-2xl leading-relaxed`} style={{ width: '750px', maxWidth: '90vw' }}>
         <p>
         Hi, I’m Matthew.
         </p>
