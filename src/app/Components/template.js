@@ -6,7 +6,7 @@ import InteractiveBlocks from './mouseeffect';
 import Navbar from './navbar';
 import { LogoVisibilityProvider } from './LogoVisibilityContext';
 
-const Template = ({ children, onMenuSelect, animationMidpoint, menuText }) => {
+const Template = ({ children, onMenuSelect, animationMidpoint, menuText, handlePageTransition }) => {
   useEffect(() => {
     const mouse = new Mouse({
       mouse: 'cirle',
@@ -29,6 +29,7 @@ const Template = ({ children, onMenuSelect, animationMidpoint, menuText }) => {
           onMenuSelect={onMenuSelect} 
           animationMidpoint={animationMidpoint} 
           menuText={menuText} 
+          handlePageTransition={handlePageTransition}
         />
         <InteractiveBlocks />
         <div className="flex-grow flex items-center justify-center">

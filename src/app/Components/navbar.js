@@ -3,7 +3,7 @@ import Image from 'next/image';
 import logo from '/public/logo.svg';
 import Menu from './menu';
 
-export default function Navbar({ onMenuSelect, animationMidpoint, menuText }) {
+export default function Navbar({ onMenuSelect, animationMidpoint, menuText, handlePageTransition }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,7 +18,7 @@ export default function Navbar({ onMenuSelect, animationMidpoint, menuText }) {
 
   const handleLogoClick = () => {
     if (menuText !== 'MENU') {
-      onMenuSelect('about', 'MENU');  // Pass 'MENU' as the desired menu text
+      handlePageTransition('about', 'MENU');
     }
     // If already on 'ABOUT', do nothing
   };

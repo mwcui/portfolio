@@ -100,6 +100,7 @@ const Home = () => {
           onMenuSelect={handleMenuSelection} 
           animationMidpoint={animationMidpoint}
           menuText={menuText}
+          handlePageTransition={handlePageTransition}
         >
           <CurrentComponent 
             handlePageTransition={handlePageTransition}
