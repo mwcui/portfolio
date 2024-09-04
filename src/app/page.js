@@ -40,10 +40,15 @@ const Home = () => {
 
   // animation for the menu selection
   const handleMenuSelection = (selection, customMenuText) => {
-    setCurrentComponent(selection); // menu selection
-    setIsInitialLoad(false); // this triggers the BlockEffect animation
-    setMenuText(customMenuText || selection.toUpperCase()); // updates the menu text
-    setRunBlockEffect(true); // Enable block effect for menu selections
+    // Always trigger the block effect, even if it's the same page
+    setRunBlockEffect(true);
+    setIsInitialLoad(false);
+
+    // Use setTimeout to ensure the block effect starts before changing the component
+    setTimeout(() => {
+      setCurrentComponent(selection);
+      setMenuText(customMenuText || selection.toUpperCase());
+    }, 0);
   };
 
   // Modified page transition function
@@ -79,7 +84,10 @@ const Home = () => {
     <div>
       {runBlockEffect && (
         <BlockEffect 
-          onComplete={() => {}} // for testing purposes. how long does it take for the animations to complete
+          onComplete={() => {
+            // Reset runBlockEffect after the animation completes
+            setRunBlockEffect(false);
+          }}
           isInitialLoad={isInitialLoad} // determines if we run animateSquaresHalf() or animateSquaresFull()
           onMidpointCalculated={handleMidpointCalculated} // midpoint of animateSquaresFullMidpoint()
         />
