@@ -3,10 +3,37 @@
 
 "use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 
 const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
+  const [screenConstantFull, setScreenConstantFull] = useState(0.006); // Default to iPhone size
+  const [screenConstantHalf, setScreenConstantHalf] = useState(0.006); // Default to iPhone size
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 640) {
+        setScreenConstantFull(0.005); // iPhone size
+        setScreenConstantHalf(0.005); // iPhone size
+      } else if (window.innerWidth < 1024) {
+        setScreenConstantFull(0.004); // iPad size
+        setScreenConstantHalf(0.0045); // iPad size
+      } else {
+        setScreenConstantFull(0.0015); // Laptop size
+        setScreenConstantHalf(0.0015); // Laptop size
+      }
+    }
+
+    // Set the initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useEffect(() => {
     const squareContainer = document.getElementById("square-container");
     const squareSize = 75;
@@ -21,12 +48,12 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
     squareContainer.style.height = `${numRows * squareSize}px`;
 
     // Calculate the estimated duration for the first half of the animation
-    const animationDuration = (numSquares - 1) * 0.001 + 0.0005; // .001 is the duration of the fade in, .0005 is the duration of the fade out. based on the GSAP values
+    const animationDuration = (numSquares - 1) * screenConstantFull + screenConstantFull;
     const animateSquaresFullMidpoint = animationDuration * 1000; // Convert to milliseconds
     
     console.log(`Estimated animation midpoint: ${animateSquaresFullMidpoint} ms`);
 
-    onMidpointCalculated(animateSquaresFullMidpoint); // this sends the animateSquaresFullMidpoint to Home
+    onMidpointCalculated(animateSquaresFullMidpoint);
 
     let squares = [];
 
@@ -64,7 +91,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
           delay: 0,
           duration: 0.0005,
           stagger: {
-            each: 0.001,
+            each: screenConstantFull,
             from: "random",
           },
           onComplete: () => {
@@ -76,7 +103,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
               delay: 0.02,
               duration: 0.0005,
               stagger: {
-                each: 0.001,
+                each: screenConstantFull,
                 from: "random",
               },
               onComplete: () => {
@@ -98,7 +125,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
         delay: 0,    // Optional delay before the animation starts
         duration: 0.0005,
         stagger: {
-          each: 0.002,
+          each: screenConstantHalf,
           from: "random",
         },
         onComplete: onComplete, // Notify parent when animation is complete
@@ -119,7 +146,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
         squareContainer.removeChild(squareContainer.firstChild);
       }
     };
-  }, [onComplete, isInitialLoad, onMidpointCalculated]);
+  }, [onComplete, isInitialLoad, onMidpointCalculated, screenConstantFull, screenConstantHalf]);
 
   return (
     <div

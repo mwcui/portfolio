@@ -8,7 +8,6 @@ import Template from './Components/template.js';
 import Logo from './Components/logo';
 import Creative from './Creative/page.js';
 import Experience from './Experience/page.js';
-import Contact from './Contact/page.js';
 import About from './About/page';
 
 const componentsMap = {

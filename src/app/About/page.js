@@ -36,9 +36,12 @@ const About = ({ handlePageTransition, handleBlockEffect, animationMidpoint }) =
       </div>
 
       {/* About Text */}
-      <div className="text-center text-1xl max-w-2xl leading-relaxed" style={{ width: '750px', maxWidth: '90vw' }}>
+      <div className="text-center text-3xl max-w-2xl leading-relaxed" style={{ width: '750px', maxWidth: '90vw' }}>
         <p>
-        Hi-I’m Matthew. I build software that helps local government streamline operations and solve complex problems.
+        Hi, I’m Matthew.
+        </p>
+        <p className="mt-4">
+        I build software that helps local government streamline operations and solve complex problems.
         </p>
 
       </div>
