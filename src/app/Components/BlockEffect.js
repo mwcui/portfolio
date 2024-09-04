@@ -7,14 +7,19 @@ import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 
 const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
+
+  // these are the screen constants for the block effect animation. Used to calculate the animation duration
   const [screenConstantFull, setScreenConstantFull] = useState(0.006); // Default to iPhone size
   const [screenConstantHalf, setScreenConstantHalf] = useState(0.006); // Default to iPhone size
 
+  // this is the screen constant for the block effect animation
+  // it is used to calculate the animation duration
+  // it is set based on the screen size
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 640) {
-        setScreenConstantFull(0.005); // iPhone size
-        setScreenConstantHalf(0.005); // iPhone size
+        setScreenConstantFull(0.006); // iPhone size
+        setScreenConstantHalf(0.006); // iPhone size
       } else if (window.innerWidth < 1024) {
         setScreenConstantFull(0.0025); // iPad size
         setScreenConstantHalf(0.0025); // iPad size
@@ -34,6 +39,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // this is the block effect animation
   useEffect(() => {
     const squareContainer = document.getElementById("square-container");
     const squareSize = 75;
