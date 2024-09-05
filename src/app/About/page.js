@@ -11,7 +11,7 @@ const About = ({ handlePageTransition }) => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
-        setTextSize('text-3xl'); // iPhone
+        setTextSize('text-2xl'); // iPhone
       } else if (window.innerWidth < 1024) {
         setTextSize('text-3xl'); // iPad
       } else {
@@ -37,7 +37,7 @@ const About = ({ handlePageTransition }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pb-16 pt-8 px-4">
 
-      <div className="m-10 w-40 h-36 relative">
+      <div className="m-10 w-36 h-36 relative">
         <Image
           src={profilePic}
           alt="Profile Picture of Matthew"
