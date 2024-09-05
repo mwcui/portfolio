@@ -9,7 +9,7 @@ import Logo from './Components/logo';
 import Creative from './Creative/page.js';
 import Experience from './Experience/page.js';
 import About from './About/page';
-import ScrollToTop from './Components/ScrollToTop';
+import ScrollToTop from './Components/ScrollToTop'; // this is used to start the content at the top of the page when the page is loaded. test this when i add everything to experience to see if it works
 
 const componentsMap = {
   //creative: Creative,
@@ -26,7 +26,6 @@ const Home = () => {
   const [menuText, setMenuText] = useState('MENU');
   const [runBlockEffect, setRunBlockEffect] = useState(true); // New state to control block effect
   const [isFading, setIsFading] = useState(false);
-  const containerRef = useRef(null);
 
   // Initial page load effect
   useEffect(() => {
@@ -82,8 +81,6 @@ const Home = () => {
 
   return (
     <div>
-      <ScrollToTop />
-      <div ref={containerRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: 1000 }}></div>
       {runBlockEffect && (
         <BlockEffect 
           onComplete={() => {
