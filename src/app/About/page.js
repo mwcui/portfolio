@@ -55,7 +55,7 @@ const About = ({ handlePageTransition }) => {
         Hi, I’m Matthew.
         </p>
         <p className="mt-4">
-        I build software that helps local government streamline operations and solve complex problems.
+        I build software that helps local governments streamline operations and solve complex problems.
         </p>
 
       </div>
