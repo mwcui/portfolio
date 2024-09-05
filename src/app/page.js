@@ -9,7 +9,6 @@ import Logo from './Components/logo';
 import Creative from './Creative/page.js';
 import Experience from './Experience/page.js';
 import About from './About/page';
-import ScrollToTop from './Components/ScrollToTop'; // this is used to start the content at the top of the page when the page is loaded. test this when i add everything to experience to see if it works
 
 const componentsMap = {
   //creative: Creative,
