@@ -10,7 +10,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
 
   // these are the screen constants for the block effect animation. Used to calculate the animation duration
   const [screenConstantFull, setScreenConstantFull] = useState(0.006); // Default to iPhone size
-  const [screenConstantHalf, setScreenConstantHalf] = useState(0.006); // Default to iPhone size
+  const [screenConstantHalf, setScreenConstantHalf] = useState(0.07); // Default to iPhone size
 
   // this is the screen constant for the block effect animation
   // it is used to calculate the animation duration
@@ -19,13 +19,13 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
     function handleResize() {
       if (window.innerWidth < 640) {
         setScreenConstantFull(0.006); // iPhone size
-        setScreenConstantHalf(0.006); // iPhone size
+        setScreenConstantHalf(0.008); // iPhone size
       } else if (window.innerWidth < 1024) {
         setScreenConstantFull(0.0025); // iPad size
         setScreenConstantHalf(0.0025); // iPad size
       } else {
         setScreenConstantFull(0.0015); // Laptop size
-        setScreenConstantHalf(0.003); // Laptop size
+        setScreenConstantHalf(0.002); // Laptop size
       }
     }
 
