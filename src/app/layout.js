@@ -6,18 +6,16 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "mwcui",
   description: "Matthew's Portfolio",
-  icons: {
-    icon: '/browsericon.svg',
-    apple: '/browsericon.svg',
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/browsericon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/browsericon.svg" />
+        <link rel="icon" href="/BrowserIcon/favicon.ico" sizes="any" />
+        <link rel="icon" href="/BrowserIcon/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="icon" href="/BrowserIcon/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/BrowserIcon/apple-touch-icon.png" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
