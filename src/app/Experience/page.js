@@ -1,3 +1,6 @@
+
+"use client"
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 import ArtistAnalytics1 from '/public/ArtistAnalytics/Symphony_1tr-01 (3).svg';
