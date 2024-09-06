@@ -24,18 +24,18 @@ const Experience = () => {
         </div>
 
         {/* Selected Image Display */}
-        <div className="w-full mx-auto">
-        <div className="mb-8">
+        <div className="mb-8 relative">
           <Image
             src={selectedImage.src}
             alt={selectedImage.alt}
-            width={800}
+            width={1000}
             height={562}
             objectFit="contain"
             className="rounded-lg"
           />
-          <p className="text-center mt-2 text-xl">{selectedImage.title}</p>
-        </div>
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-sm">
+            {selectedImage.title}
+          </p>
         </div>
 
         {/* Photo Slider */}
@@ -44,13 +44,13 @@ const Experience = () => {
             {images.map((image, index) => (
               <div 
                 key={index} 
-                className={`flex-shrink-0 bg-gray-200 rounded-lg overflow-hidden cursor-pointer transition-all duration-300 ${selectedImage.src === image.src ? 'ring-4 ring-blue-500' : 'hover:ring-2 hover:ring-blue-300'}`}
+                className={`flex-shrink-0 bg-gray-200 rounded-lg overflow-hidden cursor-pointer ${selectedImage.src === image.src ? 'border-2 ring-blue-500' : 'hover:border-2 hover:ring-blue-300'}`}
                 onClick={() => setSelectedImage(image)}
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  width={200}
+                  width={300}
                   height={112}
                   objectFit="cover"
                 />
