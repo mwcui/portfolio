@@ -50,7 +50,7 @@ const About = ({ handlePageTransition }) => {
       </div>
 
       {/* About Text */}
-      <div className={`text-center ${textSize} max-w-2xl leading-relaxed`} style={{ width: '750px', maxWidth: '90vw' }}>
+      <div className={`text-center ${textSize} max-w-2xl leading-relaxed`} style={{ width: '600px', maxWidth: '90vw' }}>
         <p>
         Hi, I’m Matthew.
         </p>
