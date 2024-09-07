@@ -42,7 +42,7 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
         {/* Photo Slider */}
-        <div className="w-4/5 overflow-x-auto relative bg-gray-600 scrollbar-hide-auto hover:overflow-x-scroll">
+        <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
           <div className="flex space-x-4 min-w-max">
             {images.map((image, index) => (
               <div 
