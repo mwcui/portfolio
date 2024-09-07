@@ -19,14 +19,14 @@ const Experience = () => {
 
   return (
         <div className="flex flex-col items-center text-white font-inika py-10 px-4">
-        <div className="w-[800px] max-w-[90vw]">
+        <div className="w-[700px] max-w-[90vw]">
         {/* Top Text */}
         <div className="mb-8 text-center">
         <h1 className="text-4xl font-bold">Project: Design to Kit</h1>
         </div>
 
         {/* Selected Image Display */}
-        <div className="mb-8 relative">
+        <div className=" relative">
           <Image
             src={selectedImage.src}
             alt={selectedImage.alt}
@@ -39,9 +39,9 @@ const Experience = () => {
           </p>
         </div>
 
-        <div className="w-full flex justify-center p-1">
+        <div className="w-full flex justify-center py-3">
         {/* Photo Slider */}
-        <div className="w-4/5 overflow-x-auto relative">
+        <div className="w-4/5 overflow-x-auto relative bg-gray-600">
           <div className="flex space-x-4 min-w-max">
             {images.map((image, index) => (
               <div 
@@ -62,7 +62,8 @@ const Experience = () => {
           </div>
         </div>
         </div>
-        <div className="mt-4">
+
+        <div className="">
           <Image
                 src={ArtistAnalyticsTable}
                 alt={"First SVG"}
