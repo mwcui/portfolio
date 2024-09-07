@@ -3,30 +3,31 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import ArtistAnalytics1 from '/public/ArtistAnalytics/Symphony_1tr-01 (3).svg';
-import ArtistAnalyticsTable from '/public/Tables/image.svg';
+import ArtistAnalytics2 from '/public/ArtistAnalytics/Symphony_2 Outline.svg';
+import ArtistAnalytics3 from '/public/ArtistAnalytics/Symphony_3 Outline.svg';
+import ArtistAnalyticsTable from '/public/Tables/image (1).svg';
 // Import additional images as needed
 
 const Experience = () => {
   const images = [
     { src: ArtistAnalytics1, alt: "First SVG", title: "Artist Analytics 1" },
-    { src: ArtistAnalyticsTable, alt: "Second SVG", title: "Artist Analytics Table" },
-    { src: ArtistAnalytics1, alt: "Third SVG", title: "Artist Analytics 2" },
-    { src: ArtistAnalyticsTable, alt: "Fourth SVG", title: "Another Table" },
+    { src: ArtistAnalytics2, alt: "Second SVG", title: "Artist Analytics 2" },
+    { src: ArtistAnalytics3, alt: "Third SVG", title: "Artist Analytics 3" },
     // Add more images as needed
   ];
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
-        <div className="flex flex-col items-center text-white font-inika py-10 px-4">
+    <div className="flex flex-col items-center text-white font-inika py-10 px-4">
         <div className="w-[700px] max-w-[90vw]">
         {/* Top Text */}
-        <div className="mb-8 text-center">
-        <h1 className="text-4xl font-bold">Project: Design to Kit</h1>
+        <div className="mb-4 ">
+        <h1 className="text-2xl font-bold">Project: Artist Analytics</h1>
         </div>
 
         {/* Selected Image Display */}
-        <div className=" relative">
+        <div className="relative">
           <Image
             src={selectedImage.src}
             alt={selectedImage.alt}
@@ -63,7 +64,7 @@ const Experience = () => {
         </div>
         </div>
 
-        <div className="">
+        <div className="relative">
           <Image
                 src={ArtistAnalyticsTable}
                 alt={"First SVG"}
@@ -72,10 +73,10 @@ const Experience = () => {
                 objectFit="cover"
               />
           </div>
+              </div>
 
-
-      </div>
     </div>
+
 
 
     
