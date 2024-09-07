@@ -31,23 +31,23 @@ const Experience = () => {
           <Image
             src={selectedImage.src}
             alt={selectedImage.alt}
-            width={1000}
+            width={800}
             height={562}
             objectFit="contain"
-            className="rounded-lg"
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-sm">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
             {selectedImage.title}
           </p>
         </div>
 
+        <div className="w-full flex justify-center p-1">
         {/* Photo Slider */}
-        <div className="w-full overflow-x-auto pb-2 relative">
+        <div className="w-4/5 overflow-x-auto relative">
           <div className="flex space-x-4 min-w-max">
             {images.map((image, index) => (
               <div 
                 key={index} 
-                className={`flex-shrink-0 bg-gray-200 rounded-lg overflow-hidden cursor-pointer ${selectedImage.src === image.src ? 'border-2 ring-blue-500' : 'hover:border-2 hover:ring-blue-300'}`}
+                className={`flex-shrink-0 bg-gray-200 overflow-hidden cursor-pointer ${selectedImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
                 onClick={() => setSelectedImage(image)}
               >
                 <Image
@@ -55,13 +55,13 @@ const Experience = () => {
                   alt={image.alt}
                   width={300}
                   height={112}
-                  objectFit="cover"
+                  objectFit="contain"
                 />
               </div>
             ))}
           </div>
         </div>
-
+        </div>
         <div className="mt-4">
           <Image
                 src={ArtistAnalyticsTable}
