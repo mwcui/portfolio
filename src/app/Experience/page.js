@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState } from 'react';
@@ -47,16 +46,17 @@ const Experience = () => {
             {images.map((image, index) => (
               <div 
                 key={index} 
-                className={`flex-shrink-0 bg-gray-200 overflow-hidden cursor-pointer ${selectedImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                className={`flex-shrink-0  overflow-hidden cursor-pointer ${selectedImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
                 onClick={() => setSelectedImage(image)}
               >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={300}
-                  height={112}
-                  objectFit="contain"
-                />
+                <div className="h-28 w-48 relative">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -132,7 +132,6 @@ export default Experience;
 //        height={450}
 //        objectFit="cover"
 //      />
-// </div>
 // </div>
 // </div>
 // </div>
