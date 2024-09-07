@@ -42,12 +42,12 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
         {/* Photo Slider */}
-        <div className="w-4/5 overflow-x-auto relative bg-gray-600">
+        <div className="w-4/5 overflow-x-auto relative bg-gray-600 scrollbar-hide-auto hover:overflow-x-scroll">
           <div className="flex space-x-4 min-w-max">
             {images.map((image, index) => (
               <div 
                 key={index} 
-                className={`flex-shrink-0  overflow-hidden cursor-pointer ${selectedImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
                 onClick={() => setSelectedImage(image)}
               >
                 <div className="h-28 w-48 relative">
