@@ -21,13 +21,13 @@ import ProgramAffordabilityTable from '/public/Tables/image (7).svg';
 import SpacecraftBusinessDevelopment1 from '/public/SpacecraftBusinessDevelopment/Business Development Tool-01.svg';
 import SpacecraftBusinessDevelopment2 from '/public/SpacecraftBusinessDevelopment/Business Development Tool outline.svg';
 import SpacecraftBusinessDevelopment3 from '/public/SpacecraftBusinessDevelopment/Business Development Tool.003 outline_test.svg';
-import SpacecraftBusinessDevelopmentTable from '/public/Tables/image (8).svg';
+import SpacecraftBusinessDevelopmentTable from '/public/Tables/image (6).svg';
 
-import MechanicalDesign1 from '/public/ElectromechanicalDesign/Mechanical Design_test.svg';
-import MechanicalDesign2 from '/public/ElectromechanicalDesign/Mechanical Design.svg';
-import MechanicalDesign3 from '/public/ElectromechanicalDesign/mechanical_design - 1 SVG.svg';
-import MechanicalDesign4 from '/public/ElectromechanicalDesign/mechanical_design-1_test.svg';
-import MechanicalDesignTable from '/public/Tables/image (9).svg';
+import ElectromechanicalDesign1 from '/public/ElectromechanicalDesign/Mechanical Design_test.svg';
+import ElectromechanicalDesign2 from '/public/ElectromechanicalDesign/mechanical_design-1_test.svg';
+import ElectromechanicalDesignTable from '/public/Tables/image (5).svg';
+
+import DisneylandTable from '/public/Tables/image (8).svg';
 
 
 
@@ -55,12 +55,18 @@ const Experience = () => {
     { src: SpacecraftBusinessDevelopment3, alt: "Third SVG", title: "Spacecraft Business Development 3" },
   ];
 
+  const ElectromechanicalDesignImages = [
+    { src: ElectromechanicalDesign1, alt: "First SVG", title: "Electromechanical Design 1" },
+    { src: ElectromechanicalDesign2, alt: "Second SVG", title: "Electromechanical Design 2" },
+  ];
+
+
 
   const [selectedArtistAnalyticsImage, setSelectedArtistAnalyticsImage] = useState(ArtistAnalyticsImages[0]);
   const [selectedEngineeringandSciencesImage, setSelectedEngineeringandSciencesImage] = useState(EngineeringandSciencesImages[0]);
   const [selectedDesigntoKitImage, setSelectedDesigntoKitImage] = useState(DesigntoKitImages[0]);
   const [selectedSpacecraftBusinessDevelopmentImage, setSelectedSpacecraftBusinessDevelopmentImage] = useState(SpacecraftBusinessDevelopmentImages[0]);
-
+  const [selectedElectromechanicalDesignImage, setSelectedElectromechanicalDesignImage] = useState(ElectromechanicalDesignImages[0]);
 
   return (
     <div className="flex flex-col items-center text-white font-inika pt-20">
@@ -312,6 +318,80 @@ const Experience = () => {
       </div>
 
 
+      {/*Electromechanical Design*/}
+      <div className="w-[700px] max-w-[90vw]">
+        {/* Top Text */}
+        <div className="mb-4">
+          <h1 className="text-2xl">Electromechanical Design</h1>
+        </div>
+
+        {/* Selected Image Display */}
+        <div className="relative">
+          <Image
+            src={selectedElectromechanicalDesignImage.src}
+            alt={selectedElectromechanicalDesignImage.alt}
+            width={800}
+            height={562}
+            objectFit="contain"
+          />
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
+            {selectedElectromechanicalDesignImage.title}
+          </p>
+        </div>
+
+        <div className="w-full flex justify-center py-3">
+          {/* Photo Slider */}
+          <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+            <div className="flex space-x-4 place-content-center">
+              {ElectromechanicalDesignImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedElectromechanicalDesignImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedElectromechanicalDesignImage(image)}
+                >
+                  {/* the width and height are restricting the images */}
+                  <div className="w-44 h-[100%] content-center">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="relative mb-20">
+          <Image
+            src={ElectromechanicalDesignTable}
+            alt={"First SVG"}
+            width={800}
+            height={450}
+            objectFit="cover"
+          />
+        </div>
+      </div>
+
+
+
+      {/*Disneyland*/}
+      <div className="w-[700px] max-w-[90vw]">
+        {/* Top Text */}
+        <div className="mb-4">
+          <h1 className="text-2xl">Disneyland</h1>
+        </div>
+
+        <div className="relative mb-20">
+          <Image
+            src={DisneylandTable}
+            alt={"First SVG"}
+            width={800}
+            height={450}
+            objectFit="cover"
+          />
+        </div>
+      </div>
 
 
 
