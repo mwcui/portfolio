@@ -9,14 +9,14 @@ import ArtistAnalyticsTable from '/public/Tables/image (1).svg';
 // Import additional images as needed
 
 const Experience = () => {
-  const images = [
+  const ArtistAnalyticsImages = [
     { src: ArtistAnalytics1, alt: "First SVG", title: "Artist Analytics 1" },
     { src: ArtistAnalytics2, alt: "Second SVG", title: "Artist Analytics 2" },
     { src: ArtistAnalytics3, alt: "Third SVG", title: "Artist Analytics 3" },
     // Add more images as needed
   ];
 
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [selectedImage, setSelectedImage] = useState(ArtistAnalyticsImages[0]);
 
   return (
     <div className="flex flex-col items-center text-white font-inika py-10">
@@ -44,7 +44,7 @@ const Experience = () => {
         {/* Photo Slider */}
         <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
           <div className="flex space-x-4">
-            {images.map((image, index) => (
+            {ArtistAnalyticsImages.map((image, index) => (
               <div 
                 key={index} 
                 className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
@@ -89,50 +89,3 @@ const Experience = () => {
 
 export default Experience;
 
-
-
-
-
-
-// {/* SVG Files */}
-// <div className="w-full mx-auto">
-// <div className="mb-8">
-// <Image
-//  src={ArtistAnalytics1}
-//  alt="First SVG"
-//  layout="responsive"
-//  width={600}
-//  height={360} // Adjust the height proportionally to the width
-//  className="object-cover"
-// />
-// </div>
-
-
-// {/* Photo Slider */}
-// <div className="w-full overflow-x-auto pb-2 relative"> {/* relative allows me to put the images on top of the blocks. I dunno why */}
-// <div className="flex space-x-4 min-w-max">
-//  {images.map((image, index) => (
-//    <div key={index} className="flex-shrink-0 bg-gray-200 rounded-lg overflow-hidden">
-//      <Image
-//        src={image.src}
-//        alt={image.alt}
-//        width={800}
-//        height={450}
-//        objectFit="cover"
-//      />
-//    </div>
-//  ))}
-// </div>
-// </div>
-
-// <div className="mt-4">
-// <Image
-//        src={ArtistAnalyticsTable}
-//        alt={"First SVG"}
-//        width={800}
-//        height={450}
-//        objectFit="cover"
-//      />
-// </div>
-// </div>
-// </div>
