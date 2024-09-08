@@ -19,7 +19,7 @@ const Experience = () => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
-    <div className="flex flex-col items-center text-white font-inika py-10 px-4">
+    <div className="flex flex-col items-center text-white font-inika py-10">
         <div className="w-[700px] max-w-[90vw]">
         {/* Top Text */}
         <div className="mb-4 ">
@@ -43,19 +43,18 @@ const Experience = () => {
         <div className="w-full flex justify-center py-3">
         {/* Photo Slider */}
         <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-          <div className="flex space-x-4 min-w-max">
+          <div className="flex space-x-4">
             {images.map((image, index) => (
               <div 
                 key={index} 
                 className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
                 onClick={() => setSelectedImage(image)}
               >
-                <div className="h-28 w-48 relative">
+                {/* the issue is the width and heights are restricting the images */}
+                <div className="w-44 content-center"> 
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    layout="fill"
-                    objectFit="contain"
                   />
                 </div>
               </div>
