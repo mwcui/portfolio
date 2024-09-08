@@ -16,7 +16,18 @@ import EngineeringandSciencesTable from '/public/Tables/image.svg';
 import DesigntoKit1 from '/public/DesigntoKit/Design_to_Kit.svg';
 import DesigntoKitTable from '/public/Tables/image (2).svg';
 
+import ProgramAffordabilityTable from '/public/Tables/image (7).svg';
 
+import SpacecraftBusinessDevelopment1 from '/public/SpacecraftBusinessDevelopment/Business Development Tool-01.svg';
+import SpacecraftBusinessDevelopment2 from '/public/SpacecraftBusinessDevelopment/Business Development Tool outline.svg';
+import SpacecraftBusinessDevelopment3 from '/public/SpacecraftBusinessDevelopment/Business Development Tool.003 outline_test.svg';
+import SpacecraftBusinessDevelopmentTable from '/public/Tables/image (8).svg';
+
+import MechanicalDesign1 from '/public/ElectromechanicalDesign/Mechanical Design_test.svg';
+import MechanicalDesign2 from '/public/ElectromechanicalDesign/Mechanical Design.svg';
+import MechanicalDesign3 from '/public/ElectromechanicalDesign/mechanical_design - 1 SVG.svg';
+import MechanicalDesign4 from '/public/ElectromechanicalDesign/mechanical_design-1_test.svg';
+import MechanicalDesignTable from '/public/Tables/image (9).svg';
 
 
 
@@ -38,9 +49,18 @@ const Experience = () => {
     { src: DesigntoKit1, alt: "First SVG", title: "DesigntoKit 1" },
   ];
 
+  const SpacecraftBusinessDevelopmentImages = [
+    { src: SpacecraftBusinessDevelopment1, alt: "First SVG", title: "Spacecraft Business Development 1" },
+    { src: SpacecraftBusinessDevelopment2, alt: "Second SVG", title: "Spacecraft Business Development 2" },
+    { src: SpacecraftBusinessDevelopment3, alt: "Third SVG", title: "Spacecraft Business Development 3" },
+  ];
+
+
   const [selectedArtistAnalyticsImage, setSelectedArtistAnalyticsImage] = useState(ArtistAnalyticsImages[0]);
   const [selectedEngineeringandSciencesImage, setSelectedEngineeringandSciencesImage] = useState(EngineeringandSciencesImages[0]);
   const [selectedDesigntoKitImage, setSelectedDesigntoKitImage] = useState(DesigntoKitImages[0]);
+  const [selectedSpacecraftBusinessDevelopmentImage, setSelectedSpacecraftBusinessDevelopmentImage] = useState(SpacecraftBusinessDevelopmentImages[0]);
+
 
   return (
     <div className="flex flex-col items-center text-white font-inika pt-20">
@@ -184,7 +204,7 @@ const Experience = () => {
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
           <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 place-content-center">
               {DesigntoKitImages.map((image, index) => (
                 <div
                   key={index}
@@ -217,7 +237,79 @@ const Experience = () => {
 
 
 
+      {/*Program Affordability*/}
+      <div className="w-[700px] max-w-[90vw]">
+        {/* Top Text */}
+        <div className="mb-4">
+          <h1 className="text-2xl">Program Affordability</h1>
+        </div>
 
+        <div className="relative mb-20">
+          <Image
+            src={ProgramAffordabilityTable}
+            alt={"First SVG"}
+            width={800}
+            height={450}
+            objectFit="cover"
+          />
+        </div>
+      </div>
+
+
+      {/*Spacecraft Business Development*/}
+      <div className="w-[700px] max-w-[90vw]">
+        {/* Top Text */}
+        <div className="mb-4">
+          <h1 className="text-2xl">Spacecraft Business Development</h1>
+        </div>
+
+        {/* Selected Image Display */}
+        <div className="relative">
+          <Image
+            src={selectedSpacecraftBusinessDevelopmentImage.src}
+            alt={selectedSpacecraftBusinessDevelopmentImage.alt}
+            width={800}
+            height={562}
+            objectFit="contain"
+          />
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
+            {selectedSpacecraftBusinessDevelopmentImage.title}
+          </p>
+        </div>
+
+        <div className="w-full flex justify-center py-3">
+          {/* Photo Slider */}
+          <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+            <div className="flex space-x-4">
+              {SpacecraftBusinessDevelopmentImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedSpacecraftBusinessDevelopmentImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedSpacecraftBusinessDevelopmentImage(image)}
+                >
+                  {/* the width and height are restricting the images */}
+                  <div className="w-44 h-[100%] content-center">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="relative mb-20">
+          <Image
+            src={SpacecraftBusinessDevelopmentTable}
+            alt={"First SVG"}
+            width={800}
+            height={450}
+            objectFit="cover"
+          />
+        </div>
+      </div>
 
 
 
