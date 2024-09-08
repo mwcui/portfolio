@@ -5,7 +5,7 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import logo from '/public/logo.svg';
-import { useLogoVisibility } from './LogoVisibilityContext';
+// import { useLogoVisibility } from './LogoVisibilityContext';
 
 const Logo = () => {
   return (
