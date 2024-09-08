@@ -94,7 +94,8 @@ const Experience = () => {
             objectFit="contain"
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
-            {selectedArtistAnalyticsImage.title}
+            {/* {selectedArtistAnalyticsImage.title} */}
+            Numbers and figures have been altered for confidentiality purposes
           </p>
         </div>
 
@@ -151,7 +152,7 @@ const Experience = () => {
             objectFit="contain"
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
-            {selectedEngineeringandSciencesImage.title}
+            Numbers and figures have been altered for confidentiality purposes
           </p>
         </div>
 
@@ -208,7 +209,7 @@ const Experience = () => {
             objectFit="contain"
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
-            {selectedDesigntoKitImage.title}
+          Numbers and figures have been altered for confidentiality purposes
           </p>
         </div>
 
@@ -283,7 +284,7 @@ const Experience = () => {
             objectFit="contain"
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
-            {selectedSpacecraftBusinessDevelopmentImage.title}
+            Layout has been altered for confidentiality purposes
           </p>
         </div>
 
@@ -339,7 +340,7 @@ const Experience = () => {
             objectFit="contain"
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
-            {selectedElectromechanicalDesignImage.title}
+            Designs are representations of previous work and are not actual projects
           </p>
         </div>
 
@@ -416,7 +417,7 @@ const Experience = () => {
             objectFit="contain"
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
-              {selectedTechnologyTransferImage.title}
+          Specifics have been omitted due to NDA
           </p>
         </div>
 
