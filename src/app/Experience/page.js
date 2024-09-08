@@ -29,6 +29,8 @@ import ElectromechanicalDesignTable from '/public/Tables/image (5).svg';
 
 import DisneylandTable from '/public/Tables/image (8).svg';
 
+import TechnologyTransfer1 from '/public/TechnologyTransfer/nasa-01.svg';
+import TechnologyTransferTable from '/public/Tables/image (9).svg';
 
 
 const Experience = () => {
@@ -60,13 +62,16 @@ const Experience = () => {
     { src: ElectromechanicalDesign2, alt: "Second SVG", title: "Electromechanical Design 2" },
   ];
 
-
+  const TechnologyTransferImages = [
+    { src: TechnologyTransfer1, alt: "First SVG", title: "Technology Transfer 1" },
+  ];
 
   const [selectedArtistAnalyticsImage, setSelectedArtistAnalyticsImage] = useState(ArtistAnalyticsImages[0]);
   const [selectedEngineeringandSciencesImage, setSelectedEngineeringandSciencesImage] = useState(EngineeringandSciencesImages[0]);
   const [selectedDesigntoKitImage, setSelectedDesigntoKitImage] = useState(DesigntoKitImages[0]);
   const [selectedSpacecraftBusinessDevelopmentImage, setSelectedSpacecraftBusinessDevelopmentImage] = useState(SpacecraftBusinessDevelopmentImages[0]);
   const [selectedElectromechanicalDesignImage, setSelectedElectromechanicalDesignImage] = useState(ElectromechanicalDesignImages[0]);
+  const [selectedTechnologyTransferImage, setSelectedTechnologyTransferImage] = useState(TechnologyTransferImages[0]);
 
   return (
     <div className="flex flex-col items-center text-white font-inika pt-20">
@@ -242,7 +247,6 @@ const Experience = () => {
       </div>
 
 
-
       {/*Program Affordability*/}
       <div className="w-[700px] max-w-[90vw]">
         {/* Top Text */}
@@ -395,15 +399,63 @@ const Experience = () => {
 
 
 
+      {/*Technology Transfer*/}
+      <div className="w-[700px] max-w-[90vw]">
+        {/* Top Text */}
+        <div className="mb-4">
+          <h1 className="text-2xl">Technology Transfer</h1>
+        </div>
+
+        {/* Selected Image Display */}
+        <div className="relative">
+          <Image
+            src={selectedTechnologyTransferImage.src}
+            alt={selectedTechnologyTransferImage.alt}
+            width={800}
+            height={562}
+            objectFit="contain"
+          />
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
+              {selectedTechnologyTransferImage.title}
+          </p>
+        </div>
+
+        <div className="w-full flex justify-center py-3">
+          {/* Photo Slider */}
+          <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+            <div className="flex space-x-4 place-content-center">
+              {TechnologyTransferImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedTechnologyTransferImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedTechnologyTransferImage(image)}
+                >
+                  {/* the width and height are restricting the images */}
+                  <div className="w-44 h-[100%] content-center">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="relative mb-20">
+          <Image
+            src={TechnologyTransferTable}
+            alt={"First SVG"}
+            width={800}
+            height={450}
+            objectFit="cover"
+          />
+        </div>
+      </div>
+
+
     </div>
-
-
-
-
-
-
-
-
 
   );
 };
