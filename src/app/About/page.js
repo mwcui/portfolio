@@ -71,16 +71,16 @@ const About = ({ handlePageTransition }) => {
       </div>
 
       {/* Social Icons */}
-      <div className="flex space-x-4 mt-16 relative"> {/* relative allows me to select the text. I dunno why but it is necessary to make the text selectable */}
+      <div className="flex space-x-4 mt-10 relative"> {/* relative allows me to select the text. I dunno why but it is necessary to make the text selectable */}
         <a href='mailto:matthew.w.cui@gmail.com' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
           Email
         </a>
         <a href='https://www.linkedin.com/in/matthewwcui/' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
           LinkedIn
         </a>
-        <a href='https://github.com/mwcui' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
+        {/* <a href='https://github.com/mwcui' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
           GitHub
-        </a>
+        </a> */}
         {/* <a href='https://www.instagram.com/mwcui/' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
           Instagram
         </a>
