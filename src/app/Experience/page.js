@@ -50,8 +50,8 @@ const Experience = () => {
                 className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
                 onClick={() => setSelectedImage(image)}
               >
-                {/* the issue is the width and heights are restricting the images */}
-                <div className="w-44 content-center"> 
+                {/* the width and height are restricting the images */}
+                <div className="w-44 h-[100%] content-center"> 
                   <Image
                     src={image.src}
                     alt={image.alt}
