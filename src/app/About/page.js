@@ -64,7 +64,7 @@ const About = ({ handlePageTransition }) => {
       <div className="mt-8 relative">
         <button
           onClick={handleExperienceClick}
-          className="bg-white text-[#0C3B65] hover:bg-slate-400 transition-colors duration-200 font-bold py-2 px-4 rounded"
+          className="bg-[#ffffff] text-[#0C3B65] hover:bg-slate-400 transition-colors duration-200 font-bold py-1 px-3 rounded"
         >
           See My Experience
         </button>

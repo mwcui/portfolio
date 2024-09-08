@@ -95,7 +95,7 @@ const Experience = () => {
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Numbers and figures have been altered for confidentiality purposes
+            Numbers and figures have been altered for confidentiality
           </p>
         </div>
 
@@ -152,7 +152,7 @@ const Experience = () => {
             objectFit="contain"
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
-            Numbers and figures have been altered for confidentiality purposes
+            Numbers and figures have been altered for confidentiality
           </p>
         </div>
 
@@ -209,7 +209,7 @@ const Experience = () => {
             objectFit="contain"
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
-          Numbers and figures have been altered for confidentiality purposes
+          Numbers and figures have been altered for confidentiality
           </p>
         </div>
 
@@ -282,9 +282,10 @@ const Experience = () => {
             width={800}
             height={562}
             objectFit="contain"
+            priority={true} // the first image is large and takes a while to load
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
-            Layout has been altered for confidentiality purposes
+          Numbers and figures have been altered for confidentiality
           </p>
         </div>
 
@@ -338,9 +339,10 @@ const Experience = () => {
             width={800}
             height={562}
             objectFit="contain"
+            priority={true} // the first image is large and takes a while to load
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
-            Designs are representations of previous work and are not actual projects
+            Designs are representations of previous work
           </p>
         </div>
 

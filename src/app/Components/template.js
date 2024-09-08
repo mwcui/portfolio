@@ -5,6 +5,7 @@ import { Mouse } from 'moussejs';
 import InteractiveBlocks from './mouseeffect';
 import Navbar from './navbar';
 import { LogoVisibilityProvider } from './LogoVisibilityContext';
+import Footer from './Footer';
 
 const Template = ({ children, onMenuSelect, animationMidpoint, menuText, handlePageTransition }) => {
   useEffect(() => {
@@ -35,6 +36,7 @@ const Template = ({ children, onMenuSelect, animationMidpoint, menuText, handleP
         <div className="flex-grow flex items-center justify-center">
           {children}
         </div>
+        <Footer />
       </div>
     </LogoVisibilityProvider>
   );
