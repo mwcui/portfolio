@@ -93,7 +93,7 @@ const Experience = () => {
             height={562}
             objectFit="contain"
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
             {/* {selectedArtistAnalyticsImage.title} */}
             Numbers and figures have been altered for confidentiality
           </p>
@@ -101,7 +101,7 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4">
               {ArtistAnalyticsImages.map((image, index) => (
                 <div
@@ -110,7 +110,7 @@ const Experience = () => {
                   onClick={() => setSelectedArtistAnalyticsImage(image)}
                 >
                   {/* the width and height are restricting the images */}
-                  <div className="w-44 h-[100%] content-center">
+                  <div className="w-32 h-[100%] content-center">
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -151,14 +151,14 @@ const Experience = () => {
             height={562}
             objectFit="contain"
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
             Numbers and figures have been altered for confidentiality
           </p>
         </div>
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4">
               {EngineeringandSciencesImages.map((image, index) => (
                 <div
@@ -167,7 +167,7 @@ const Experience = () => {
                   onClick={() => setSelectedEngineeringandSciencesImage(image)}
                 >
                   {/* the width and height are restricting the images */}
-                  <div className="w-44 h-[100%] content-center">
+                  <div className="w-32 h-[100%] content-center">                    
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -208,14 +208,14 @@ const Experience = () => {
             height={562}
             objectFit="contain"
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
           Numbers and figures have been altered for confidentiality
           </p>
         </div>
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4 place-content-center">
               {DesigntoKitImages.map((image, index) => (
                 <div
@@ -224,7 +224,7 @@ const Experience = () => {
                   onClick={() => setSelectedDesigntoKitImage(image)}
                 >
                   {/* the width and height are restricting the images */}
-                  <div className="w-44 h-[100%] content-center">
+                  <div className="w-32 h-[100%] content-center">                    
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -284,14 +284,14 @@ const Experience = () => {
             objectFit="contain"
             priority={true} // the first image is large and takes a while to load
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
           Numbers and figures have been altered for confidentiality
           </p>
         </div>
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4">
               {SpacecraftBusinessDevelopmentImages.map((image, index) => (
                 <div
@@ -300,7 +300,7 @@ const Experience = () => {
                   onClick={() => setSelectedSpacecraftBusinessDevelopmentImage(image)}
                 >
                   {/* the width and height are restricting the images */}
-                  <div className="w-44 h-[100%] content-center">
+                  <div className="w-32 h-[100%] content-center">                    
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -341,14 +341,14 @@ const Experience = () => {
             objectFit="contain"
             priority={true} // the first image is large and takes a while to load
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
             Designs are representations of previous work
           </p>
         </div>
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4 place-content-center">
               {ElectromechanicalDesignImages.map((image, index) => (
                 <div
@@ -357,7 +357,7 @@ const Experience = () => {
                   onClick={() => setSelectedElectromechanicalDesignImage(image)}
                 >
                   {/* the width and height are restricting the images */}
-                  <div className="w-44 h-[100%] content-center">
+                  <div className="w-32 h-[100%] content-center">                    
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -418,14 +418,14 @@ const Experience = () => {
             height={562}
             objectFit="contain"
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
           Specifics have been omitted due to NDA
           </p>
         </div>
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-4/5 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4 place-content-center">
               {TechnologyTransferImages.map((image, index) => (
                 <div
@@ -434,7 +434,7 @@ const Experience = () => {
                   onClick={() => setSelectedTechnologyTransferImage(image)}
                 >
                   {/* the width and height are restricting the images */}
-                  <div className="w-44 h-[100%] content-center">
+                  <div className="w-32 h-[100%] content-center">                    
                     <Image
                       src={image.src}
                       alt={image.alt}
