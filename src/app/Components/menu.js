@@ -17,6 +17,12 @@ const Menu = ({ closeMenu, onMenuSelect, animationMidpoint }) => {
         </button>
         <h1 className="font-bold text-4xl font-inika mb-20">MENU</h1>
         <ul className="space-y-6 sm:space-y-8 md:space-y-10 text-xl sm:text-2xl md:text-3xl font-inika">
+        <li
+            className="hover:text-gray-600 hover:italic cursor-pointer"
+            onClick={() => handleSelect('menu')}
+          >
+            HOME
+          </li>
           <li
             className="hover:text-gray-600 hover:italic cursor-pointer"
             onClick={() => handleSelect('experience')}
