@@ -7,7 +7,7 @@ import ArtistAnalytics2 from '/public/ArtistAnalytics/Symphony_2 Outline.svg';
 import ArtistAnalytics3 from '/public/ArtistAnalytics/Symphony_3 Outline.svg';
 import ArtistAnalyticsTable from '/public/Tables/image (1).svg';
 
-import EngineeringandSciences1 from '/public/EngineeringandSciences/E_S Dashboard 001.svg';
+import EngineeringandSciences1 from '/public/EngineeringandSciences/E_S Dashboard 001 outline.svg';
 import EngineeringandSciences2 from '/public/EngineeringandSciences/E_S Dashboard 002.svg';
 import EngineeringandSciences3 from '/public/EngineeringandSciences/E_S Dashboard.003.svg';
 import EngineeringandSciences4 from '/public/EngineeringandSciences/E_S Dashboard.004.svg';
@@ -78,7 +78,7 @@ const Experience = () => {
       
       
       {/* Artist Analytics */}
-      <div className="w-[700px] max-w-[90vw]">
+      <div className="w-[1000px] max-w-[90vw]">
         {/* Top Text */}
         <div className="mb-4">
           <h1 className="text-2xl">Artist Analytics</h1>
@@ -89,7 +89,7 @@ const Experience = () => {
           <Image
             src={selectedArtistAnalyticsImage.src}
             alt={selectedArtistAnalyticsImage.alt}
-            width={800}
+            width={1000}
             height={562}
             objectFit="contain"
           />
@@ -101,7 +101,7 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4">
               {ArtistAnalyticsImages.map((image, index) => (
                 <div
@@ -126,7 +126,7 @@ const Experience = () => {
           <Image
             src={ArtistAnalyticsTable}
             alt={"First SVG"}
-            width={800}
+            width={1000}
             height={450}
             objectFit="cover"
           />
@@ -136,7 +136,7 @@ const Experience = () => {
       
 
       {/* Engineering and Sciences */}  
-      <div className="w-[700px] max-w-[90vw]">
+      <div className="w-[1000px] max-w-[90vw]">
         {/* Top Text */}
         <div className="mb-4">
           <h1 className="text-2xl">Engineering & Sciences</h1>
@@ -147,7 +147,7 @@ const Experience = () => {
           <Image
             src={selectedEngineeringandSciencesImage.src}
             alt={selectedEngineeringandSciencesImage.alt}
-            width={800}
+            width={1000}
             height={562}
             objectFit="contain"
           />
@@ -158,7 +158,7 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4">
               {EngineeringandSciencesImages.map((image, index) => (
                 <div
@@ -183,7 +183,7 @@ const Experience = () => {
           <Image
             src={EngineeringandSciencesTable}
             alt={"First SVG"}
-            width={800}
+            width={1000}
             height={450}
             objectFit="cover"
           />
@@ -193,7 +193,7 @@ const Experience = () => {
 
 
       {/*Design to Kit*/}
-      <div className="w-[700px] max-w-[90vw]">
+      <div className="w-[1000px] max-w-[90vw]">
         {/* Top Text */}
         <div className="mb-4">
           <h1 className="text-2xl">Design to Kit</h1>
@@ -204,7 +204,7 @@ const Experience = () => {
           <Image
             src={selectedDesigntoKitImage.src}
             alt={selectedDesigntoKitImage.alt}
-            width={800}
+            width={1000}
             height={562}
             objectFit="contain"
           />
@@ -215,7 +215,7 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4 place-content-center">
               {DesigntoKitImages.map((image, index) => (
                 <div
@@ -240,7 +240,7 @@ const Experience = () => {
           <Image
             src={DesigntoKitTable}
             alt={"First SVG"}
-            width={800}
+            width={1000}
             height={450}
             objectFit="cover"
           />
@@ -249,7 +249,7 @@ const Experience = () => {
 
 
       {/*Program Affordability*/}
-      <div className="w-[700px] max-w-[90vw]">
+      <div className="w-[1000px] max-w-[90vw]">
         {/* Top Text */}
         <div className="mb-4">
           <h1 className="text-2xl">Program Affordability</h1>
@@ -259,7 +259,7 @@ const Experience = () => {
           <Image
             src={ProgramAffordabilityTable}
             alt={"First SVG"}
-            width={800}
+            width={1000}
             height={450}
             objectFit="cover"
           />
@@ -268,7 +268,7 @@ const Experience = () => {
 
 
       {/*Spacecraft Business Development*/}
-      <div className="w-[700px] max-w-[90vw]">
+      <div className="w-[1000px] max-w-[90vw]">
         {/* Top Text */}
         <div className="mb-4">
           <h1 className="text-2xl">Spacecraft Business Development</h1>
@@ -279,7 +279,7 @@ const Experience = () => {
           <Image
             src={selectedSpacecraftBusinessDevelopmentImage.src}
             alt={selectedSpacecraftBusinessDevelopmentImage.alt}
-            width={800}
+            width={1000}
             height={562}
             objectFit="contain"
             priority={true} // the first image is large and takes a while to load
@@ -291,7 +291,7 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4">
               {SpacecraftBusinessDevelopmentImages.map((image, index) => (
                 <div
@@ -316,7 +316,7 @@ const Experience = () => {
           <Image
             src={SpacecraftBusinessDevelopmentTable}
             alt={"First SVG"}
-            width={800}
+            width={1000}
             height={450}
             objectFit="cover"
           />
@@ -325,7 +325,7 @@ const Experience = () => {
 
 
       {/*Electromechanical Design*/}
-      <div className="w-[700px] max-w-[90vw]">
+      <div className="w-[1000px] max-w-[90vw]">
         {/* Top Text */}
         <div className="mb-4">
           <h1 className="text-2xl">Electromechanical Design</h1>
@@ -336,7 +336,7 @@ const Experience = () => {
           <Image
             src={selectedElectromechanicalDesignImage.src}
             alt={selectedElectromechanicalDesignImage.alt}
-            width={800}
+            width={1000}
             height={562}
             objectFit="contain"
             priority={true} // the first image is large and takes a while to load
@@ -348,7 +348,7 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4 place-content-center">
               {ElectromechanicalDesignImages.map((image, index) => (
                 <div
@@ -373,7 +373,7 @@ const Experience = () => {
           <Image
             src={ElectromechanicalDesignTable}
             alt={"First SVG"}
-            width={800}
+            width={1000}
             height={450}
             objectFit="cover"
           />
@@ -383,7 +383,7 @@ const Experience = () => {
 
 
       {/*Disneyland*/}
-      <div className="w-[700px] max-w-[90vw]">
+      <div className="w-[1000px] max-w-[90vw]">
         {/* Top Text */}
         <div className="mb-4">
           <h1 className="text-2xl">Disneyland</h1>
@@ -393,7 +393,7 @@ const Experience = () => {
           <Image
             src={DisneylandTable}
             alt={"First SVG"}
-            width={800}
+            width={1000}
             height={450}
             objectFit="cover"
           />
@@ -403,7 +403,7 @@ const Experience = () => {
 
 
       {/*Technology Transfer*/}
-      <div className="w-[700px] max-w-[90vw]">
+      <div className="w-[1000px] max-w-[90vw]">
         {/* Top Text */}
         <div className="mb-4">
           <h1 className="text-2xl">Technology Transfer</h1>
@@ -414,7 +414,7 @@ const Experience = () => {
           <Image
             src={selectedTechnologyTransferImage.src}
             alt={selectedTechnologyTransferImage.alt}
-            width={800}
+            width={1000}
             height={562}
             objectFit="contain"
           />
@@ -425,7 +425,7 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4 place-content-center">
               {TechnologyTransferImages.map((image, index) => (
                 <div
@@ -450,7 +450,7 @@ const Experience = () => {
           <Image
             src={TechnologyTransferTable}
             alt={"First SVG"}
-            width={800}
+            width={1000}
             height={450}
             objectFit="cover"
           />
