@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { Mouse } from 'moussejs';
-import InteractiveBlocks from './mouseeffect';
+import InteractiveBlocks from './InteractiveBlocks';
 import Navbar from './navbar';
 import { LogoVisibilityProvider } from './LogoVisibilityContext';
 import Footer from './Footer';
