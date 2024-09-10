@@ -109,30 +109,5 @@ html, body {
     pointer-events: none;
   }
 
-@layer utilities {
-  .scrollbar-hide-auto {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-  .scrollbar-hide-auto::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari and Opera */
-  }
-  .scrollbar-hide-auto:hover {
-    -ms-overflow-style: auto;  /* IE and Edge */
-    scrollbar-width: thin;  /* Firefox */
-  }
-  .scrollbar-hide-auto:hover::-webkit-scrollbar {
-    display: block;  /* Chrome, Safari and Opera */
-    width: 8px;  /* Width of the scrollbar */
-  }
-  .scrollbar-hide-auto:hover::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.7);  /* White with some transparency */
-    border-radius: 10px;  /* Rounded corners for oval shape */
-    border: 2px solid transparent;  /* Creates padding around the scrollbar */
-    background-clip: padding-box;  /* Ensures the border is transparent */
-  }
-  .scrollbar-hide-auto:hover::-webkit-scrollbar-track {
-    background: transparent;  /* Transparent track */
-  }
-}
+
 
