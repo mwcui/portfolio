@@ -101,8 +101,8 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-            <div className="flex space-x-4">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+            <div className="flex space-x-4 place-content-center">
               {ArtistAnalyticsImages.map((image, index) => (
                 <div
                   key={index}
@@ -158,8 +158,8 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-            <div className="flex space-x-4">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+            <div className="flex space-x-4 place-content-center">
               {EngineeringandSciencesImages.map((image, index) => (
                 <div
                   key={index}
@@ -215,7 +215,7 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4 place-content-center">
               {DesigntoKitImages.map((image, index) => (
                 <div
@@ -291,8 +291,8 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-            <div className="flex space-x-4">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+            <div className="flex space-x-4 place-content-center">
               {SpacecraftBusinessDevelopmentImages.map((image, index) => (
                 <div
                   key={index}
@@ -348,7 +348,7 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4 place-content-center">
               {ElectromechanicalDesignImages.map((image, index) => (
                 <div
@@ -425,7 +425,7 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/3 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4 place-content-center">
               {TechnologyTransferImages.map((image, index) => (
                 <div
