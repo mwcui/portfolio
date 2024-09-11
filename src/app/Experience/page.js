@@ -33,6 +33,13 @@ import TechnologyTransfer1 from '/public/TechnologyTransfer/nasa-01.svg';
 import TechnologyTransferTable from '/public/Tables/image (9).svg';
 
 
+import DisneyLogo from '/public/Logos/removed_background/Disney.png';
+import NASALogo from '/public/Logos/removed_background/NASA.png';
+import NorthropGrummanLogo from '/public/Logos/removed_background/Northrop_Grumman.png';
+import SymphonyLogo from '/public/Logos/removed_background/Symphony.png';
+
+
+
 const Experience = () => {
   const ArtistAnalyticsImages = [
     { src: ArtistAnalytics1, alt: "First SVG", title: "Artist Analytics 1" },
@@ -79,9 +86,22 @@ const Experience = () => {
       
       {/* Artist Analytics */}
       <div className="w-[1000px] max-w-[90vw]">
-        {/* Top Text */}
-        <div className="mb-4">
-          <h1 className="text-2xl">Artist Analytics</h1>
+        {/* Header */}
+        <div className="flex items-center bg-[#1e3a8a] p-4 mb-4">
+          <Image
+            src={SymphonyLogo}
+            alt="Symphony Logo"
+            width={100}
+            height={50}
+            objectFit="contain"
+          />
+          <h1 className="text-3xl ml-4 text-white">Artist Analytics</h1>
+        </div>
+
+        {/* Title */}
+        <div className="bg-black p-4 mb-4">
+          <h2 className="text-2xl text-white">Dock to Stock Cycle Times</h2>
+          <p className="text-sm text-white">Purpose: Track the range of cycle times in Mdays for all items completed within the mon</p>
         </div>
 
         {/* Selected Image Display */}
@@ -135,348 +155,7 @@ const Experience = () => {
 
       
 
-      {/* Engineering and Sciences   */}
-      <div className="w-[1000px] max-w-[90vw]">
-        {/* Top Text */}
-        <div className="mb-4">
-          <h1 className="text-2xl">Engineering & Sciences</h1>
-        </div>
-
-        {/* Selected Image Display */}
-        <div className="relative">
-          <Image
-            src={selectedEngineeringandSciencesImage.src}
-            alt={selectedEngineeringandSciencesImage.alt}
-            width={1000}
-            height={562}
-            objectFit="contain"
-          />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
-            Numbers and figures have been altered for confidentiality
-          </p>
-        </div>
-
-        <div className="w-full flex justify-center py-3">
-          {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-            <div className="flex space-x-4 place-content-center">
-              {EngineeringandSciencesImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedEngineeringandSciencesImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
-                  onClick={() => setSelectedEngineeringandSciencesImage(image)}
-                >
-                  {/* the width and height are restricting the images */}
-                  <div className="w-32 h-[100%] content-center">                    
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="relative mb-20">
-          <Image
-            src={EngineeringandSciencesTable}
-            alt={"First SVG"}
-            width={1000}
-            height={450}
-            objectFit="cover"
-          />
-        </div>
-      </div>
-
-
-
-      {/*Design to Kit*/}
-      <div className="w-[1000px] max-w-[90vw]">
-        {/* Top Text */}
-        <div className="mb-4">
-          <h1 className="text-2xl">Design to Kit</h1>
-        </div>
-
-        {/* Selected Image Display */}
-        <div className="relative">
-          <Image
-            src={selectedDesigntoKitImage.src}
-            alt={selectedDesigntoKitImage.alt}
-            width={1000}
-            height={562}
-            objectFit="contain"
-          />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
-          Numbers and figures have been altered for confidentiality
-          </p>
-        </div>
-
-        <div className="w-full flex justify-center py-3">
-          {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-            <div className="flex space-x-4 place-content-center">
-              {DesigntoKitImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedDesigntoKitImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
-                  onClick={() => setSelectedDesigntoKitImage(image)}
-                >
-                  {/* the width and height are restricting the images */}
-                  <div className="w-32 h-[100%] content-center">                    
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="relative mb-20">
-          <Image
-            src={DesigntoKitTable}
-            alt={"First SVG"}
-            width={1000}
-            height={450}
-            objectFit="cover"
-          />
-        </div>
-      </div>
-
-
-      {/*Program Affordability*/}
-      <div className="w-[1000px] max-w-[90vw]">
-        {/* Top Text */}
-        <div className="mb-4">
-          <h1 className="text-2xl">Program Affordability</h1>
-        </div>
-
-        <div className="relative mb-20">
-          <Image
-            src={ProgramAffordabilityTable}
-            alt={"First SVG"}
-            width={1000}
-            height={450}
-            objectFit="cover"
-          />
-        </div>
-      </div>
-
-
-      {/*Spacecraft Business Development*/}
-      <div className="w-[1000px] max-w-[90vw]">
-        {/* Top Text */}
-        <div className="mb-4">
-          <h1 className="text-2xl">Spacecraft Business Development</h1>
-        </div>
-
-        {/* Selected Image Display */}
-        <div className="relative">
-          <Image
-            src={selectedSpacecraftBusinessDevelopmentImage.src}
-            alt={selectedSpacecraftBusinessDevelopmentImage.alt}
-            width={1000}
-            height={562}
-            objectFit="contain"
-            priority={true} // the first image is large and takes a while to load
-          />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
-          Numbers and figures have been altered for confidentiality
-          </p>
-        </div>
-
-        <div className="w-full flex justify-center py-3">
-          {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-            <div className="flex space-x-4 place-content-center">
-              {SpacecraftBusinessDevelopmentImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedSpacecraftBusinessDevelopmentImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
-                  onClick={() => setSelectedSpacecraftBusinessDevelopmentImage(image)}
-                >
-                  {/* the width and height are restricting the images */}
-                  <div className="w-32 h-[100%] content-center">                    
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="relative mb-20">
-          <Image
-            src={SpacecraftBusinessDevelopmentTable}
-            alt={"First SVG"}
-            width={1000}
-            height={450}
-            objectFit="cover"
-          />
-        </div>
-      </div>
-
-
-      {/*Electromechanical Design*/}
-      <div className="w-[1000px] max-w-[90vw]">
-        {/* Top Text */}
-        <div className="mb-4">
-          <h1 className="text-2xl">Electromechanical Design</h1>
-        </div>
-
-        {/* Selected Image Display */}
-        <div className="relative">
-          <Image
-            src={selectedElectromechanicalDesignImage.src}
-            alt={selectedElectromechanicalDesignImage.alt}
-            width={1000}
-            height={562}
-            objectFit="contain"
-            priority={true} // the first image is large and takes a while to load
-          />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
-            Designs are representations of previous work
-          </p>
-        </div>
-
-        <div className="w-full flex justify-center py-3">
-          {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-            <div className="flex space-x-4 place-content-center">
-              {ElectromechanicalDesignImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedElectromechanicalDesignImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
-                  onClick={() => setSelectedElectromechanicalDesignImage(image)}
-                >
-                  {/* the width and height are restricting the images */}
-                  <div className="w-32 h-[100%] content-center">                    
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="relative mb-20">
-          <Image
-            src={ElectromechanicalDesignTable}
-            alt={"First SVG"}
-            width={1000}
-            height={450}
-            objectFit="cover"
-          />
-        </div>
-      </div>
-
-
-
-      {/*Disneyland*/}
-      <div className="w-[1000px] max-w-[90vw]">
-        {/* Top Text */}
-        <div className="mb-4">
-          <h1 className="text-2xl">Disneyland</h1>
-        </div>
-
-        <div className="relative mb-20">
-          <Image
-            src={DisneylandTable}
-            alt={"First SVG"}
-            width={1000}
-            height={450}
-            objectFit="cover"
-          />
-        </div>
-      </div>
-
-
-
-      {/*Technology Transfer*/}
-      <div className="w-[1000px] max-w-[90vw]">
-        {/* Top Text */}
-        <div className="mb-4">
-          <h1 className="text-2xl">Technology Transfer</h1>
-        </div>
-
-        {/* Selected Image Display */}
-        <div className="relative">
-          <Image
-            src={selectedTechnologyTransferImage.src}
-            alt={selectedTechnologyTransferImage.alt}
-            width={1000}
-            height={562}
-            objectFit="contain"
-          />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
-          Specifics have been omitted due to NDA
-          </p>
-        </div>
-
-        <div className="w-full flex justify-center py-3">
-          {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-            <div className="flex space-x-4 place-content-center">
-              {TechnologyTransferImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedTechnologyTransferImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
-                  onClick={() => setSelectedTechnologyTransferImage(image)}
-                >
-                  {/* the width and height are restricting the images */}
-                  <div className="w-32 h-[100%] content-center">                    
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="relative mb-20">
-          {/* <Image
-            src={TechnologyTransferTable}
-            alt={"First SVG"}
-            width={1000}
-            height={450}
-            objectFit="cover"
-          /> */}
-
-        <p className="px-[2vw]">
-        Project Description:
-        </p>
-        <p className="m-4 px-[5vw]">
-        Determine the commercial viability of technology within NASA’s patent portfolio.
-        </p>
-        <p className="px-[2vw]">
-        What was the Challenge?
-        </p>
-        <p className="m-4 px-[5vw]">
-        NASA invests millions annually in research and development, building an extensive patent portfolio. However, only a small portion of these patents were being utilized. The challenge was to prevent the majority of these technologies from remaining underutilized. Our goal was to explore their commercial potential and identify ways NASA could generate revenue by licensing or transferring these technologies for commercial use.
-        </p>
-
-        <p className="px-[2vw]">
-        What was the Solution and How was it Achieved?
-        </p>
-        <p className="m-4 px-[5vw]">
-        The solution involved gaining a comprehensive understanding of NASA's patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts (SMEs) to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
-        </p>
-
-        </div>
-      </div>
+     
 
 
     </div>
@@ -485,4 +164,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
