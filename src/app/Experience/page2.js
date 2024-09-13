@@ -477,7 +477,7 @@ const Experience = () => {
                         What was the Solution and How was it Achieved?
                     </p>
                     <p className="m-4 px-[5vw]">
-                        The solution involved gaining a comprehensive understanding of NASA's patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts (SMEs) to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
+                        The solution involved gaining a comprehensive understanding of NASA&apos;s patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts (SMEs) to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
                     </p>
 
                 </div>
