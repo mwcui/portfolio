@@ -33,7 +33,7 @@ import TechnologyTransfer1 from '/public/TechnologyTransfer/nasa-01.svg';
 import TechnologyTransferTable from '/public/Tables/image (9).svg';
 
 
-import DisneyLogo from '/public/Logos/disney.png';
+import DisneyLogo from '/public/Logos/removed_background/disney.png';
 import NASALogo from '/public/Logos/removed_background/NASA.png';
 import NorthropGrummanLogo from '/public/Logos/removed_background/Northrop_Grumman.png';
 import SymphonyLogo from '/public/Logos/removed_background/Symphony.png';
