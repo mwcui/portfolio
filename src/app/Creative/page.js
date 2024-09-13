@@ -1,29 +1,29 @@
-"use client";
+// "use client";
 
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+// import React, { useState, useEffect } from 'react';
+// import Image from 'next/image';
 
-// Importing images
-import image1 from '/public/EverestTheVan/Column4.jpeg';
-import image2 from '/public/EverestTheVan/45991404_717704181939089_8783923192192249374_n.jpg';
-import image3 from '/public/EverestTheVan/IMG_5602.jpeg';
-import image4 from '/public/EverestTheVan/52670261_863556043982887_8109390835054743669_n.jpg';
-import image5 from '/public/EverestTheVan/4D2FC80D-BBD9-406E-AA75-3EE5766E0602.JPG';
-import image6 from '/public/EverestTheVan/Column1.jpeg';
-import image7 from '/public/EverestTheVan/IMG_8273.jpeg';
-import image8 from '/public/EverestTheVan/img044.jpg';
-import image9 from '/public/EverestTheVan/IMG_8928.jpeg';
+// // Importing images
+// import image1 from '/public/EverestTheVan/Column4.jpeg';
+// import image2 from '/public/EverestTheVan/45991404_717704181939089_8783923192192249374_n.jpg';
+// import image3 from '/public/EverestTheVan/IMG_5602.jpeg';
+// import image4 from '/public/EverestTheVan/52670261_863556043982887_8109390835054743669_n.jpg';
+// import image5 from '/public/EverestTheVan/4D2FC80D-BBD9-406E-AA75-3EE5766E0602.JPG';
+// import image6 from '/public/EverestTheVan/Column1.jpeg';
+// import image7 from '/public/EverestTheVan/IMG_8273.jpeg';
+// import image8 from '/public/EverestTheVan/img044.jpg';
+// import image9 from '/public/EverestTheVan/IMG_8928.jpeg';
 
-import ypslogo from '/public/YourPersonalStory/Your_personal_story.svg';
-import image10 from '/public/YourPersonalStory/Collage.jpg';
-import image11 from '/public/YourPersonalStory/collage02.JPG';
-import image12 from '/public/YourPersonalStory/Collage20201208.JPG';
-import image13 from '/public/YourPersonalStory/Collage20210104_0001.JPG';
-import image14 from '/public/YourPersonalStory/Collage20210113_0001.JPG';
-import image15 from '/public/YourPersonalStory/Collage20210220_0001.JPG';
-import image16 from '/public/YourPersonalStory/Collage20210220_0002.jpg';
-import image17 from '/public/YourPersonalStory/IMG_1440.jpg';
-import image18 from '/public/YourPersonalStory/Collage20210221_0002.jpg';
+// import ypslogo from '/public/YourPersonalStory/Your_personal_story.svg';
+// import image10 from '/public/YourPersonalStory/Collage.jpg';
+// import image11 from '/public/YourPersonalStory/collage02.JPG';
+// import image12 from '/public/YourPersonalStory/Collage20201208.JPG';
+// import image13 from '/public/YourPersonalStory/Collage20210104_0001.JPG';
+// import image14 from '/public/YourPersonalStory/Collage20210113_0001.JPG';
+// import image15 from '/public/YourPersonalStory/Collage20210220_0001.JPG';
+// import image16 from '/public/YourPersonalStory/Collage20210220_0002.jpg';
+// import image17 from '/public/YourPersonalStory/IMG_1440.jpg';
+// import image18 from '/public/YourPersonalStory/Collage20210221_0002.jpg';
 
 // const Creative = () => {
 //   const [selectedImage, setSelectedImage] = useState(null);
