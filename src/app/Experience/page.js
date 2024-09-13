@@ -90,22 +90,22 @@ const Experience = () => {
 
   return (
     <div className="flex flex-col items-center text-white font-inika pt-20">
-      
-      
+
+
       {/* Artist Analytics */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-4 p-1">
+        <div className="flex items-center pb-2 p-1">
           <Image
             src={SymphonyLogo}
             alt="Symphony Logo"
-            width={300}
+            width={120}
             height={50}
             objectFit="contain"
           />
-          <h1 className="text-3xl ml-4 text-white">|</h1>
-          <h1 className="text-3xl ml-4 text-white"></h1>
-          <h1 className="text-4xl ml-4 text-white">Artist Analytics</h1>
+          <h1 className="text-lg ml-4 text-white">|</h1>
+          {/* <h1 className="text-lg ml-4 text-white"></h1> */}
+          <h1 className="text ml-4 text-white">Artist Analytics</h1>
         </div>
 
         {/* Selected Image Display */}
@@ -170,33 +170,121 @@ const Experience = () => {
 
                 </div> */}
 
-<div className="flex justify-center">
-  <Accordion type="single" collapsible className="w-1/2">
-    <AccordionItem value="item-1">
-      <AccordionTrigger>Is it accessible?</AccordionTrigger>
-      <AccordionContent>
-        Yes. It adheres to the WAI-ARIA design pattern.
-      </AccordionContent>
-    </AccordionItem>
-  </Accordion>
-</div>
+        <div className="z-100 relative">
+          <div className="flex justify-center">
+            <Accordion type="single" collapsible className="text-lg">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>PROJECT DESCRIPTION</AccordionTrigger>
+                <AccordionContent className="text pl-2">
+                  Determine the commercial viability of technology within NASA’s patent portfolio.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
 
-<div className="flex justify-center">
-  <Accordion type="single" collapsible className="w-1/2">
-    <AccordionItem value="item-1">
-      <AccordionTrigger>Is it accessible?</AccordionTrigger>
-      <AccordionContent>
-        Yes. It adheres to the WAI-ARIA design pattern.
-      </AccordionContent>
-    </AccordionItem>
-  </Accordion>
-</div>
+          <div className="flex justify-center">
+            <Accordion type="single" collapsible className=" text-lg">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>WHAT WAS THE CHALLENGE?</AccordionTrigger>
+                <AccordionContent className="text pl-2">
+                  NASA invests millions annually in research and development, building an extensive patent portfolio. However, only a small portion of these patents are being utilized. The challenge was to prevent the majority of these technologies from remaining underutilized. Our goal was to explore their commercial potential and identify ways NASA could generate revenue by licensing or transferring these technologies for commercial use.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+
+          <div className="flex justify-center">
+            <Accordion type="single" collapsible className=" text-lg">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>WHAT WAS THE SOLUTION?</AccordionTrigger>
+                <AccordionContent className="text pl-2">
+                  First by gaining a comprehensive understanding of NASA&apos;s patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts (SMEs) to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+
+          <div className="flex justify-center">
+            <Accordion type="single" collapsible className=" text-lg">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>WHAT WAS THE RESULT?</AccordionTrigger>
+                <AccordionContent className="text pl-2">
+                  We facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full">
+      <AccordionItem value="item-1" className="border-b-0">
+        <AccordionTrigger className="hover:no-underline">
+          <span className="hover:underline">Is it accessible?</span>
+        </AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2" className="border-b-0">
+        <AccordionTrigger className="hover:no-underline">
+          <span className="hover:underline">Is it styled?</span>
+        </AccordionTrigger>
+        <AccordionContent>
+          Yes. It comes with default styles that matches the other
+          components&apos; aesthetic.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3" className="border-b-0">
+        <AccordionTrigger className="hover:no-underline">
+          <span className="hover:underline">Is it animated?</span>
+        </AccordionTrigger>
+        <AccordionContent>
+          Yes. It&apos;s animated by default, but you can disable it if you
+          prefer.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+
+
+
+    <Accordion type="single" collapsible className="w-full">
+      <AccordionItem value="item-1" className="border-b-0">
+        <AccordionTrigger className="hover:no-underline flex flex-col items-center">
+          <span className="hover:underline text-center">Is it accessible?</span>
+        </AccordionTrigger>
+        <AccordionContent className="text-center">
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2" className="border-b-0">
+        <AccordionTrigger className="hover:no-underline flex flex-col items-center">
+          <span className="hover:underline text-center">Is it styled?</span>
+        </AccordionTrigger>
+        <AccordionContent className="text-center">
+          Yes. It comes with default styles that matches the other
+          components&apos; aesthetic.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3" className="border-b-0">
+        <AccordionTrigger className="hover:no-underline flex flex-col items-center">
+          <span className="hover:underline text-center">Is it animated?</span>
+        </AccordionTrigger>
+        <AccordionContent className="text-center">
+          Yes. It&apos;s animated by default, but you can disable it if you
+          prefer.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+
+
+
+
+        </div>
 
       </div>
 
-      
 
-     
+
+
 
 
     </div>
