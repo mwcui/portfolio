@@ -265,10 +265,10 @@ const Experience = () => {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3" className="border-b-0">
-        <AccordionTrigger className="hover:no-underline flex flex-col items-center text-2xl">
+        <AccordionTrigger className="hover:no-underline flex flex-col items-center text">
           <span className="hover:underline text-center">WHAT WAS THE SOLUTION?</span>
         </AccordionTrigger>
-        <AccordionContent className="text-center text-xl">
+        <AccordionContent className="text-center text-sm">
           Yes. It&apos;s animated by default, but you can disable it if you
           prefer.
         </AccordionContent>
