@@ -105,8 +105,9 @@ const Experience = () => {
           />
           <h1 className="text-lg ml-4 text-white">|</h1>
           {/* <h1 className="text-lg ml-4 text-white"></h1> */}
-          <h1 className="text ml-4 text-white">Artist Analytics</h1>
+          <h1 className="text ml-4 text-white">ARTIST ANALYTICS</h1>
         </div>
+
 
         {/* Selected Image Display */}
         <div className="relative">
@@ -171,7 +172,7 @@ const Experience = () => {
                 </div> */}
 
         <div className="z-100 relative">
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <Accordion type="single" collapsible className="text-lg">
               <AccordionItem value="item-1">
                 <AccordionTrigger>PROJECT DESCRIPTION</AccordionTrigger>
@@ -242,33 +243,32 @@ const Experience = () => {
           prefer.
         </AccordionContent>
       </AccordionItem>
-    </Accordion>
+    </Accordion> */}
 
 
 
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion type="single" collapsible className="w-full text">
       <AccordionItem value="item-1" className="border-b-0">
         <AccordionTrigger className="hover:no-underline flex flex-col items-center">
-          <span className="hover:underline text-center">Is it accessible?</span>
+          <span className="hover:underline text-center">PROJECT DESCRIPTION</span>
         </AccordionTrigger>
-        <AccordionContent className="text-center">
-          Yes. It adheres to the WAI-ARIA design pattern.
+        <AccordionContent className="text-center text-sm">
+        Determine the commercial viability of technology within NASA’s patent portfolio.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2" className="border-b-0">
-        <AccordionTrigger className="hover:no-underline flex flex-col items-center">
-          <span className="hover:underline text-center">Is it styled?</span>
+        <AccordionTrigger className="hover:no-underline flex flex-col items-center text">
+          <span className="hover:underline text-center">WHAT WAS THE CHALLENGE?</span>
         </AccordionTrigger>
-        <AccordionContent className="text-center">
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
+        <AccordionContent className="text-center text-sm">
+        NASA invests millions annually in research and development, building an extensive patent portfolio. However, only a small portion of these patents are being utilized. The challenge was to prevent the majority of these technologies from remaining underutilized. Our goal was to explore their commercial potential and identify ways NASA could generate revenue by licensing or transferring these technologies for commercial use.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3" className="border-b-0">
-        <AccordionTrigger className="hover:no-underline flex flex-col items-center">
-          <span className="hover:underline text-center">Is it animated?</span>
+        <AccordionTrigger className="hover:no-underline flex flex-col items-center text-2xl">
+          <span className="hover:underline text-center">WHAT WAS THE SOLUTION?</span>
         </AccordionTrigger>
-        <AccordionContent className="text-center">
+        <AccordionContent className="text-center text-xl">
           Yes. It&apos;s animated by default, but you can disable it if you
           prefer.
         </AccordionContent>
