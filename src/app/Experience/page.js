@@ -87,21 +87,17 @@ const Experience = () => {
       {/* Artist Analytics */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center bg-[#1e3a8a] p-4 mb-4">
+        <div className="flex items-center pb-4 p-1">
           <Image
             src={SymphonyLogo}
             alt="Symphony Logo"
-            width={100}
+            width={300}
             height={50}
             objectFit="contain"
           />
-          <h1 className="text-3xl ml-4 text-white">Artist Analytics</h1>
-        </div>
-
-        {/* Title */}
-        <div className="bg-black p-4 mb-4">
-          <h2 className="text-2xl text-white">Dock to Stock Cycle Times</h2>
-          <p className="text-sm text-white">Purpose: Track the range of cycle times in Mdays for all items completed within the mon</p>
+          <h1 className="text-3xl ml-4 text-white">|</h1>
+          <h1 className="text-3xl ml-4 text-white"></h1>
+          <h1 className="text-4xl ml-4 text-white">Artist Analytics</h1>
         </div>
 
         {/* Selected Image Display */}
@@ -143,14 +139,30 @@ const Experience = () => {
         </div>
 
         <div className="relative mb-20">
-          <Image
-            src={ArtistAnalyticsTable}
-            alt={"First SVG"}
-            width={1000}
-            height={450}
-            objectFit="cover"
-          />
-        </div>
+
+                    <p className="mt-10 px-[2vw] text-center text-3xl">
+                        PROJECT
+                    </p>
+                    <p className="m-4 px-[5vw]">
+                        Determine commercial viability of technology within NASA’s patent portfolio.
+                    </p>
+                    <p className="px-[2vw] text-center text-3xl">
+                        PROBLEM
+                    </p>
+                    <p className="m-4 px-[5vw]">
+                        NASA invests millions annually in research and development, building an extensive patent portfolio. However, only a small portion of these patents were being utilized. The challenge was to prevent the majority of these technologies from remaining underutilized. Our goal was to explore their commercial potential and identify ways NASA could generate revenue by licensing or transferring these technologies for commercial use.
+                    </p>
+
+                    <p className="px-[2vw] text-center text-3xl">
+                        SOLUTION
+                    </p>
+                    <p className="m-4 px-[5vw]">
+                        The solution involved gaining a comprehensive understanding of NASA's patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts (SMEs) to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
+                    </p>
+
+                </div>
+
+
       </div>
 
       
