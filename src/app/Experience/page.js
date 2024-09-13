@@ -39,6 +39,14 @@ import NorthropGrummanLogo from '/public/Logos/removed_background/Northrop_Grumm
 import SymphonyLogo from '/public/Logos/removed_background/Symphony.png';
 
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
+
 
 const Experience = () => {
   const ArtistAnalyticsImages = [
@@ -138,7 +146,7 @@ const Experience = () => {
           </div>
         </div>
 
-        <div className="relative mb-20">
+        {/* <div className="relative mb-20">
 
                     <p className="mt-10 px-[2vw] text-center text-3xl">
                         PROJECT
@@ -160,8 +168,29 @@ const Experience = () => {
                         The solution involved gaining a comprehensive understanding of NASA's patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts (SMEs) to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
                     </p>
 
-                </div>
+                </div> */}
 
+<div className="flex justify-center">
+  <Accordion type="single" collapsible className="w-1/2">
+    <AccordionItem value="item-1">
+      <AccordionTrigger>Is it accessible?</AccordionTrigger>
+      <AccordionContent>
+        Yes. It adheres to the WAI-ARIA design pattern.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+<div className="flex justify-center">
+  <Accordion type="single" collapsible className="w-1/2">
+    <AccordionItem value="item-1">
+      <AccordionTrigger>Is it accessible?</AccordionTrigger>
+      <AccordionContent>
+        Yes. It adheres to the WAI-ARIA design pattern.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</div>
 
       </div>
 
