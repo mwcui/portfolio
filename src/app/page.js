@@ -6,7 +6,6 @@ import { useState, useEffect, useRef } from 'react';
 import BlockEffect from './Components/BlockEffect.js';
 import Template from './Components/template.js';
 import Logo from './Components/logo';
-import Creative from './Creative/page.js';
 import Experience from './Experience/page.js';
 import About from './About/page';
 
