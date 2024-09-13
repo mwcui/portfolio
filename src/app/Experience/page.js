@@ -55,6 +55,8 @@ const Experience = () => {
   const [ProjectSpaceSize, setProjectSpaceSize] = useState('text-sm'); // Default for iPhone
   const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
   const [ProjectSpaceVisible, setProjectSpaceVisible] = useState(true); // Default for iPhone
+  const [ProjectTitleSize, setProjectTitleSize] = useState('text'); // Default for iPhone
+  const [ProjectResponseSize, setProjectResponseSize] = useState('text-sm'); // Default for iPhone
 
   useEffect(() => {
     const handleResize = () => {
@@ -63,18 +65,24 @@ const Experience = () => {
         setProjectNameSize('text');
         setProjectDividerSize('text-lg');
         setProjectSpaceVisible(false); // Hide on iPhone
+        setProjectTitleSize('text-sm');
+        setProjectResponseSize('text-sm');
       } else if (window.innerWidth < 1024) { // iPad
         setSymphonyLogoSize(225);
         setProjectNameSize('text-3xl');
         setProjectSpaceSize('text-2xl');
         setProjectDividerSize('text-2xl');
         setProjectSpaceVisible(true); // Show on iPad
+        setProjectTitleSize('text-2xl');
+        setProjectResponseSize('text-xl');
       } else { // Mac
         setSymphonyLogoSize(300);
         setProjectNameSize('text-4xl');
         setProjectSpaceSize('text-3xl');
         setProjectDividerSize('text-3xl');
-        setProjectSpaceVisible(true); // Show on Mac
+        setProjectSpaceVisible(true); // Show on Mac  
+        setProjectTitleSize('text-3xl');
+        setProjectResponseSize('text-2xl');
       }
     };
 
@@ -87,7 +95,7 @@ const Experience = () => {
     // Cleanup
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   const ArtistAnalyticsImages = [
     { src: ArtistAnalytics1, alt: "First SVG", title: "Artist Analytics 1" },
     { src: ArtistAnalytics2, alt: "Second SVG", title: "Artist Analytics 2" },
@@ -190,30 +198,32 @@ const Experience = () => {
 
         <div className="z-100 relative">
 
-    <Accordion type="single" collapsible className="w-full text">
-      <AccordionItem value="item-1" className="border-b-0">
-        <AccordionTrigger className="hover:no-underline flex flex-col items-center">
-          <span className="hover:underline text-center">PROJECT DESCRIPTION</span>
-        </AccordionTrigger>
-        <AccordionContent className="text-center text-sm">
-        Develop a product that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2" className="border-b-0">
-        <AccordionTrigger className="hover:no-underline flex flex-col items-center text">
-          <span className="hover:underline text-center">WHAT WAS THE CHALLENGE?</span>
-        </AccordionTrigger>
-        <AccordionContent className="text-center text-sm">
-          Musicians and record labels currently do not have a way of viewing their royalties data outside of spreadsheets. This is an issue because lots of information that is provided falls through the cracks. So we solved that issue. once solved, we needed to create a login for users on the website to isolate the different use cases so that each user&apos;s data is separated.        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3" className="border-b-0">
-        <AccordionTrigger className="hover:no-underline flex flex-col items-center text">
-          <span className="hover:underline text-center">WHAT WAS THE SOLUTION?</span>
-        </AccordionTrigger>
-        <AccordionContent className="text-center text-sm">
-        I developed a dashboard that visualizes ingested mechanical royalties data. This was done by using python and SQL on the back end and tableau and visx for visualization on the front end. Once the unique instances were created, javascript/nextjs were used for embedding the tool into our website, then clerk was used for authentication.
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1" className="border-b-0">
+              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
+                <span className="hover:underline text-center">PROJECT DESCRIPTION</span>
+              </AccordionTrigger>
+              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+                Develop a product that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
+              </AccordionContent>
+            </AccordionItem>
+              <AccordionItem value="item-2" className="border-b-0">
+              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
+                <span className="hover:underline text-center">WHAT WAS THE CHALLENGE?</span>
+              </AccordionTrigger>
+              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+                Musicians and record labels currently do not have a way of viewing their royalties data outside of spreadsheets. This is an issue because lots of information that is provided falls through the cracks. So we solved that issue. once solved, we needed to create a login for users on the website to isolate the different use cases so that each user&apos;s data is separated.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3" className="border-b-0">
+              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
+                <span className="hover:underline text-center">WHAT WAS THE SOLUTION?</span>
+              </AccordionTrigger>
+              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+                I developed a dashboard that visualizes ingested mechanical royalties data. This was done by using python and SQL on the back end and tableau and visx for visualization on the front end. Once the unique instances were created, javascript/nextjs were used for embedding the tool into our website, then clerk was used for authentication.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
 
 
