@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import ArtistAnalytics1 from '/public/ArtistAnalytics/Symphony_1tr-01 (3).svg';
 import ArtistAnalytics2 from '/public/ArtistAnalytics/Symphony_2 Outline.svg';
@@ -49,6 +49,45 @@ import {
 
 
 const Experience = () => {
+  // Define state for responsive text size variables
+  const [SymphonyLogoSize, setSymphonyLogoSize] = useState(120); // Default for iPhone
+  const [ProjectNameSize, setProjectNameSize] = useState('text'); // Default for iPhone
+  const [ProjectSpaceSize, setProjectSpaceSize] = useState('text-sm'); // Default for iPhone
+  const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
+  const [ProjectSpaceVisible, setProjectSpaceVisible] = useState(true); // Default for iPhone
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) { // iPhone
+        setSymphonyLogoSize(120);
+        setProjectNameSize('text');
+        setProjectDividerSize('text-lg');
+        setProjectSpaceVisible(false); // Hide on iPhone
+      } else if (window.innerWidth < 1024) { // iPad
+        setSymphonyLogoSize(225);
+        setProjectNameSize('text-3xl');
+        setProjectSpaceSize('text-2xl');
+        setProjectDividerSize('text-2xl');
+        setProjectSpaceVisible(true); // Show on iPad
+      } else { // Mac
+        setSymphonyLogoSize(300);
+        setProjectNameSize('text-4xl');
+        setProjectSpaceSize('text-3xl');
+        setProjectDividerSize('text-3xl');
+        setProjectSpaceVisible(true); // Show on Mac
+      }
+    };
+
+    // Set initial values
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
   const ArtistAnalyticsImages = [
     { src: ArtistAnalytics1, alt: "First SVG", title: "Artist Analytics 1" },
     { src: ArtistAnalytics2, alt: "Second SVG", title: "Artist Analytics 2" },
@@ -99,13 +138,13 @@ const Experience = () => {
           <Image
             src={SymphonyLogo}
             alt="Symphony Logo"
-            width={120}
+            width={SymphonyLogoSize}
             height={50}
             objectFit="contain"
           />
-          <h1 className="text-lg ml-4 text-white">|</h1>
-          {/* <h1 className="text-lg ml-4 text-white"></h1> */}
-          <h1 className="text ml-4 text-white">ARTIST ANALYTICS</h1>
+          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>}
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>ARTIST ANALYTICS</h1>
         </div>
 
 
@@ -147,105 +186,9 @@ const Experience = () => {
           </div>
         </div>
 
-        {/* <div className="relative mb-20">
 
-                    <p className="mt-10 px-[2vw] text-center text-3xl">
-                        PROJECT
-                    </p>
-                    <p className="m-4 px-[5vw]">
-                        Determine commercial viability of technology within NASA’s patent portfolio.
-                    </p>
-                    <p className="px-[2vw] text-center text-3xl">
-                        PROBLEM
-                    </p>
-                    <p className="m-4 px-[5vw]">
-                        NASA invests millions annually in research and development, building an extensive patent portfolio. However, only a small portion of these patents were being utilized. The challenge was to prevent the majority of these technologies from remaining underutilized. Our goal was to explore their commercial potential and identify ways NASA could generate revenue by licensing or transferring these technologies for commercial use.
-                    </p>
-
-                    <p className="px-[2vw] text-center text-3xl">
-                        SOLUTION
-                    </p>
-                    <p className="m-4 px-[5vw]">
-                        The solution involved gaining a comprehensive understanding of NASA's patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts (SMEs) to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
-                    </p>
-
-                </div> */}
 
         <div className="z-100 relative">
-          {/* <div className="flex justify-center">
-            <Accordion type="single" collapsible className="text-lg">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>PROJECT DESCRIPTION</AccordionTrigger>
-                <AccordionContent className="text pl-2">
-                  Determine the commercial viability of technology within NASA’s patent portfolio.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-
-          <div className="flex justify-center">
-            <Accordion type="single" collapsible className=" text-lg">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>WHAT WAS THE CHALLENGE?</AccordionTrigger>
-                <AccordionContent className="text pl-2">
-                  NASA invests millions annually in research and development, building an extensive patent portfolio. However, only a small portion of these patents are being utilized. The challenge was to prevent the majority of these technologies from remaining underutilized. Our goal was to explore their commercial potential and identify ways NASA could generate revenue by licensing or transferring these technologies for commercial use.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-
-          <div className="flex justify-center">
-            <Accordion type="single" collapsible className=" text-lg">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>WHAT WAS THE SOLUTION?</AccordionTrigger>
-                <AccordionContent className="text pl-2">
-                  First by gaining a comprehensive understanding of NASA&apos;s patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts (SMEs) to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-
-          <div className="flex justify-center">
-            <Accordion type="single" collapsible className=" text-lg">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>WHAT WAS THE RESULT?</AccordionTrigger>
-                <AccordionContent className="text pl-2">
-                  We facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-
-          <Accordion type="single" collapsible className="w-full">
-      <AccordionItem value="item-1" className="border-b-0">
-        <AccordionTrigger className="hover:no-underline">
-          <span className="hover:underline">Is it accessible?</span>
-        </AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2" className="border-b-0">
-        <AccordionTrigger className="hover:no-underline">
-          <span className="hover:underline">Is it styled?</span>
-        </AccordionTrigger>
-        <AccordionContent>
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3" className="border-b-0">
-        <AccordionTrigger className="hover:no-underline">
-          <span className="hover:underline">Is it animated?</span>
-        </AccordionTrigger>
-        <AccordionContent>
-          Yes. It&apos;s animated by default, but you can disable it if you
-          prefer.
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion> */}
-
-
 
     <Accordion type="single" collapsible className="w-full text">
       <AccordionItem value="item-1" className="border-b-0">
