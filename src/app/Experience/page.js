@@ -81,8 +81,8 @@ const Experience = () => {
         setProjectSpaceSize('text-3xl');
         setProjectDividerSize('text-3xl');
         setProjectSpaceVisible(true); // Show on Mac  
-        setProjectTitleSize('text-3xl');
-        setProjectResponseSize('text-2xl');
+        setProjectTitleSize('text-2xl');
+        setProjectResponseSize('text-xl');
       }
     };
 
