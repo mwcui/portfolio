@@ -56,10 +56,12 @@ const Experience = () => {
   const [ProjectNameSize, setProjectNameSize] = useState('text'); // Default for iPhone
   const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
   const [ProjectTitleSize, setProjectTitleSize] = useState('text'); // Default for iPhone
+  const [ProjectTitleSpacing, setProjectTitleSpacing] = useState('pt-20'); // Default for iPhone // spacing between photoslider and project title size
   const [ProjectResponseSize, setProjectResponseSize] = useState('text-sm'); // Default for iPhone
+  const [ProjectResponseSpacing, setProjectResponseSpacing] = useState('pt-6'); // Default for iPhone
   const [ProjectDescriptionWidth, setProjectDescriptionWidth] = useState('max-w-[95%]'); // Default for iPhone. using max-w-[95%] instead of w-[90%] bc w-[90%] does not center the text
   const [PhotoSliderImageSize, setPhotoSliderImageSize] = useState('w-32 h-[100%]'); // Default for iPhone
-  
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -68,9 +70,11 @@ const Experience = () => {
         setNorthropGrummanLogoSize(70);
         setProjectNameSize('text');
         setProjectDividerSize('text-lg');
-        setProjectTitleSize('text-sm');
+        setProjectTitleSize('text');
+        setProjectTitleSpacing('pt-10');
         setProjectResponseSize('text-sm');
-        setProjectDescriptionWidth('max-w-[95%]')
+        setProjectResponseSpacing('pt-10');
+        setProjectDescriptionWidth('max-w-[90%]')
         setPhotoSliderImageSize('w-16 h-[100%]');
       } else if (window.innerWidth < 1024) { // iPad
         setSymphonyLogoSize(225);
@@ -78,7 +82,9 @@ const Experience = () => {
         setProjectNameSize('text-3xl');
         setProjectDividerSize('text-2xl');
         setProjectTitleSize('text-2xl');
+        setProjectTitleSpacing('pt-16');
         setProjectResponseSize('text-xl');
+        setProjectResponseSpacing('pt-16');
         setProjectDescriptionWidth('max-w-[90%]');
         setPhotoSliderImageSize('w-32 h-[100%]');
       } else { // Mac
@@ -87,7 +93,9 @@ const Experience = () => {
         setProjectNameSize('text-3xl');
         setProjectDividerSize('text-3xl');
         setProjectTitleSize('text-2xl');
+        setProjectTitleSpacing('pt-10');
         setProjectResponseSize('text-xl');
+        setProjectResponseSpacing('pt-16');
         setProjectDescriptionWidth('max-w-[70%]');
         setPhotoSliderImageSize('w-32 h-[100%]');
       }
@@ -208,34 +216,41 @@ const Experience = () => {
 
             {/* Project Description */}
             <div className={`${ProjectDescriptionWidth}`}>
-            <div className="text-center pt-20">
-              <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
-              <p className={`${ProjectResponseSize} pt-3`}>
-                Develop a tool that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
-              </p>
-            </div>
+              <div className={`${ProjectTitleSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                    Develop a tool that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
+                  </p>
+                </div>
+              </div>
             </div>
 
 
             {/* What Was the Challenge? */}
             <div className={`${ProjectDescriptionWidth}`}>
-            <div className="text-center pt-20">
-              <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
-              <p className={`${ProjectResponseSize} pt-3`}>
-                Musicians and record labels currently do not have a way of viewing their royalties data outside of spreadsheets. This is an issue because lots of information that is provided falls through the cracks. So we solved that issue. once solved, we needed to create a login for users on the website to isolate the different use cases so that each user&apos;s data is separated.
-              </p>
-            </div>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                    Musicians and record labels currently do not have a way of viewing their royalties data outside of spreadsheets. This is an issue because lots of information that is provided falls through the cracks. So we solved that issue. once solved, we needed to create a login for users on the website to isolate the different use cases so that each user&apos;s data is separated.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* What Was the Solution? */}
             <div className={`${ProjectDescriptionWidth}`}>
-            <div className="text-center pt-20">
-              <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
-              <p className={`${ProjectResponseSize} pt-3`}>
-                I developed a dashboard that visualizes ingested mechanical royalties data. This was done by using python and SQL on the back end and tableau and visx for visualization on the front end. Once the unique instances were created, javascript/nextjs were used for embedding the tool into our website, then clerk was used for authentication.
-              </p>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                    I developed a dashboard that visualizes ingested mechanical royalties data. This was done by using python and SQL on the back end and tableau and visx for visualization on the front end. Once the unique instances were created, javascript/nextjs were used for embedding the tool into our website, then clerk was used for authentication.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
+
           </div>
 
         </div>
@@ -305,39 +320,48 @@ const Experience = () => {
 
         <div className="z-100 relative pb-20">
 
+
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
             <div className={`${ProjectDescriptionWidth}`}>
-            <div className="text-center pt-20">
-              <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
-              <p className={`${ProjectResponseSize} pt-3`}>
-              Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).
-              </p>
-            </div>
+              <div className={`${ProjectTitleSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).
+                  </p>
+                </div>
+              </div>
             </div>
 
 
             {/* What Was the Challenge? */}
             <div className={`${ProjectDescriptionWidth}`}>
-            <div className="text-center pt-20">
-              <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
-              <p className={`${ProjectResponseSize} pt-3`}>
-              Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.
-              </p>
-            </div>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* What Was the Solution? */}
             <div className={`${ProjectDescriptionWidth}`}>
-            <div className="text-center pt-20">
-              <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
-              <p className={`${ProjectResponseSize} pt-3`}>
-              Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).
-              </p>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          </div>
+
+
 
         </div>
 
@@ -405,39 +429,46 @@ const Experience = () => {
 
         <div className="z-100 relative pb-20">
 
-        <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center">
 
-{/* Project Description */}
-<div className={`${ProjectDescriptionWidth}`}>
-<div className="text-center pt-20">
-  <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
-  <p className={`${ProjectResponseSize} pt-3`}>
-  Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).
-  </p>
-</div>
-</div>
+            {/* Project Description */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectTitleSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                    Develop a tool that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
+                  </p>
+                </div>
+              </div>
+            </div>
 
 
-{/* What Was the Challenge? */}
-<div className={`${ProjectDescriptionWidth}`}>
-<div className="text-center pt-20">
-  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
-  <p className={`${ProjectResponseSize} pt-3`}>
-  Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.
-  </p>
-</div>
-</div>
+            {/* What Was the Challenge? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                    Musicians and record labels currently do not have a way of viewing their royalties data outside of spreadsheets. This is an issue because lots of information that is provided falls through the cracks. So we solved that issue. once solved, we needed to create a login for users on the website to isolate the different use cases so that each user&apos;s data is separated.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-{/* What Was the Solution? */}
-<div className={`${ProjectDescriptionWidth}`}>
-<div className="text-center pt-20">
-  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
-  <p className={`${ProjectResponseSize} pt-3`}>
-  Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).
-  </p>
-</div>
-</div>
-</div>
+            {/* What Was the Solution? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                    I developed a dashboard that visualizes ingested mechanical royalties data. This was done by using python and SQL on the back end and tableau and visx for visualization on the front end. Once the unique instances were created, javascript/nextjs were used for embedding the tool into our website, then clerk was used for authentication.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
 
         </div>
 
