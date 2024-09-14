@@ -31,6 +31,8 @@ import ElectromechanicalDesign1 from '/public/ElectromechanicalDesign/Mechanical
 import ElectromechanicalDesign2 from '/public/ElectromechanicalDesign/mechanical_design-1_test.svg';
 import ElectromechanicalDesignTable from '/public/Tables/image (5).svg';
 
+import Disneyland1 from '/public/Disneyland/Disneyland Map 2024.jpg';
+import Disneyland2 from '/public/Disneyland/DCA Map 2024.jpg';
 import DisneylandTable from '/public/Tables/image (8).svg';
 
 import TechnologyTransfer1 from '/public/TechnologyTransfer/nasa-01.svg';
