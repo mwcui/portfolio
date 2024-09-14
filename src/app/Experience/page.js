@@ -791,7 +791,104 @@ const Experience = () => {
 
 
 
-     
+           {/* Disneyland */}
+           <div className="w-[1000px] max-w-[90vw]">
+        {/* Header */}
+        <div className="flex items-center pb-2 p-1">
+          <Image
+            src={NorthropGrummanLogo}
+            alt="Northrop Grumman Logo"
+            width={NorthropGrummanLogoSize}
+            height={50}
+            objectFit="contain"
+          />
+          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>DISNEYLAND</h1>
+        </div>
+
+
+        {/* Selected Image Display */}
+        <div className="relative">
+          <Image
+            src={selectedDisneylandImage.src}
+            alt={selectedDisneylandImage.alt}
+            width={1000}
+            height={562}
+            objectFit="contain"
+            priority={true}
+          />
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+            {/* {selectedArtistAnalyticsImage.title} */}
+            Numbers/figures are for representation purposes, actual designs are confidential | Source: Google Images
+          </p>
+        </div>
+
+        <div className="w-full flex justify-center py-3">
+          {/* Photo Slider */}
+          <div className=" overflow-x-auto relative bg-slate-600 p-1 rounded-lg">
+            <div className="flex space-x-2 place-content-center">
+              {DisneylandImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedDisneylandImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedDisneylandImage(image)}
+                >
+                  {/* the width and height are restricting the images */}
+                  <div className={`${PhotoSliderImageSize} content-center`}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+
+        <div className="z-100 relative pb-20">
+          <div className="flex flex-col items-center">
+
+            {/* Project Description */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectTitleSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  Provide electromechanical component design and development for space programs (ex: James Webb Space Telescope).                 
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* What Was the Challenge? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  After the electrical design phase of spacecraft development, components cannot be manufactured or integrated without considering their physical form. The challenge is to translate the electrical designs into 3D models that not only meet the system requirements but also ensure the components are manufacturable, fit within the spacecraft’s physical constraints, and integrate seamlessly with other parts. electromechanical design solves the critical issue of packaging, manufacturability, and spatial integration, bridging the gap between electrical design and final assembly.                  
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* What Was the Solution? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  I designed the electrical and mechanical components using creo parametric, performed GD&T/tolerance analysis, managed the assets using Enovia PLM, and managed requirements across the systems, electrical and manufacturing stakeholders.                  
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
