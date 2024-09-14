@@ -57,6 +57,7 @@ const Experience = () => {
   const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
   const [ProjectTitleSize, setProjectTitleSize] = useState('text'); // Default for iPhone
   const [ProjectResponseSize, setProjectResponseSize] = useState('text-sm'); // Default for iPhone
+  const [PhotoSliderImageSize, setPhotoSliderImageSize] = useState('w-32 h-[100%]'); // Default for iPhone
 
   useEffect(() => {
     const handleResize = () => {
@@ -67,6 +68,7 @@ const Experience = () => {
         setProjectDividerSize('text-lg');
         setProjectTitleSize('text-sm');
         setProjectResponseSize('text-sm');
+        setPhotoSliderImageSize('w-16 h-[100%]');
       } else if (window.innerWidth < 1024) { // iPad
         setSymphonyLogoSize(225);
         setNorthropGrummanLogoSize(110);
@@ -74,6 +76,7 @@ const Experience = () => {
         setProjectDividerSize('text-2xl');
         setProjectTitleSize('text-2xl');
         setProjectResponseSize('text-xl');
+        setPhotoSliderImageSize('w-32 h-[100%]');
       } else { // Mac
         setSymphonyLogoSize(250);
         setNorthropGrummanLogoSize(135);
@@ -81,6 +84,7 @@ const Experience = () => {
         setProjectDividerSize('text-3xl');
         setProjectTitleSize('text-2xl');
         setProjectResponseSize('text-xl');
+        setPhotoSliderImageSize('w-32 h-[100%]');
       }
     };
 
@@ -170,8 +174,8 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-            <div className="flex space-x-4 place-content-center">
+          <div className=" overflow-x-auto relative bg-slate-600 p-1 rounded-lg">
+            <div className="flex space-x-2 place-content-center">
               {ArtistAnalyticsImages.map((image, index) => (
                 <div
                   key={index}
@@ -179,7 +183,7 @@ const Experience = () => {
                   onClick={() => setSelectedArtistAnalyticsImage(image)}
                 >
                   {/* the width and height are restricting the images */}
-                  <div className="w-32 h-[100%] content-center">
+                  <div className={`${PhotoSliderImageSize} content-center`}>
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -264,8 +268,8 @@ const Experience = () => {
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
-          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
-            <div className="flex space-x-4 place-content-center">
+          <div className=" overflow-x-auto relative bg-slate-600 p-1 rounded-lg">
+            <div className="flex space-x-2 place-content-center">
               {EngineeringandSciencesImages.map((image, index) => (
                 <div
                   key={index}
@@ -273,7 +277,7 @@ const Experience = () => {
                   onClick={() => setSelectedEngineeringandSciencesImage(image)}
                 >
                   {/* the width and height are restricting the images */}
-                  <div className="w-32 h-[100%] content-center">
+                  <div className={`${PhotoSliderImageSize} content-center`}>
                     <Image
                       src={image.src}
                       alt={image.alt}
