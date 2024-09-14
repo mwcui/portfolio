@@ -53,6 +53,8 @@ const Experience = () => {
   // Define state for responsive text size variables
   const [SymphonyLogoSize, setSymphonyLogoSize] = useState(120); // Default for iPhone
   const [NorthropGrummanLogoSize, setNorthropGrummanLogoSize] = useState(120); // Default for iPhone
+  const [SpaceCraftBusinessDevelopmentRenaming, setSpaceCraftBusinessDevelopmentRenaming] = useState('SPACECRAFT BUSINESS DEVELOPMENT');
+  const [ElectromechanicalDesignRenaming, setElectromechanicalDesignRenaming] = useState('ELECTROMECHANICAL DESIGN');
   const [ProjectNameSize, setProjectNameSize] = useState('text'); // Default for iPhone
   const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
   const [ProjectTitleSize, setProjectTitleSize] = useState('text'); // Default for iPhone
@@ -68,6 +70,8 @@ const Experience = () => {
       if (window.innerWidth < 640) { // iPhone
         setSymphonyLogoSize(120);
         setNorthropGrummanLogoSize(70);
+        setSpaceCraftBusinessDevelopmentRenaming('SPACECRAFT BIZ DEV');
+        setElectromechanicalDesignRenaming('ELECTROMECH DESIGN');
         setProjectNameSize('text');
         setProjectDividerSize('text-lg');
         setProjectTitleSize('text');
@@ -79,6 +83,8 @@ const Experience = () => {
       } else if (window.innerWidth < 1024) { // iPad
         setSymphonyLogoSize(225);
         setNorthropGrummanLogoSize(110);
+        setSpaceCraftBusinessDevelopmentRenaming('SPACECRAFT BIZ DEV');
+        setElectromechanicalDesignRenaming('ELECTROMECHANICAL DESIGN');
         setProjectNameSize('text-3xl');
         setProjectDividerSize('text-2xl');
         setProjectTitleSize('text-2xl');
@@ -90,6 +96,8 @@ const Experience = () => {
       } else { // Mac
         setSymphonyLogoSize(250);
         setNorthropGrummanLogoSize(135);
+        setSpaceCraftBusinessDevelopmentRenaming('SPACECRAFT BIZ DEV');
+        setElectromechanicalDesignRenaming('ELECTROMECHANICAL DESIGN');
         setProjectNameSize('text-3xl');
         setProjectDividerSize('text-3xl');
         setProjectTitleSize('text-2xl');
@@ -573,7 +581,7 @@ const Experience = () => {
           />
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>SPACECRAFT BIZ DEV</h1>
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>{SpaceCraftBusinessDevelopmentRenaming}</h1>
         </div>
 
 
@@ -675,15 +683,15 @@ const Experience = () => {
           />
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>ELECTROMECH DESIGN</h1>
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>{ElectromechanicalDesignRenaming}</h1>
         </div>
 
 
         {/* Selected Image Display */}
         <div className="relative">
           <Image
-            src={selectedSpacecraftBusinessDevelopmentImage.src}
-            alt={selectedSpacecraftBusinessDevelopmentImage.alt}
+            src={selectedElectromechanicalDesignImage.src}
+            alt={selectedElectromechanicalDesignImage.alt}
             width={1000}
             height={562}
             objectFit="contain"
@@ -699,11 +707,11 @@ const Experience = () => {
           {/* Photo Slider */}
           <div className=" overflow-x-auto relative bg-slate-600 p-1 rounded-lg">
             <div className="flex space-x-2 place-content-center">
-              {SpacecraftBusinessDevelopmentImages.map((image, index) => (
+              {ElectromechanicalDesignImages.map((image, index) => (
                 <div
                   key={index}
-                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedSpacecraftBusinessDevelopmentImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
-                  onClick={() => setSelectedSpacecraftBusinessDevelopmentImage(image)}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedElectromechanicalDesignImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedElectromechanicalDesignImage(image)}
                 >
                   {/* the width and height are restricting the images */}
                   <div className={`${PhotoSliderImageSize} content-center`}>
@@ -728,7 +736,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Build a tool to help the spacecraft engineering department generate new business
+                  Provide electromechanical component design and development for space programs (ex: James Webb Space Telescope).                 
                   </p>
                 </div>
               </div>
@@ -740,7 +748,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    The organization was forecasting softness (not having enough work in the future) and needed to market itself to the rest of the company. There was plenty of work across the company, but without marketing, nobody knew to give it to us.
+                  After the electrical design phase of spacecraft development, components cannot be manufactured or integrated without considering their physical form. The challenge is to translate the electrical designs into 3D models that not only meet the system requirements but also ensure the components are manufacturable, fit within the spacecraft’s physical constraints, and integrate seamlessly with other parts. electromechanical design solves the critical issue of packaging, manufacturability, and spatial integration, bridging the gap between electrical design and final assembly.                  
                   </p>
                 </div>
               </div>
@@ -752,7 +760,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Developed an internal marketing tool that supported internal business capture. I lead a team of 2 through the design and development of the website (Javascript, Sharepoint), managed stakeholder requirements/expectations and facilitated x-functional communications.
+                  I designed the electrical and mechanical components using creo parametric, performed GD&T/tolerance analysis, managed the assets using Enovia PLM, and managed requirements across the systems, electrical and manufacturing stakeholders.                  
                   </p>
                 </div>
               </div>
@@ -760,6 +768,14 @@ const Experience = () => {
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
 
 
 
