@@ -35,7 +35,7 @@ import TechnologyTransferTable from '/public/Tables/image (9).svg';
 
 import DisneyLogo from '/public/Logos/removed_background/disney.png';
 import NASALogo from '/public/Logos/removed_background/NASA.png';
-import NorthropGrummanLogo from '/public/Logos/ng_svg.svg';
+import NorthropGrummanLogo from '/public/Logos/Northrop Grumman Black Logo.svg';
 import SymphonyLogo from '/public/Logos/removed_background/Symphony.png';
 
 
@@ -51,6 +51,7 @@ import {
 const Experience = () => {
   // Define state for responsive text size variables
   const [SymphonyLogoSize, setSymphonyLogoSize] = useState(120); // Default for iPhone
+  const [NorthropGrummanLogoSize, setNorthropGrummanLogoSize] = useState(120); // Default for iPhone
   const [ProjectNameSize, setProjectNameSize] = useState('text'); // Default for iPhone
   const [ProjectSpaceSize, setProjectSpaceSize] = useState('text-sm'); // Default for iPhone
   const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
@@ -62,6 +63,7 @@ const Experience = () => {
     const handleResize = () => {
       if (window.innerWidth < 640) { // iPhone
         setSymphonyLogoSize(120);
+        setNorthropGrummanLogoSize(120);
         setProjectNameSize('text');
         setProjectDividerSize('text-lg');
         setProjectSpaceVisible(false); // Hide on iPhone
@@ -69,6 +71,7 @@ const Experience = () => {
         setProjectResponseSize('text-sm');
       } else if (window.innerWidth < 1024) { // iPad
         setSymphonyLogoSize(225);
+        setNorthropGrummanLogoSize(120);
         setProjectNameSize('text-3xl');
         setProjectSpaceSize('text-2xl');
         setProjectDividerSize('text-2xl');
@@ -77,6 +80,7 @@ const Experience = () => {
         setProjectResponseSize('text-xl');
       } else { // Mac
         setSymphonyLogoSize(300);
+        setNorthropGrummanLogoSize(190);
         setProjectNameSize('text-4xl');
         setProjectSpaceSize('text-3xl');
         setProjectDividerSize('text-3xl');
@@ -141,7 +145,7 @@ const Experience = () => {
       {/* Artist Analytics */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-2 p-1">
+        <div className="flex items-center pb-3 p-1">
           <Image
             src={SymphonyLogo}
             alt="Symphony Logo"
@@ -235,17 +239,17 @@ const Experience = () => {
       {/* Engineering and Sciences */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-2 p-1">
+        <div className="flex items-center pb-3 p-1">
           <Image
             src={NorthropGrummanLogo}
-            alt="Symphony Logo"
-            width={SymphonyLogoSize}
+            alt="Northrop Grumman Logo"
+            width={NorthropGrummanLogoSize}
             height={50}
             objectFit="contain"
           />
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
           {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>ARTIST ANALYTICS</h1>
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>ENGINEERING & SCIENCES</h1>
         </div>
 
 
