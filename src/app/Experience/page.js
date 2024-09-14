@@ -14,7 +14,7 @@ import EngineeringandSciences3 from '/public/EngineeringandSciences/E_S Dashboar
 import EngineeringandSciences4 from '/public/EngineeringandSciences/E_S Dashboard.004.svg';
 import EngineeringandSciencesTable from '/public/Tables/image.svg';
 
-import DesigntoKit1 from '/public/DesigntoKit/Design_to_Kit.svg';
+import DocktoStock1 from '/public/DesigntoKit/Design_to_Kit.svg';
 import DesigntoKitTable from '/public/Tables/image (2).svg';
 
 import ProgramAffordabilityTable from '/public/Tables/image (7).svg';
@@ -124,9 +124,9 @@ const Experience = () => {
     { src: EngineeringandSciences4, alt: "Fourth SVG", title: "Engineering and Sciences 4" },
   ];
 
-  const DesigntoKitImages = [
-    { src: DesigntoKit1, alt: "First SVG", title: "DesigntoKit 1" },
-  ];
+  const DocktoStockImages = [
+    { src: DocktoStock1, alt: "First SVG", title: "DocktoStock 1" },
+  ];  
 
   const SpacecraftBusinessDevelopmentImages = [
     { src: SpacecraftBusinessDevelopment1, alt: "First SVG", title: "Spacecraft Business Development 1" },
@@ -145,7 +145,7 @@ const Experience = () => {
 
   const [selectedArtistAnalyticsImage, setSelectedArtistAnalyticsImage] = useState(ArtistAnalyticsImages[0]);
   const [selectedEngineeringandSciencesImage, setSelectedEngineeringandSciencesImage] = useState(EngineeringandSciencesImages[0]);
-  const [selectedDesigntoKitImage, setSelectedDesigntoKitImage] = useState(DesigntoKitImages[0]);
+  const [selectedDocktoStockImage, setDocktoStockImage] = useState(DocktoStockImages[0]);
   const [selectedSpacecraftBusinessDevelopmentImage, setSelectedSpacecraftBusinessDevelopmentImage] = useState(SpacecraftBusinessDevelopmentImages[0]);
   const [selectedElectromechanicalDesignImage, setSelectedElectromechanicalDesignImage] = useState(ElectromechanicalDesignImages[0]);
   const [selectedTechnologyTransferImage, setSelectedTechnologyTransferImage] = useState(TechnologyTransferImages[0]);
@@ -168,7 +168,6 @@ const Experience = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>ARTIST ANALYTICS</h1>
         </div>
-
 
         {/* Selected Image Display */}
         <div className="relative">
@@ -211,14 +210,13 @@ const Experience = () => {
 
 
         <div className="z-100 relative pb-20">
-
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
             <div className={`${ProjectDescriptionWidth}`}>
               <div className={`${ProjectTitleSpacing}`}>
                 <div className="text-center">
-                  <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
+                  <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
                     Develop a tool that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
                   </p>
@@ -226,12 +224,11 @@ const Experience = () => {
               </div>
             </div>
 
-
             {/* What Was the Challenge? */}
             <div className={`${ProjectDescriptionWidth}`}>
               <div className={`${ProjectResponseSpacing}`}>
                 <div className="text-center">
-                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
                     Musicians and record labels currently do not have a way of viewing their royalties data outside of spreadsheets. This is an issue because lots of information that is provided falls through the cracks. So we solved that issue. once solved, we needed to create a login for users on the website to isolate the different use cases so that each user&apos;s data is separated.
                   </p>
@@ -243,18 +240,15 @@ const Experience = () => {
             <div className={`${ProjectDescriptionWidth}`}>
               <div className={`${ProjectResponseSpacing}`}>
                 <div className="text-center">
-                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
                     I developed a dashboard that visualizes ingested mechanical royalties data. This was done by using python and SQL on the back end and tableau and visx for visualization on the front end. Once the unique instances were created, javascript/nextjs were used for embedding the tool into our website, then clerk was used for authentication.
                   </p>
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
 
 
@@ -319,15 +313,13 @@ const Experience = () => {
 
 
         <div className="z-100 relative pb-20">
-
-
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
             <div className={`${ProjectDescriptionWidth}`}>
               <div className={`${ProjectTitleSpacing}`}>
                 <div className="text-center">
-                  <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
+                  <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
                   Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).
                   </p>
@@ -335,12 +327,11 @@ const Experience = () => {
               </div>
             </div>
 
-
             {/* What Was the Challenge? */}
             <div className={`${ProjectDescriptionWidth}`}>
               <div className={`${ProjectResponseSpacing}`}>
                 <div className="text-center">
-                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
                   Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.
                   </p>
@@ -352,7 +343,7 @@ const Experience = () => {
             <div className={`${ProjectDescriptionWidth}`}>
               <div className={`${ProjectResponseSpacing}`}>
                 <div className="text-center">
-                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
                   Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).
                   </p>
@@ -360,11 +351,7 @@ const Experience = () => {
               </div>
             </div>
           </div>
-
-
-
         </div>
-
       </div>
 
 
@@ -386,12 +373,11 @@ const Experience = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>DOCK TO STOCK</h1>
         </div>
 
-
         {/* Selected Image Display */}
         <div className="relative">
           <Image
-            src={selectedEngineeringandSciencesImage.src}
-            alt={selectedEngineeringandSciencesImage.alt}
+            src={selectedDocktoStockImage.src}
+            alt={selectedDocktoStockImage.alt}
             width={1000}
             height={562}
             objectFit="contain"
@@ -406,11 +392,113 @@ const Experience = () => {
           {/* Photo Slider */}
           <div className=" overflow-x-auto relative bg-slate-600 p-1 rounded-lg">
             <div className="flex space-x-2 place-content-center">
-              {EngineeringandSciencesImages.map((image, index) => (
+              {DocktoStockImages.map((image, index) => (
                 <div
                   key={index}
-                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedEngineeringandSciencesImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
-                  onClick={() => setSelectedEngineeringandSciencesImage(image)}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedDocktoStockImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedDocktoStockImage(image)}
+                >
+                  {/* the width and height are restricting the images */}
+                  <div className={`${PhotoSliderImageSize} content-center`}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="z-100 relative pb-20">
+          <div className="flex flex-col items-center">
+
+            {/* Project Description */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectTitleSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  Develop a tool that visualizes the different processes within the Dock to Stock workflow and shines a spotlight on the areas that need the most operational improvement.
+                                    </p>
+                </div>
+              </div>
+            </div>
+
+
+            {/* What Was the Challenge? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  The current process for the Dock to Stock workflow is manual, with no real-time data visualization. This makes it difficult to identify inefficiencies and areas for improvement.currently management has limited visibility into what is going on between when raw material/parts are delivered at the docks, to when they get kitted (stock) and sent out across the campus, and where the major delay points are at. This has led to kits getting delayed, in some cases over 200+ days, causing major cost and schedule impacts for many programs across Space Park
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* What Was the Solution? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  A dashboard that tracks the major process points within the D2S workflow, highlighting impacted programs, age of process, average times, current location of material, etc.. I gathered the data (Nimbus, SAP HANA, Envoia PLM, SME’s), performed analysis/pipeline development (SQL, Python), and built the tool (Tableau).                  
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+{/* Dock to Stock */}
+      <div className="w-[1000px] max-w-[90vw]">
+        {/* Header */}
+        <div className="flex items-center pb-2 p-1">
+          <Image
+            src={NorthropGrummanLogo}
+            alt="Northrop Grumman Logo"
+            width={NorthropGrummanLogoSize}
+            height={50}
+            objectFit="contain"
+          />
+          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>DOCK TO STOCK</h1>
+        </div>
+
+
+        {/* Selected Image Display */}
+        <div className="relative">
+          <Image
+            src={selectedDocktoStockImage.src}
+            alt={selectedDocktoStockImage.alt}
+            width={1000}
+            height={562}
+            objectFit="contain"
+          />
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+            {/* {selectedArtistAnalyticsImage.title} */}
+            Numbers and figures have been altered for confidentiality
+          </p>
+        </div>
+
+        <div className="w-full flex justify-center py-3">
+          {/* Photo Slider */}
+          <div className=" overflow-x-auto relative bg-slate-600 p-1 rounded-lg">
+            <div className="flex space-x-2 place-content-center">
+              {DocktoStockImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedDocktoStockImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedDocktoStockImage(image)}
                 >
                   {/* the width and height are restricting the images */}
                   <div className={`${PhotoSliderImageSize} content-center`}>
@@ -428,17 +516,16 @@ const Experience = () => {
 
 
         <div className="z-100 relative pb-20">
-
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
             <div className={`${ProjectDescriptionWidth}`}>
               <div className={`${ProjectTitleSpacing}`}>
                 <div className="text-center">
-                  <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
+                  <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Develop a tool that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
-                  </p>
+                  Develop a tool that visualizes the different processes within the Dock to Stock workflow and shines a spotlight on the areas that need the most operational improvement.
+                                    </p>
                 </div>
               </div>
             </div>
@@ -448,9 +535,9 @@ const Experience = () => {
             <div className={`${ProjectDescriptionWidth}`}>
               <div className={`${ProjectResponseSpacing}`}>
                 <div className="text-center">
-                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Musicians and record labels currently do not have a way of viewing their royalties data outside of spreadsheets. This is an issue because lots of information that is provided falls through the cracks. So we solved that issue. once solved, we needed to create a login for users on the website to isolate the different use cases so that each user&apos;s data is separated.
+                  The current process for the Dock to Stock workflow is manual, with no real-time data visualization. This makes it difficult to identify inefficiencies and areas for improvement.currently management has limited visibility into what is going on between when raw material/parts are delivered at the docks, to when they get kitted (stock) and sent out across the campus, and where the major delay points are at. This has led to kits getting delayed, in some cases over 200+ days, causing major cost and schedule impacts for many programs across Space Park
                   </p>
                 </div>
               </div>
@@ -460,19 +547,118 @@ const Experience = () => {
             <div className={`${ProjectDescriptionWidth}`}>
               <div className={`${ProjectResponseSpacing}`}>
                 <div className="text-center">
-                  <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    I developed a dashboard that visualizes ingested mechanical royalties data. This was done by using python and SQL on the back end and tableau and visx for visualization on the front end. Once the unique instances were created, javascript/nextjs were used for embedding the tool into our website, then clerk was used for authentication.
+                  A dashboard that tracks the major process points within the D2S workflow, highlighting impacted programs, age of process, average times, current location of material, etc.. I gathered the data (Nimbus, SAP HANA, Envoia PLM, SME’s), performed analysis/pipeline development (SQL, Python), and built the tool (Tableau).                  
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+{/* Spacecraft Business Development */}
+<div className="w-[1000px] max-w-[90vw]">
+        {/* Header */}
+        <div className="flex items-center pb-2 p-1">
+          <Image
+            src={NorthropGrummanLogo}
+            alt="Northrop Grumman Logo"
+            width={NorthropGrummanLogoSize}
+            height={50}
+            objectFit="contain"
+          />
+          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>SPACECRAFT BUSINESS DEVELOPMENT</h1>
+        </div>
+
+
+        {/* Selected Image Display */}
+        <div className="relative">
+          <Image
+            src={selectedSpacecraftBusinessDevelopmentImage.src}
+            alt={selectedSpacecraftBusinessDevelopmentImage.alt}
+            width={1000}
+            height={562}
+            objectFit="contain"
+          />
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+            {/* {selectedArtistAnalyticsImage.title} */}
+            Numbers and figures have been altered for confidentiality
+          </p>
+        </div>
+
+        <div className="w-full flex justify-center py-3">
+          {/* Photo Slider */}
+          <div className=" overflow-x-auto relative bg-slate-600 p-1 rounded-lg">
+            <div className="flex space-x-2 place-content-center">
+              {SpacecraftBusinessDevelopmentImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedSpacecraftBusinessDevelopmentImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedSpacecraftBusinessDevelopmentImage(image)}
+                >
+                  {/* the width and height are restricting the images */}
+                  <div className={`${PhotoSliderImageSize} content-center`}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className="z-100 relative pb-20">
+          <div className="flex flex-col items-center">
+
+            {/* Project Description */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectTitleSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  Build a tool to help the spacecraft engineering department generate new business
                   </p>
                 </div>
               </div>
             </div>
 
+            {/* What Was the Challenge? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  The organization was forecasting softness (not having enough work in the future) and needed to market itself to the rest of the company. There was plenty of work across the company, but without marketing, nobody knew to give it to us.                  
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* What Was the Solution? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  Developed an internal marketing tool that supported internal business capture. I lead a team of 2 through the design and development of the website (Javascript, Sharepoint), managed stakeholder requirements/expectations and facilitated x-functional communications.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
-
       </div>
+
 
 
 
