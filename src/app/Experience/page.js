@@ -17,6 +17,9 @@ import EngineeringandSciencesTable from '/public/Tables/image.svg';
 import DocktoStock1 from '/public/DesigntoKit/Design_to_Kit.svg';
 import DesigntoKitTable from '/public/Tables/image (2).svg';
 
+import ProgramAffordability1 from '/public/ProgramAffordability/2021 Q4 ILR Chart.png';
+import ProgramAffordability2 from '/public/ProgramAffordability/Employee Affordability Graph.png';
+import ProgramAffordability3 from '/public/ProgramAffordability/ILR Q4 Chart.png';
 import ProgramAffordabilityTable from '/public/Tables/image (7).svg';
 
 import SpacecraftBusinessDevelopment1 from '/public/SpacecraftBusinessDevelopment/Business Development Tool-01.svg';
@@ -136,6 +139,12 @@ const Experience = () => {
     { src: DocktoStock1, alt: "First SVG", title: "DocktoStock 1" },
   ];
 
+  const ProgramAffordabilityImages = [
+    { src: ProgramAffordability1, alt: "First SVG", title: "Program Affordability 1" },
+    { src: ProgramAffordability2, alt: "Second SVG", title: "Program Affordability 2" },
+    { src: ProgramAffordability3, alt: "Third SVG", title: "Program Affordability 3" },
+  ];
+
   const SpacecraftBusinessDevelopmentImages = [
     { src: SpacecraftBusinessDevelopment1, alt: "First SVG", title: "Spacecraft Business Development 1" },
     { src: SpacecraftBusinessDevelopment2, alt: "Second SVG", title: "Spacecraft Business Development 2" },
@@ -153,6 +162,7 @@ const Experience = () => {
 
   const [selectedArtistAnalyticsImage, setSelectedArtistAnalyticsImage] = useState(ArtistAnalyticsImages[0]);
   const [selectedEngineeringandSciencesImage, setSelectedEngineeringandSciencesImage] = useState(EngineeringandSciencesImages[0]);
+  const [selectedProgramAffordabilityImage, setSelectedProgramAffordabilityImage] = useState(ProgramAffordabilityImages[0]);
   const [selectedDocktoStockImage, setDocktoStockImage] = useState(DocktoStockImages[0]);
   const [selectedSpacecraftBusinessDevelopmentImage, setSelectedSpacecraftBusinessDevelopmentImage] = useState(SpacecraftBusinessDevelopmentImages[0]);
   const [selectedElectromechanicalDesignImage, setSelectedElectromechanicalDesignImage] = useState(ElectromechanicalDesignImages[0]);
@@ -188,7 +198,7 @@ const Experience = () => {
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Numbers and figures have been altered for confidentiality
+            Figures and numbers are a representation of the project. Some information has been altered for confidentiality.
           </p>
         </div>
 
@@ -365,7 +375,7 @@ const Experience = () => {
 
 
 
-      {/* Dock to Stock */}
+      {/* Program Affordability */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center pb-2 p-1">
@@ -378,33 +388,32 @@ const Experience = () => {
           />
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>DOCK TO STOCK</h1>
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>PROGRAM AFFORDABILITY</h1>
         </div>
 
         {/* Selected Image Display */}
         <div className="relative">
           <Image
-            src={selectedDocktoStockImage.src}
-            alt={selectedDocktoStockImage.alt}
+            src={selectedProgramAffordabilityImage.src}
+            alt={selectedProgramAffordabilityImage.alt}
             width={1000}
             height={562}
             objectFit="contain"
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Numbers and figures have been altered for confidentiality
-          </p>
+            Numbers/figures are for representation purposes, actual data is confidential | Source: IRL ICS          </p>
         </div>
 
         <div className="w-full flex justify-center py-3">
           {/* Photo Slider */}
           <div className=" overflow-x-auto relative bg-slate-600 p-1 rounded-lg">
             <div className="flex space-x-2 place-content-center">
-              {DocktoStockImages.map((image, index) => (
+              {ProgramAffordabilityImages.map((image, index) => (
                 <div
                   key={index}
-                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedDocktoStockImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
-                  onClick={() => setSelectedDocktoStockImage(image)}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedProgramAffordabilityImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedProgramAffordabilityImage(image)}
                 >
                   {/* the width and height are restricting the images */}
                   <div className={`${PhotoSliderImageSize} content-center`}>
@@ -461,6 +470,9 @@ const Experience = () => {
           </div>
         </div>
       </div>
+
+
+      
 
 
 
@@ -699,7 +711,7 @@ const Experience = () => {
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Numbers and figures have been altered for confidentiality
+            Numbers/figures are for representation purposes, actual designs are confidential | Source: Google Images
           </p>
         </div>
 
