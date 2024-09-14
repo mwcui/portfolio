@@ -126,7 +126,7 @@ const Experience = () => {
 
   const DocktoStockImages = [
     { src: DocktoStock1, alt: "First SVG", title: "DocktoStock 1" },
-  ];  
+  ];
 
   const SpacecraftBusinessDevelopmentImages = [
     { src: SpacecraftBusinessDevelopment1, alt: "First SVG", title: "Spacecraft Business Development 1" },
@@ -321,7 +321,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).
+                    Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).
                   </p>
                 </div>
               </div>
@@ -333,7 +333,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.
+                    Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.
                   </p>
                 </div>
               </div>
@@ -345,7 +345,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).
+                    Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).
                   </p>
                 </div>
               </div>
@@ -420,8 +420,8 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Develop a tool that visualizes the different processes within the Dock to Stock workflow and shines a spotlight on the areas that need the most operational improvement.
-                                    </p>
+                    Develop a tool that visualizes the different processes within the Dock to Stock workflow and shines a spotlight on the areas that need the most operational improvement.
+                  </p>
                 </div>
               </div>
             </div>
@@ -433,7 +433,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  The current process for the Dock to Stock workflow is manual, with no real-time data visualization. This makes it difficult to identify inefficiencies and areas for improvement.currently management has limited visibility into what is going on between when raw material/parts are delivered at the docks, to when they get kitted (stock) and sent out across the campus, and where the major delay points are at. This has led to kits getting delayed, in some cases over 200+ days, causing major cost and schedule impacts for many programs across Space Park
+                    The current process for the Dock to Stock workflow is manual, with no real-time data visualization. This makes it difficult to identify inefficiencies and areas for improvement.currently management has limited visibility into what is going on between when raw material/parts are delivered at the docks, to when they get kitted (stock) and sent out across the campus, and where the major delay points are at. This has led to kits getting delayed, in some cases over 200+ days, causing major cost and schedule impacts for many programs across Space Park
                   </p>
                 </div>
               </div>
@@ -445,7 +445,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  A dashboard that tracks the major process points within the D2S workflow, highlighting impacted programs, age of process, average times, current location of material, etc.. I gathered the data (Nimbus, SAP HANA, Envoia PLM, SME’s), performed analysis/pipeline development (SQL, Python), and built the tool (Tableau).                  
+                    A dashboard that tracks the major process points within the D2S workflow, highlighting impacted programs, age of process, average times, current location of material, etc.. I gathered the data (Nimbus, SAP HANA, Envoia PLM, SME’s), performed analysis/pipeline development (SQL, Python), and built the tool (Tableau).
                   </p>
                 </div>
               </div>
@@ -458,7 +458,7 @@ const Experience = () => {
 
 
 
-{/* Dock to Stock */}
+      {/* Dock to Stock */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center pb-2 p-1">
@@ -524,8 +524,8 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Develop a tool that visualizes the different processes within the Dock to Stock workflow and shines a spotlight on the areas that need the most operational improvement.
-                                    </p>
+                    Develop a tool that visualizes the different processes within the Dock to Stock workflow and shines a spotlight on the areas that need the most operational improvement.
+                  </p>
                 </div>
               </div>
             </div>
@@ -537,7 +537,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  The current process for the Dock to Stock workflow is manual, with no real-time data visualization. This makes it difficult to identify inefficiencies and areas for improvement.currently management has limited visibility into what is going on between when raw material/parts are delivered at the docks, to when they get kitted (stock) and sent out across the campus, and where the major delay points are at. This has led to kits getting delayed, in some cases over 200+ days, causing major cost and schedule impacts for many programs across Space Park
+                    The current process for the Dock to Stock workflow is manual, with no real-time data visualization. This makes it difficult to identify inefficiencies and areas for improvement.currently management has limited visibility into what is going on between when raw material/parts are delivered at the docks, to when they get kitted (stock) and sent out across the campus, and where the major delay points are at. This has led to kits getting delayed, in some cases over 200+ days, causing major cost and schedule impacts for many programs across Space Park
                   </p>
                 </div>
               </div>
@@ -549,7 +549,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  A dashboard that tracks the major process points within the D2S workflow, highlighting impacted programs, age of process, average times, current location of material, etc.. I gathered the data (Nimbus, SAP HANA, Envoia PLM, SME’s), performed analysis/pipeline development (SQL, Python), and built the tool (Tableau).                  
+                    A dashboard that tracks the major process points within the D2S workflow, highlighting impacted programs, age of process, average times, current location of material, etc.. I gathered the data (Nimbus, SAP HANA, Envoia PLM, SME’s), performed analysis/pipeline development (SQL, Python), and built the tool (Tableau).
                   </p>
                 </div>
               </div>
@@ -560,8 +560,8 @@ const Experience = () => {
 
 
 
-{/* Spacecraft Business Development */}
-<div className="w-[1000px] max-w-[90vw]">
+      {/* Spacecraft Business Development */}
+      <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center pb-2 p-1">
           <Image
@@ -585,6 +585,7 @@ const Experience = () => {
             width={1000}
             height={562}
             objectFit="contain"
+            priority={true}
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
             {/* {selectedArtistAnalyticsImage.title} */}
@@ -626,7 +627,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Build a tool to help the spacecraft engineering department generate new business
+                    Build a tool to help the spacecraft engineering department generate new business
                   </p>
                 </div>
               </div>
@@ -638,7 +639,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  The organization was forecasting softness (not having enough work in the future) and needed to market itself to the rest of the company. There was plenty of work across the company, but without marketing, nobody knew to give it to us.                  
+                    The organization was forecasting softness (not having enough work in the future) and needed to market itself to the rest of the company. There was plenty of work across the company, but without marketing, nobody knew to give it to us.
                   </p>
                 </div>
               </div>
@@ -650,7 +651,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Developed an internal marketing tool that supported internal business capture. I lead a team of 2 through the design and development of the website (Javascript, Sharepoint), managed stakeholder requirements/expectations and facilitated x-functional communications.
+                    Developed an internal marketing tool that supported internal business capture. I lead a team of 2 through the design and development of the website (Javascript, Sharepoint), managed stakeholder requirements/expectations and facilitated x-functional communications.
                   </p>
                 </div>
               </div>
