@@ -56,7 +56,7 @@ const Experience = () => {
   const [ProjectNameSize, setProjectNameSize] = useState('text'); // Default for iPhone
   const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
   const [ProjectTitleSize, setProjectTitleSize] = useState('text'); // Default for iPhone
-  const [ProjectTitleSpacing, setProjectTitleSpacing] = useState('pt-20'); // Default for iPhone // spacing between photoslider and project title size
+  const [ProjectTitleSpacing, setProjectTitleSpacing] = useState('pt-6'); // Default for iPhone // spacing between photoslider and project title size
   const [ProjectResponseSize, setProjectResponseSize] = useState('text-sm'); // Default for iPhone
   const [ProjectResponseSpacing, setProjectResponseSpacing] = useState('pt-6'); // Default for iPhone
   const [ProjectDescriptionWidth, setProjectDescriptionWidth] = useState('max-w-[95%]'); // Default for iPhone. using max-w-[95%] instead of w-[90%] bc w-[90%] does not center the text
@@ -71,7 +71,7 @@ const Experience = () => {
         setProjectNameSize('text');
         setProjectDividerSize('text-lg');
         setProjectTitleSize('text');
-        setProjectTitleSpacing('pt-10');
+        setProjectTitleSpacing('pt-6');
         setProjectResponseSize('text-sm');
         setProjectResponseSpacing('pt-10');
         setProjectDescriptionWidth('max-w-[90%]')
