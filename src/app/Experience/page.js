@@ -71,7 +71,7 @@ const Experience = () => {
         setProjectResponseSize('text-sm');
       } else if (window.innerWidth < 1024) { // iPad
         setSymphonyLogoSize(225);
-        setNorthropGrummanLogoSize(120);
+        setNorthropGrummanLogoSize(110);
         setProjectNameSize('text-3xl');
         setProjectSpaceSize('text-2xl');
         setProjectDividerSize('text-2xl');
@@ -79,8 +79,8 @@ const Experience = () => {
         setProjectTitleSize('text-2xl');
         setProjectResponseSize('text-xl');
       } else { // Mac
-        setSymphonyLogoSize(300);
-        setNorthropGrummanLogoSize(190);
+        setSymphonyLogoSize(250);
+        setNorthropGrummanLogoSize(135);
         setProjectNameSize('text-4xl');
         setProjectSpaceSize('text-3xl');
         setProjectDividerSize('text-3xl');
@@ -154,7 +154,7 @@ const Experience = () => {
             objectFit="contain"
           />
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
-          {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>}
+          {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>ARTIST ANALYTICS</h1>
         </div>
 
@@ -248,7 +248,7 @@ const Experience = () => {
             objectFit="contain"
           />
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
-          {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>}
+          {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>ENGINEERING & SCIENCES</h1>
         </div>
 
