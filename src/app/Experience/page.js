@@ -63,7 +63,7 @@ const Experience = () => {
     const handleResize = () => {
       if (window.innerWidth < 640) { // iPhone
         setSymphonyLogoSize(120);
-        setNorthropGrummanLogoSize(120);
+        setNorthropGrummanLogoSize(70);
         setProjectNameSize('text');
         setProjectDividerSize('text-lg');
         setProjectSpaceVisible(false); // Hide on iPhone
@@ -145,7 +145,7 @@ const Experience = () => {
       {/* Artist Analytics */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-3 p-1">
+        <div className="flex items-center pb-2 p-1">
           <Image
             src={SymphonyLogo}
             alt="Symphony Logo"
@@ -239,7 +239,7 @@ const Experience = () => {
       {/* Engineering and Sciences */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-3 p-1">
+        <div className="flex items-center pb-2 p-1">
           <Image
             src={NorthropGrummanLogo}
             alt="Northrop Grumman Logo"
