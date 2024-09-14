@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+
 import ArtistAnalytics1 from '/public/ArtistAnalytics/Symphony_1tr-01 (3).svg';
 import ArtistAnalytics2 from '/public/ArtistAnalytics/Symphony_2 Outline.svg';
 import ArtistAnalytics3 from '/public/ArtistAnalytics/Symphony_3 Outline.svg';
@@ -53,9 +54,7 @@ const Experience = () => {
   const [SymphonyLogoSize, setSymphonyLogoSize] = useState(120); // Default for iPhone
   const [NorthropGrummanLogoSize, setNorthropGrummanLogoSize] = useState(120); // Default for iPhone
   const [ProjectNameSize, setProjectNameSize] = useState('text'); // Default for iPhone
-  const [ProjectSpaceSize, setProjectSpaceSize] = useState('text-sm'); // Default for iPhone
   const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
-  const [ProjectSpaceVisible, setProjectSpaceVisible] = useState(true); // Default for iPhone
   const [ProjectTitleSize, setProjectTitleSize] = useState('text'); // Default for iPhone
   const [ProjectResponseSize, setProjectResponseSize] = useState('text-sm'); // Default for iPhone
 
@@ -66,25 +65,20 @@ const Experience = () => {
         setNorthropGrummanLogoSize(70);
         setProjectNameSize('text');
         setProjectDividerSize('text-lg');
-        setProjectSpaceVisible(false); // Hide on iPhone
         setProjectTitleSize('text-sm');
         setProjectResponseSize('text-sm');
       } else if (window.innerWidth < 1024) { // iPad
         setSymphonyLogoSize(225);
         setNorthropGrummanLogoSize(110);
         setProjectNameSize('text-3xl');
-        setProjectSpaceSize('text-2xl');
         setProjectDividerSize('text-2xl');
-        setProjectSpaceVisible(true); // Show on iPad
         setProjectTitleSize('text-2xl');
         setProjectResponseSize('text-xl');
       } else { // Mac
         setSymphonyLogoSize(250);
         setNorthropGrummanLogoSize(135);
         setProjectNameSize('text-4xl');
-        setProjectSpaceSize('text-3xl');
         setProjectDividerSize('text-3xl');
-        setProjectSpaceVisible(true); // Show on Mac  
         setProjectTitleSize('text-2xl');
         setProjectResponseSize('text-xl');
       }
