@@ -35,7 +35,7 @@ const About = ({ handlePageTransition }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pb-16 pt-2 px-4">
+    <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pb-16  px-4">
 
       <div className="m-10 w-36 h-36 relative">
         <Image

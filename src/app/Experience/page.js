@@ -573,7 +573,7 @@ const Experience = () => {
           />
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>SPACECRAFT BUSINESS DEVELOPMENT</h1>
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>SPACECRAFT BIZ DEV</h1>
         </div>
 
 
@@ -615,7 +615,6 @@ const Experience = () => {
             </div>
           </div>
         </div>
-
 
 
         <div className="z-100 relative pb-20">
@@ -661,6 +660,106 @@ const Experience = () => {
       </div>
 
 
+
+
+      {/* Electromechanical Design */}
+      <div className="w-[1000px] max-w-[90vw]">
+        {/* Header */}
+        <div className="flex items-center pb-2 p-1">
+          <Image
+            src={NorthropGrummanLogo}
+            alt="Northrop Grumman Logo"
+            width={NorthropGrummanLogoSize}
+            height={50}
+            objectFit="contain"
+          />
+          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>ELECTROMECH DESIGN</h1>
+        </div>
+
+
+        {/* Selected Image Display */}
+        <div className="relative">
+          <Image
+            src={selectedSpacecraftBusinessDevelopmentImage.src}
+            alt={selectedSpacecraftBusinessDevelopmentImage.alt}
+            width={1000}
+            height={562}
+            objectFit="contain"
+            priority={true}
+          />
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+            {/* {selectedArtistAnalyticsImage.title} */}
+            Numbers and figures have been altered for confidentiality
+          </p>
+        </div>
+
+        <div className="w-full flex justify-center py-3">
+          {/* Photo Slider */}
+          <div className=" overflow-x-auto relative bg-slate-600 p-1 rounded-lg">
+            <div className="flex space-x-2 place-content-center">
+              {SpacecraftBusinessDevelopmentImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedSpacecraftBusinessDevelopmentImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedSpacecraftBusinessDevelopmentImage(image)}
+                >
+                  {/* the width and height are restricting the images */}
+                  <div className={`${PhotoSliderImageSize} content-center`}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+
+        <div className="z-100 relative pb-20">
+          <div className="flex flex-col items-center">
+
+            {/* Project Description */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectTitleSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                    Build a tool to help the spacecraft engineering department generate new business
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* What Was the Challenge? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                    The organization was forecasting softness (not having enough work in the future) and needed to market itself to the rest of the company. There was plenty of work across the company, but without marketing, nobody knew to give it to us.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* What Was the Solution? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                    Developed an internal marketing tool that supported internal business capture. I lead a team of 2 through the design and development of the website (Javascript, Sharepoint), managed stakeholder requirements/expectations and facilitated x-functional communications.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
