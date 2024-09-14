@@ -158,6 +158,11 @@ const Experience = () => {
     { src: ElectromechanicalDesign2, alt: "Second SVG", title: "Electromechanical Design 2" },
   ];
 
+  const DisneylandImages = [
+    { src: Disneyland1, alt: "First SVG", title: "Disneyland 1" },
+    { src: Disneyland2, alt: "Second SVG", title: "Disneyland 2" },
+  ];
+
   const TechnologyTransferImages = [
     { src: TechnologyTransfer1, alt: "First SVG", title: "Technology Transfer 1" },
   ];
@@ -168,6 +173,7 @@ const Experience = () => {
   const [selectedDocktoStockImage, setDocktoStockImage] = useState(DocktoStockImages[0]);
   const [selectedSpacecraftBusinessDevelopmentImage, setSelectedSpacecraftBusinessDevelopmentImage] = useState(SpacecraftBusinessDevelopmentImages[0]);
   const [selectedElectromechanicalDesignImage, setSelectedElectromechanicalDesignImage] = useState(ElectromechanicalDesignImages[0]);
+  const [selectedDisneylandImage, setSelectedDisneylandImage] = useState(DisneylandImages[0]);
   const [selectedTechnologyTransferImage, setSelectedTechnologyTransferImage] = useState(TechnologyTransferImages[0]);
 
   return (
