@@ -77,7 +77,7 @@ const Experience = () => {
       } else { // Mac
         setSymphonyLogoSize(250);
         setNorthropGrummanLogoSize(135);
-        setProjectNameSize('text-4xl');
+        setProjectNameSize('text-3xl');
         setProjectDividerSize('text-3xl');
         setProjectTitleSize('text-2xl');
         setProjectResponseSize('text-xl');
@@ -250,8 +250,8 @@ const Experience = () => {
         {/* Selected Image Display */}
         <div className="relative">
           <Image
-            src={selectedArtistAnalyticsImage.src}
-            alt={selectedArtistAnalyticsImage.alt}
+            src={selectedEngineeringandSciencesImage.src}
+            alt={selectedEngineeringandSciencesImage.alt}
             width={1000}
             height={562}
             objectFit="contain"
@@ -266,11 +266,11 @@ const Experience = () => {
           {/* Photo Slider */}
           <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
             <div className="flex space-x-4 place-content-center">
-              {ArtistAnalyticsImages.map((image, index) => (
+              {EngineeringandSciencesImages.map((image, index) => (
                 <div
                   key={index}
-                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedArtistAnalyticsImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
-                  onClick={() => setSelectedArtistAnalyticsImage(image)}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedEngineeringandSciencesImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedEngineeringandSciencesImage(image)}
                 >
                   {/* the width and height are restricting the images */}
                   <div className="w-32 h-[100%] content-center">
@@ -287,7 +287,7 @@ const Experience = () => {
 
 
 
-        <div className="z-100 relative">
+        <div className="z-100 relative pb-20">
 
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1" className="border-b-0">
@@ -295,7 +295,7 @@ const Experience = () => {
                 <span className="hover:underline text-center">PROJECT DESCRIPTION</span>
               </AccordionTrigger>
               <AccordionContent className={`text-center ${ProjectResponseSize}`}>
-                Develop a tool that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
+              Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).              
               </AccordionContent>
             </AccordionItem>
               <AccordionItem value="item-2" className="border-b-0">
@@ -303,7 +303,7 @@ const Experience = () => {
                 <span className="hover:underline text-center">WHAT WAS THE CHALLENGE?</span>
               </AccordionTrigger>
               <AccordionContent className={`text-center ${ProjectResponseSize}`}>
-                Musicians and record labels currently do not have a way of viewing their royalties data outside of spreadsheets. This is an issue because lots of information that is provided falls through the cracks. So we solved that issue. once solved, we needed to create a login for users on the website to isolate the different use cases so that each user&apos;s data is separated.
+              Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.              
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3" className="border-b-0">
@@ -311,7 +311,7 @@ const Experience = () => {
                 <span className="hover:underline text-center">WHAT WAS THE SOLUTION?</span>
               </AccordionTrigger>
               <AccordionContent className={`text-center ${ProjectResponseSize}`}>
-                I developed a dashboard that visualizes ingested mechanical royalties data. This was done by using python and SQL on the back end and tableau and visx for visualization on the front end. Once the unique instances were created, javascript/nextjs were used for embedding the tool into our website, then clerk was used for authentication.
+              Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).              
               </AccordionContent>
             </AccordionItem>
           </Accordion>
