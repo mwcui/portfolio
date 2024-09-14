@@ -57,7 +57,9 @@ const Experience = () => {
   const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
   const [ProjectTitleSize, setProjectTitleSize] = useState('text'); // Default for iPhone
   const [ProjectResponseSize, setProjectResponseSize] = useState('text-sm'); // Default for iPhone
+  const [ProjectDescriptionWidth, setProjectDescriptionWidth] = useState('w-[90%]'); // Default for iPhone
   const [PhotoSliderImageSize, setPhotoSliderImageSize] = useState('w-32 h-[100%]'); // Default for iPhone
+  
 
   useEffect(() => {
     const handleResize = () => {
@@ -68,6 +70,7 @@ const Experience = () => {
         setProjectDividerSize('text-lg');
         setProjectTitleSize('text-sm');
         setProjectResponseSize('text-sm');
+        setProjectDescriptionWidth('max-w-[95%]')
         setPhotoSliderImageSize('w-16 h-[100%]');
       } else if (window.innerWidth < 1024) { // iPad
         setSymphonyLogoSize(225);
@@ -76,6 +79,7 @@ const Experience = () => {
         setProjectDividerSize('text-2xl');
         setProjectTitleSize('text-2xl');
         setProjectResponseSize('text-xl');
+        setProjectDescriptionWidth('max-w-[90%]');
         setPhotoSliderImageSize('w-32 h-[100%]');
       } else { // Mac
         setSymphonyLogoSize(250);
@@ -84,6 +88,7 @@ const Experience = () => {
         setProjectDividerSize('text-3xl');
         setProjectTitleSize('text-2xl');
         setProjectResponseSize('text-xl');
+        setProjectDescriptionWidth('max-w-[70%]');
         setPhotoSliderImageSize('w-32 h-[100%]');
       }
     };
@@ -199,32 +204,34 @@ const Experience = () => {
 
         <div className="z-100 relative pb-20">
 
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1" className="border-b-0">
-              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
-                <span className="hover:underline text-center">PROJECT DESCRIPTION</span>
-              </AccordionTrigger>
-              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+          <div className="flex flex-col items-center">
+            {/* Project Description */}
+            <div className={`${ProjectDescriptionWidth}`}>
+            <div className="text-center pt-20">
+              <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
+              <p className={`${ProjectResponseSize} pt-3`}>
                 Develop a tool that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
-              </AccordionContent>
-            </AccordionItem>
-              <AccordionItem value="item-2" className="border-b-0">
-              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
-                <span className="hover:underline text-center">WHAT WAS THE CHALLENGE?</span>
-              </AccordionTrigger>
-              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+              </p>
+            </div>
+            </div>
+
+
+            {/* What Was the Challenge? */}
+            <div className="text-center pt-20 w-[70%]">
+              <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
+              <p className={`${ProjectResponseSize} pt-3`}>
                 Musicians and record labels currently do not have a way of viewing their royalties data outside of spreadsheets. This is an issue because lots of information that is provided falls through the cracks. So we solved that issue. once solved, we needed to create a login for users on the website to isolate the different use cases so that each user&apos;s data is separated.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3" className="border-b-0">
-              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
-                <span className="hover:underline text-center">WHAT WAS THE SOLUTION?</span>
-              </AccordionTrigger>
-              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+              </p>
+            </div>
+
+            {/* What Was the Solution? */}
+            <div className="text-center pt-20 w-[70%]">
+              <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
+              <p className={`${ProjectResponseSize} pt-3`}>
                 I developed a dashboard that visualizes ingested mechanical royalties data. This was done by using python and SQL on the back end and tableau and visx for visualization on the front end. Once the unique instances were created, javascript/nextjs were used for embedding the tool into our website, then clerk was used for authentication.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+              </p>
+            </div>
+          </div>
 
         </div>
 
@@ -293,32 +300,31 @@ const Experience = () => {
 
         <div className="z-100 relative pb-20">
 
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1" className="border-b-0">
-              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
-                <span className="hover:underline text-center">PROJECT DESCRIPTION</span>
-              </AccordionTrigger>
-              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
-              Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).              
-              </AccordionContent>
-            </AccordionItem>
-              <AccordionItem value="item-2" className="border-b-0">
-              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
-                <span className="hover:underline text-center">WHAT WAS THE CHALLENGE?</span>
-              </AccordionTrigger>
-              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
-              Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.              
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3" className="border-b-0">
-              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
-                <span className="hover:underline text-center">WHAT WAS THE SOLUTION?</span>
-              </AccordionTrigger>
-              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
-              Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).              
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <div className="flex flex-col items-center">
+            {/* Project Description */}
+            <div className="text-center mb-4">
+              <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
+              <p className={`${ProjectResponseSize}`}>
+                Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).
+              </p>
+            </div>
+
+            {/* What Was the Challenge? */}
+            <div className="text-center mb-4">
+              <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
+              <p className={`${ProjectResponseSize}`}>
+                Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.
+              </p>
+            </div>
+
+            {/* What Was the Solution? */}
+            <div className="text-center mb-4">
+              <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
+              <p className={`${ProjectResponseSize}`}>
+                Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).
+              </p>
+            </div>
+          </div>
 
         </div>
 
@@ -386,32 +392,31 @@ const Experience = () => {
 
         <div className="z-100 relative pb-20">
 
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1" className="border-b-0">
-              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
-                <span className="hover:underline text-center">PROJECT DESCRIPTION</span>
-              </AccordionTrigger>
-              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
-              Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).              
-              </AccordionContent>
-            </AccordionItem>
-              <AccordionItem value="item-2" className="border-b-0">
-              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
-                <span className="hover:underline text-center">WHAT WAS THE CHALLENGE?</span>
-              </AccordionTrigger>
-              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
-              Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.              
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3" className="border-b-0">
-              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
-                <span className="hover:underline text-center">WHAT WAS THE SOLUTION?</span>
-              </AccordionTrigger>
-              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
-              Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).              
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <div className="flex flex-col items-center">
+            {/* Project Description */}
+            <div className="text-center mb-4">
+              <h2 className={`${ProjectTitleSize} hover:underline`}>PROJECT DESCRIPTION</h2>
+              <p className={`${ProjectResponseSize}`}>
+                Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).
+              </p>
+            </div>
+
+            {/* What Was the Challenge? */}
+            <div className="text-center mb-4">
+              <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE CHALLENGE?</h2>
+              <p className={`${ProjectResponseSize}`}>
+                Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.
+              </p>
+            </div>
+
+            {/* What Was the Solution? */}
+            <div className="text-center mb-4">
+              <h2 className={`${ProjectTitleSize} hover:underline`}>WHAT WAS THE SOLUTION?</h2>
+              <p className={`${ProjectResponseSize}`}>
+                Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).
+              </p>
+            </div>
+          </div>
 
         </div>
 
