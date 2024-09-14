@@ -326,6 +326,100 @@ const Experience = () => {
 
 
 
+
+      {/* Dock to Stock */}
+      <div className="w-[1000px] max-w-[90vw]">
+        {/* Header */}
+        <div className="flex items-center pb-2 p-1">
+          <Image
+            src={NorthropGrummanLogo}
+            alt="Northrop Grumman Logo"
+            width={NorthropGrummanLogoSize}
+            height={50}
+            objectFit="contain"
+          />
+          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>DOCK TO STOCK</h1>
+        </div>
+
+
+        {/* Selected Image Display */}
+        <div className="relative">
+          <Image
+            src={selectedEngineeringandSciencesImage.src}
+            alt={selectedEngineeringandSciencesImage.alt}
+            width={1000}
+            height={562}
+            objectFit="contain"
+          />
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+            {/* {selectedArtistAnalyticsImage.title} */}
+            Numbers and figures have been altered for confidentiality
+          </p>
+        </div>
+
+        <div className="w-full flex justify-center py-3">
+          {/* Photo Slider */}
+          <div className=" overflow-x-auto relative bg-slate-600 p-1 rounded-lg">
+            <div className="flex space-x-2 place-content-center">
+              {EngineeringandSciencesImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedEngineeringandSciencesImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedEngineeringandSciencesImage(image)}
+                >
+                  {/* the width and height are restricting the images */}
+                  <div className={`${PhotoSliderImageSize} content-center`}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className="z-100 relative pb-20">
+
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1" className="border-b-0">
+              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
+                <span className="hover:underline text-center">PROJECT DESCRIPTION</span>
+              </AccordionTrigger>
+              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+              Develop a tool for the Portfolio Vice President and Directors that provides visibility into the sector&apos;s performance (20,000 + employees).              
+              </AccordionContent>
+            </AccordionItem>
+              <AccordionItem value="item-2" className="border-b-0">
+              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
+                <span className="hover:underline text-center">WHAT WAS THE CHALLENGE?</span>
+              </AccordionTrigger>
+              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+              Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.              
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3" className="border-b-0">
+              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
+                <span className="hover:underline text-center">WHAT WAS THE SOLUTION?</span>
+              </AccordionTrigger>
+              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+              Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).              
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+
+        </div>
+
+      </div>
+
+
+
+
     </div>
 
   );
