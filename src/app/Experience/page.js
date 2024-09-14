@@ -35,7 +35,7 @@ import TechnologyTransferTable from '/public/Tables/image (9).svg';
 
 import DisneyLogo from '/public/Logos/removed_background/disney.png';
 import NASALogo from '/public/Logos/removed_background/NASA.png';
-import NorthropGrummanLogo from '/public/Logos/removed_background/Northrop_Grumman.png';
+import NorthropGrummanLogo from '/public/Logos/ng_svg.svg';
 import SymphonyLogo from '/public/Logos/removed_background/Symphony.png';
 
 
@@ -138,13 +138,106 @@ const Experience = () => {
   return (
     <div className="flex flex-col items-center text-white font-inika pt-20">
 
-
       {/* Artist Analytics */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center pb-2 p-1">
           <Image
             src={SymphonyLogo}
+            alt="Symphony Logo"
+            width={SymphonyLogoSize}
+            height={50}
+            objectFit="contain"
+          />
+          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>}
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>ARTIST ANALYTICS</h1>
+        </div>
+
+
+        {/* Selected Image Display */}
+        <div className="relative">
+          <Image
+            src={selectedArtistAnalyticsImage.src}
+            alt={selectedArtistAnalyticsImage.alt}
+            width={1000}
+            height={562}
+            objectFit="contain"
+          />
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+            {/* {selectedArtistAnalyticsImage.title} */}
+            Numbers and figures have been altered for confidentiality
+          </p>
+        </div>
+
+        <div className="w-full flex justify-center py-3">
+          {/* Photo Slider */}
+          <div className="w-1/2 overflow-x-auto relative bg-slate-600 scrollbar-hide-auto hover:overflow-x-scroll p-1 rounded-lg">
+            <div className="flex space-x-4 place-content-center">
+              {ArtistAnalyticsImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedArtistAnalyticsImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedArtistAnalyticsImage(image)}
+                >
+                  {/* the width and height are restricting the images */}
+                  <div className="w-32 h-[100%] content-center">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className="z-100 relative pb-20">
+
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1" className="border-b-0">
+              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
+                <span className="hover:underline text-center">PROJECT DESCRIPTION</span>
+              </AccordionTrigger>
+              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+                Develop a tool that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
+              </AccordionContent>
+            </AccordionItem>
+              <AccordionItem value="item-2" className="border-b-0">
+              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
+                <span className="hover:underline text-center">WHAT WAS THE CHALLENGE?</span>
+              </AccordionTrigger>
+              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+                Musicians and record labels currently do not have a way of viewing their royalties data outside of spreadsheets. This is an issue because lots of information that is provided falls through the cracks. So we solved that issue. once solved, we needed to create a login for users on the website to isolate the different use cases so that each user&apos;s data is separated.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3" className="border-b-0">
+              <AccordionTrigger className={`hover:no-underline flex flex-col items-center ${ProjectTitleSize}`}>
+                <span className="hover:underline text-center">WHAT WAS THE SOLUTION?</span>
+              </AccordionTrigger>
+              <AccordionContent className={`text-center ${ProjectResponseSize}`}>
+                I developed a dashboard that visualizes ingested mechanical royalties data. This was done by using python and SQL on the back end and tableau and visx for visualization on the front end. Once the unique instances were created, javascript/nextjs were used for embedding the tool into our website, then clerk was used for authentication.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+
+        </div>
+
+      </div>
+
+
+
+
+
+      {/* Engineering and Sciences */}
+      <div className="w-[1000px] max-w-[90vw]">
+        {/* Header */}
+        <div className="flex items-center pb-2 p-1">
+          <Image
+            src={NorthropGrummanLogo}
             alt="Symphony Logo"
             width={SymphonyLogoSize}
             height={50}
@@ -204,7 +297,7 @@ const Experience = () => {
                 <span className="hover:underline text-center">PROJECT DESCRIPTION</span>
               </AccordionTrigger>
               <AccordionContent className={`text-center ${ProjectResponseSize}`}>
-                Develop a product that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
+                Develop a tool that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
               </AccordionContent>
             </AccordionItem>
               <AccordionItem value="item-2" className="border-b-0">
@@ -225,15 +318,9 @@ const Experience = () => {
             </AccordionItem>
           </Accordion>
 
-
-
-
         </div>
 
       </div>
-
-
-
 
 
 
