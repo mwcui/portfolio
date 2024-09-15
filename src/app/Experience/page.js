@@ -59,6 +59,7 @@ const Experience = () => {
   const [SymphonyLogoSize, setSymphonyLogoSize] = useState(120); // Default for iPhone
   const [NorthropGrummanLogoSize, setNorthropGrummanLogoSize] = useState(120); // Default for iPhone
   const [SpaceCraftBusinessDevelopmentRenaming, setSpaceCraftBusinessDevelopmentRenaming] = useState('SPACECRAFT BUSINESS DEVELOPMENT');
+  const [DisneyLogoSize, setDisneyLogoSize] = useState(120);
   const [ElectromechanicalDesignRenaming, setElectromechanicalDesignRenaming] = useState('ELECTROMECHANICAL DESIGN');
   const [ProjectNameSize, setProjectNameSize] = useState('text'); // Default for iPhone
   const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
@@ -75,6 +76,7 @@ const Experience = () => {
       if (window.innerWidth < 640) { // iPhone
         setSymphonyLogoSize(120);
         setNorthropGrummanLogoSize(70);
+        setDisneyLogoSize(170);
         setSpaceCraftBusinessDevelopmentRenaming('SPACECRAFT BIZ DEV');
         setElectromechanicalDesignRenaming('ELECTROMECH DESIGN');
         setProjectNameSize('text');
@@ -88,6 +90,7 @@ const Experience = () => {
       } else if (window.innerWidth < 1024) { // iPad
         setSymphonyLogoSize(225);
         setNorthropGrummanLogoSize(110);
+        setDisneyLogoSize(270);
         setSpaceCraftBusinessDevelopmentRenaming('SPACECRAFT BIZ DEV');
         setElectromechanicalDesignRenaming('ELECTROMECHANICAL DESIGN');
         setProjectNameSize('text-3xl');
@@ -101,6 +104,7 @@ const Experience = () => {
       } else { // Mac
         setSymphonyLogoSize(250);
         setNorthropGrummanLogoSize(135);
+        setDisneyLogoSize(320);
         setSpaceCraftBusinessDevelopmentRenaming('SPACECRAFT BIZ DEV');
         setElectromechanicalDesignRenaming('ELECTROMECHANICAL DESIGN');
         setProjectNameSize('text-3xl');
@@ -796,9 +800,9 @@ const Experience = () => {
         {/* Header */}
         <div className="flex items-center pb-2 p-1">
           <Image
-            src={NorthropGrummanLogo}
-            alt="Northrop Grumman Logo"
-            width={NorthropGrummanLogoSize}
+            src={DisneyLogo}
+            alt="Disney Logo"
+            width={DisneyLogoSize}
             height={50}
             objectFit="contain"
           />
