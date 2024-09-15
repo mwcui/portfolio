@@ -65,7 +65,7 @@ const Template = ({ children, onMenuSelect, animationMidpoint, menuText, handleP
           menuText={menuText} 
           handlePageTransition={handlePageTransition}
         />
-        {/* <InteractiveBlocks /> */}
+        <InteractiveBlocks />
         <div className="flex-grow flex items-center justify-center">
           {children}
         </div>

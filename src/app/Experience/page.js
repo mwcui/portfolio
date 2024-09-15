@@ -39,7 +39,7 @@ import TechnologyTransfer1 from '/public/TechnologyTransfer/nasa-01.svg';
 import TechnologyTransferTable from '/public/Tables/image (9).svg';
 
 
-import DisneyLogo from '/public/Logos/removed_background/disney.png';
+import DisneyLogo from '/public/Logos/removed_background/NASA Logo 1975.png';
 import NASALogo from '/public/Logos/removed_background/NASA.png';
 import NorthropGrummanLogo from '/public/Logos/Northrop Grumman Black Logo.svg';
 import SymphonyLogo from '/public/Logos/removed_background/Symphony.png';
@@ -59,7 +59,8 @@ const Experience = () => {
   const [SymphonyLogoSize, setSymphonyLogoSize] = useState(120); // Default for iPhone
   const [NorthropGrummanLogoSize, setNorthropGrummanLogoSize] = useState(120); // Default for iPhone
   const [SpaceCraftBusinessDevelopmentRenaming, setSpaceCraftBusinessDevelopmentRenaming] = useState('SPACECRAFT BUSINESS DEVELOPMENT');
-  const [DisneyLogoSize, setDisneyLogoSize] = useState(120);
+  const [DisneyLogoSize, setDisneyLogoSize] = useState(170);
+  const [NASALogoSize, setNASALogoSize] = useState(120);
   const [ElectromechanicalDesignRenaming, setElectromechanicalDesignRenaming] = useState('ELECTROMECHANICAL DESIGN');
   const [ProjectNameSize, setProjectNameSize] = useState('text'); // Default for iPhone
   const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
@@ -77,6 +78,7 @@ const Experience = () => {
         setSymphonyLogoSize(120);
         setNorthropGrummanLogoSize(70);
         setDisneyLogoSize(170);
+        setNASALogoSize(120);
         setSpaceCraftBusinessDevelopmentRenaming('SPACECRAFT BIZ DEV');
         setElectromechanicalDesignRenaming('ELECTROMECH DESIGN');
         setProjectNameSize('text');
@@ -91,6 +93,7 @@ const Experience = () => {
         setSymphonyLogoSize(225);
         setNorthropGrummanLogoSize(110);
         setDisneyLogoSize(270);
+        setNASALogoSize(120);
         setSpaceCraftBusinessDevelopmentRenaming('SPACECRAFT BIZ DEV');
         setElectromechanicalDesignRenaming('ELECTROMECHANICAL DESIGN');
         setProjectNameSize('text-3xl');
@@ -105,6 +108,7 @@ const Experience = () => {
         setSymphonyLogoSize(250);
         setNorthropGrummanLogoSize(135);
         setDisneyLogoSize(320);
+        setNASALogoSize(125);
         setSpaceCraftBusinessDevelopmentRenaming('SPACECRAFT BIZ DEV');
         setElectromechanicalDesignRenaming('ELECTROMECHANICAL DESIGN');
         setProjectNameSize('text-3xl');
@@ -800,10 +804,10 @@ const Experience = () => {
         {/* Header */}
         <div className="flex items-center pb-2 p-1">
           <Image
-            src={DisneyLogo}
-            alt="Disney Logo"
-            width={DisneyLogoSize}
-            height={50}
+            src={NASALogo}
+            alt="NASA Logo"
+            width={NASALogoSize}
+            height={70}
             objectFit="contain"
           />
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
