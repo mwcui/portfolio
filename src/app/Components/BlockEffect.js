@@ -1,4 +1,4 @@
-
+// this is the block reveal effect on page load and switching pages from the menu
 
 "use client";
 
@@ -41,7 +41,7 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
   // this is the block effect animation
   useEffect(() => {
     const squareContainer = document.getElementById("square-container");
-    const squareSize = 75;
+    const squareSize = 50;
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
     const numCols = Math.ceil(screenWidth / squareSize);
