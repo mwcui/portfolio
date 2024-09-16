@@ -23,8 +23,8 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
         setScreenConstantFull(0.0025); // iPad size
         setScreenConstantHalf(0.0025); // iPad size
       } else {
-        setScreenConstantFull(0.0015); // Laptop size
-        setScreenConstantHalf(0.003); // Laptop size
+        setScreenConstantFull(0.0012); // Laptop size
+        setScreenConstantHalf(0.0017); // Laptop size
       }
     }
 
