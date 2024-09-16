@@ -6,53 +6,34 @@ import Image from 'next/image';
 import ArtistAnalytics1 from '/public/ArtistAnalytics/Symphony_1tr-01 (3).svg';
 import ArtistAnalytics2 from '/public/ArtistAnalytics/Symphony_2 Outline.svg';
 import ArtistAnalytics3 from '/public/ArtistAnalytics/Symphony_3 Outline.svg';
-import ArtistAnalyticsTable from '/public/Tables/image (1).svg';
 
 import EngineeringandSciences1 from '/public/EngineeringandSciences/E_S Dashboard 001 outline.svg';
 import EngineeringandSciences2 from '/public/EngineeringandSciences/E_S Dashboard 002.svg';
 import EngineeringandSciences3 from '/public/EngineeringandSciences/E_S Dashboard.003.svg';
 import EngineeringandSciences4 from '/public/EngineeringandSciences/E_S Dashboard.004.svg';
-import EngineeringandSciencesTable from '/public/Tables/image.svg';
 
 import DocktoStock1 from '/public/DesigntoKit/Design_to_Kit.svg';
-import DesigntoKitTable from '/public/Tables/image (2).svg';
 
 import ProgramAffordability1 from '/public/ProgramAffordability/2021 Q4 ILR Chart.png';
 import ProgramAffordability2 from '/public/ProgramAffordability/Employee Affordability Graph.png';
 import ProgramAffordability3 from '/public/ProgramAffordability/ILR Q4 Chart.png';
-import ProgramAffordabilityTable from '/public/Tables/image (7).svg';
 
 import SpacecraftBusinessDevelopment1 from '/public/SpacecraftBusinessDevelopment/Business Development Tool-01.svg';
 import SpacecraftBusinessDevelopment2 from '/public/SpacecraftBusinessDevelopment/Business Development Tool outline.svg';
 import SpacecraftBusinessDevelopment3 from '/public/SpacecraftBusinessDevelopment/Business Development Tool.003 outline_test.svg';
-import SpacecraftBusinessDevelopmentTable from '/public/Tables/image (6).svg';
 
 import ElectromechanicalDesign1 from '/public/ElectromechanicalDesign/Mechanical Design_test.svg';
 import ElectromechanicalDesign2 from '/public/ElectromechanicalDesign/mechanical_design-1_test.svg';
-import ElectromechanicalDesignTable from '/public/Tables/image (5).svg';
 
 import Disneyland1 from '/public/Disneyland/Disneyland Map 2024.jpg';
 import Disneyland2 from '/public/Disneyland/DCA Map 2024.jpg';
-import DisneylandTable from '/public/Tables/image (8).svg';
 
 import TechnologyTransfer1 from '/public/TechnologyTransfer/nasa-01.svg';
-import TechnologyTransferTable from '/public/Tables/image (9).svg';
-
 
 import DisneyLogo from '/public/Logos/removed_background/Modified Disney from ChatGPT.png';
 import NASALogo from '/public/Logos/removed_background/NASA Logo 1975.png';
 import NorthropGrummanLogo from '/public/Logos/Northrop Grumman Black Logo.svg';
 import SymphonyLogo from '/public/Logos/removed_background/Symphony.png';
-
-
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
-
-
 
 const Projects = () => {
   // Define state for responsive text size variables
@@ -828,7 +809,7 @@ const Projects = () => {
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Numbers/figures are for representation purposes, actual designs are confidential | Source: Google Images
+            Work cannot be disclosed due to NDA | Source: Google Images
           </p>
         </div>
 
@@ -929,7 +910,7 @@ const Projects = () => {
           />
           <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Numbers/figures are for representation purposes, actual designs are confidential | Source: Google Images
+            Work cannot be disclosed due to NDA
           </p>
         </div>
 
