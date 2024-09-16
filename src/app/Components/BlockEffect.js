@@ -1,5 +1,4 @@
-// KEEP THIS CODE. DO NOT LOSE THE EFFECT FROM 277 TO 303
-// this works. 277 to 303 is what i need for the other pages.
+
 
 "use client";
 

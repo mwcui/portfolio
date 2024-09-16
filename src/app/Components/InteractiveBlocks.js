@@ -1,3 +1,5 @@
+// this is the blueprint background + highlight effect for the mouse
+
 "use client";
 
 import React, { useEffect } from 'react';
@@ -12,7 +14,7 @@ const InteractiveBlocks = () => {
       const screenWidth = document.documentElement.scrollWidth;
       const screenHeight = document.documentElement.scrollHeight;
       const newNumCols = Math.ceil((screenWidth + blockSize) / blockSize);
-      const newNumRows = Math.ceil((screenHeight + blockSize) / blockSize);
+      const newNumRows = Math.ceil((screenHeight + blockSize + blockSize) / blockSize); // the extra blockSize is to account for the extra space at the bottom of the screen
 
       if (newNumCols !== numCols || newNumRows !== numRows) {
         numCols = newNumCols;
