@@ -183,6 +183,9 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>ARTIST ANALYTICS</h1>
         </div>
+        <div className="flex flex-col items-start ml-1 pb-2 p-1">
+        Enabling musicians and labels to track royalties simply, eliminating information loss from disparate data sources.
+        </div>
 
         {/* Selected Image Display */}
         <div className="relative">
