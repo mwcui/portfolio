@@ -25,9 +25,9 @@ const Menu = ({ closeMenu, onMenuSelect, animationMidpoint }) => {
           </li>
           <li
             className="hover:text-gray-600 hover:italic cursor-pointer"
-            onClick={() => handleSelect('experience')}
+            onClick={() => handleSelect('projects')}
           >
-            EXPERIENCE
+            PROJECTS
           </li>
           {/* <li
             className="hover:text-gray-600 hover:italic cursor-pointer"

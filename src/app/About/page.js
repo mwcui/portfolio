@@ -29,9 +29,9 @@ const About = ({ handlePageTransition }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleExperienceClick = () => {
-    // Directly transition to the Experience page without block effect
-    handlePageTransition('experience', 'EXPERIENCE');
+  const handleProjectsClick = () => {
+    // Directly transition to the Projects page without block effect
+    handlePageTransition('projects', 'PROJECTS');
   };
 
   return (
@@ -60,13 +60,13 @@ const About = ({ handlePageTransition }) => {
 
       </div>
 
-      {/* Experience Button */}
+      {/* Projects Button */}
       <div className="mt-8 relative">
         <button
-          onClick={handleExperienceClick}
+          onClick={handleProjectsClick}
           className="bg-[#ffffff] text-[#0C3B65] hover:bg-slate-400 transition-colors duration-200 font-bold py-1 px-3 rounded"
         >
-          See My Experience
+          See My Projects
         </button>
       </div>
 

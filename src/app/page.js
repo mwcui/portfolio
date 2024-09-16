@@ -6,12 +6,12 @@ import { useState, useEffect, useRef } from 'react';
 import BlockEffect from './Components/BlockEffect.js';
 import Template from './Components/template.js';
 import Logo from './Components/logo';
-import Experience from './Experience/page.js';
+import Projects from './Projects/page.js';
 import About from './About/page';
 
 const componentsMap = {
   //creative: Creative,
-  experience: Experience,
+  projects: Projects,
   about: About,
   logo: Logo,
 };

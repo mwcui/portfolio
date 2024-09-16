@@ -54,7 +54,7 @@ import {
 
 
 
-const Experience = () => {
+const Projects = () => {
   // Define state for responsive text size variables
   const [SymphonyLogoSize, setSymphonyLogoSize] = useState(130); // Default for iPhone
   const [NorthropGrummanLogoSize, setNorthropGrummanLogoSize] = useState(120); // Default for iPhone
@@ -488,7 +488,7 @@ const Experience = () => {
       </div>
 
 
-      
+
 
 
 
@@ -764,7 +764,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Provide electromechanical component design and development for space programs (ex: James Webb Space Telescope).                 
+                    Provide electromechanical component design and development for space programs (ex: James Webb Space Telescope).
                   </p>
                 </div>
               </div>
@@ -776,7 +776,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  After the electrical design phase of spacecraft development, components cannot be manufactured or integrated without considering their physical form. The challenge is to translate the electrical designs into 3D models that not only meet the system requirements but also ensure the components are manufacturable, fit within the spacecraft’s physical constraints, and integrate seamlessly with other parts. electromechanical design solves the critical issue of packaging, manufacturability, and spatial integration, bridging the gap between electrical design and final assembly.                  
+                    After the electrical design phase of spacecraft development, components cannot be manufactured or integrated without considering their physical form. The challenge is to translate the electrical designs into 3D models that not only meet the system requirements but also ensure the components are manufacturable, fit within the spacecraft’s physical constraints, and integrate seamlessly with other parts. electromechanical design solves the critical issue of packaging, manufacturability, and spatial integration, bridging the gap between electrical design and final assembly.
                   </p>
                 </div>
               </div>
@@ -788,7 +788,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  I designed the electrical and mechanical components using creo parametric, performed GD&T/tolerance analysis, managed the assets using Enovia PLM, and managed requirements across the systems, electrical and manufacturing stakeholders.                  
+                    I designed the electrical and mechanical components using creo parametric, performed GD&T/tolerance analysis, managed the assets using Enovia PLM, and managed requirements across the systems, electrical and manufacturing stakeholders.
                   </p>
                 </div>
               </div>
@@ -799,8 +799,8 @@ const Experience = () => {
 
 
 
-           {/* Disneyland */}
-           <div className="w-[1000px] max-w-[90vw]">
+      {/* Disneyland */}
+      <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center pb-2 p-1">
           <Image
@@ -865,7 +865,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Provide electromechanical component design and development for space programs (ex: James Webb Space Telescope).                 
+                    Development and Maintenance of new and existing infrastructure across Disneyland and California Adventure.
                   </p>
                 </div>
               </div>
@@ -877,7 +877,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  After the electrical design phase of spacecraft development, components cannot be manufactured or integrated without considering their physical form. The challenge is to translate the electrical designs into 3D models that not only meet the system requirements but also ensure the components are manufacturable, fit within the spacecraft’s physical constraints, and integrate seamlessly with other parts. electromechanical design solves the critical issue of packaging, manufacturability, and spatial integration, bridging the gap between electrical design and final assembly.                  
+                    Disneyland and California Adventure’s park assets endure frequent, high-touch usage, leading to wear and the constant need for maintenance and repair. At the same time, new projects and upgrades are regularly being added to enhance the guest experience. The challenge was finding a way to efficiently balance routine maintenance, unexpected repairs, and ongoing construction, all while ensuring these activities caused minimal disruption to the park's daily operations and guest enjoyment.
                   </p>
                 </div>
               </div>
@@ -889,7 +889,7 @@ const Experience = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  I designed the electrical and mechanical components using creo parametric, performed GD&T/tolerance analysis, managed the assets using Enovia PLM, and managed requirements across the systems, electrical and manufacturing stakeholders.                  
+                    The key was to do as much work as possible while guests were not at the park. For the ongoing projects where that was not possible, facades and detours were implemented to minimize experience impact. I managed a number of projects including: Peter Pan Roofing Facade Replacement, Splash Mountain Corrosion Mitigation, Space Mountain Deep Clean, Blue Sky Cellar Renovation.
                   </p>
                 </div>
               </div>
@@ -900,7 +900,103 @@ const Experience = () => {
 
 
 
+      {/* NASA */}
+      <div className="w-[1000px] max-w-[90vw]">
+        {/* Header */}
+        <div className="flex items-center pb-2 p-1">
+          <Image
+            src={NASALogo}
+            alt="NASA Logo"
+            width={NASALogoSize}
+            height={300}
+            objectFit="contain"
+          />
+          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>TECHNOLOGY TRANSFER</h1>
+        </div>
 
+
+        {/* Selected Image Display */}
+        <div className="relative">
+          <Image
+            src={selectedTechnologyTransferImage.src}
+            alt={selectedTechnologyTransferImage.alt}
+            width={1000}
+            height={562}
+            objectFit="contain"
+            priority={true}
+          />
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+            {/* {selectedArtistAnalyticsImage.title} */}
+            Numbers/figures are for representation purposes, actual designs are confidential | Source: Google Images
+          </p>
+        </div>
+
+        <div className="w-full flex justify-center py-3">
+          {/* Photo Slider */}
+          <div className=" overflow-x-auto relative bg-slate-600 p-1 rounded-lg">
+            <div className="flex space-x-2 place-content-center">
+              {TechnologyTransferImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`flex-shrink-0 overflow-hidden cursor-pointer ${selectedTechnologyTransferImage.src === image.src ? 'opacity-90 hover:opacity-90' : 'opacity-100 hover:opacity-50'}`}
+                  onClick={() => setSelectedTechnologyTransferImage(image)}
+                >
+                  {/* the width and height are restricting the images */}
+                  <div className={`${PhotoSliderImageSize} content-center`}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+
+        <div className="z-100 relative pb-20">
+          <div className="flex flex-col items-center">
+
+            {/* Project Description */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectTitleSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  Determine the commercial viability of technology within NASA’s patent portfolio.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* What Was the Challenge? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  NASA invests millions annually in research and development, building an extensive patent portfolio. However, only a small portion of these patents were being utilized. The challenge was to prevent the majority of these technologies from remaining underutilized. Our goal was to explore their commercial potential and identify ways NASA could generate revenue by licensing or transferring these technologies for commercial use.                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* What Was the Solution? */}
+            <div className={`${ProjectDescriptionWidth}`}>
+              <div className={`${ProjectResponseSpacing}`}>
+                <div className="text-center">
+                  <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
+                  <p className={`${ProjectResponseSize} pt-3`}>
+                  The solution involved gaining a comprehensive understanding of NASA's patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts (SMEs) to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -909,4 +1005,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Projects;
