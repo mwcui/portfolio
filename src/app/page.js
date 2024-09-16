@@ -47,6 +47,7 @@ const Home = () => {
     setTimeout(() => {
       setCurrentComponent(selection);
       setMenuText(customMenuText || selection.toUpperCase());
+      window.scrollTo(0, 0); // Scroll to top immediately
     }, 0);
   };
 
@@ -58,6 +59,7 @@ const Home = () => {
     setTimeout(() => {
       setCurrentComponent(selection);
       setMenuText(customMenuText || selection.toUpperCase());
+      window.scrollTo(0, 0); // Scroll to top immediately
       
       // Use requestAnimationFrame to ensure the DOM has updated before we start fading in
       requestAnimationFrame(() => {
