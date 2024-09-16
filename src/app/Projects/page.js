@@ -236,7 +236,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Develop a tool that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrated a user authentication/management system into the website.
+                    Develop a tool that enables record labels and artists to view their metrics (royalties, streams, etc.) and integrate a user authentication/management system into the website.
                   </p>
                 </div>
               </div>
@@ -248,7 +248,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Musicians and record labels currently do not have a way of viewing their royalties data outside of spreadsheets. This is an issue because lots of information that is provided falls through the cracks. So we solved that issue. once solved, we needed to create a login for users on the website to isolate the different use cases so that each user&apos;s data is separated.
+                  Musicians and record labels currently rely on spreadsheets to view their royalties data, leading to important information slipping through the cracks. We solved this by creating a platform to streamline the data. To ensure privacy and tailored access, a user login system was implemented, allowing each user to securely view their own data.                  
                   </p>
                 </div>
               </div>
@@ -260,7 +260,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    I developed a dashboard that visualizes ingested mechanical royalties data. This was done by using python and SQL on the back end and tableau and visx for visualization on the front end. Once the unique instances were created, javascript/nextjs were used for embedding the tool into our website, then clerk was used for authentication.
+                  I developed a dashboard to visualize ingested mechanical royalties data, using Python and SQL on the backend and Tableau and Visx for front-end visualization. After creating unique instances, I embedded the tool into the website with JavaScript and Next.js, and integrated Clerk for user authentication.
                   </p>
                 </div>
               </div>
@@ -354,7 +354,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Executives are making decisions from data that is both outdated and expensive to produce. The current process involves manpower for extracting data from the databases, distilling down the pertinent information, prepping the data into slides, coordinating with scheduling, then waiting for management to review it. By the time the sectors review the data, it is already stale.
+                  Executives rely on outdated and expensive data to make decisions. The current process is labor-intensive, requiring teams to extract data from databases, filter the important details, format it into slides, coordinate with scheduling, and then wait for management review. By the time the data reaches executives, it is already outdated.
                   </p>
                 </div>
               </div>
@@ -366,7 +366,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Delivered a real-time performance dashboard that reports metrics across the following pillars: financial, staffing, engineering, and business development. I lead a team of 5 through product design, development, and deployment (Jira/Tableau), managed stakeholder requirements and communication (Confluence/Sharepoint), and developed product strategy/roadmap (Miro/PPT).
+                  I delivered a real-time performance dashboard reporting key metrics across financial, staffing, engineering, and business development pillars. Leading a team of five, I oversaw the design, development, and deployment phases using Jira and Tableau, managed stakeholder requirements and communications via Confluence and SharePoint, and developed the product strategy and roadmap using Miro and PowerPoint.
                   </p>
                 </div>
               </div>
@@ -443,7 +443,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Develop a tool that visualizes the different processes within the Dock to Stock workflow and shines a spotlight on the areas that need the most operational improvement.
+                  Develop a program management tool to burn down a $30M staffing risk for a Class A space program.                  
                   </p>
                 </div>
               </div>
