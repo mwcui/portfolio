@@ -918,7 +918,7 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>TECHNOLOGY TRANSFER</h1>
         </div>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Unlocking revenue potential by identifying commercial applications for NASA's underutilized patents
+        Unlocking revenue potential by identifying commercial applications for NASA&apos;s underutilized patents
         </div>
 
 
