@@ -171,7 +171,7 @@ const Projects = () => {
       {/* Artist Analytics */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-2 p-1">
+        <div className="flex items-center  p-1">
           <Image
             src={SymphonyLogo}
             alt="Symphony Logo"
@@ -183,8 +183,8 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>ARTIST ANALYTICS</h1>
         </div>
-        <div className="flex flex-col items-start ml-1 pb-2 p-1">
-        Enabling musicians and labels to track royalties simply, eliminating information loss from disparate data sources.
+        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+        Enabling musicians and labels to track royalties simply, eliminating information loss from disparate data sources
         </div>
 
         {/* Selected Image Display */}
@@ -276,7 +276,7 @@ const Projects = () => {
       {/* Engineering and Sciences */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-2 p-1">
+        <div className="flex items-center p-1">
           <Image
             src={NorthropGrummanLogo}
             alt="Northrop Grumman Logo"
@@ -287,6 +287,9 @@ const Projects = () => {
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>ENGINEERING & SCIENCES</h1>
+        </div>
+        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+        Empowering executives to make real-time decisions by removing delays from outdated, manually extracted data   
         </div>
 
 
