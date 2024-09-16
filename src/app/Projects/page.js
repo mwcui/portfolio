@@ -227,7 +227,7 @@ const Projects = () => {
 
 
 
-        <div className="z-100 relative pb-20">
+        <div className="z-100 pb-20">
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
@@ -333,7 +333,7 @@ const Projects = () => {
 
 
 
-        <div className="z-100 relative pb-20">
+        <div className="z-100 pb-20">
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
@@ -434,7 +434,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="z-100 relative pb-20">
+        <div className="z-100 pb-20">
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
@@ -544,7 +544,7 @@ const Projects = () => {
 
 
 
-        <div className="z-100 relative pb-20">
+        <div className="z-100 pb-20">
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
@@ -649,7 +649,7 @@ const Projects = () => {
         </div>
 
 
-        <div className="z-100 relative pb-20">
+        <div className="z-100 pb-20">
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
@@ -754,7 +754,7 @@ const Projects = () => {
         </div>
 
 
-        <div className="z-100 relative pb-20">
+        <div className="z-100 pb-20">
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
@@ -858,7 +858,7 @@ const Projects = () => {
         </div>
 
 
-        <div className="z-100 relative pb-20">
+        <div className="z-100 pb-20">
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
@@ -962,7 +962,7 @@ const Projects = () => {
         </div>
 
 
-        <div className="z-100 relative pb-20">
+        <div className="z-100 pb-20">
           <div className="flex flex-col items-center">
 
             {/* Project Description */}
