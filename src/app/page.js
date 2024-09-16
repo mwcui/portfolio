@@ -1,5 +1,3 @@
-// testing. this works perfect
-
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
@@ -10,7 +8,6 @@ import Projects from './Projects/page.js';
 import About from './About/page';
 
 const componentsMap = {
-  //creative: Creative,
   projects: Projects,
   about: About,
   logo: Logo,
@@ -24,6 +21,11 @@ const Home = () => {
   const [menuText, setMenuText] = useState('MENU');
   const [runBlockEffect, setRunBlockEffect] = useState(true); // New state to control block effect
   const [isFading, setIsFading] = useState(false);
+
+  // Scroll to top on component change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentComponent]);
 
   // Initial page load effect
   useEffect(() => {
