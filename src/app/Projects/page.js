@@ -394,7 +394,7 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>PROGRAM AFFORDABILITY</h1>
         </div>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Solving staffing inefficiencies by providing real-time visibility into personnel metrics and budget constraints        
+        Solving staffing inefficiencies with real-time visibility into personnel metrics and budget constraints        
         </div>
 
         {/* Selected Image Display */}
@@ -500,7 +500,7 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>DOCK TO STOCK</h1>
         </div>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Reducing program and schedule impacts by providing insights into the supply chain process
+        Reducing program and schedule impacts through supply chain insights
         </div>
 
 
@@ -708,6 +708,9 @@ const Projects = () => {
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>{ElectromechanicalDesignRenaming}</h1>
+        </div>
+        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+        Bridging the gap between electrical design and assembly through manufacturability and spatial integration        
         </div>
 
 
