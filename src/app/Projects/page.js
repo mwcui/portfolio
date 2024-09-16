@@ -605,7 +605,7 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>{SpaceCraftBusinessDevelopmentRenaming}</h1>
         </div>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Driving new business capture by developing internal marketing and visibility across the organization
+        Driving new business capture by developing internal marketing and organizational visibility
         </div>
 
 
@@ -814,7 +814,7 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>DCA</h1>
         </div>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Managing projects, repairs, and maintenance while keeping the magic alive and guest experiences seamless
+        Managing projects, repairs, and maintenance while keeping the magic alive 💫
         </div>
 
 
@@ -918,7 +918,7 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>TECHNOLOGY TRANSFER</h1>
         </div>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Unlocking revenue potential by identifying commercial applications for NASA&apos;s underutilized patents
+        Unlocking revenue potential for NASA&apos;s underutilized patents
         </div>
 
 
