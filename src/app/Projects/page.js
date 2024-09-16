@@ -171,7 +171,7 @@ const Projects = () => {
       {/* Artist Analytics */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center  p-1">
+        <div className="flex items-center p-1">
           <Image
             src={SymphonyLogo}
             alt="Symphony Logo"
@@ -381,7 +381,7 @@ const Projects = () => {
       {/* Program Affordability */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-2 p-1">
+        <div className="flex items-center p-1">
           <Image
             src={NorthropGrummanLogo}
             alt="Northrop Grumman Logo"
@@ -487,7 +487,7 @@ const Projects = () => {
       {/* Dock to Stock */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-2 p-1">
+        <div className="flex items-center p-1">
           <Image
             src={NorthropGrummanLogo}
             alt="Northrop Grumman Logo"
@@ -592,7 +592,7 @@ const Projects = () => {
       {/* Spacecraft Business Development */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-2 p-1">
+        <div className="flex items-center p-1">
           <Image
             src={NorthropGrummanLogo}
             alt="Northrop Grumman Logo"
@@ -697,7 +697,7 @@ const Projects = () => {
       {/* Electromechanical Design */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-2 p-1">
+        <div className="flex items-center p-1">
           <Image
             src={NorthropGrummanLogo}
             alt="Northrop Grumman Logo"
@@ -801,7 +801,7 @@ const Projects = () => {
       {/* Disneyland */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-2 p-1">
+        <div className="flex items-center p-1">
           <Image
             src={DisneyLogo}
             alt="Disney Logo"
@@ -811,7 +811,10 @@ const Projects = () => {
           />
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>DISNEYLAND</h1>
+          <h1 className={`${ProjectNameSize} ml-4 text-white`}>DCA</h1>
+        </div>
+        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+        Managing projects, repairs, and maintenance while keeping the magic alive and guest experiences seamless
         </div>
 
 
@@ -902,7 +905,7 @@ const Projects = () => {
       {/* NASA */}
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
-        <div className="flex items-center pb-2 p-1">
+        <div className="flex items-center p-1">
           <Image
             src={NASALogo}
             alt="NASA Logo"
@@ -913,6 +916,9 @@ const Projects = () => {
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>TECHNOLOGY TRANSFER</h1>
+        </div>
+        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+        Unlocking revenue potential by identifying commercial applications for NASA's underutilized patents
         </div>
 
 
