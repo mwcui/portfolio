@@ -393,6 +393,9 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>PROGRAM AFFORDABILITY</h1>
         </div>
+        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+        Solving staffing inefficiencies by providing real-time visibility into personnel metrics and budget constraints        
+        </div>
 
         {/* Selected Image Display */}
         <div className="relative">
@@ -496,6 +499,9 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>DOCK TO STOCK</h1>
         </div>
+        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+        Reducing program and schedule impacts by providing insights into the supply chain process
+        </div>
 
 
         {/* Selected Image Display */}
@@ -597,6 +603,9 @@ const Projects = () => {
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>{SpaceCraftBusinessDevelopmentRenaming}</h1>
+        </div>
+        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+        Driving new business capture by developing internal marketing and visibility across the organization
         </div>
 
 
