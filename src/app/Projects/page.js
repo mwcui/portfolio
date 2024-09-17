@@ -669,7 +669,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  The organization anticipated a slowdown in future work. Instead of playing defensively and letting go of valuable employees, we took an offensive approach by seeking new business opportunities for them. We discovered that plenty of work existed within the company, but without proper marketing, no one knew to direct it our way. This made it clear that we needed to promote our capabilities internally.                  
+                  The organization was forecasting a slowdown in future work. Instead of playing defensively and letting go of valuable employees, we took an offensive approach by seeking new business opportunities for them. We discovered that plenty of work existed within the company, but without proper marketing, no one knew to direct it our way. This made it clear that we needed to promote our capabilities internally.                  
                   </p>
                 </div>
               </div>
@@ -774,7 +774,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  After the electrical design phase of spacecraft development, components can't be manufactured or integrated without accounting for their physical form. The challenge is to translate electrical designs into 3D models that meet system requirements while ensuring the components are manufacturable, fit within the spacecraft's physical constraints, and integrate seamlessly with other parts. Electromechanical design addresses these critical issues of packaging, manufacturability, and spatial integration, bridging the gap between electrical design and final assembly.                  
+                  After the electrical design phase of spacecraft development, components can&apos;t be manufactured or integrated without accounting for their physical form. The challenge is to translate these designs into 3D models that meet system requirements while ensuring the components are manufacturable, fit within the spacecraft&apos;s physical constraints, and integrate seamlessly with other parts. Electromechanical design addresses these critical issues of packaging, manufacturability, and spatial integration, bridging the gap between electrical design and final assembly.                  
                   </p>
                 </div>
               </div>
@@ -866,7 +866,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Development and Maintenance of new and existing infrastructure across Disneyland and California Adventure.
+                    Provide development and maintenance of new and existing infrastructure across Disneyland and California Adventure.
                   </p>
                 </div>
               </div>
@@ -878,7 +878,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Disneyland and California Adventure’s park assets endure frequent, high-touch usage, leading to wear and the constant need for maintenance and repair. At the same time, new projects and upgrades are regularly being added to enhance the guest experience. The challenge was finding a way to efficiently balance routine maintenance, unexpected repairs, and ongoing construction, all while ensuring these activities caused minimal disruption to the park&apos;s daily operations and guest enjoyment.
+                  Disneyland and California Adventure&apos;s park assets endure frequent, high-touch usage, leading to wear and the constant need for maintenance and repair. At the same time, new projects and upgrades are regularly being added to enhance the guest experience. The challenge was finding a way to efficiently balance routine maintenance, unexpected repairs, and ongoing construction, all while ensuring these activities caused minimal disruption to the park&apos;s daily operations and guest experience.                  
                   </p>
                 </div>
               </div>
@@ -890,7 +890,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    The key was to do as much work as possible while guests were not at the park. For the ongoing projects where that was not possible, facades and detours were implemented to minimize experience impact. I managed a number of projects including: Peter Pan Roofing Facade Replacement, Splash Mountain Corrosion Mitigation, Space Mountain Deep Clean, Blue Sky Cellar Renovation.
+                  The key was to complete as much work as possible outside of park hours. For ongoing projects that couldn&apos;t avoid guest exposure, facades and detours were used to minimize the impact on the guest experience. Notable projects include the Peter Pan Roofing Facade Replacement, Splash Mountain Corrosion Mitigation, Space Mountain Deep Clean, and Blue Sky Cellar Renovation.                  
                   </p>
                 </div>
               </div>
@@ -970,7 +970,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Determine the commercial viability of technology within NASA’s patent portfolio.
+                  Determine the commercial viability of technology within NASA&apos;s patent portfolio.
                   </p>
                 </div>
               </div>
@@ -982,7 +982,8 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  NASA invests millions annually in research and development, building an extensive patent portfolio. However, only a small portion of these patents were being utilized. The challenge was to prevent the majority of these technologies from remaining underutilized. Our goal was to explore their commercial potential and identify ways NASA could generate revenue by licensing or transferring these technologies for commercial use.                  </p>
+                  NASA invests millions annually in research and development, building an extensive patent portfolio. However, only a small portion of these patents are utilized. The challenge was to prevent the majority of these technologies from remaining underutilized. Our goal was to explore their commercial potential and identify ways NASA could generate revenue by licensing or transferring these technologies for commercial use.                  
+                  </p>
                 </div>
               </div>
             </div>
@@ -993,7 +994,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  The solution involved gaining a comprehensive understanding of NASA&apos;s patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts (SMEs) to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
+                  The solution involved gaining a comprehensive understanding of NASA&apos;s patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
                   </p>
                 </div>
               </div>
