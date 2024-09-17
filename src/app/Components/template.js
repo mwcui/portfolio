@@ -65,7 +65,7 @@ const Template = ({ children, onMenuSelect, animationMidpoint, menuText, handleP
           menuText={menuText} 
           handlePageTransition={handlePageTransition}
         />
-        <InteractiveBlocks />
+        <InteractiveBlocks /> {/* comment this out when debugging/adding items, it makes it way easier to update the code. this effect makes it difficult to using the inspect tool */}
         <div className="flex-grow flex items-center justify-center">
           {children}
         </div>

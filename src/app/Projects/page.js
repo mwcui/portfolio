@@ -82,7 +82,7 @@ const Projects = () => {
         setProjectNameSize('text-3xl');
         setProjectDividerSize('text-2xl');
         setProjectTitleSize('text-2xl');
-        setProjectTitleSpacing('pt-16');
+        setProjectTitleSpacing('pt-8');
         setTagLineSize('text-vs');
         setProjectResponseSize('text-xl');
         setProjectResponseSpacing('pt-16');
