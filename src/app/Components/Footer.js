@@ -28,7 +28,7 @@ const Footer = () => {
   return (
     <footer className="text-white py-3 fixed bottom-0 left-0 right-0 font-inika">
       <div className="flex justify-center">
-        <div className="bg-gray-600 bg-opacity-70 rounded-lg px-2 py-2 flex items-center">
+        <div className="bg-gray-600 bg-opacity-70 rounded px-2 py-2 flex items-center">
           <p className={`${textSize} pr-4 whitespace-nowrap`}>
             Facing a challenge? Let&apos;s explore it together
           </p>
