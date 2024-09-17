@@ -47,6 +47,7 @@ const Projects = () => {
   const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
   const [ProjectTitleSize, setProjectTitleSize] = useState('text'); // Default for iPhone
   const [ProjectTitleSpacing, setProjectTitleSpacing] = useState('pt-6'); // Default for iPhone // spacing between photoslider and project title size
+  const [TagLineSize, setTagLineSize] = useState('text-vvs'); // Default for iPhone
   const [ProjectResponseSize, setProjectResponseSize] = useState('text-sm'); // Default for iPhone
   const [ProjectResponseSpacing, setProjectResponseSpacing] = useState('pt-6'); // Default for iPhone
   const [ProjectDescriptionWidth, setProjectDescriptionWidth] = useState('max-w-[95%]'); // Default for iPhone. using max-w-[95%] instead of w-[90%] bc w-[90%] does not center the text
@@ -66,6 +67,7 @@ const Projects = () => {
         setProjectDividerSize('text-lg');
         setProjectTitleSize('text');
         setProjectTitleSpacing('pt-6');
+        setTagLineSize('text-vvs');
         setProjectResponseSize('text-sm');
         setProjectResponseSpacing('pt-10');
         setProjectDescriptionWidth('max-w-[90%]')
@@ -81,6 +83,7 @@ const Projects = () => {
         setProjectDividerSize('text-2xl');
         setProjectTitleSize('text-2xl');
         setProjectTitleSpacing('pt-16');
+        setTagLineSize('text-vs');
         setProjectResponseSize('text-xl');
         setProjectResponseSpacing('pt-16');
         setProjectDescriptionWidth('max-w-[90%]');
@@ -96,6 +99,7 @@ const Projects = () => {
         setProjectDividerSize('text-3xl');
         setProjectTitleSize('text-2xl');
         setProjectTitleSpacing('pt-10');
+        setTagLineSize('text-vs');
         setProjectResponseSize('text-xl');
         setProjectResponseSpacing('pt-16');
         setProjectDescriptionWidth('max-w-[70%]');
@@ -183,8 +187,10 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>ARTIST ANALYTICS</h1>
         </div>
+        <div className={`${TagLineSize}`}>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
         Enabling musicians and labels to track royalties simply, eliminating information loss from disparate data sources
+        </div>
         </div>
 
         {/* Selected Image Display */}
@@ -288,8 +294,10 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>ENGINEERING & SCIENCES</h1>
         </div>
+        <div className={`${TagLineSize}`}>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
         Empowering executives to make real-time decisions by removing delays from outdated, manually extracted data   
+        </div>
         </div>
 
 
@@ -393,8 +401,10 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>PROGRAM AFFORDABILITY</h1>
         </div>
+        <div className={`${TagLineSize}`}>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
         Solving staffing inefficiencies with real-time visibility into personnel metrics and budget constraints        
+        </div>
         </div>
 
         {/* Selected Image Display */}
@@ -498,8 +508,10 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>DOCK TO STOCK</h1>
         </div>
+        <div className={`${TagLineSize}`}>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
         Reducing program and schedule impacts through supply chain insights
+        </div>
         </div>
 
 
@@ -603,8 +615,10 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>{SpaceCraftBusinessDevelopmentRenaming}</h1>
         </div>
+        <div className={`${TagLineSize}`}>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
         Driving new business capture by developing internal marketing and organizational visibility
+        </div>
         </div>
 
 
@@ -708,8 +722,10 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>{ElectromechanicalDesignRenaming}</h1>
         </div>
+        <div className={`${TagLineSize}`}>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
         Bridging the gap between electrical design and assembly through manufacturability and spatial integration        
+        </div>
         </div>
 
 
@@ -812,8 +828,10 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>DCA</h1>
         </div>
+        <div className={`${TagLineSize}`}>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
         Managing projects, repairs, and maintenance while keeping the magic alive 💫
+        </div>
         </div>
 
 
@@ -916,8 +934,10 @@ const Projects = () => {
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>TECHNOLOGY TRANSFER</h1>
         </div>
+        <div className={`${TagLineSize}`}>
         <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
         Unlocking revenue potential for NASA&apos;s underutilized patents
+        </div>
         </div>
 
 
