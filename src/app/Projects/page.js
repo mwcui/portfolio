@@ -456,7 +456,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    The current process for the Dock to Stock workflow is manual, with no real-time data visualization. This makes it difficult to identify inefficiencies and areas for improvement.currently management has limited visibility into what is going on between when raw material/parts are delivered at the docks, to when they get kitted (stock) and sent out across the campus, and where the major delay points are at. This has led to kits getting delayed, in some cases over 200+ days, causing major cost and schedule impacts for many programs across Space Park
+                  Program budgets fluctuate, leading to staffing constraints that cause issues such as too much capital with insufficient headcount, resulting in underperformance and schedule delays, or too little capital with excess staff, leading to cost overruns and project timeline impacts.                  
                   </p>
                 </div>
               </div>
@@ -468,8 +468,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    A dashboard that tracks the major process points within the D2S workflow, highlighting impacted programs, age of process, average times, current location of material, etc.. I gathered the data (Nimbus, SAP HANA, Envoia PLM, SME’s), performed analysis/pipeline development (SQL, Python), and built the tool (Tableau).
-                  </p>
+                  I developed a tool that tracks personnel metrics and spending, enabling program management to test different staffing scenarios. I led a team of one through the design and development process using Tableau and SQL, championed access to the necessary data (MPM/Cobra, Salesforce), and managed stakeholder requirements and expectations.                  </p>
                 </div>
               </div>
             </div>
@@ -553,7 +552,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Develop a tool that visualizes the different processes within the Dock to Stock workflow and shines a spotlight on the areas that need the most operational improvement.
+                  Develop a tool that visualizes the different processes within the Dock to Stock supply chain and shines a spotlight on the areas that need the most operational improvement.                  
                   </p>
                 </div>
               </div>
@@ -566,7 +565,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    The current process for the Dock to Stock workflow is manual, with no real-time data visualization. This makes it difficult to identify inefficiencies and areas for improvement.currently management has limited visibility into what is going on between when raw material/parts are delivered at the docks, to when they get kitted (stock) and sent out across the campus, and where the major delay points are at. This has led to kits getting delayed, in some cases over 200+ days, causing major cost and schedule impacts for many programs across Space Park
+                  The current process is manual and lacks real-time data visualization, making it difficult to spot inefficiencies and areas for improvement. Management has limited visibility into the workflow from the time raw materials and parts are delivered at the docks until they are kitted and distributed across the campus. This lack of insight has resulted in significant delays—sometimes over 200 days—causing major cost and schedule impacts for various programs at Space Park.                                    
                   </p>
                 </div>
               </div>
@@ -578,7 +577,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    A dashboard that tracks the major process points within the D2S workflow, highlighting impacted programs, age of process, average times, current location of material, etc.. I gathered the data (Nimbus, SAP HANA, Envoia PLM, SME’s), performed analysis/pipeline development (SQL, Python), and built the tool (Tableau).
+                  I developed a dashboard that tracks key process points within the Dock to Stock supply chain, highlighting impacted programs, process duration, average times, and the current location of materials. I gathered data from sources like Nimbus, SAP HANA, Enovia PLM, and SMEs, performed analysis and pipeline development using SQL and Python, and built the tool in Tableau.                 
                   </p>
                 </div>
               </div>
@@ -658,7 +657,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Build a tool to help the spacecraft engineering department generate new business
+                    Build a tool to help the spacecraft engineering organization cappture new business.
                   </p>
                 </div>
               </div>
@@ -670,7 +669,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    The organization was forecasting softness (not having enough work in the future) and needed to market itself to the rest of the company. There was plenty of work across the company, but without marketing, nobody knew to give it to us.
+                  The organization anticipated a slowdown in future work. Instead of playing defensively and letting go of valuable employees, we took an offensive approach by seeking new business opportunities for them. We discovered that plenty of work existed within the company, but without proper marketing, no one knew to direct it our way. This made it clear that we needed to promote our capabilities internally.                  
                   </p>
                 </div>
               </div>
@@ -682,7 +681,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Developed an internal marketing tool that supported internal business capture. I lead a team of 2 through the design and development of the website (Javascript, Sharepoint), managed stakeholder requirements/expectations and facilitated x-functional communications.
+                  I developed an internal marketing tool to support business capture, leading a team of two through the design and development of the website using JavaScript and SharePoint. I managed stakeholder requirements and expectations, while also facilitating cross-functional communications.                  
                   </p>
                 </div>
               </div>
@@ -763,7 +762,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    Provide electromechanical component design and development for space programs (ex: James Webb Space Telescope).
+                    Provide electromechanical component design and development for space programs.
                   </p>
                 </div>
               </div>
@@ -775,7 +774,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    After the electrical design phase of spacecraft development, components cannot be manufactured or integrated without considering their physical form. The challenge is to translate the electrical designs into 3D models that not only meet the system requirements but also ensure the components are manufacturable, fit within the spacecraft’s physical constraints, and integrate seamlessly with other parts. electromechanical design solves the critical issue of packaging, manufacturability, and spatial integration, bridging the gap between electrical design and final assembly.
+                  After the electrical design phase of spacecraft development, components can't be manufactured or integrated without accounting for their physical form. The challenge is to translate electrical designs into 3D models that meet system requirements while ensuring the components are manufacturable, fit within the spacecraft's physical constraints, and integrate seamlessly with other parts. Electromechanical design addresses these critical issues of packaging, manufacturability, and spatial integration, bridging the gap between electrical design and final assembly.                  
                   </p>
                 </div>
               </div>
@@ -787,7 +786,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                    I designed the electrical and mechanical components using creo parametric, performed GD&T/tolerance analysis, managed the assets using Enovia PLM, and managed requirements across the systems, electrical and manufacturing stakeholders.
+                  I designed the electrical and mechanical components using Creo Parametric, performed GD&T and tolerance analysis, managed assets through Enovia PLM, and coordinated requirements across systems, electrical, and manufacturing stakeholders. Notable projects include the James Webb Space Telescope and Archinaut.                  
                   </p>
                 </div>
               </div>
