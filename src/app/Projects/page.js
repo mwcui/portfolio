@@ -366,7 +366,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  I delivered a real-time performance dashboard reporting key metrics across financial, staffing, engineering, and business development pillars. Leading a team of five, I oversaw the design, development, and deployment phases using Jira and Tableau, managed stakeholder requirements and communications via Confluence and SharePoint, and developed the product strategy and roadmap using Miro and PowerPoint.
+                  I delivered a real-time performance dashboard reporting key metrics across the financial, staffing, engineering, and business development pillars. Leading a team of five, I oversaw the design, development, and deployment phases using Jira and Tableau, managed stakeholder requirements and communications via Confluence and SharePoint, and developed the product strategy and roadmap using Miro and PowerPoint.
                   </p>
                 </div>
               </div>
@@ -456,7 +456,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Program budgets fluctuate, leading to staffing constraints that cause issues such as too much capital with insufficient headcount, resulting in underperformance and schedule delays, or too little capital with excess staff, leading to cost overruns and project timeline impacts.                  
+                  Program budgets fluctuate, leading to staffing constraints. This creates issues such as too much capital with insufficient headcount, resulting in underperformance and schedule delays. On the other hand, too little capital with excess staff leads to cost overruns and project timeline impacts. These fluctuations disrupt project efficiency and make it challenging to meet both budget and schedule targets.                  
                   </p>
                 </div>
               </div>
@@ -565,7 +565,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  The current process is manual and lacks real-time data visualization, making it difficult to spot inefficiencies and areas for improvement. Management has limited visibility into the workflow from the time raw materials and parts are delivered at the docks until they are kitted and distributed across the campus. This lack of insight has resulted in significant delays—sometimes over 200 days—causing major cost and schedule impacts for various programs at Space Park.                                    
+                  Management has limited visibility into the workflow, from the time raw materials and parts are delivered at the docks until they are kitted and distributed across the campus. This lack of insight has resulted in significant delays—sometimes over 200 days—causing major cost and schedule impacts for various programs at Space Park.                                    
                   </p>
                 </div>
               </div>
@@ -669,7 +669,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  The organization was forecasting a slowdown in future work. Instead of playing defensively and letting go of valuable employees, we took an offensive approach by seeking new business opportunities for them. We discovered that plenty of work existed within the company, but without proper marketing, no one knew to direct it our way. This made it clear that we needed to promote our capabilities internally.                  
+                  The challenge was that the organization was forecasting a slowdown in future work. Instead of playing defensively and letting go of valuable employees, we took an offensive approach by seeking new business opportunities for them. We discovered that plenty of work existed within the company, but without proper marketing, no one knew to direct it our way. This made it clear that we needed to promote our capabilities internally.                  
                   </p>
                 </div>
               </div>
@@ -681,7 +681,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  I developed an internal marketing tool to support business capture, leading a team of two through the design and development of the website using JavaScript and SharePoint. I managed stakeholder requirements and expectations, while also facilitating cross-functional communications.                  
+                  I developed an internal marketing tool to support business capture, leading a team of two through the design and development of the website. I managed stakeholder requirements and expectations, facilitated cross-functional communications, and coordinated with the technical leads to ensure the website aligned with their TCAs and messaging.                  
                   </p>
                 </div>
               </div>
@@ -890,7 +890,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  The key was to complete as much work as possible outside of park hours. For ongoing projects that couldn&apos;t avoid guest exposure, facades and detours were used to minimize the impact on the guest experience. Notable projects include the Peter Pan Roofing Facade Replacement, Splash Mountain Corrosion Mitigation, Space Mountain Deep Clean, and Blue Sky Cellar Renovation.                  
+                  I managed teams of contractors to complete as much work as possible outside of park hours. For projects that couldn&apos;t avoid guest exposure, I led efforts to implement facades and detours to minimize the impact on the guest experience. Notable projects include the Peter Pan Roofing Facade Replacement, Splash Mountain Corrosion Mitigation, Space Mountain Deep Clean, and Blue Sky Cellar Renovation.                  
                   </p>
                 </div>
               </div>
@@ -994,7 +994,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  The solution involved gaining a comprehensive understanding of NASA&apos;s patented technologies, then identifying potential industries where these innovations could have commercial applications. We conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts to generate relevant use cases. This approach helped us target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
+                  The solution involved gaining a comprehensive understanding of NASA&apos;s patented technologies, then identifying potential industries where these innovations could have commercial applications. I conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts to generate relevant use cases. This approach helped the team to target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
                   </p>
                 </div>
               </div>
