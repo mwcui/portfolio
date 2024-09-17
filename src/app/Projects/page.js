@@ -1,4 +1,8 @@
+// this is the projects pages. aka where all my experience is listed
+
 "use client"
+
+// these are all the imports. they're broken down into categories, from most recent to oldest projects
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -37,24 +41,35 @@ import SymphonyLogo from '/public/Logos/removed_background/Symphony.png';
 
 const Projects = () => {
   // Define state for responsive text size variables
-  const [SymphonyLogoSize, setSymphonyLogoSize] = useState(130); // Default for iPhone
-  const [NorthropGrummanLogoSize, setNorthropGrummanLogoSize] = useState(120); // Default for iPhone
-  const [SpaceCraftBusinessDevelopmentRenaming, setSpaceCraftBusinessDevelopmentRenaming] = useState('SPACECRAFT BUSINESS DEVELOPMENT');
-  const [DisneyLogoSize, setDisneyLogoSize] = useState(170);
-  const [NASALogoSize, setNASALogoSize] = useState(55);
-  const [ElectromechanicalDesignRenaming, setElectromechanicalDesignRenaming] = useState('ELECTROMECHANICAL DESIGN');
-  const [ProjectNameSize, setProjectNameSize] = useState('text'); // Default for iPhone
-  const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // Default for iPhone
-  const [ProjectTitleSize, setProjectTitleSize] = useState('text'); // Default for iPhone
-  const [ProjectTitleSpacing, setProjectTitleSpacing] = useState('pt-6'); // Default for iPhone // spacing between photoslider and project title size
-  const [TagLineSize, setTagLineSize] = useState('text-vvs'); // Default for iPhone
-  const [ProjectResponseSize, setProjectResponseSize] = useState('text-sm'); // Default for iPhone
-  const [ProjectResponseSpacing, setProjectResponseSpacing] = useState('pt-6'); // Default for iPhone
-  const [ProjectDescriptionWidth, setProjectDescriptionWidth] = useState('max-w-[95%]'); // Default for iPhone. using max-w-[95%] instead of w-[90%] bc w-[90%] does not center the text
-  const [PhotoSliderImageSize, setPhotoSliderImageSize] = useState('w-32 h-[100%]'); // Default for iPhone
+  // nextjs requires initial states for all variables. this is the section that defines all of them
+  // the idea here is that i built as a mobile first design, hence why the inital states are for the iphone
+
+  // there are a ton of variables because of the number of projects (8) and the different screen sizes (3). rather than update each variable manually, i can just update the state, and the useEffect will handle the rest
+
+
+  const [SymphonyLogoSize, setSymphonyLogoSize] = useState(130); // title logo size
+  const [NorthropGrummanLogoSize, setNorthropGrummanLogoSize] = useState(120); // title logo size
+  const [SpaceCraftBusinessDevelopmentRenaming, setSpaceCraftBusinessDevelopmentRenaming] = useState('SPACECRAFT BUSINESS DEVELOPMENT'); // title logo size
+  const [DisneyLogoSize, setDisneyLogoSize] = useState(170); // title logo size
+  const [NASALogoSize, setNASALogoSize] = useState(55); // title logo size
+  const [ElectromechanicalDesignRenaming, setElectromechanicalDesignRenaming] = useState('ELECTROMECHANICAL DESIGN'); // Electromechanical design title renaming. too long for iPhone
+  const [ProjectNameSize, setProjectNameSize] = useState('text'); // this is the name of the project, next to the title logo
+  const [ProjectDividerSize, setProjectDividerSize] = useState('text-lg'); // this is the divider between the title and the title logo
+  const [TagLineSize, setTagLineSize] = useState('text-vvs'); // this is the tagline under the title logo/project name
+  const [ProjectTitleSize, setProjectTitleSize] = useState('text'); // these are the sizes of the project titles (project description, what was the challenge, what was the solution)
+  const [ProjectTitleSpacing, setProjectTitleSpacing] = useState('pt-6'); // spacing between photoslider and project title size
+  const [ProjectResponseSize, setProjectResponseSize] = useState('text-sm'); // responses to the project titles
+  const [ProjectResponseSpacing, setProjectResponseSpacing] = useState('pt-6'); // spacing between the project titles and the project responses
+  const [ProjectDescriptionWidth, setProjectDescriptionWidth] = useState('max-w-[95%]'); // width of the responses. using max-w-[95%] instead of w-[90%] bc w-[90%] does not center the text
+  const [PhotoSliderImageSize, setPhotoSliderImageSize] = useState('w-32 h-[100%]'); // for the size of the photoslider images
 
 
   useEffect(() => {
+
+    // this section handles the responsiveness of the page. it checks the screen size and updates the variables accordingly
+    // example: font size on mac is bigger than iphone, so it needs to change
+    // this section does it for all of them (or as may as i was able to capture, there are still some outstanding, but they're minor)
+
     const handleResize = () => {
       if (window.innerWidth < 640) { // iPhone
         setSymphonyLogoSize(130);
@@ -65,9 +80,9 @@ const Projects = () => {
         setElectromechanicalDesignRenaming('ELECTROMECH DESIGN');
         setProjectNameSize('text');
         setProjectDividerSize('text-lg');
+        setTagLineSize('text-vvs');
         setProjectTitleSize('text');
         setProjectTitleSpacing('pt-6');
-        setTagLineSize('text-vvs');
         setProjectResponseSize('text-sm');
         setProjectResponseSpacing('pt-10');
         setProjectDescriptionWidth('max-w-[90%]')
@@ -81,9 +96,9 @@ const Projects = () => {
         setElectromechanicalDesignRenaming('ELECTROMECHANICAL DESIGN');
         setProjectNameSize('text-3xl');
         setProjectDividerSize('text-2xl');
+        setTagLineSize('text-vs');
         setProjectTitleSize('text-2xl');
         setProjectTitleSpacing('pt-8');
-        setTagLineSize('text-vs');
         setProjectResponseSize('text-xl');
         setProjectResponseSpacing('pt-16');
         setProjectDescriptionWidth('max-w-[90%]');
@@ -97,9 +112,9 @@ const Projects = () => {
         setElectromechanicalDesignRenaming('ELECTROMECHANICAL DESIGN');
         setProjectNameSize('text-3xl');
         setProjectDividerSize('text-3xl');
+        setTagLineSize('text');
         setProjectTitleSize('text-2xl');
         setProjectTitleSpacing('pt-10');
-        setTagLineSize('text');
         setProjectResponseSize('text-xl');
         setProjectResponseSpacing('pt-16');
         setProjectDescriptionWidth('max-w-[70%]');
