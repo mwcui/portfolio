@@ -132,6 +132,9 @@ const Projects = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // these are the images for each project. they're stored in an array, and the index of the array is stored in the state
+  // this is used for the photoslider
+
   const ArtistAnalyticsImages = [
     { src: ArtistAnalytics1, alt: "First SVG", title: "Artist Analytics 1" },
     { src: ArtistAnalytics2, alt: "Second SVG", title: "Artist Analytics 2" },
@@ -175,16 +178,26 @@ const Projects = () => {
     { src: TechnologyTransfer1, alt: "First SVG", title: "Technology Transfer 1" },
   ];
 
+  // selecting the first image from the photoslider for the selected image display
   const [selectedArtistAnalyticsImage, setSelectedArtistAnalyticsImage] = useState(ArtistAnalyticsImages[0]);
   const [selectedEngineeringandSciencesImage, setSelectedEngineeringandSciencesImage] = useState(EngineeringandSciencesImages[0]);
   const [selectedProgramAffordabilityImage, setSelectedProgramAffordabilityImage] = useState(ProgramAffordabilityImages[0]);
-  const [selectedDocktoStockImage, setDocktoStockImage] = useState(DocktoStockImages[0]);
+  const [selectedDocktoStockImage, setSelectedDocktoStockImage] = useState(DocktoStockImages[0]);
   const [selectedSpacecraftBusinessDevelopmentImage, setSelectedSpacecraftBusinessDevelopmentImage] = useState(SpacecraftBusinessDevelopmentImages[0]);
   const [selectedElectromechanicalDesignImage, setSelectedElectromechanicalDesignImage] = useState(ElectromechanicalDesignImages[0]);
   const [selectedDisneylandImage, setSelectedDisneylandImage] = useState(DisneylandImages[0]);
   const [selectedTechnologyTransferImage, setSelectedTechnologyTransferImage] = useState(TechnologyTransferImages[0]);
 
+
+  // each project is broken down in the following manner:
+  // header (logo, divider, project name)
+  // selected image display (the image that is currently selected from the photoslider)
+  // photoslider (the photoslider itself)
+  // project description (the project description, what was the challenge, and what was the solution)
+
   return (
+
+    // this is the main container that holds all of the projects
     <div className="flex flex-col items-center text-white font-inika pt-20">
 
       {/* Artist Analytics */}
@@ -203,9 +216,9 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>ARTIST ANALYTICS</h1>
         </div>
         <div className={`${TagLineSize}`}>
-        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Enabling musicians and labels to track royalties simply, eliminating information loss from disparate data sources
-        </div>
+          <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+            Enabling musicians and labels to track royalties simply, eliminating information loss from disparate data sources
+          </div>
         </div>
 
         {/* Selected Image Display */}
@@ -269,7 +282,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Musicians and record labels currently rely on spreadsheets to view their royalties data, leading to important information slipping through the cracks. We solved this by creating a platform to streamline the data. To ensure privacy and tailored access, a user login system was implemented, allowing each user to securely view their own data.                  
+                    Musicians and record labels currently rely on spreadsheets to view their royalties data, leading to important information slipping through the cracks. We solved this by creating a platform to streamline the data. To ensure privacy and tailored access, a user login system was implemented, allowing each user to securely view their own data.
                   </p>
                 </div>
               </div>
@@ -281,7 +294,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  I developed a dashboard to visualize ingested mechanical royalties data, using Python and SQL on the backend and Tableau and Visx for front-end visualization. After creating unique instances, I embedded the tool into the website with JavaScript and Next.js, and integrated Clerk for user authentication.
+                    I developed a dashboard to visualize ingested mechanical royalties data, using Python and SQL on the backend and Tableau and Visx for front-end visualization. After creating unique instances, I embedded the tool into the website with JavaScript and Next.js, and integrated Clerk for user authentication.
                   </p>
                 </div>
               </div>
@@ -310,9 +323,9 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>ENGINEERING & SCIENCES</h1>
         </div>
         <div className={`${TagLineSize}`}>
-        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Empowering executives to make real-time decisions by removing delays from outdated, manually extracted data   
-        </div>
+          <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+            Empowering executives to make real-time decisions by removing delays from outdated, manually extracted data
+          </div>
         </div>
 
 
@@ -377,7 +390,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Executives rely on outdated and expensive data to make decisions. The current process is labor-intensive, requiring teams to extract data from databases, filter the important details, format it into slides, coordinate with scheduling, and then wait for management review. By the time the data reaches executives, it is already outdated.
+                    Executives rely on outdated and expensive data to make decisions. The current process is labor-intensive, requiring teams to extract data from databases, filter the important details, format it into slides, coordinate with scheduling, and then wait for management review. By the time the data reaches executives, it is already outdated.
                   </p>
                 </div>
               </div>
@@ -389,7 +402,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  I delivered a real-time performance dashboard reporting key metrics across the financial, staffing, engineering, and business development pillars. Leading a team of five, I oversaw the design, development, and deployment phases using Jira and Tableau, managed stakeholder requirements and communications via Confluence and SharePoint, and developed the product strategy and roadmap using Miro and PowerPoint.
+                    I delivered a real-time performance dashboard reporting key metrics across the financial, staffing, engineering, and business development pillars. Leading a team of five, I oversaw the design, development, and deployment phases using Jira and Tableau, managed stakeholder requirements and communications via Confluence and SharePoint, and developed the product strategy and roadmap using Miro and PowerPoint.
                   </p>
                 </div>
               </div>
@@ -417,9 +430,9 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>PROGRAM AFFORDABILITY</h1>
         </div>
         <div className={`${TagLineSize}`}>
-        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Solving staffing inefficiencies with real-time visibility into personnel metrics and budget constraints        
-        </div>
+          <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+            Solving staffing inefficiencies with real-time visibility into personnel metrics and budget constraints
+          </div>
         </div>
 
         {/* Selected Image Display */}
@@ -468,7 +481,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Develop a program management tool to burn down a $30M staffing risk for a Class A space program.                  
+                    Develop a program management tool to burn down a $30M staffing risk for a Class A space program.
                   </p>
                 </div>
               </div>
@@ -481,7 +494,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Program budgets fluctuate, leading to staffing constraints. This creates issues such as too much capital with insufficient headcount, resulting in underperformance and schedule delays. On the other hand, too little capital with excess staff leads to cost overruns and project timeline impacts. These fluctuations disrupt project efficiency and make it challenging to meet both budget and schedule targets.                  
+                    Program budgets fluctuate, leading to staffing constraints. This creates issues such as too much capital with insufficient headcount, resulting in underperformance and schedule delays. On the other hand, too little capital with excess staff leads to cost overruns and project timeline impacts. These fluctuations disrupt project efficiency and make it challenging to meet both budget and schedule targets.
                   </p>
                 </div>
               </div>
@@ -493,7 +506,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  I developed a tool that tracks personnel metrics and spending, enabling program management to test different staffing scenarios. I led a team of one through the design and development process using Tableau and SQL, championed access to the necessary data (MPM/Cobra, Salesforce), and managed stakeholder requirements and expectations.                  </p>
+                    I developed a tool that tracks personnel metrics and spending, enabling program management to test different staffing scenarios. I led a team of one through the design and development process using Tableau and SQL, championed access to the necessary data (MPM/Cobra, Salesforce), and managed stakeholder requirements and expectations.                  </p>
                 </div>
               </div>
             </div>
@@ -524,9 +537,9 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>DOCK TO STOCK</h1>
         </div>
         <div className={`${TagLineSize}`}>
-        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Reducing program and schedule impacts through supply chain insights
-        </div>
+          <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+            Reducing program and schedule impacts through supply chain insights
+          </div>
         </div>
 
 
@@ -579,7 +592,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Develop a tool that visualizes the different processes within the Dock to Stock supply chain and shines a spotlight on the areas that need the most operational improvement.                  
+                    Develop a tool that visualizes the different processes within the Dock to Stock supply chain and shines a spotlight on the areas that need the most operational improvement.
                   </p>
                 </div>
               </div>
@@ -592,7 +605,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Management has limited visibility into the workflow, from the time raw materials and parts are delivered at the docks until they are kitted and distributed across the campus. This lack of insight has resulted in significant delays—sometimes over 200 days—causing major cost and schedule impacts for various programs at Space Park.                                    
+                    Management has limited visibility into the workflow, from the time raw materials and parts are delivered at the docks until they are kitted and distributed across the campus. This lack of insight has resulted in significant delays—sometimes over 200 days—causing major cost and schedule impacts for various programs at Space Park.
                   </p>
                 </div>
               </div>
@@ -604,7 +617,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  I developed a dashboard that tracks key process points within the Dock to Stock supply chain, highlighting impacted programs, process duration, average times, and the current location of materials. I gathered data from sources like Nimbus, SAP HANA, Enovia PLM, and SMEs, performed analysis and pipeline development using SQL and Python, and built the tool in Tableau.                 
+                    I developed a dashboard that tracks key process points within the Dock to Stock supply chain, highlighting impacted programs, process duration, average times, and the current location of materials. I gathered data from sources like Nimbus, SAP HANA, Enovia PLM, and SMEs, performed analysis and pipeline development using SQL and Python, and built the tool in Tableau.
                   </p>
                 </div>
               </div>
@@ -631,9 +644,9 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>{SpaceCraftBusinessDevelopmentRenaming}</h1>
         </div>
         <div className={`${TagLineSize}`}>
-        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Driving new business capture by developing internal marketing and organizational visibility
-        </div>
+          <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+            Driving new business capture by developing internal marketing and organizational visibility
+          </div>
         </div>
 
 
@@ -698,7 +711,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  The challenge was that the organization was forecasting a slowdown in future work. Instead of playing defensively and letting go of valuable employees, we took an offensive approach by seeking new business opportunities for them. We discovered that plenty of work existed within the company, but without proper marketing, no one knew to direct it our way. This made it clear that we needed to promote our capabilities internally.                  
+                    The challenge was that the organization was forecasting a slowdown in future work. Instead of playing defensively and letting go of valuable employees, we took an offensive approach by seeking new business opportunities for them. We discovered that plenty of work existed within the company, but without proper marketing, no one knew to direct it our way. This made it clear that we needed to promote our capabilities internally.
                   </p>
                 </div>
               </div>
@@ -710,7 +723,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  I developed an internal marketing tool to support business capture, leading a team of two through the design and development of the website. I managed stakeholder requirements and expectations, facilitated cross-functional communications, and coordinated with the technical leads to ensure the website aligned with their TCAs and messaging.                  
+                    I developed an internal marketing tool to support business capture, leading a team of two through the design and development of the website. I managed stakeholder requirements and expectations, facilitated cross-functional communications, and coordinated with the technical leads to ensure the website aligned with their TCAs and messaging.
                   </p>
                 </div>
               </div>
@@ -738,9 +751,9 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>{ElectromechanicalDesignRenaming}</h1>
         </div>
         <div className={`${TagLineSize}`}>
-        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Bridging the gap between electrical design and assembly through manufacturability and spatial integration        
-        </div>
+          <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+            Bridging the gap between electrical design and assembly through manufacturability and spatial integration
+          </div>
         </div>
 
 
@@ -805,7 +818,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  After the electrical design phase of spacecraft development, components can&apos;t be manufactured or integrated without accounting for their physical form. The challenge is to translate these designs into 3D models that meet system requirements while ensuring the components are manufacturable, fit within the spacecraft&apos;s physical constraints, and integrate seamlessly with other parts. Electromechanical design addresses these critical issues of packaging, manufacturability, and spatial integration, bridging the gap between electrical design and final assembly.                  
+                    After the electrical design phase of spacecraft development, components can&apos;t be manufactured or integrated without accounting for their physical form. The challenge is to translate these designs into 3D models that meet system requirements while ensuring the components are manufacturable, fit within the spacecraft&apos;s physical constraints, and integrate seamlessly with other parts. Electromechanical design addresses these critical issues of packaging, manufacturability, and spatial integration, bridging the gap between electrical design and final assembly.
                   </p>
                 </div>
               </div>
@@ -817,7 +830,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  I designed the electrical and mechanical components using Creo Parametric, performed GD&T and tolerance analysis, managed assets through Enovia PLM, and coordinated requirements across systems, electrical, and manufacturing stakeholders. Notable projects include the James Webb Space Telescope and Archinaut.                  
+                    I designed the electrical and mechanical components using Creo Parametric, performed GD&T and tolerance analysis, managed assets through Enovia PLM, and coordinated requirements across systems, electrical, and manufacturing stakeholders. Notable projects include the James Webb Space Telescope and Archinaut.
                   </p>
                 </div>
               </div>
@@ -844,9 +857,9 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>DCA</h1>
         </div>
         <div className={`${TagLineSize}`}>
-        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Managing projects, repairs, and maintenance while keeping the magic alive 💫
-        </div>
+          <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+            Managing projects, repairs, and maintenance while keeping the magic alive 💫
+          </div>
         </div>
 
 
@@ -911,7 +924,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Disneyland and California Adventure&apos;s park assets endure frequent, high-touch usage, leading to wear and the constant need for maintenance and repair. At the same time, new projects and upgrades are regularly being added to enhance the guest experience. The challenge was finding a way to efficiently balance routine maintenance, unexpected repairs, and ongoing construction, all while ensuring these activities caused minimal disruption to the park&apos;s daily operations and guest experience.                  
+                    Disneyland and California Adventure&apos;s park assets endure frequent, high-touch usage, leading to wear and the constant need for maintenance and repair. At the same time, new projects and upgrades are regularly being added to enhance the guest experience. The challenge was finding a way to efficiently balance routine maintenance, unexpected repairs, and ongoing construction, all while ensuring these activities caused minimal disruption to the park&apos;s daily operations and guest experience.
                   </p>
                 </div>
               </div>
@@ -923,7 +936,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  I managed teams of contractors to complete as much work as possible outside of park hours. For projects that couldn&apos;t avoid guest exposure, I led efforts to implement facades and detours to minimize the impact on the guest experience. Notable projects include the Peter Pan Roofing Facade Replacement, Splash Mountain Corrosion Mitigation, Space Mountain Deep Clean, and Blue Sky Cellar Renovation.                  
+                    I managed teams of contractors to complete as much work as possible outside of park hours. For projects that couldn&apos;t avoid guest exposure, I led efforts to implement facades and detours to minimize the impact on the guest experience. Notable projects include the Peter Pan Roofing Facade Replacement, Splash Mountain Corrosion Mitigation, Space Mountain Deep Clean, and Blue Sky Cellar Renovation.
                   </p>
                 </div>
               </div>
@@ -950,9 +963,9 @@ const Projects = () => {
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>TECHNOLOGY TRANSFER</h1>
         </div>
         <div className={`${TagLineSize}`}>
-        <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
-        Unlocking revenue potential for NASA&apos;s underutilized patents
-        </div>
+          <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
+            Unlocking revenue potential for NASA&apos;s underutilized patents
+          </div>
         </div>
 
 
@@ -1005,7 +1018,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>PROJECT DESCRIPTION</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  Determine the commercial viability of technology within NASA&apos;s patent portfolio.
+                    Determine the commercial viability of technology within NASA&apos;s patent portfolio.
                   </p>
                 </div>
               </div>
@@ -1017,7 +1030,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE CHALLENGE?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  NASA invests millions annually in research and development, building an extensive patent portfolio. However, only a small portion of these patents are utilized. The challenge was to prevent the majority of these technologies from remaining underutilized. Our goal was to explore their commercial potential and identify ways NASA could generate revenue by licensing or transferring these technologies for commercial use.                  
+                    NASA invests millions annually in research and development, building an extensive patent portfolio. However, only a small portion of these patents are utilized. The challenge was to prevent the majority of these technologies from remaining underutilized. Our goal was to explore their commercial potential and identify ways NASA could generate revenue by licensing or transferring these technologies for commercial use.
                   </p>
                 </div>
               </div>
@@ -1029,7 +1042,7 @@ const Projects = () => {
                 <div className="text-center">
                   <h2 className={`${ProjectTitleSize}`}>WHAT WAS THE SOLUTION?</h2>
                   <p className={`${ProjectResponseSize} pt-3`}>
-                  The solution involved gaining a comprehensive understanding of NASA&apos;s patented technologies, then identifying potential industries where these innovations could have commercial applications. I conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts to generate relevant use cases. This approach helped the team to target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
+                    The solution involved gaining a comprehensive understanding of NASA&apos;s patented technologies, then identifying potential industries where these innovations could have commercial applications. I conducted in-depth market research using tools like IBISWorld and Statista, combined with insights from subject matter experts to generate relevant use cases. This approach helped the team to target industries and companies with the greatest potential for commercialization. Ultimately, we facilitated multiple discussions with commercial partners, paving the way for potential licensing opportunities and revenue generation.
                   </p>
                 </div>
               </div>
