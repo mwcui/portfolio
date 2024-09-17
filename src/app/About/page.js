@@ -19,6 +19,9 @@ const About = ({ handlePageTransition }) => {
       }
     };
 
+    // this section runs the handleResize function once when the page loads, adds the event listener (which reads the page for size changes) then removes the event listener when the page is unmounted (preventing memory leaks)
+
+
     // Set initial size
     handleResize();
 

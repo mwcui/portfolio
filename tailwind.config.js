@@ -1,3 +1,5 @@
+/** tailwind config file. tailwind base doesnt cover everything, this is where I added custom styles */
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
@@ -91,8 +93,8 @@ module.exports = {
   			'accordion-up': 'accordion-up 0.2s ease-out'
   		},
 		fontSize: {
-			vvs: '6px', // Add the new font size
-		  vs: '12px', // Add the new font size
+			vvs: '6px', // Add the new font size. named it vvs because xxs was messing with the existing fonts on other pages
+		  vs: '12px', // Add the new font size. same as reason above
 		}
   	}
   },

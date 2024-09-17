@@ -1,11 +1,15 @@
+// this is the template that is used for every page. it contains the navbar, the interactive blocks, the footer, and the mouse (golden circle)
+// the idea is that every page has this template in the background, hence why its called template
+
+
 "use client";
 
 import { useEffect, useState } from 'react';
-import { Mouse } from 'moussejs';
-import InteractiveBlocks from './InteractiveBlocks';
-import Navbar from './navbar';
-import { LogoVisibilityProvider } from './LogoVisibilityContext';
-import Footer from './Footer';
+import { Mouse } from 'moussejs'; // got this from codegrid youtube video
+import InteractiveBlocks from './InteractiveBlocks'; // this is the blueprint background + highlight effect for the mouse
+import Navbar from './navbar'; // this is the navbar
+import { LogoVisibilityProvider } from './LogoVisibilityContext'; // this is an artifact of the logo visibility. turning on/off the logo in the navbar. keeping in case i want to use it in the future
+import Footer from './Footer'; // this is the footer
 
 const Template = ({ children, onMenuSelect, animationMidpoint, menuText, handlePageTransition }) => {
   const [mouseInstance, setMouseInstance] = useState(null);
@@ -19,6 +23,9 @@ const Template = ({ children, onMenuSelect, animationMidpoint, menuText, handleP
         setIsMouseEffectActive(true);
       }
     };
+
+
+    // this section runs the handleResize function once when the page loads, adds the event listener (which reads the page for size changes) then removes the event listener when the page is unmounted (preventing memory leaks)
 
     // Set initial size
     handleResize();

@@ -1,10 +1,13 @@
+// this is the footer that is on every page. it has a call to action to book a call with me
+
 import React from 'react';
 import { useState, useEffect } from 'react';
 
 const Footer = () => {
-  const [textSize, setTextSize] = useState('text');
+  const [textSize, setTextSize] = useState('text'); // this variable controls the text size of the footer
 
   useEffect(() => {
+    // this is the useEffect that controls the text size of the footer based on screen size
     const handleResize = () => {
       if (window.innerWidth < 640) {
         setTextSize('text-xs'); // iPhone
@@ -14,6 +17,8 @@ const Footer = () => {
         setTextSize('text'); // Laptop and larger
       }
     };
+
+    // this section runs the handleResize function once when the page loads, adds the event listener (which reads the page for size changes) then removes the event listener when the page is unmounted (preventing memory leaks)
 
     // Set initial size
     handleResize();
