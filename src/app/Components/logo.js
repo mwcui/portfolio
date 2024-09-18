@@ -1,4 +1,6 @@
+// used as the logo in the navbar
 
+// this is where the logovisibility was used in the past. can turn on in the future if desired
 
 "use client"
 

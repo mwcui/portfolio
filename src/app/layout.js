@@ -1,3 +1,6 @@
+// this is where the icon for the browser tab is defined
+// also where the text in the browser tab is defined
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 

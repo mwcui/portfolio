@@ -1,3 +1,6 @@
+// this is the about page
+// what is initally loaded on the home page
+
 'use client'
 
 import { useState, useEffect } from 'react';
@@ -6,7 +9,7 @@ import profilePic from '/public/About/ProfilePicture.png'; // Replace with your 
 
 
 const About = ({ handlePageTransition }) => {
-  const [textSize, setTextSize] = useState('text-3xl');
+  const [textSize, setTextSize] = useState('text-3xl'); // controls the size of the text on the page
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,10 +35,21 @@ const About = ({ handlePageTransition }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+
+  // handles the transition to the projects page when the button is clicked
   const handleProjectsClick = () => {
     // Directly transition to the Projects page without block effect
     handlePageTransition('projects', 'PROJECTS');
   };
+
+
+
+  // this is how the about page is broken down:
+  // profile photo
+  // about text
+  // projects button
+  // social icons (email, linkedin)
+
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pb-16  px-4">
@@ -72,6 +86,9 @@ const About = ({ handlePageTransition }) => {
           See My Projects
         </button>
       </div>
+
+
+      {/* kept the other links (github, instagram, tiktok, twitter) in case I want to add them back in the future */}
 
       {/* Social Icons */}
       <div className="flex space-x-4 mt-10 relative"> {/* relative allows me to select the text. I dunno why but it is necessary to make the text selectable */}

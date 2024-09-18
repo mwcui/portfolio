@@ -1,3 +1,7 @@
+/* where the inika google font is defined */
+/* also where the blueprint background is defined */
+/* and the block effect */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

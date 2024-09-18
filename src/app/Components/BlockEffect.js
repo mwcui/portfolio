@@ -1,4 +1,5 @@
-// this is the block reveal effect on page load and switching pages from the menu
+// this is the block reveal effect on initial page load and switching pages from the menu
+// got this from a codegrid youtube video
 
 "use client";
 
@@ -11,9 +12,8 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
   const [screenConstantFull, setScreenConstantFull] = useState(0.0045); // Default to iPhone size
   const [screenConstantHalf, setScreenConstantHalf] = useState(0.0045); // Default to iPhone size
 
-  // this is the screen constant for the block effect animation
-  // it is used to calculate the animation duration
-  // it is set based on the screen size
+  // this part is super important. it handles how quickly the block effect occurs based on screen size
+  // took a lot of tweaking to get it to where it is now
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 640) {
@@ -28,6 +28,8 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
       }
     }
 
+    // this section runs the handleResize function once when the page loads, adds the event listener (which reads the page for size changes) then removes the event listener when the page is unmounted (preventing memory leaks)
+
     // Set the initial value
     handleResize();
 
@@ -40,6 +42,8 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
 
   // this is the block effect animation
   useEffect(() => {
+
+    // sets the base variables for the block effect animation
     const squareContainer = document.getElementById("square-container");
     const squareSize = 50;
     const screenWidth = window.innerWidth;
@@ -56,12 +60,15 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
     const animationDuration = (numSquares - 1) * screenConstantFull + screenConstantFull;
     const animateSquaresFullMidpoint = animationDuration * 1000; // Convert to milliseconds
     
+
+    // used for debugging/testing in the console
     console.log(`Estimated animation midpoint: ${animateSquaresFullMidpoint} ms`);
 
     onMidpointCalculated(animateSquaresFullMidpoint);
 
     let squares = [];
 
+    // this function creates the squares for the block effect animation
     function createSquares() {
       for (let i = 0; i < numSquares; i++) {
         const square = document.createElement("div");
@@ -84,6 +91,23 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
       }
     }
 
+    // this function animates the squares for the block effect animation (specifically on initial page load)
+    function animateSquaresHalf() {
+      // Start with squares fully visible and fade them out
+      gsap.to(squares, {
+        opacity: 0,    // Fade out the squares
+        delay: 0,    // Optional delay before the animation starts
+        duration: 0.0005,
+        stagger: {
+          each: screenConstantHalf,
+          from: "random",
+        },
+        onComplete: onComplete, // Notify parent when animation is complete
+      });
+    }
+
+
+    // this function animates the squares for the block effect animation (specifically on switching pages from the menu)
     function animateSquaresFull() {
       const startTime = performance.now();
       let midpointTime;
@@ -123,21 +147,9 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
       );
     }
 
-    function animateSquaresHalf() {
-      // Start with squares fully visible and fade them out
-      gsap.to(squares, {
-        opacity: 0,    // Fade out the squares
-        delay: 0,    // Optional delay before the animation starts
-        duration: 0.0005,
-        stagger: {
-          each: screenConstantHalf,
-          from: "random",
-        },
-        onComplete: onComplete, // Notify parent when animation is complete
-      });
-    }
 
-    // Initialize the squares and animate
+
+    // Initialize the squares and figures out which animation to run based on initial page load or switching pages from the menu
     createSquares();
     if (isInitialLoad) {
       animateSquaresHalf();
@@ -151,8 +163,9 @@ const BlockEffect = ({ onComplete, isInitialLoad, onMidpointCalculated }) => {
         squareContainer.removeChild(squareContainer.firstChild);
       }
     };
-  }, [onComplete, isInitialLoad, onMidpointCalculated, screenConstantFull, screenConstantHalf]);
+  }, [onComplete, isInitialLoad, onMidpointCalculated, screenConstantFull, screenConstantHalf]); // all these values, when changed, will cause the useEffect to run again
 
+  // the div that contains the squares for the block effect animation. basically how it looks on the screen
   return (
     <div
       id="square-container"

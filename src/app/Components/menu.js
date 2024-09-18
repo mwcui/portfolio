@@ -1,3 +1,5 @@
+// this is the menu that appears when the menu button is clicked
+
 const Menu = ({ closeMenu, onMenuSelect, animationMidpoint }) => {
   const handleSelect = (page) => {
     onMenuSelect(page); // selects the page from the menu

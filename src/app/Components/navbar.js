@@ -1,9 +1,17 @@
+// this is the navbar that appears at the top of every page
+
 import { useState } from 'react';
 import Image from 'next/image';
 import logo from '/public/logo.svg';
 import Menu from './menu';
 
 export default function Navbar({ onMenuSelect, animationMidpoint, menuText, handlePageTransition }) {
+
+  // there is a bunch of nunaced stuff here
+  // from delaying the close of the menu UNTIL blockeffectfull gets to the halfway point
+  // to the menu text based on the selected page
+
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {

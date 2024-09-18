@@ -39,6 +39,7 @@ const InteractiveBlocks = () => {
       }
     }
 
+    // this creates the highlight tail effect
     function highlightRandomNeighbors() {
       const index = parseInt(this.dataset.index);
       const neighbors = [].filter(

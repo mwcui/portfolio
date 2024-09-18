@@ -37,6 +37,9 @@ const Template = ({ children, onMenuSelect, animationMidpoint, menuText, handleP
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+
+  // this is the golden mouse that is on the screen. I found it off of some person from google
+  // grabbed the code and plugged it in here
   useEffect(() => {
     if (isMouseEffectActive && !mouseInstance) {
       const mouse = new Mouse({

@@ -1,3 +1,7 @@
+// this is the logo page
+
+// a fun expression of my logo 🫶🏻
+
 "use client"
 
 import Image from 'next/image';
