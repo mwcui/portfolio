@@ -17,7 +17,9 @@ const InteractiveBlocks = () => {
       const numBlocks = numCols * numRows; // Total number of blocks based on visible area
 
       // Limit the number of blocks to approximately 13,500
-      const maxBlocks = 14000;
+      // this here makes it so that the blocks are not created in the invisible areas of the screen
+      // the screen approx needs 13,500 blocks to fill the screen. so i gave it a buffer of 1,500
+      const maxBlocks = 15000;
       const blocksToCreate = Math.min(numBlocks, maxBlocks);
 
       // Clear existing blocks
