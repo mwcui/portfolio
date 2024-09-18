@@ -21,6 +21,9 @@ const InteractiveBlocks = () => {
         numRows = newNumRows;
         const numBlocks = numCols * numRows;
 
+        // Log the total number of blocks
+        console.log(`Total number of blocks: ${numBlocks}`);
+
         const currentBlocks = blockContainer.children.length;
         if (currentBlocks < numBlocks) {
           for (let i = currentBlocks; i < numBlocks; i++) {
