@@ -9,6 +9,12 @@ const InteractiveBlocks = () => {
     const blockSize = 20; // Size of each block
     const blockContainer = document.getElementById("blocks");
 
+
+    // this here makes it so that the blocks are only created in the visible area of the screen. it is set for mac pro display.
+    // the background is also set to stay in place. so the content on the page moves, but the background stays in place.
+    // this is to keep the performance high. before i had event listeners to track both resize and scroll events. performance was bad with that
+    // now its just resizing, no more scroll events.
+
     function createBlocks() {
       const screenWidth = window.innerWidth; // Use innerWidth for visible area
       const screenHeight = window.innerHeight; // Use innerHeight for visible area
