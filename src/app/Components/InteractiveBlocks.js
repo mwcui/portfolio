@@ -6,50 +6,56 @@ import React, { useEffect } from 'react';
 
 const InteractiveBlocks = () => {
   useEffect(() => {
-    const blockSize = 20;
-    let numCols, numRows;
+    const blockSize = 20; // Size of each block
     const blockContainer = document.getElementById("blocks");
 
     function createBlocks() {
-      const screenWidth = document.documentElement.scrollWidth;
-      const screenHeight = document.documentElement.scrollHeight;
-      const newNumCols = Math.ceil((screenWidth + blockSize) / blockSize);
-      const newNumRows = Math.ceil((screenHeight + blockSize + blockSize) / blockSize); // the extra blockSize is to account for the extra space at the bottom of the screen
+      const screenWidth = window.innerWidth; // Use innerWidth for visible area
+      const screenHeight = window.innerHeight; // Use innerHeight for visible area
+      const numCols = Math.ceil(screenWidth / blockSize); // Calculate number of columns based on visible width
+      const numRows = Math.ceil(screenHeight / blockSize); // Calculate number of rows based on visible height
+      const numBlocks = numCols * numRows; // Total number of blocks based on visible area
 
-      if (newNumCols !== numCols || newNumRows !== numRows) {
-        numCols = newNumCols;
-        numRows = newNumRows;
-        const numBlocks = numCols * numRows;
+      // Limit the number of blocks to approximately 13,500
+      const maxBlocks = 14000;
+      const blocksToCreate = Math.min(numBlocks, maxBlocks);
 
-        // Log the total number of blocks
-        console.log(`Total number of blocks: ${numBlocks}`);
-
-        const currentBlocks = blockContainer.children.length;
-        if (currentBlocks < numBlocks) {
-          for (let i = currentBlocks; i < numBlocks; i++) {
-            const block = document.createElement("div");
-            block.classList.add("block");
-            block.dataset.index = i;
-            block.addEventListener("mousemove", highlightRandomNeighbors);
-
-            blockContainer.appendChild(block);
-          }
-        } else if (currentBlocks > numBlocks) {
-          for (let i = currentBlocks - 1; i >= numBlocks; i--) {
-            blockContainer.removeChild(blockContainer.lastChild);
-          }
-        }
+      // Clear existing blocks
+      while (blockContainer.firstChild) {
+        blockContainer.removeChild(blockContainer.firstChild);
       }
+
+      // Create blocks for the visible area
+      for (let i = 0; i < blocksToCreate; i++) {
+        const block = document.createElement("div");
+        block.classList.add("block");
+        block.dataset.index = i;
+
+        // Set block size and position
+        block.style.width = `${blockSize}px`;
+        block.style.height = `${blockSize}px`;
+        block.style.position = 'absolute';
+        block.style.left = `${(i % numCols) * blockSize}px`;
+        block.style.top = `${Math.floor(i / numCols) * blockSize}px`;
+
+        // Add mousemove event listener for highlight effect
+        block.addEventListener("mousemove", highlightRandomNeighbors);
+
+        blockContainer.appendChild(block);
+      }
+
+      // Log the total number of blocks created
+      console.log(`Total number of blocks: ${blocksToCreate}`);
     }
 
-    // this creates the highlight tail effect
+    // This creates the highlight tail effect
     function highlightRandomNeighbors() {
       const index = parseInt(this.dataset.index);
       const neighbors = [].filter(
         (i) =>
           i >= 0 &&
           i < blockContainer.children.length &&
-          Math.abs((i % numCols) - (index % numCols)) <= 1
+          Math.abs((i % Math.ceil(window.innerWidth / 20)) - (index % Math.ceil(window.innerWidth / 20))) <= 1
       );
 
       this.classList.add("highlight");
@@ -61,25 +67,27 @@ const InteractiveBlocks = () => {
     // Initial creation
     createBlocks();
 
-    // Update on resize or scroll
-    const handleResizeOrScroll = () => {
+    // Update on resize
+    const handleResize = () => {
       createBlocks();
     };
 
-    window.addEventListener('resize', handleResizeOrScroll);
-    window.addEventListener('scroll', handleResizeOrScroll);
+    window.addEventListener('resize', handleResize);
 
     // Cleanup on unmount
     return () => {
-      window.removeEventListener('resize', handleResizeOrScroll);
-      window.removeEventListener('scroll', handleResizeOrScroll);
+      window.removeEventListener('resize', handleResize);
       while (blockContainer.firstChild) {
         blockContainer.removeChild(blockContainer.firstChild);
       }
     };
   }, []);
 
-  return <div id="blocks" style={{ position: 'fixed', top: 0, left: 0, width: '105%', height: '100%', }}></div>;
+  return (
+    <div id="blocks" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', overflow: 'hidden' }}>
+      {/* Background blocks will be rendered here */}
+    </div>
+  );
 };
 
 export default InteractiveBlocks;
