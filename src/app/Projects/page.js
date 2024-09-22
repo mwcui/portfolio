@@ -11,12 +11,10 @@ import ArtistAnalytics1 from '/public/ArtistAnalytics/Symphony_1tr-01 (3).svg';
 import ArtistAnalytics2 from '/public/ArtistAnalytics/Symphony_2 Outline.svg';
 import ArtistAnalytics3 from '/public/ArtistAnalytics/Symphony_3 Outline.svg';
 
-import EngineeringandSciences1 from '/public/EngineeringandSciences/E_S Dashboard 001 outline.svg';
-import EngineeringandSciences2 from '/public/EngineeringandSciences/E_S Dashboard 002.svg';
-import EngineeringandSciences3 from '/public/EngineeringandSciences/E_S Dashboard.003.svg';
-import EngineeringandSciences4 from '/public/EngineeringandSciences/E_S Dashboard.004.svg';
+import EngineeringandSciences1 from '/public/EngineeringandSciences/overview.png';
+import EngineeringandSciences2 from '/public/EngineeringandSciences/financial.png';
 
-import DocktoStock1 from '/public/DesigntoKit/Design_to_Kit.svg';
+import DocktoStock1 from '/public/DesigntoKit/d2s.jpg';
 
 import ProgramAffordability1 from '/public/ProgramAffordability/2021 Q4 ILR Chart.png';
 import ProgramAffordability2 from '/public/ProgramAffordability/Employee Affordability Graph.png';
@@ -144,8 +142,6 @@ const Projects = () => {
   const EngineeringandSciencesImages = [
     { src: EngineeringandSciences1, alt: "First SVG", title: "Engineering and Sciences 1" },
     { src: EngineeringandSciences2, alt: "Second SVG", title: "Engineering and Sciences 2" },
-    { src: EngineeringandSciences3, alt: "Third SVG", title: "Engineering and Sciences 3" },
-    { src: EngineeringandSciences4, alt: "Fourth SVG", title: "Engineering and Sciences 4" },
   ];
 
   const DocktoStockImages = [
@@ -211,9 +207,9 @@ const Projects = () => {
             height={50}
             objectFit="contain"
           /> */}
-          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          {/* <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1> */}
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>ARTIST ANALYTICS</h1>
+          <h1 className={`${ProjectNameSize} ml-1 text-white`}>ARTIST ANALYTICS</h1>
         </div>
         <div className={`${TagLineSize}`}>
           <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
@@ -230,9 +226,9 @@ const Projects = () => {
             height={562}
             objectFit="contain"
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[8px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Figures and numbers are a representation of the project. Some information has been altered for confidentiality.
+            Images are for representation purposes only
           </p>
         </div>
 
@@ -311,16 +307,16 @@ const Projects = () => {
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center p-1">
-          <Image
+          {/* <Image
             src={NorthropGrummanLogo}
             alt="Northrop Grumman Logo"
             width={NorthropGrummanLogoSize}
             height={50}
             objectFit="contain"
-          />
-          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          /> */}
+          {/* <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1> */}
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>ENGINEERING & SCIENCES</h1>
+          <h1 className={`${ProjectNameSize} ml-1 text-white`}>ENGINEERING & SCIENCES</h1>
         </div>
         <div className={`${TagLineSize}`}>
           <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
@@ -338,9 +334,9 @@ const Projects = () => {
             height={562}
             objectFit="contain"
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[8px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Numbers and figures have been altered for confidentiality
+            Images are for representation purposes only
           </p>
         </div>
 
@@ -418,16 +414,16 @@ const Projects = () => {
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center p-1">
-          <Image
+          {/* <Image
             src={NorthropGrummanLogo}
             alt="Northrop Grumman Logo"
             width={NorthropGrummanLogoSize}
             height={50}
             objectFit="contain"
-          />
-          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          /> */}
+          {/* <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1> */}
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>PROGRAM AFFORDABILITY</h1>
+          <h1 className={`${ProjectNameSize} ml-1 text-white`}>PROGRAM AFFORDABILITY</h1>
         </div>
         <div className={`${TagLineSize}`}>
           <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
@@ -444,9 +440,10 @@ const Projects = () => {
             height={562}
             objectFit="contain"
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[8px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Numbers/figures are for representation purposes, actual data is confidential | Source: IRL ICS          </p>
+            Images are for representation purposes only     
+             </p>
         </div>
 
         <div className="w-full flex justify-center py-3">
@@ -525,16 +522,16 @@ const Projects = () => {
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center p-1">
-          <Image
+          {/* <Image
             src={NorthropGrummanLogo}
             alt="Northrop Grumman Logo"
             width={NorthropGrummanLogoSize}
             height={50}
             objectFit="contain"
-          />
-          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          /> */}
+          {/* <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1> */}
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>DOCK TO STOCK</h1>
+          <h1 className={`${ProjectNameSize} ml-1 text-white`}>DOCK TO STOCK</h1>
         </div>
         <div className={`${TagLineSize}`}>
           <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
@@ -552,9 +549,9 @@ const Projects = () => {
             height={562}
             objectFit="contain"
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[8px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Numbers and figures have been altered for confidentiality
+            Images are for representation purposes only
           </p>
         </div>
 
@@ -632,16 +629,16 @@ const Projects = () => {
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center p-1">
-          <Image
+          {/* <Image
             src={NorthropGrummanLogo}
             alt="Northrop Grumman Logo"
             width={NorthropGrummanLogoSize}
             height={50}
             objectFit="contain"
-          />
-          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          /> */}
+          {/* <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1> */}
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>{SpaceCraftBusinessDevelopmentRenaming}</h1>
+          <h1 className={`${ProjectNameSize} ml-1 text-white`}>{SpaceCraftBusinessDevelopmentRenaming}</h1>
         </div>
         <div className={`${TagLineSize}`}>
           <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
@@ -660,9 +657,9 @@ const Projects = () => {
             objectFit="contain"
             priority={true}
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[8px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Numbers and figures have been altered for confidentiality
+            Images are for representation purposes only
           </p>
         </div>
 
@@ -739,16 +736,16 @@ const Projects = () => {
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center p-1">
-          <Image
+          {/* <Image
             src={NorthropGrummanLogo}
             alt="Northrop Grumman Logo"
             width={NorthropGrummanLogoSize}
             height={50}
             objectFit="contain"
-          />
-          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          /> */}
+          {/* <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1> */}
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>{ElectromechanicalDesignRenaming}</h1>
+          <h1 className={`${ProjectNameSize} ml-1 text-white`}>{ElectromechanicalDesignRenaming}</h1>
         </div>
         <div className={`${TagLineSize}`}>
           <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
@@ -767,9 +764,9 @@ const Projects = () => {
             objectFit="contain"
             priority={true}
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[8px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Numbers/figures are for representation purposes, actual designs are confidential | Source: Google Images
+            Images are for representation purposes only
           </p>
         </div>
 
@@ -845,16 +842,16 @@ const Projects = () => {
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center p-1">
-          <Image
+          {/* <Image
             src={DisneyLogo}
             alt="Disney Logo"
             width={DisneyLogoSize}
             height={300}
             objectFit="contain"
-          />
-          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          /> */}
+          {/* <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1> */}
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>DCA</h1>
+          <h1 className={`${ProjectNameSize} ml-1 text-white`}>DCA</h1>
         </div>
         <div className={`${TagLineSize}`}>
           <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
@@ -873,9 +870,9 @@ const Projects = () => {
             objectFit="contain"
             priority={true}
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[8px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Work cannot be disclosed due to NDA | Source: Google Images
+            Images are for representation purposes only
           </p>
         </div>
 
@@ -951,16 +948,16 @@ const Projects = () => {
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center p-1">
-          <Image
+          {/* <Image
             src={NASALogo}
             alt="NASA Logo"
             width={NASALogoSize}
             height={300}
             objectFit="contain"
-          />
-          <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
+          /> */}
+          {/* <h1 className={`${ProjectDividerSize} ml-1 text-white`}>|</h1> */}
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
-          <h1 className={`${ProjectNameSize} ml-4 text-white`}>TECHNOLOGY TRANSFER</h1>
+          <h1 className={`${ProjectNameSize} ml-1 text-white`}>TECHNOLOGY TRANSFER</h1>
         </div>
         <div className={`${TagLineSize}`}>
           <div className="flex flex-col items-start ml-1 pb-2 p-1 italic">
@@ -979,9 +976,9 @@ const Projects = () => {
             objectFit="contain"
             priority={true}
           />
-          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[6px]">
+          <p className="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-opacity-70 p-1 rounded text-[8px]">
             {/* {selectedArtistAnalyticsImage.title} */}
-            Work cannot be disclosed due to NDA
+            Images are for representation purposes only
           </p>
         </div>
 
