@@ -204,13 +204,13 @@ const Projects = () => {
       <div className="w-[1000px] max-w-[90vw]">
         {/* Header */}
         <div className="flex items-center p-1">
-          <Image
+          {/* <Image
             src={SymphonyLogo}
             alt="Symphony Logo"
             width={SymphonyLogoSize}
             height={50}
             objectFit="contain"
-          />
+          /> */}
           <h1 className={`${ProjectDividerSize} ml-4 text-white`}>|</h1>
           {/* {ProjectSpaceVisible && <h1 className={`${ProjectSpaceSize} ml-4 text-white`}></h1>} */}
           <h1 className={`${ProjectNameSize} ml-4 text-white`}>ARTIST ANALYTICS</h1>
