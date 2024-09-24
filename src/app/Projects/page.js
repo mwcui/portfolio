@@ -11,8 +11,8 @@ import ArtistAnalytics1 from '/public/ArtistAnalytics/Symphony_1tr-01 (3).svg';
 import ArtistAnalytics2 from '/public/ArtistAnalytics/Symphony_2 Outline.svg';
 import ArtistAnalytics3 from '/public/ArtistAnalytics/Symphony_3 Outline.svg';
 
-import EngineeringandSciences1 from '/public/EngineeringandSciences/overview.png';
-import EngineeringandSciences2 from '/public/EngineeringandSciences/financial.png';
+import EngineeringandSciences1 from '/public/EngineeringandSciences/financial.png';
+import EngineeringandSciences2 from '/public/EngineeringandSciences/overview.png';
 
 import DocktoStock1 from '/public/DesigntoKit/d2s.jpg';
 
