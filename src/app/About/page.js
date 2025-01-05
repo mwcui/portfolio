@@ -69,10 +69,10 @@ const About = ({ handlePageTransition }) => {
       {/* About Text */}
       <div className={`text-center ${textSize} max-w-2xl leading-relaxed relative`} style={{ width: '575px', maxWidth: '90vw' }}>
         <p>
-        Hi, I’m Matthew
+        Hi, I&apos;m Matthew
         </p>
         <p className="mt-4">
-        I'm currently working on <span className="hover:italic">
+        I&apos;m currently working on <span className="hover:italic">
             <a href="https://www.lavel.ai/en/" target="_blank" rel="noopener noreferrer">Lavel</a>
         </span>, an AI-first legal management platform built for legal professionals across Mexico
         </p>
