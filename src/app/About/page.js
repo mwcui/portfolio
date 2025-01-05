@@ -69,7 +69,7 @@ const About = ({ handlePageTransition }) => {
       {/* About Text */}
       <div className={`text-center ${textSize} max-w-2xl leading-relaxed relative`} style={{ width: '575px', maxWidth: '90vw' }}>
         <p>
-        Hi, I&apos;m Matthew
+        Hi, I&apos;m Matthew.
         </p>
         <p className="mt-4">
         I&apos;m currently working on <span className="hover:italic">
