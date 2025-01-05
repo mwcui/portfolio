@@ -35,7 +35,7 @@ const Footer = () => {
       <div className="flex justify-center">
         <div className="bg-gray-600 bg-opacity-70 rounded px-2 py-2 flex items-center">
           <p className={`${textSize} pr-4 whitespace-nowrap`}>
-            Facing a challenge? Let&apos;s explore it together
+            Looking to unlock your legal potential?
           </p>
           <button
             className={`bg-white text-[#0C3B65] ${textSize} hover:bg-slate-200 transition-colors duration-200 font-bold py-1 px-3 rounded whitespace-nowrap`}

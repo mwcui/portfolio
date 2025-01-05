@@ -65,12 +65,12 @@ const Menu = ({ closeMenu, onMenuSelect, animationMidpoint }) => {
           >
             HOME
           </li>
-          <li
+          {/* <li
             className="hover:text-gray-600 hover:italic cursor-pointer"
             onClick={() => handleSelect('projects')}
           >
             PROJECTS
-          </li>
+          </li> */}
           {/* <li
             className="hover:text-gray-600 hover:italic cursor-pointer"
             onClick={() => handleSelect('creative')}

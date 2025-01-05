@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import profilePic from '/public/About/ProfilePicture.png'; // Replace with your actual image path
+import profilePic from '/public/About/MiamiMatthew.png'; // Replace with your actual image path
 
 
 const About = ({ handlePageTransition }) => {
@@ -54,7 +54,7 @@ const About = ({ handlePageTransition }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-white font-inika pb-16  px-4">
 
-      <div className="m-10 w-36 h-36 relative">
+      <div className="m-10 w-40 h-40 relative">
         <Image
           src={profilePic}
           alt="Profile Picture of Matthew"
@@ -67,31 +67,34 @@ const About = ({ handlePageTransition }) => {
       </div>
 
       {/* About Text */}
-      <div className={`text-center ${textSize} max-w-2xl leading-relaxed`} style={{ width: '600px', maxWidth: '90vw' }}>
+      <div className={`text-center ${textSize} max-w-2xl leading-relaxed relative`} style={{ width: '575px', maxWidth: '90vw' }}>
         <p>
-        Hi, I’m Matthew.
+        Hi, I’m Matthew
         </p>
         <p className="mt-4">
-        I build software that helps local governments streamline operations and solve complex problems.
+        I'm currently working on <span className="hover:italic">
+            <a href="https://www.lavel.ai/en/" target="_blank" rel="noopener noreferrer">Lavel</a>
+        </span>, an AI-first legal management platform built for legal professionals across Mexico
         </p>
 
       </div>
 
       {/* Projects Button */}
-      <div className="mt-8 relative">
+      {/* <div className="mt-8 relative">
         <button
           onClick={handleProjectsClick}
           className="bg-[#ffffff] text-[#0C3B65] hover:bg-slate-400 transition-colors duration-200 font-bold py-1 px-3 rounded"
         >
           See My Projects
         </button>
-      </div>
+      </div> */}
 
 
       {/* kept the other links (github, instagram, tiktok, twitter) in case I want to add them back in the future */}
 
       {/* Social Icons */}
       <div className="flex space-x-4 mt-10 relative"> {/* relative allows me to select the text. I dunno why but it is necessary to make the text selectable */}
+
         <a href='mailto:matthew.w.cui@gmail.com' target='_blank' rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
           Email
         </a>
