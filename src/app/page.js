@@ -33,12 +33,13 @@ const PAGE_CSS = `:root {
   body {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .page {
     max-width: 680px;
     width: 100%;
-    height: 100%;
+    max-height: 100%;
     overflow-y: auto;
     padding: clamp(40px, 8vw, 72px) clamp(20px, 5vw, 24px) 96px;
     box-sizing: border-box;
@@ -238,18 +239,18 @@ const PAGE_BODY = `<div class="page">
       <summary><span class="toggle-icon"></span> Books</summary>
       <div class="media-content">
         <ul class="dash-list">
-          <li><a href="https://www.amazon.com/Lessons-History-Will-Durant/dp/143914995X" target="_blank" rel="noopener">The Lessons of History</a> by Will&nbsp;and&nbsp;Ariel&nbsp;Durant</li>
-          <li><a href="https://www.amazon.com/Fish-That-Ate-Whale-Americas/dp/1250033314" target="_blank" rel="noopener">The Fish that Ate the Whale</a> by Rich&nbsp;Cohen</li>
-          <li><a href="https://www.amazon.com/What-Takes-Lessons-Pursuit-Excellence/dp/1501158147" target="_blank" rel="noopener">What It Takes</a> by Stephen&nbsp;A.&nbsp;Schwarzman</li>
-          <li><a href="https://www.amazon.com/Bloomberg-Michael-R/dp/0471208884" target="_blank" rel="noopener">Bloomberg</a> by Michael&nbsp;Bloomberg</li>
-          <li><a href="https://www.amazon.com/Tao-Charlie-Munger-Compilation-Commentary/dp/150115334X" target="_blank" rel="noopener">The Tao of Charlie Munger</a> by David&nbsp;Clark</li>
-          <li><a href="https://www.amazon.com/Letters-J-D-Rockefeller-his-son/dp/B09BY8189Q" target="_blank" rel="noopener">The 38 Letters from J.D. Rockefeller to His Son</a> by G.&nbsp;Ng</li>
+          <li><a href="https://www.amazon.com/Lessons-History-Will-Durant/dp/143914995X" target="_blank" rel="noopener">The Lessons of History</a> by&nbsp;Will&nbsp;and&nbsp;Ariel&nbsp;Durant</li>
+          <li><a href="https://www.amazon.com/Fish-That-Ate-Whale-Americas/dp/1250033314" target="_blank" rel="noopener">The Fish that Ate the Whale</a> by&nbsp;Rich&nbsp;Cohen</li>
+          <li><a href="https://www.amazon.com/What-Takes-Lessons-Pursuit-Excellence/dp/1501158147" target="_blank" rel="noopener">What It Takes</a> by&nbsp;Stephen&nbsp;A.&nbsp;Schwarzman</li>
+          <li><a href="https://www.amazon.com/Bloomberg-Michael-R/dp/0471208884" target="_blank" rel="noopener">Bloomberg</a> by&nbsp;Michael&nbsp;Bloomberg</li>
+          <li><a href="https://www.amazon.com/Tao-Charlie-Munger-Compilation-Commentary/dp/150115334X" target="_blank" rel="noopener">The Tao of Charlie Munger</a> by&nbsp;David&nbsp;Clark</li>
+          <li><a href="https://www.amazon.com/Letters-J-D-Rockefeller-his-son/dp/B09BY8189Q" target="_blank" rel="noopener">The 38 Letters from J.D. Rockefeller to His Son</a> by&nbsp;G.&nbsp;Ng</li>
           <li><a href="https://www.amazon.com/Want-Where-Going-Never-There/dp/1681840480" target="_blank" rel="noopener">All I Want To Know Is Where I'm Going To Die So I'll Never Go&nbsp;There</a>&nbsp;<span style="white-space:nowrap;">by&nbsp;Peter&nbsp;Bevelin</span></li>
-          <li><a href="https://a.co/d/05E1wtEo" target="_blank" rel="noopener">A Pirate Looks at Fifty</a> by Jimmy&nbsp;Buffett</li>
-          <li><a href="https://www.amazon.com/Snowball-Warren-Buffett-Business-Life/dp/0553384619" target="_blank" rel="noopener">The Snowball</a> by Alice&nbsp;Schroeder</li>
-          <li><a href="https://www.amazon.com/Shoe-Dog-Memoir-Creator-Nike/dp/1501135910" target="_blank" rel="noopener">Shoe Dog</a> by Phil&nbsp;Knight</li>
-          <li><a href="https://www.amazon.com/Winning-Unforgiving-Race-Greatness-Grover/dp/1982168862" target="_blank" rel="noopener">Winning</a> by Tim&nbsp;S.&nbsp;Grover</li>
-          <li><a href="https://www.amazon.com/Never-Split-Difference-Negotiating-Depended/dp/0062407805" target="_blank" rel="noopener">Never Split the Difference</a> by Chris&nbsp;Voss</li>
+          <li><a href="https://a.co/d/05E1wtEo" target="_blank" rel="noopener">A Pirate Looks at Fifty</a> by&nbsp;Jimmy&nbsp;Buffett</li>
+          <li><a href="https://www.amazon.com/Snowball-Warren-Buffett-Business-Life/dp/0553384619" target="_blank" rel="noopener">The Snowball</a> by&nbsp;Alice&nbsp;Schroeder</li>
+          <li><a href="https://www.amazon.com/Shoe-Dog-Memoir-Creator-Nike/dp/1501135910" target="_blank" rel="noopener">Shoe Dog</a> by&nbsp;Phil&nbsp;Knight</li>
+          <li><a href="https://www.amazon.com/Winning-Unforgiving-Race-Greatness-Grover/dp/1982168862" target="_blank" rel="noopener">Winning</a> by&nbsp;Tim&nbsp;S.&nbsp;Grover</li>
+          <li><a href="https://www.amazon.com/Never-Split-Difference-Negotiating-Depended/dp/0062407805" target="_blank" rel="noopener">Never Split the Difference</a> by&nbsp;Chris&nbsp;Voss</li>
           <li><a href="https://www.amazon.com/Female-Brain-Louann-Brizendine/dp/0767920104" target="_blank" rel="noopener">The Female Brain</a> by&nbsp;Louann&nbsp;Brizendine,&nbsp;MD</li>
           <li><a href="https://www.amazon.com/Male-Brain-Breakthrough-Understanding-Think/dp/0767927540" target="_blank" rel="noopener">The Male Brain</a> by&nbsp;Louann&nbsp;Brizendine,&nbsp;MD</li>
         </ul>
