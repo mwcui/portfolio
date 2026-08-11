@@ -1,14 +1,12 @@
 // this is where the icon for the browser tab is defined
 // also where the text in the browser tab is defined
 
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
-  title: "Matthew's Portfolio",
-  description: "Matthew's Portfolio",
+  title: "Matthew Cui",
+  description:
+    "Matthew Cui — MBA candidate at Oxford, previously in finance, aerospace, entertainment, and startups.",
 };
 
 export default function RootLayout({ children }) {
@@ -20,7 +18,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/BrowserIcon/favicon-32x32.png" type="image/png" sizes="32x32" />
         <link rel="apple-touch-icon" href="/BrowserIcon/apple-touch-icon.png" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
