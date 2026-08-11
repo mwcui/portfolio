@@ -19,18 +19,31 @@ const PAGE_CSS = `:root {
   html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden;
     background: var(--bg);
     color: var(--text-body);
     font-family: var(--sans);
     -webkit-font-smoothing: antialiased;
+    /* Hide the scrollbar at the document level (not on a nested container)
+       so the page always scrolls natively — this is what actually works
+       reliably across mobile browsers and in-app WebViews (Instagram,
+       TikTok, etc.), which often can't touch-scroll a div nested inside
+       an overflow:hidden parent. Hiding it here means no gutter is ever
+       reserved, so horizontal centering never shifts when content grows. */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* legacy Edge/IE */
+  }
+  html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge (Chromium) */
+    width: 0;
+    height: 0;
   }
 
-  /* The outer window never scrolls, so there's no browser scrollbar to
-     throw off horizontal centering. Instead, .page itself scrolls
-     internally, staying perfectly centered regardless of browser/OS. */
+  /* min-height (not height) + flex centering: short content centers
+     vertically, and anything taller than the viewport just grows the
+     page and scrolls natively from the top — no custom scroll container. */
   body {
+    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,17 +52,8 @@ const PAGE_CSS = `:root {
   .page {
     max-width: 680px;
     width: 100%;
-    max-height: 100%;
-    overflow-y: auto;
     padding: clamp(40px, 8vw, 72px) clamp(20px, 5vw, 24px) 96px;
     box-sizing: border-box;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* legacy Edge/IE */
-  }
-  .page::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge (Chromium) */
-    width: 0;
-    height: 0;
   }
 
   h1 {
