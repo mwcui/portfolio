@@ -3,8 +3,7 @@
 // replaced the previous interactive site. Styles and markup are injected
 // directly to avoid re-authoring the whole page as JSX.
 
-const PAGE_CSS = `
-  :root {
+const PAGE_CSS = `:root {
     --bg: #181818;
     --text-heading: #f7f7f5;
     --text-body: #c7c7c2;
@@ -215,8 +214,7 @@ const PAGE_CSS = `
 
   @media (max-width: 400px) {
     h1 { font-size: 22px; }
-  }
-`;
+  }`;
 
 const PAGE_BODY = `<div class="page">
     <div class="intro">
@@ -226,7 +224,7 @@ const PAGE_BODY = `<div class="page">
       <p>I'm currently at <a href="https://www.ox.ac.uk/" target="_blank" rel="noopener">Oxford</a> pursuing an MBA.</p>
     </div>
 
-    <p>Prior to that, I was learning long&#8209;term capital management at <a href="http://www.industrialequity.com/" target="_blank" rel="noopener">IEL</a> from the great Raymond&nbsp;Webb.</p>
+    <p>Prior to that, I was learning long&#8209;term capital management at <a href="http://www.industrialequity.com/" target="_blank" rel="noopener">IEL</a> from the insightful Raymond&nbsp;Webb.</p>
 
     <p>My move into finance came after 10 years of building and managing things at<br><a href="https://www.nasa.gov/" target="_blank" rel="noopener">NASA</a>, <a href="https://www.disney.com/" target="_blank" rel="noopener">Disney</a>, <a href="https://www.northropgrumman.com/" target="_blank" rel="noopener">Northrop&nbsp;Grumman</a>, <a href="https://www.symphonymarkets.com/" target="_blank" rel="noopener">Symphony&nbsp;Markets</a>, and <a href="https://www.lavel.ai/" target="_blank" rel="noopener">Lavel</a> (left in 2024).</p>
 
@@ -244,7 +242,7 @@ const PAGE_BODY = `<div class="page">
           <li><a href="https://www.amazon.com/Bloomberg-Michael-R/dp/0471208884" target="_blank" rel="noopener">Bloomberg</a> by Michael&nbsp;Bloomberg</li>
           <li><a href="https://www.amazon.com/Tao-Charlie-Munger-Compilation-Commentary/dp/150115334X" target="_blank" rel="noopener">The Tao of Charlie Munger</a> by David&nbsp;Clark</li>
           <li><a href="https://www.amazon.com/Letters-J-D-Rockefeller-his-son/dp/B09BY8189Q" target="_blank" rel="noopener">The 38 Letters from J.D. Rockefeller to His Son</a> by G.&nbsp;Ng</li>
-          <li><a href="https://www.amazon.com/Want-Where-Going-Never-There/dp/1681840480" target="_blank" rel="noopener">All I Want To Know Is Where I'm Going To Die So I'll Never Go&nbsp;There</a>&nbsp;<span style="white-space:nowrap;">by&nbsp;Peter&nbsp;Bevelin</span></li>
+          <li><a href="https://www.amazon.com/Want-Where-Going-Never-There/dp/1681840480" target="_blank" rel="noopener">All I Want To Know Is Where I'm Going To Die So I'll&nbsp;Never&nbsp;Go&nbsp;There</a>&nbsp;<span style="white-space:nowrap;">by&nbsp;Peter&nbsp;Bevelin</span></li>
           <li><a href="https://a.co/d/05E1wtEo" target="_blank" rel="noopener">A Pirate Looks at Fifty</a> by Jimmy&nbsp;Buffett</li>
           <li><a href="https://www.amazon.com/Snowball-Warren-Buffett-Business-Life/dp/0553384619" target="_blank" rel="noopener">The Snowball</a> by Alice&nbsp;Schroeder</li>
           <li><a href="https://www.amazon.com/Shoe-Dog-Memoir-Creator-Nike/dp/1501135910" target="_blank" rel="noopener">Shoe Dog</a> by Phil&nbsp;Knight</li>
