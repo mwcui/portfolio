@@ -233,7 +233,7 @@ const PAGE_BODY = `<div class="page">
 
     <p>Prior to that, I was learning long&#8209;term capital management at <a href="http://www.industrialequity.com/" target="_blank" rel="noopener">IEL</a> from the insightful Raymond&nbsp;Webb.</p>
 
-    <p>My move into finance came after 10 years of building and managing things at <a href="https://www.nasa.gov/" target="_blank" rel="noopener">NASA</a>, <a href="https://www.disney.com/" target="_blank" rel="noopener">Disney</a>, <a href="https://www.northropgrumman.com/" target="_blank" rel="noopener">Northrop&nbsp;Grumman</a>, <a href="https://www.symphonymarkets.com/" target="_blank" rel="noopener">Symphony&nbsp;Markets</a>, and <a href="https://www.lavel.ai/" target="_blank" rel="noopener">Lavel</a> (left in 2024).</p>
+    <p>My move into finance came after 10 years of building things at <a href="https://www.nasa.gov/" target="_blank" rel="noopener">NASA</a>, <a href="https://www.disney.com/" target="_blank" rel="noopener">Disney</a>, <a href="https://www.northropgrumman.com/" target="_blank" rel="noopener">Northrop&nbsp;Grumman</a>, <a href="https://www.symphonymarkets.com/" target="_blank" rel="noopener">Symphony&nbsp;Markets</a>, and <a href="https://www.lavel.ai/" target="_blank" rel="noopener">Lavel</a> (left in 2024).</p>
 
     <p>You can learn more about me <a href="https://www.linkedin.com/in/matthewwcui/" target="_blank" rel="noopener">here</a>. <a href="mailto:matthew.w.cui@gmail.com">Reach out</a> if interested.</p>
 
@@ -282,7 +282,7 @@ const PAGE_BODY = `<div class="page">
 
     <p>I enjoy adventuring, salsa dancing, and spending time with friends and family.</p>
 
-    <p>My dream is to climb <a href="https://en.wikipedia.org/wiki/Mount_Everest" target="_blank" rel="noopener">Mount&nbsp;Everest</a>.</p>
+    <p>My dream is to climb <a href="https://en.wikipedia.org/wiki/Mount_Everest" target="_blank" rel="noopener">Everest</a>.</p>
 
     <footer>Los Angeles, California</footer>
   </div>`;
