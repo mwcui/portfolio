@@ -235,7 +235,7 @@ const PAGE_BODY = `<div class="page">
 
     <p>Before diving into finance, I spent a decade building things at <a href="https://www.nasa.gov/" target="_blank" rel="noopener">NASA</a>, <a href="https://www.disney.com/" target="_blank" rel="noopener">Disney</a>, <a href="https://www.northropgrumman.com/" target="_blank" rel="noopener">Northrop&nbsp;Grumman</a>, <a href="https://www.symphonymarkets.com/" target="_blank" rel="noopener">Symphony&nbsp;Markets</a>, and <a href="https://www.lavel.ai/" target="_blank" rel="noopener">Lavel</a> (left in 2024).</p>
 
-    <p>You can learn more about me <a href="https://www.linkedin.com/in/matthewwcui/" target="_blank" rel="noopener">here</a>. <a href="mailto:matthew.w.cui@gmail.com">Reach out</a> if interested.</p>
+    <p>You can explore more about my experience <a href="https://www.linkedin.com/in/matthewwcui/" target="_blank" rel="noopener">here</a>. <a href="mailto:matthew.w.cui@gmail.com">Let's connect</a> if you'd like to chat.</p>
 
     <h2>Favorite Media</h2>
 
