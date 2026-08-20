@@ -276,6 +276,7 @@ const PAGE_BODY = `<div class="page">
         <ul class="dash-list">
           <li><a href="https://www.founderspodcast.com/" target="_blank" rel="noopener">Founders</a></li>
           <li><a href="https://allin.com/" target="_blank" rel="noopener">All-In</a></li>
+          <li><a href="https://www.tbpn.com/" target="_blank" rel="noopener">TBPN</a></li>
         </ul>
       </div>
     </details>
