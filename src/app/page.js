@@ -78,6 +78,7 @@ export default function Home() {
             <li><a href="https://www.founderspodcast.com/" target="_blank" rel="noopener">Founders</a></li>
             <li><a href="https://allin.com/" target="_blank" rel="noopener">All-In</a></li>
             <li><a href="https://www.tbpn.com/" target="_blank" rel="noopener">TBPN</a></li>
+            <li><a href="https://www.davidsenra.com/" target="_blank" rel="noopener">David&nbsp;Senra</a></li>
           </ul>
         </div>
       </details>
